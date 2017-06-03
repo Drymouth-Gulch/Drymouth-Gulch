@@ -52,3 +52,4 @@ license (http://creativecommons.org/licenses/by-sa/3.0/).<BR>
 <i>While using and editing the following content, we take responsibility for our actions.</i>
 
 Oh shit things and stuff. Wow.
+Git Good
