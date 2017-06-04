@@ -2,7 +2,7 @@
 	var/obj/item/weapon/kitchen/knife/knife
 	var/can_insert_knife = FALSE
 	attack_hand(var/mob/living/M)
-		if(can_insert_knife = TRUE)
+		if(can_insert_knife == TRUE)
 			if(knife)
 				knife.loc = get_turf(src)
 				if(M.put_in_active_hand(knife))
@@ -14,7 +14,7 @@
 		else
 			..()
 	attackby(var/obj/item/I, var/mob/living/M)
-		if(can_insert_knife = TRUE)
+		if(can_insert_knife == TRUE)
 			if(istype(I, /obj/item/weapon/kitchen/knife))
 				if(knife)	return
 				M.drop_item()

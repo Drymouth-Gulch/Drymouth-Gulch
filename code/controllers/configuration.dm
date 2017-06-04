@@ -246,7 +246,7 @@
 				if("use_age_restriction_for_jobs")
 					config.use_age_restriction_for_jobs = 1
 				if("lobby_countdown")
-					config.lobby_countdown = 5
+					config.lobby_countdown = text2num(value) //This used to be 5 seconds to override the config file?
 				if("round_end_countdown")
 					config.round_end_countdown = text2num(value)
 				if("log_ooc")

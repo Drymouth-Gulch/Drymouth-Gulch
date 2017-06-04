@@ -248,8 +248,8 @@
 		else
 			return 0
 
-	//wasteland jobs are always available
-	return 1
+	//wasteland jobs are always available - what does this even mean
+	//return 1  - The fuck is this here if return 1 is put in later, get ur shit together
 
 	if(jobban_isbanned(src,rank))
 		return 0

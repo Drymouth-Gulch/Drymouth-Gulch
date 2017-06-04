@@ -1,6 +1,6 @@
 var/const/NCR					=(1<<0)
-var/const/NCRCOLONEL			=(1<<0)
-var/const/NCRMAJOR			    =(1<<1)
+var/const/NCRCOLONEL			=(1<<0) //Job commented out under Code/Job/Job/NewNCR
+var/const/NCRMAJOR			    =(1<<1) //Major now under title of Captain - Naming needs to be tidied up still.
 var/const/NCRLIEUTENANT      	=(1<<2)
 var/const/NCRSERGEANT        	=(1<<3)
 var/const/NCRTROOPER        	=(1<<4)
@@ -10,7 +10,7 @@ var/const/NCRRANGER       		=(1<<7)
 var/const/NCRRECRANGER			=(1<<8)
 
 var/const/LEGION			=(1<<1)
-var/const/LEGLEGAT			=(1<<0)
+var/const/LEGLEGAT			=(1<<0) //Job commented out under Code/Job/Job/NewLegion
 var/const/LEGCENTURION		=(1<<1)
 var/const/LEGVEX			=(1<<2)
 var/const/LEGDECAN			=(1<<3)

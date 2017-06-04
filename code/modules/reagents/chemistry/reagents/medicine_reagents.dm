@@ -1094,7 +1094,7 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 
 /datum/reagent/medicine/medx/reaction_mob(mob/living/M, method=INJECT, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
-		if(method=INJECT)
+		if(method==INJECT)
 			if(show_message)
 				M << "<span class>Your senses start to numb through out your body...</span>" //It's a painkiller, after all
 	..()

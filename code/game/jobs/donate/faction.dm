@@ -1,7 +1,7 @@
 datum/f13_faction/BOS
 	name = "BOS"
 	first_spawn = 1
-	late_join = 1
+	late_join = 0
 	color = "#020080"
 	head_status = "Paladin"
 	flag = "bos"

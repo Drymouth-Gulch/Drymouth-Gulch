@@ -4,7 +4,7 @@ Trooper
 /datum/job/ncrlieutenant
 	title = "Lieutenant"
 	flag = NCRLIEUTENANT
-	department_head = list("NCR Lieutenant")
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins+
 	status = "NCR Lieutenant"
@@ -12,7 +12,7 @@ Trooper
 	spawn_positions = 1
 //	donaters = 1
 //	donatorrank = 3
-	supervisors = "The NCR Major"
+	supervisors = "The NCR Captain"
 	//spawn_point = locate(/obj/effect/landmark/start/ncr/commander)
 	selection_color = "#ffeeee"
 	access = list(67,69,70,71,72,20)
@@ -46,12 +46,12 @@ Trooper
 		n.access = list(67,69,70,71,72,20)
 
 /datum/job/ncrm
-	title = "Major"
+	title = "Captain"
 	flag = NCRMAJOR
-	department_head = list("NCR Major")
+	department_head = list("NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
-	status = "Major"
+	status = "Captain"
 	total_positions = 1
 	spawn_positions = 1
 //	donaters = 1
@@ -63,10 +63,11 @@ Trooper
 	minimal_access = list(67,68,69,70,71,72,20)
 	outfit = /datum/outfit/job/ncrmajor
 
+/*  Job removed for reasons
 /datum/job/ncrc
 	title = "Colonel"
 	flag = NCRCOLONEL
-	department_head = list("NCR Major")
+	department_head = list("NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
 	status = "Colonel"
@@ -80,6 +81,7 @@ Trooper
 	access = list(67,68,69,70,71,72)
 	minimal_access = list(67,68,69,70,71,72,20)
 	outfit = /datum/outfit/job/ncrcolonel
+*/
 
 /datum/outfit/job/ncrcolonel
 	id = /obj/item/weapon/card/id/ncr
@@ -127,7 +129,7 @@ Trooper
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
-		H.status="Major"
+		H.status="Captain"
 		n.access = list(67,68,69,70,71,72)
 /*
 Sergeant
@@ -135,7 +137,7 @@ Sergeant
 /datum/job/ncrsergeant
 	title = "Sergeant"
 	flag = NCRSERGEANT
-	department_head = list("NCR Lieutenant")
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
 	status = "Sergeant"
@@ -178,13 +180,13 @@ Trooper
 /datum/job/ncrtrooper
 	title = "Trooper"
 	flag = NCRTROOPER
-	department_head = list("NCR Sergeant")
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
 	status = "Trooper"
 	total_positions = 10
 	spawn_positions = 6
-	supervisors = "the head of security"
+	supervisors = "NCR Sergeant"
 	//spawn_point = locate(/obj/effect/landmark/start/ncr/trooper)
 	selection_color = "#ffeeee"
 	access = list(67)
@@ -218,14 +220,14 @@ Trooper
 Recruit
 */
 /datum/job/ncrrecruit
-	title = "Recruit"
+	title = "NCR Recruit"
 	flag = NCRRECRUIT
-	department_head = list("NCR Sergeant")
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
 	total_positions = 10
 	spawn_positions = -1
-	supervisors = "the head of security"
+	supervisors = "The NCR Lieutenant"
 	//spawn_point = locate(/obj/effect/landmark/start/ncr/trooper)
 	selection_color = "#ffeeee"
 	access = list(67)
@@ -263,7 +265,7 @@ Veteran Ranger
 /datum/job/ncrvetranger
 	title = "Veteran Ranger"
 	flag = NCRVETRANGER
-	department_head = list("NCR Sergeant")
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR"
 	status = "Vetran Ranger"
@@ -271,7 +273,7 @@ Veteran Ranger
 	spawn_positions = 1
 //	donaters = 1
 //	donatorrank = 3
-	supervisors = "Nobody"
+	supervisors = "NCR Lieutenat"
 	selection_color = "#ffeeee"
 	minimal_player_age = 0
 	//spawn_point = locate(/obj/effect/landmark/start/ncr/trooper)
@@ -311,7 +313,7 @@ NCR Ranger
 /datum/job/ncrranger
 	title = "Ranger"
 	flag = NCRRANGER
-	department_head = list("NCR Sergeant")
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR"
 	status = "Ranger"
@@ -319,7 +321,7 @@ NCR Ranger
 	spawn_positions = 3
 //	donaters = 1
 //	donatorrank = 2
-	supervisors = "Veteran Ranger"
+	supervisors = "NCR Lieutenat"
 	selection_color = "#ffeeee"
 	minimal_player_age = 0
 	//spawn_point = locate(/obj/effect/landmark/start/ncr/trooper)
@@ -353,9 +355,11 @@ NCR Ranger
 		n.name="[H.real_name] ([H.job])"
 		H.status="Ranger"
 		n.access = list(67)
+
 /datum/job/ncrrecranger
 	title = "Recruit Ranger"
 	flag = NCRRECRANGER
+	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" //desert faction shall disable appearing as scavenger after readying
 	status = "Recruit Ranger"
@@ -363,7 +367,7 @@ NCR Ranger
 	spawn_positions = 3 //does not matter for late join
 //	donaters = 1
 //	donatorrank = 3
-	supervisors = "Veteran Ranger"
+	supervisors = "NCR Lieutenat"
 	selection_color = "#ffeeee"
 	minimal_player_age = 0
 	access = list(67)

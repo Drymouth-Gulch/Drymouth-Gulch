@@ -3,9 +3,9 @@ Legion
 */
 //recruit
 /datum/job/legrecruit
-	title = "Legionary"
+	title = "Legionary Recruit"
 	flag = LEGIONARY
-	department_head = list("Legat")
+	department_head = list("Centurion")
 	department_flag = LEGION
 	faction = "Legion"
 	total_positions = 10
@@ -103,7 +103,7 @@ Legion
 	status = "Vexillarius"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Legat"
+	supervisors = "Centurion"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 //	donaters = 1
@@ -187,6 +187,7 @@ Legion
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
+/*  Job removed for reasons
 //legat
 /datum/job/leglegat
 	title = "Legat"
@@ -207,6 +208,7 @@ Legion
 
 	access = list()
 	minimal_access = list()
+*/
 
 /datum/outfit/job/leglegat
 	name = "Legat"
