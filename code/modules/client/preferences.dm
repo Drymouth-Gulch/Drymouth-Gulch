@@ -548,15 +548,26 @@ var/list/preferences_datums = list()
 		return 0
 
 	if (level == 1) // to high
+
 		// remove any other job(s) set to high
+
+		job_ncr_med |= job_ncr_high //Godstring removed all this chunk
+		job_bos_med |= job_bos_high
+		job_legion_med |= job_legion_high
+		job_den_med |= job_den_high
+		job_wasteland_med |= job_wasteland_high
+		job_enclave_med |= job_enclave_high
+		job_vault_med |= job_vault_high
+
 		job_ncr_high = 0
 		job_bos_high = 0
 		job_legion_high = 0
 		job_den_high = 0
 		job_wasteland_high = 0
 		job_enclave_high = 0
+		job_vault_high = 0 //godstring removed the vault line
 
-	else if (job.department_flag == NCR)
+	if (job.department_flag == NCR) //Godstring put an else here because he hates me
 		job_ncr_low &= ~job.flag
 		job_ncr_med &= ~job.flag
 		job_ncr_high &= ~job.flag
@@ -602,9 +613,12 @@ var/list/preferences_datums = list()
 		return 1
 
 	else if (job.department_flag == WASTELAND)
-		job_ncr_low &= ~job.flag
+		/*job_ncr_low &= ~job.flag //fucking godstring replaced wasteland with NCR here for whatever reason
 		job_ncr_med &= ~job.flag
-		job_ncr_high &= ~job.flag
+		job_ncr_high &= ~job.flag*/
+		job_wasteland_low &= ~job.flag
+		job_wasteland_med &= ~job.flag
+		job_wasteland_high &= ~job.flag
 
 		switch(level)
 			if (1)

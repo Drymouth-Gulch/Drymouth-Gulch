@@ -429,24 +429,24 @@ SAVEFILE UPDATING/VERSIONING - 'Simplified', or rather, more coder-friendly ~Car
 	S["job_ncr_high"]		<< job_ncr_high
 	S["job_ncr_med"]		<< job_ncr_med
 	S["job_ncr_low"]		<< job_ncr_low
-	S["job_legion_high"]	>> job_legion_high
-	S["job_legion_med"]		>> job_legion_med
-	S["job_legion_low"]		>> job_legion_low
-	S["job_bos_high"]		>> job_bos_high
-	S["job_bos_med"]		>> job_bos_med
-	S["job_bos_low"]		>> job_bos_low
-	S["job_den_high"]		>> job_den_high
-	S["job_den_med"]		>> job_den_med
-	S["job_den_low"]		>> job_den_low
-	S["job_wasteland_high"]		>> job_wasteland_high
-	S["job_wasteland_med"]		>> job_wasteland_med
-	S["job_wasteland_low"]		>> job_wasteland_low
-	S["job_vault_high"]		>> job_vault_high
-	S["job_vault_med"]		>> job_vault_med
-	S["job_vault_low"]		>> job_vault_low
-	S["job_enclave_high"]		>> job_enclave_high
-	S["job_enclave_med"]		>> job_enclave_med
-	S["job_enclave_low"]		>> job_enclave_low
+	S["job_legion_high"]	<< job_legion_high
+	S["job_legion_med"]		<< job_legion_med
+	S["job_legion_low"]		<< job_legion_low
+	S["job_bos_high"]		<< job_bos_high
+	S["job_bos_med"]		<< job_bos_med
+	S["job_bos_low"]		<< job_bos_low
+	S["job_den_high"]		<< job_den_high
+	S["job_den_med"]		<< job_den_med
+	S["job_den_low"]		<< job_den_low
+	S["job_wasteland_high"]		<< job_wasteland_high
+	S["job_wasteland_med"]		<< job_wasteland_med
+	S["job_wasteland_low"]		<< job_wasteland_low
+	S["job_vault_high"]		<< job_vault_high
+	S["job_vault_med"]		<< job_vault_med
+	S["job_vault_low"]		<< job_vault_low
+	S["job_enclave_high"]		<< job_enclave_high
+	S["job_enclave_med"]		<< job_enclave_med
+	S["job_enclave_low"]		<< job_enclave_low
 	return 1
 
 
