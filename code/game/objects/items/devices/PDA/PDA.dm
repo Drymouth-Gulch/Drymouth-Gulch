@@ -6,7 +6,7 @@ var/global/list/obj/item/clothing/gloves/pda/PDAs = list()
 
 /obj/item/clothing/gloves/pda
 	var/desco= "" //examine = desco + locked/unlocked
-	name = "\improper PDA"
+	name = "Pipboy"
 	desco = "A portable microcomputer by Thinktronic Systems, LTD. Functionality determined by a preprogrammed ROM cartridge."
 	icon = 'icons/obj/pda.dmi'
 	icon_state = "pda"

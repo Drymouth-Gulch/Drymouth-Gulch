@@ -362,3 +362,23 @@
 //	throw_range = 1
 //	attack_verb = list("clubbed", "bludgeoned")
 //	origin_tech = "combat=1"
+
+/obj/item/weapon/radlegred
+	name = "red rad leg"
+	icon_state = "radslegred"
+	desc = "ew a red leg"
+
+/obj/item/weapon/radlegblue
+	name = "blue rad leg"
+	icon_state = "radslegblue"
+	desc = "ew a blue leg"
+
+/obj/item/weapon/radmeatred
+	name = "red rad meat"
+	icon_state = "radsmeatred"
+	desc = "ew red meat"
+
+/obj/item/weapon/radmeatblue
+	name = "blue rad meat"
+	icon_state = "radsmeatblue"
+	desc = "ew blue meat"

@@ -14,12 +14,14 @@
 
 /obj/item/flag/ncr
 	name = "NCR flag"
+	desc = "NCR Flag"
 	icon_state = "ncrflag"
 	item_state = "ncrflag"
 	faction = "NCR"
 
 /obj/item/flag/legion
 	name = "Legion flag"
+	desc = "Legion Flag"
 	icon_state = "legionflag"
 	item_state = "legionflag"
 	faction = "Legion"
