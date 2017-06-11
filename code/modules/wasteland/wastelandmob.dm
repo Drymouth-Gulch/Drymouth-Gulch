@@ -165,7 +165,7 @@
 	speak_chance = 5
 	turns_per_move = 5
 	see_in_dark = 10
-	butcher_results = list(/obj/item/weapon/radlegred = 2, /obj/item/weapon/radmeatred = 3)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/radlegred = 2, /obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider/radmeatred = 3)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
@@ -198,4 +198,4 @@
 	melee_damage_upper = 20
 	move_to_delay = 5
 	faction = list("scorpions")
-	butcher_results = list(/obj/item/weapon/radlegblue = 2, /obj/item/weapon/radmeatblue = 3)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/radlegblue = 2, /obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider/radmeatblue = 3)
