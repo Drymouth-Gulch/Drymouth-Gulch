@@ -362,23 +362,23 @@
 //	throw_range = 1
 //	attack_verb = list("clubbed", "bludgeoned")
 //	origin_tech = "combat=1"
-
-/obj/item/weapon/radlegred
+//TODO - MOVE THESE TO WASTE MOBS DM - GOMBLE
+/obj/item/weapon/reagent_containers/food/snacks/radlegred
 	name = "red rad leg"
 	icon_state = "radslegred"
 	desc = "ew a red leg"
 
-/obj/item/weapon/radlegblue
+/obj/item/weapon/reagent_containers/food/snacks/radlegblue
 	name = "blue rad leg"
 	icon_state = "radslegblue"
 	desc = "ew a blue leg"
-
-/obj/item/weapon/radmeatred
+//TODO - BLUE SHOULD BE SUBCLASS OF RED, OR VISA VERSA - GOMBLE
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider/radmeatred
 	name = "red rad meat"
 	icon_state = "radsmeatred"
 	desc = "ew red meat"
 
-/obj/item/weapon/radmeatblue
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider/radmeatblue
 	name = "blue rad meat"
 	icon_state = "radsmeatblue"
 	desc = "ew blue meat"
