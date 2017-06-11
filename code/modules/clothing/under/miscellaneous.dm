@@ -1041,7 +1041,7 @@
 	can_adjust = 1
 
 /obj/item/clothing/under/f13/vault/v13 //The Legend is here.
-	name = "Vault 13 jumpsuit"
+	name = "Vault 113 jumpsuit"
 	desc = "The regulation clothing worn by the vault dwellers of Vault-Tec vaults. It's made of sturdy leather.<br>This jumpsuit has number 13 on the back."
 	icon_state = "vault13"
 	item_color = "vault13"

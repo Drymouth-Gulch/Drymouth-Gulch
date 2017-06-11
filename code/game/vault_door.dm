@@ -1,5 +1,5 @@
 /obj/structure/vaultdoor
-	name = "vault door"
+	name = "vault door 113"
 	icon = 'icons/obj/doors/gear.dmi'
 	icon_state = "closed"
 	density = 1
