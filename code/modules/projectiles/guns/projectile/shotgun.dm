@@ -16,6 +16,7 @@
 	mag_load_sound = null
 	mag_unload_sound = null		//Shotguns have their own procs related to loading, unloading, etc.
 	chamber_sound = null
+	heavy_weapon = 1 //Added by Gomble - Use both yer hams.
 
 /obj/item/weapon/gun/projectile/shotgun/attackby(obj/item/A, mob/user, params)
 	var/num_loaded = magazine.attackby(A, user, params, 1)
@@ -167,6 +168,7 @@
 	sawn_desc = "Omar's coming!"
 	unique_rename = 1
 	unique_reskin = 1
+	heavy_weapon = 1 //Should this be rehashed to shotgun class?
 
 /obj/item/weapon/gun/projectile/revolver/doublebarrel/New()
 	..()
@@ -238,6 +240,7 @@
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/mad
 	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/revolver/single_shotgun
 	name = "single shotgun"
@@ -250,6 +253,7 @@
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/improvised
 	fire_sound = 'sound/f13weapons/caravan_shotgun.ogg'
+	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/revolver/zipgun
 	name = "zipgun"
@@ -286,6 +290,7 @@
 	sawn_desc = "I'm just here for the gasoline."
 	unique_rename = 0
 	unique_reskin = 0
+	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/revolver/doublebarrel/improvised/attackby(obj/item/A, mob/user, params)
 	..()
@@ -363,6 +368,7 @@
 	fire_delay = 0
 	pin = /obj/item/device/firing_pin/implant/pindicate
 	action_button_name = null
+	
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog/unrestricted
 	pin = /obj/item/device/firing_pin
