@@ -1,6 +1,6 @@
 /obj/item/flag
 	name = "empty flag"
-	desc = "you can put there some leather."
+	desc = "you could put some leather there."
 	density = 1
 	anchored = 1
 	w_class = 4

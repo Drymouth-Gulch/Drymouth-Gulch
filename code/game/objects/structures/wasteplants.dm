@@ -1,6 +1,6 @@
 /obj/structure/broc
-	name = "Broc"
-	desc = "It's waste plant."
+	name = "Broc Flower"
+	desc = "It's a wasteland plant."
 	icon = 'icons/obj/Plants.dmi'
 	icon_state = "broc"
 	anchored = 1
@@ -23,8 +23,8 @@
 		icon_state = "broc_no"
 
 /obj/structure/xander
-	name = "Xander"
-	desc = "It's waste plant."
+	name = "Xander Root"
+	desc = "It's a wasteland plant."
 	icon = 'icons/obj/Plants.dmi'
 	icon_state = "xander"
 	anchored = 1
@@ -47,8 +47,8 @@
 		icon_state = "xander_no"
 
 /obj/structure/feracactus
-	name = "Feracactus"
-	desc = "It's waste plant."
+	name = "Ferocactus"
+	desc = "It's a wasteland plant."
 	icon = 'icons/obj/Plants.dmi'
 	icon_state = "cactus"
 	anchored = 1
@@ -72,7 +72,7 @@
 
 /obj/structure/mutfruit
 	name = "Mutfruit"
-	desc = "It's waste plant."
+	desc = "It's a wasteland plant."
 	icon = 'icons/obj/Plants.dmi'
 	icon_state = "mutfruit"
 	anchored = 1
@@ -96,7 +96,7 @@
 
 /obj/structure/fungus
 	name = "Cave fungus"
-	desc = "It's waste plant."
+	desc = "It's a wasteland plant."
 	icon = 'icons/obj/Plants.dmi'
 	icon_state = "fungus"
 	anchored = 1
