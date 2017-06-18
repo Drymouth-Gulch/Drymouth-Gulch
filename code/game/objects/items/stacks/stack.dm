@@ -226,20 +226,25 @@
 			user.put_in_active_hand(src)
 			return
 		var/new_stack = input(user, "How much would you like to transfer?:\n(1-[amount])", "Stack Splitting") as num|null
-		if(new_stack)
-			var/obj/item/stack/F = new src.type( user, 1)
-			. = F
-			F.amount = max(min(round(text2num(new_stack)), amount),1)
-			F.copy_evidences(src)
-			user.put_in_hands(F)
-			src.add_fingerprint(user)
-			F.add_fingerprint(user)
-			use(new_stack)
-			if (src && usr.machine==src)
-				spawn(0) src.interact(usr)
+		if(new_stack == null || new_stack <= 0 || new_stack >= amount)
+			return
+		else
+			change_stack(user, new_stack)
 	else
 		..()
 	return
+/obj/item/stack/proc/change_stack(mob/user,amount)
+			var/obj/item/stack/F = new type(user, amount, FALSE)
+			. = F
+			F.copy_evidences(src)
+			user.put_in_hands(F)
+			add_fingerprint(user)
+			F.add_fingerprint(user)
+			use(amount)
+			F.update_icon()
+			/*if (src && usr.machine==src)
+				spawn(0) src.interact(usr)*/
+
 
 /obj/item/stack/attackby(obj/item/W, mob/user, params)
 	if(istype(W, src.type))
