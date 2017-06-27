@@ -1,7 +1,9 @@
 <!-- Most valid html will work in here, excluding images. -->
 
-<h1>Welcome to Fallout 13</h1>
+<h1>Welcome to Drymouth Gulch!</h1>
 
-<i><b>The development is on early Alpha stage, so don't expect the full size wasteland or lots of other post-nuclear miracles you dream of.
+<i><b>The development is like two or three guys maybe and only one or two are decent coders, so please be patient.
 
-<i>The server is running a Fallout 13 Git build, based off /tg/ Station 13.</i>
+<i><b>This server takes place before the Second Battle of Hoover Dam.
+
+<i>This server is running Fallout13 Legacy code, with some <s> incredibly stupid </s> features removed, such as the whitelist.</i>
