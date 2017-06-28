@@ -328,7 +328,7 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	s += "</a>"
 	s += ")<br>"
 	s += "<img src='http://i.imgur.com/bwkdv8N.gif'><br>"
-	s += "Under <b>[config.hostedby]</b> Protectorate"
+	s += "Hosted by KING <b>[config.hostedby]</b>"
 /*
 	var/list/features = list()
 	if(!ticker)
