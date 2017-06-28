@@ -15,3 +15,5 @@ LaughingRabbit = Elder
 Superballs = Elder
 Zellion = Overseer
 Gomble = President
+Urytion = Overseer
+Mhatt12 = Overseer
