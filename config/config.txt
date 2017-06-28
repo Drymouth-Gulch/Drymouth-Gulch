@@ -2,7 +2,7 @@
 SERVERNAME [ENG] Drymouth Gulch: Unofficial Fallout13 Server. Mid-RP
 
 ## Station name: The name of the station as it is referred to in-game. If commented out, the game will generate a random name instead.
-#STATIONNAME Deadly Wasteland
+#STATIONNAME Drymouth Gulch
 
 # Lobby time: This is the amount of time between rounds that players have to setup their characters and be ready.
 LOBBY_COUNTDOWN 600
@@ -119,19 +119,19 @@ USEWHITELIST
 SERVER 92.222.238.93:4738
 
 ## forum address
-FORUMURL https://vk.com/ss_fallout13
+FORUMURL 
 
 ## Wiki address
-# WIKIURL http://www.fallss.esy.es/wiki/doku.php?id=start
+# WIKIURL 
 
 ##Rules address
-# RULESURL https://discordapp.com/channels/208155759698116608/208157701404884993
+# RULESURL 
 
 ##Github address
-GITHUBURL https://bitbucket.org/Jackerzz/fallout/issues?status=new&status=open
+GITHUBURL https://github.com/Drymouth-Gulch/Drymouth-Gulch
 
 ## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
-# BANAPPEALS http://justanotherday.example.com
+# BANAPPEALS https://discord.gg/cT74U7B
 
 ## In-game features
 ##Toggle for having jobs load up from the .txt
