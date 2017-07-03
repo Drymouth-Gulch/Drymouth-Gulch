@@ -64,11 +64,26 @@
 	var/obj/item/ammo_casing/AC = magazine.get_round() //load next casing.
 	chambered = AC
 
-
 /obj/item/weapon/gun/projectile/shotgun/examine(mob/user)
 	..()
 	if (chambered)
 		user << "A [chambered.BB ? "live" : "spent"] one is in the chamber."
+
+/obj/item/weapon/gun/projectile/shotgun/hunting
+	name = "hunting shotgun"
+	desc = "A traditional shotgun with wood furniture and a four-shell capacity underneath."
+	icon_state = "shotgun"
+	item_state = "shotgun"
+	sawn_desc = "Blast 'em."
+
+/obj/item/weapon/gun/projectile/shotgun/hunting/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/weapon/circular_saw) || istype(A, /obj/item/weapon/gun/energy/plasmacutter))
+		sawoff(user)
+	if(istype(A, /obj/item/weapon/melee/energy))
+		var/obj/item/weapon/melee/energy/W = A
+		if(W.active)
+			sawoff(user)
 
 // RIOT SHOTGUN //
 

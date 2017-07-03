@@ -164,7 +164,7 @@ obj
 									lb.loc=src.loc
 									del src
 								if(5)
-									var/obj/item/weapon/gun/projectile/shotgun/lb = new
+									var/obj/item/weapon/gun/projectile/shotgun/hunting/lb = new
 									lb.loc=src.loc
 									del src
 								if(6)
@@ -212,6 +212,10 @@ obj
 									del src
 								if(10)
 									var/obj/item/weapon/gun/projectile/revolver/colt6250/lb = new
+									lb.loc=src.loc
+									del src
+								if(11)
+									var/obj/item/weapon/gun/projectile/revolver/m29/scoped/lb = new
 									lb.loc=src.loc
 									del src
 					tier4

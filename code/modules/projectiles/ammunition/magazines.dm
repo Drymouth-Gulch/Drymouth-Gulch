@@ -107,7 +107,7 @@
 	name = "shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	caliber = "shotgun"
-	max_ammo = 4
+	max_ammo = 5
 	multiload = 0
 
 /obj/item/ammo_box/magazine/internal/shot/ammo_count(countempties = 1)
