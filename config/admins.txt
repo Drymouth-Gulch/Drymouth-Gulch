@@ -18,3 +18,4 @@ Gomble = President
 Urytion = Paladin
 Mhatt12 = Paladin
 Evoturd = Paladin
+Zyymurgy = Paladin
