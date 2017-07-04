@@ -31,7 +31,7 @@
 	icon_state = "russianranged"
 	icon_living = "russianranged"
 	corpse = /obj/effect/landmark/mobcorpse/russian/ranged
-	weapon1 = /obj/item/weapon/gun/projectile/revolver/doublebarrel/improvised
+	weapon1 = /obj/item/weapon/gun/projectile/revolver/single_shotgun
 	ranged = 1
 	retreat_distance = 3
 	minimum_distance = 3

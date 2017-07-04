@@ -406,8 +406,8 @@ var/global/list/rockTurfEdgeCache
 		return
 
 	SpawnMonster(T)
-	if(prob(20))
-		new /obj/effect/spider/stickyweb (T)
+//	if(prob(20))
+//		new /obj/effect/spider/stickyweb (T)
 	var/turf/simulated/floor/t = new turf_type(T)
 	spawn(2)
 		t.fullUpdateMineralOverlays()

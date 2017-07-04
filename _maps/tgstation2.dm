@@ -15,11 +15,11 @@ z7 = empty space
 
 #if !defined(MAP_FILE)
 
-        #include "map_files\wasteland\wasteland.1.1.1.dmm"
+        #include "map_files\wasteland\wasteland.1.1.2.dmm"
         #include "map_files\wasteland\inner_vault.dmm"
-        //#include "map_files\wasteland\vault_underground.dmm"
+        #include "map_files\wasteland\vault_underground.dmm"
        // #include "map_files\generic\z4.dmm"
-        //#include "map_files\wasteland\underground.dmm"
+        #include "map_files\wasteland\underground.dmm"
         //#include "map_files\generic\z6.dmm"
        // #include "map_files\generic\z7.dmm"
 
