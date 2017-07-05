@@ -17,7 +17,7 @@ z7 = empty space
 
         #include "map_files\wasteland\wasteland.1.1.2.dmm"
         #include "map_files\wasteland\inner_vault.dmm"
-        #include "map_files\wasteland\vault_underground.dmm"
+       // include "map_files\wasteland\vault_underground.dmm"
        // #include "map_files\generic\z4.dmm"
         #include "map_files\wasteland\underground.dmm"
         //#include "map_files\generic\z6.dmm"
