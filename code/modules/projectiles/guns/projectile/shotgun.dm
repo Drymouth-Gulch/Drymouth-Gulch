@@ -70,6 +70,20 @@
 	if (chambered)
 		user << "A [chambered.BB ? "live" : "spent"] one is in the chamber."
 
+// Hunting Shotgun
+/obj/item/weapon/gun/projectile/shotgun/hunting
+	sawn_desc = "Blast 'em."
+
+/obj/item/weapon/gun/projectile/shotgun/hunting/attackby(obj/item/A, mob/user, params)
+	..()
+	if(istype(A, /obj/item/weapon/circular_saw) || istype(A, /obj/item/weapon/gun/energy/plasmacutter))
+		sawoff(user)
+	if(istype(A, /obj/item/weapon/melee/energy))
+		var/obj/item/weapon/melee/energy/W = A
+		if(W.active)
+			sawoff(user)
+
+
 // RIOT SHOTGUN //
 
 /obj/item/weapon/gun/projectile/shotgun/riot //for spawn in the armory

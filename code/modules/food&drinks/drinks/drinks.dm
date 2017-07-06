@@ -30,12 +30,14 @@
 	if(!canconsume(M, user))
 		return 0
 
+/*
 	if(M.water > THIRST_LEVEL_FULL)
 		if(M == user)
 			M << "<span class='notice'>You do not want to drink.</span>"
 		else
 			user << "<span class='notice'>[M] do not want to drink.</span>"
 		return 0
+*/
 
 	if(M == user)
 		M << "<span class='notice'>You swallow a gulp of [src].</span>"

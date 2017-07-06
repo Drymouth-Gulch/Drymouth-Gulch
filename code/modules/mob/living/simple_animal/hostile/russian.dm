@@ -17,7 +17,8 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	attacktext = "bashes"
-	attack_sound = 'sound/weapons/punch1.ogg'
+	attack_sound = 'sound/weapons/genhit1.ogg'
+	environment_smash = 0
 	a_intent = "harm"
 	var/corpse = /obj/effect/landmark/mobcorpse/russian
 	var/weapon1 = /obj/item/weapon/twohanded/sledgehammer
@@ -31,7 +32,7 @@
 	icon_state = "russianranged"
 	icon_living = "russianranged"
 	corpse = /obj/effect/landmark/mobcorpse/russian/ranged
-	weapon1 = /obj/item/weapon/gun/projectile/revolver/doublebarrel/improvised
+	weapon1 = /obj/item/weapon/gun/projectile/revolver/single_shotgun
 	ranged = 1
 	retreat_distance = 3
 	minimum_distance = 3

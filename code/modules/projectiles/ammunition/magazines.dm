@@ -61,7 +61,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = "d-tiv revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/c357
+	ammo_type = /obj/item/ammo_casing/c357/lowpower
 	caliber = "38"
 	max_ammo = 6
 
@@ -107,7 +107,7 @@
 	name = "shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	caliber = "shotgun"
-	max_ammo = 4
+	max_ammo = 5
 	multiload = 0
 
 /obj/item/ammo_box/magazine/internal/shot/ammo_count(countempties = 1)
@@ -347,7 +347,7 @@ obj/item/ammo_box/magazine/tommygunm45
 /obj/item/ammo_box/magazine/d12g
 	name = "shotgun drum magazine"
 	icon_state = "riotmag"
-	ammo_type = /obj/item/ammo_casing/shotgun
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	origin_tech = "combat=3;syndicate=1"
 	caliber = "shotgun"
 	max_ammo = 12

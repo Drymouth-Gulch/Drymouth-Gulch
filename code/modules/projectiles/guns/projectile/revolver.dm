@@ -122,6 +122,28 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
 	fire_sound = 'sound/f13weapons/44mag.ogg'
 
+/obj/item/weapon/gun/projectile/revolver/m29/scoped
+	name = "\improper Scoped S&W Model 29"
+	icon_state = "scoped_m29"
+	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? Now with a scope!"
+	zoomable = TRUE
+	zoom_amt = 7
+
+/obj/item/weapon/gun/projectile/revolver/m29/mysterious
+	name = "\improper S&W Model 29 - 'Mysterious'"
+	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? You feel like you have the power of god. <b>HELL YEAH!</b>"
+	icon_state = "mysterious_m29"
+	damageG=9999
+	damageA=9999
+	damageS=9999
+	rangeG=0
+
+/obj/item/weapon/gun/projectile/revolver/m29/mysterious/New()
+	..()
+	update_icon()
+	src.setgundamage(src.damageG,src.damageA,src.damageS,src.rangeG)
+	return
+
 /obj/item/weapon/gun/projectile/revolver/sequoia
 	name = "Ranger Sequoia"
 	desc = "This large, double-action revolver is a rare, scopeless variant of the hunting revolver. It is used exclusively by the New California Republic Rangers. This revolver features a dark finish with intricate engravings etched all around the weapon. Engraved along the barrel are the words 'For Honorable Service,' and 'Against All Tyrants.' The hand grip bears the symbol of the NCR Rangers, a bear, and a brass plate attached to the bottom that reads '20 Years.' "
@@ -133,7 +155,7 @@
 /obj/item/weapon/gun/projectile/revolver/police
 	name = "police pistol"
 	desc = "A .38 caliber police pistol which can also accept .357 rounds."
-	icon_state = "detective_panther"
+	icon_state = "police"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	origin_tech = "combat=2;materials=2"
 	fire_sound = 'sound/f13weapons/policepistol.ogg'

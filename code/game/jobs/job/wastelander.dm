@@ -51,7 +51,7 @@ Wastelandwhore
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 1)
+	/obj/item/stack/caps = 1)
 	l_hand = /obj/item/weapon/switchblade
 
 /*
@@ -85,7 +85,7 @@ Wastelandpusher
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 4)
+	/obj/item/stack/caps = 4)
 
 
 /datum/outfit/job/wastelander/pre_equip(mob/living/carbon/human/H)
@@ -107,7 +107,7 @@ Wastelandpusher
 	/obj/item/weapon/reagent_containers/blood/radaway=2, \
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/stack/coin/coins = 1)
+	/obj/item/stack/caps = 1)
 //	if (prob(80))
 //		l_hand = pick(/obj/item/weapon/kitchen/knife)
 //Due to how large this one is it gets its own file

@@ -25,7 +25,7 @@ Trooper
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/ncr
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
@@ -35,7 +35,8 @@ Trooper
 		/obj/item/ammo_box/magazine/m556=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/automatic/pistol/deagle=1, \
-		/obj/item/weapon/melee/classic_baton/telescopic=1)
+		/obj/item/weapon/melee/classic_baton/telescopic=1, \
+		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrlieutenant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -88,7 +89,7 @@ Trooper
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/ncr
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
@@ -98,7 +99,8 @@ Trooper
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1, \
-		/obj/item/weapon/melee/classic_baton/telescopic=1)
+		/obj/item/weapon/melee/classic_baton/telescopic=1, \
+		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrcolonel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -113,7 +115,7 @@ Trooper
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/ncr
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
@@ -122,7 +124,8 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1, \
+		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrmajor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -164,7 +167,8 @@ Sergeant
 	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman/servicerifle
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
-		/obj/item/weapon/kitchen/knife/combat=1)
+		/obj/item/weapon/kitchen/knife/combat=1, \
+		/obj/item/stack/caps=2)
 /datum/outfit/job/ncrsergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -207,7 +211,8 @@ Trooper
 	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman/servicerifle
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
-		/obj/item/weapon/kitchen/knife/combat=1)
+		/obj/item/weapon/kitchen/knife/combat=1, \
+		/obj/item/stack/caps=1)
 /datum/outfit/job/ncrtrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -248,7 +253,8 @@ Recruit
 	suit_store = /obj/item/weapon/gun/projectile/shotgun/boltaction
 	backpack_contents = list(/obj/item/ammo_box/a762=3, \
 		/obj/item/clothing/mask/facewrap=1, \
-		/obj/item/weapon/kitchen/knife/combat=1)
+		/obj/item/weapon/kitchen/knife/combat=1,\
+		/obj/item/stack/caps=1)
 
 /datum/outfit/job/ncrrecruit/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -288,7 +294,7 @@ Veteran Ranger
 	gloves = /obj/item/clothing/gloves/combat
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/rangercombat
@@ -334,7 +340,7 @@ NCR Ranger
 	name = "NCR Ranger"
 	id = /obj/item/weapon/card/id/ncr/ranger
 	gloves = /obj/item/clothing/gloves/combat
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat

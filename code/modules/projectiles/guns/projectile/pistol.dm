@@ -76,6 +76,7 @@
 	force = 14
 	mag_type = /obj/item/ammo_box/magazine/m50
 	can_suppress = 0
+	w_class = 3
 
 /obj/item/weapon/gun/projectile/automatic/pistol/deagle/update_icon()
 	..()

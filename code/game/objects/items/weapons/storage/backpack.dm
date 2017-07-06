@@ -10,10 +10,10 @@
  */
 
 /obj/item/weapon/storage/backpack
-	name = "backpack"
-	desc = "You wear this on your back and put items into it."
-	icon_state = "backpack"
-	item_state = "backpack"
+	name = "load bearing webbing"
+	desc = "A kit of load bearing gear consisting of pouches, suspenders and a belt."
+	icon_state = "webbing"
+	item_state = "webbing"
 	w_class = 4
 	slot_flags = SLOT_BACK	//ERROOOOO
 	max_w_class = 3
@@ -25,7 +25,6 @@
 /obj/item/weapon/storage/backpack/attackby(obj/item/weapon/W, mob/user, params)
 	playsound(src.loc, "rustle", 50, 1, -5)
 	..()
-
 /*
  * Backpack Types
  */

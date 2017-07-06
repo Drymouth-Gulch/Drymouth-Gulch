@@ -164,7 +164,7 @@ obj
 									lb.loc=src.loc
 									del src
 								if(5)
-									var/obj/item/weapon/gun/projectile/shotgun/lb = new
+									var/obj/item/weapon/gun/projectile/shotgun/hunting/lb = new
 									lb.loc=src.loc
 									del src
 								if(6)
@@ -540,7 +540,7 @@ obj
 								del src
 				tier4
 					New()
-						switch(rand(1,6))
+						switch(rand(1,5))
 							if(1)
 								var/obj/item/clothing/suit/armor/f13/rangercombat/lb = new
 								var/obj/item/clothing/head/helmet/f13/rangercombat/lb2 = new
@@ -554,22 +554,18 @@ obj
 								lb2.loc=src.loc
 								del src
 							if(3)
-								var/obj/item/weapon/storage/belt/webbing/alt/lb = new
-								lb.loc=src.loc
-								del src
-							if(4)
 								var/obj/item/clothing/suit/armor/f13/combat/lb = new
 								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
-							if(5)
+							if(4)
 								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/salvaged/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/salvaged/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
-							if(6)
+							if(5)
 								var/obj/item/clothing/suit/armor/f13/power_armor/t45d/salvaged/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/t45d/broken/lb2 = new
 								lb.loc=src.loc
