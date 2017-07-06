@@ -123,7 +123,7 @@ obj
 				gun
 					tier1
 						New()
-							switch(rand(1,5))
+							switch(rand(1,6))
 								if(1)
 									var/obj/item/weapon/gun/projectile/revolver/single_shotgun/lb = new
 									lb.loc=src.loc
@@ -142,6 +142,10 @@ obj
 									del src
 								if(5)
 									var/obj/item/weapon/gun/projectile/revolver/pipe_rifle/lb = new
+									lb.loc=src.loc
+									del src
+								if(6)
+									var/obj/item/weapon/gun/projectile/automatic/pistol/silenced22/lb = new
 									lb.loc=src.loc
 									del src
 					tier2
@@ -173,7 +177,7 @@ obj
 									del src
 					tier3
 						New()
-							switch(rand(1,10))
+							switch(rand(1,13))
 								if(1)
 									var/obj/item/weapon/gun/projectile/revolver/that_gun/lb = new
 									lb.loc=src.loc
@@ -212,6 +216,18 @@ obj
 									del src
 								if(10)
 									var/obj/item/weapon/gun/projectile/revolver/colt6250/lb = new
+									lb.loc=src.loc
+									del src
+								if(11)
+									var/obj/item/weapon/gun/projectile/automatic/american180/lb = new
+									lb.loc=src.loc
+									del src
+								if(12)
+									var/obj/item/weapon/gun/projectile/automatic/greasegun/lb = new
+									lb.loc=src.loc
+									del src
+								if(13)
+									var/obj/item/weapon/gun/projectile/revolver/m29/scoped/lb = new
 									lb.loc=src.loc
 									del src
 					tier4
@@ -287,7 +303,7 @@ obj
 					ammo
 						tier1
 							New()
-								switch(rand(1,3))
+								switch(rand(1,4))
 									if(1)
 										var/obj/item/ammo_box/c357/c38/lb = new
 										lb.loc=src.loc
@@ -300,9 +316,13 @@ obj
 										var/obj/item/weapon/storage/box/rubbershot/lb = new
 										lb.loc=src.loc
 										del src
+									if(4)
+										var/obj/item/ammo_box/magazine/m22/lb = new
+										lb.loc=src.loc
+										del src
 						tier2
 							New()
-								switch(rand(1,5))
+								switch(rand(1,6))
 									if(1)
 										var/obj/item/ammo_box/magazine/m45/lb = new
 										lb.loc=src.loc
@@ -312,7 +332,7 @@ obj
 										lb.loc=src.loc
 										del src
 									if(3)
-										var/obj/item/ammo_box/c9mm/lb = new
+										var/obj/item/ammo_box/magazine/uzim9mm/lb = new
 										lb.loc=src.loc
 										del src
 									if(4)
@@ -323,9 +343,13 @@ obj
 										var/obj/item/weapon/stock_parts/cell/device/laser/lb = new
 										lb.loc=src.loc
 										del src
+									if(6)
+										var/obj/item/ammo_box/magazine/m9mm/lb = new
+										lb.loc=src.loc
+										del src
 						tier3
 							New()
-								switch(rand(1,7))
+								switch(rand(1,10))
 									if(1)
 										var/obj/item/ammo_box/magazine/m556/r20/lb = new
 										lb.loc=src.loc
@@ -356,6 +380,14 @@ obj
 										del src
 									if(8)
 										var/obj/item/ammo_box/needler/lb = new
+										lb.loc=src.loc
+										del src
+									if(9)
+										var/obj/item/ammo_box/magazine/d22/lb = new
+										lb.loc=src.loc
+										del src
+									if(10)
+										var/obj/item/ammo_box/magazine/stick45/lb = new
 										lb.loc=src.loc
 										del src
 						tier4

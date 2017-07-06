@@ -751,21 +751,6 @@
 	new /obj/item/ammo_casing/shotgun(src)
 	new /obj/item/ammo_casing/shotgun(src)
 
-/obj/item/weapon/storage/box/slugshot
-	name = "box of slug shotgun shots"
-	desc = "A box full of slug shots."
-	icon_state = "slugshot_box"
-
-/obj/item/weapon/storage/box/lethalshot/New()
-	..()
-	new /obj/item/ammo_casing/shotgun(src)
-	new /obj/item/ammo_casing/shotgun(src)
-	new /obj/item/ammo_casing/shotgun(src)
-	new /obj/item/ammo_casing/shotgun(src)
-	new /obj/item/ammo_casing/shotgun(src)
-	new /obj/item/ammo_casing/shotgun(src)
-	new /obj/item/ammo_casing/shotgun(src)
-
 /obj/item/weapon/storage/box/incenshot
 	name = "box of incendiary shotgun shots"
 	desc = "A box full of incendiary shots."

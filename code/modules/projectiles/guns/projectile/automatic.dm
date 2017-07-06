@@ -395,3 +395,37 @@
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 	w_class = 5
 	heavy_weapon = 1
+
+/obj/item/weapon/gun/projectile/automatic/american180
+	name = "silenced .22 smg"
+	desc = "An American 180, commonly used in prisons."
+	icon_state = "american180"
+	item_state = "shotgun"
+	suppressed = 1
+	can_unsuppress = 0
+	fire_delay = 1
+	mag_type = /obj/item/ammo_box/magazine/d22
+	damageG=2
+	damageA=0
+	damageS=2
+	rangeG=0
+	fire_sound = 'sound/f13weapons/american180.ogg'
+
+/obj/item/weapon/gun/projectile/automatic/assault_rifle/infiltrator/New()
+	..()
+	update_icon()
+	src.setgundamage(src.damageG,src.damageA,src.damageS,src.rangeG)
+	return
+
+/obj/item/weapon/gun/projectile/automatic/greasegun
+	name = "M3A1 grease gun"
+	desc = "A mass-produced .45 caliber sub machine gun used in World War II. Slow fire rate means less waste of ammo and controllable bursts."
+	icon_state = "grease_gun"
+	item_state = "arg"
+	slot_flags = 0
+	origin_tech = "combat=3;materials=2"
+	mag_type = /obj/item/ammo_box/magazine/stick45
+	fire_sound = 'sound/f13weapons/greasegun.ogg'
+	can_suppress = 0
+	burst_size = 3
+	fire_delay = 3

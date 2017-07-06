@@ -1,6 +1,6 @@
 /obj/item/ammo_box/m44
 	name = "speed loader (.44)"
-	icon_state = "38"
+	icon_state = "44"
 	ammo_type = /obj/item/ammo_casing/m44
 	max_ammo = 6
 	multiple_sprites = 1

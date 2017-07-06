@@ -39,6 +39,10 @@
 	damage = 45
 	armour_penetration = -20
 
+/obj/item/projectile/bullet/weakbullet4
+	damage = 5
+	armour_penetration = -5
+
 /obj/item/projectile/bullet/toxinbullet
 	damage = 15
 	damage_type = TOX

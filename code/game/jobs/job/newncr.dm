@@ -34,7 +34,7 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/deagle=1, \
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
 		/obj/item/weapon/melee/classic_baton/telescopic=1, \
 		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrlieutenant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -98,7 +98,7 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1, \
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
 		/obj/item/weapon/melee/classic_baton/telescopic=1, \
 		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrcolonel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
@@ -124,7 +124,7 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1, \
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
 		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrmajor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -168,7 +168,8 @@ Sergeant
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/stack/caps=2)
+		/obj/item/stack/caps=2,\
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
 /datum/outfit/job/ncrsergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -212,7 +213,8 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/stack/caps=1)
+		/obj/item/stack/caps=1, \
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
 /datum/outfit/job/ncrtrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
@@ -254,7 +256,8 @@ Recruit
 	backpack_contents = list(/obj/item/ammo_box/a762=3, \
 		/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/weapon/kitchen/knife/combat=1,\
-		/obj/item/stack/caps=1)
+		/obj/item/stack/caps=1,\
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
 
 /datum/outfit/job/ncrrecruit/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -395,7 +398,7 @@ NCR Ranger
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 1, \
+	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/gun/projectile/revolver/m29=1, \
 	/obj/item/ammo_box/m44=2, \
 	/obj/item/weapon/gun/projectile/revolver/caravan_shotgun=1, \

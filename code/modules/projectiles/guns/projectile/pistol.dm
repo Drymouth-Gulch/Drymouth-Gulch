@@ -91,3 +91,21 @@
 	desc = "A Deagle brand Deagle for operators operating operationally. Uses .50 AE ammo."
 	icon_state = "deaglecamo"
 	item_state = "deagleg"
+
+/obj/item/weapon/gun/projectile/automatic/pistol/silenced22
+	name = "silenced .22 pistol"
+	desc = "A integrally suppressed .22 pistol."
+	icon_state = "silenced22"
+	suppressed = 1
+	mag_type = /obj/item/ammo_box/magazine/m22
+	can_unsuppress = 0
+	fire_sound = 'sound/f13weapons/22pistol.ogg'
+
+/obj/item/weapon/gun/projectile/automatic/pistol/ninemil
+	name = "9mm pistol"
+	desc = "A mass produced pre-war Browning Hi-power standard issue for NCR troops."
+	icon_state = "ninemil"
+	w_class = 3
+	mag_type = /obj/item/ammo_box/magazine/m9mm
+	can_suppress = 0
+	fire_sound = 'sound/f13weapons/greasegun.ogg'

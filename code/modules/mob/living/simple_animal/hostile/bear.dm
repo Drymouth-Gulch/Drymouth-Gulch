@@ -1,7 +1,7 @@
 //Space bears!
 /mob/living/simple_animal/hostile/bear
-	name = "yaoi guai"
-	desc = "Don't feed the yaoi guai..."
+	name = "yao guai"
+	desc = "Don't feed the yao guai..."
 	icon_state = "bear"
 	icon_living = "bear"
 	icon_dead = "bear_dead"
