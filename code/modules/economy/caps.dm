@@ -19,8 +19,8 @@
 
 /obj/item/stack/caps/New()
 	..()
-	if(prob(50)) //50% chance
-		amount = rand(250,500)
+	if(prob(20)) //20% chance
+		amount = rand(100,250)
 	else
-		amount = rand(1,300)
+		amount = rand(1,100)
 	update_icon()
