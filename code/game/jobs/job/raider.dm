@@ -53,3 +53,5 @@ Raider
 		glasses = /obj/item/clothing/glasses/sunglasses
 	if (prob(80))
 		l_hand = pick(/obj/item/weapon/hatchet)
+
+/datum/outfit/job/raider/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

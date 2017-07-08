@@ -409,7 +409,6 @@
 #include "code\game\jobs\jobs.dm"
 #include "code\game\jobs\whitelist.dm"
 #include "code\game\jobs\donate\job.dm"
-#include "code\game\jobs\donate\status.dm"
 #include "code\game\jobs\faction\faction.dm"
 #include "code\game\jobs\job\den.dm"
 #include "code\game\jobs\job\job.dm"

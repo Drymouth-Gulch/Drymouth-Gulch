@@ -38,6 +38,7 @@
 	desc = "Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
 	icon_state = "roman_shield"
 	item_state = "roman_shield"
+	block_chance = 25
 
 /obj/item/weapon/shield/riot/buckler
 	name = "wooden buckler"
@@ -46,7 +47,7 @@
 	item_state = "buckler"
 	materials = list()
 	burn_state = FLAMMABLE
-	block_chance = 40
+	block_chance = 15
 
 /obj/item/weapon/shield/energy
 	name = "energy combat shield"

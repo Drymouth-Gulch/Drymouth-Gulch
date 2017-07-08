@@ -142,7 +142,7 @@ var/list/assistant_occupations = list()
 
 var/list/wasteland_occupations = list(
 	"Mercenary",
-	"Cult Leader",
+	"Messiah",
 	"Wastelander",
 	"Raider",
 	"Whore",
@@ -152,23 +152,23 @@ var/list/wasteland_occupations = list(
 
 var/list/legion_positions = list(
 	//"Legat",
-	"Centurion",
-	"Vexillarius",
-	"Decan",
-	"Veteran",
-	"Legionary"
+	"Legion Centurion",
+	"Legion Vexillarius",
+	"Legion Decanus",
+	"Veteran Legionnaire",
+	"Legionnaire Recruit"
 )
 
 var/list/ncr_positions = list(
-	"Colonel",
-	"Major",
-	"Lieutenant",
-	"Sergeant",
-	"Trooper",
-	"Recruit",
-	"Veteran Ranger",
-	"Ranger",
-	"Recruit Ranger"
+	"NCR Colonel",
+	"NCR Major",
+	"NCR Lieutenant",
+	"NCR Sergeant",
+	"NCR Trooper",
+	"NCR Recruit",
+	"NCR Veteran Ranger",
+	"NCR Ranger",
+	"NCR Recruit Ranger"
 )
 
 var/list/vault_occupations = list(
@@ -181,10 +181,10 @@ var/list/vault_occupations = list(
 )
 
 var/list/bos_occupations = list(
-	"Paladin",
-	"Knight",
-	"Scribe",
-	"Initiate"
+	"BOS Paladin",
+	"BOS Knight",
+	"BOS Scribe",
+	"BOS Initiate"
 )
 
 var/list/den_occupations = list(

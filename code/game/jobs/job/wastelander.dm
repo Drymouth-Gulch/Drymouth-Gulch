@@ -120,23 +120,24 @@ Chaplain
 	flag = PREACHER
 	//department_head = list("Head of Personnel")
 	department_flag = WASTELAND
-	faction = "Vault"
+	faction = "Wasteland"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "God"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/preacher
-
-	access = list(access_morgue, access_chapel_office, access_crematorium, access_theatre)
-	minimal_access = list(access_morgue, access_chapel_office, access_crematorium, access_theatre)
-
 /datum/outfit/job/preacher
 	name = "Preacher"
-
-	gloves = /obj/item/clothing/gloves/pda/chaplain
-	uniform = /obj/item/clothing/under/f13/vault/v13
-	backpack_contents = list(/obj/item/device/camera/spooky = 1)
+	id = null
+	gloves = /obj/item/clothing/gloves/fingerless
+	uniform = /obj/item/clothing/under/rank/chaplain
+	shoes = /obj/item/clothing/shoes/combat/swat
+	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
+	backpack_contents = list(/obj/item/ammo_box/a762=2, \
+		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
+	mask = /obj/item/clothing/mask/gas/syndicate
+	r_hand = /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
 
 
 /datum/outfit/job/preacher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
