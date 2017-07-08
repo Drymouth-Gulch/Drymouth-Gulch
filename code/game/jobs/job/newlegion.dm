@@ -47,6 +47,7 @@ Legion
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
 
 //decan
 /datum/job/legdecan
@@ -94,6 +95,7 @@ Legion
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legdecan/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
 
 //vexillarius
 /datum/job/legvex
@@ -139,6 +141,7 @@ Legion
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legvex/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
 
 //centurion
 /datum/job/legcenturion
@@ -188,6 +191,7 @@ Legion
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legcenturion/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
 
 /*  Job removed for reasons
 //legat
@@ -240,6 +244,7 @@ Legion
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/leglegate/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
 
 //prime recruit
 /datum/job/legvet
@@ -286,3 +291,4 @@ Legion
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legvet/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
