@@ -19,3 +19,7 @@ Urytion = Paladin
 Mhatt12 = Paladin
 Evoturd = Paladin
 Zyymurgy = Paladin
+LividCake = Paladin
+ChetChumpley = Paladin
+hi_im_white = Paladin
+Dragoon458 = Paladin
