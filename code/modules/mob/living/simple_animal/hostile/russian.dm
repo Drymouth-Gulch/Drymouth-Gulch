@@ -17,13 +17,14 @@
 	melee_damage_lower = 25
 	melee_damage_upper = 25
 	attacktext = "bashes"
-	attack_sound = 'sound/weapons/punch1.ogg'
+	attack_sound = 'sound/weapons/genhit1.ogg'
+	environment_smash = 0
 	a_intent = "harm"
 	var/corpse = /obj/effect/landmark/mobcorpse/russian
 	var/weapon1 = /obj/item/weapon/twohanded/sledgehammer
 	atmos_requirements = list("min_oxy" = 5, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 1, "min_co2" = 0, "max_co2" = 5, "min_n2" = 0, "max_n2" = 0)
 	unsuitable_atmos_damage = 15
-	faction = list("russian")
+	faction = list("Raider")
 	status_flags = CANPUSH
 
 
@@ -31,7 +32,7 @@
 	icon_state = "russianranged"
 	icon_living = "russianranged"
 	corpse = /obj/effect/landmark/mobcorpse/russian/ranged
-	weapon1 = /obj/item/weapon/gun/projectile/revolver/doublebarrel/improvised
+	weapon1 = /obj/item/weapon/gun/projectile/revolver/single_shotgun
 	ranged = 1
 	retreat_distance = 3
 	minimum_distance = 3

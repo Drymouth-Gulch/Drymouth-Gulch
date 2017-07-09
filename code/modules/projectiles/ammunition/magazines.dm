@@ -61,7 +61,7 @@
 
 /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	name = "d-tiv revolver cylinder"
-	ammo_type = /obj/item/ammo_casing/c357
+	ammo_type = /obj/item/ammo_casing/c357/lowpower
 	caliber = "38"
 	max_ammo = 6
 
@@ -107,7 +107,7 @@
 	name = "shotgun internal magazine"
 	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	caliber = "shotgun"
-	max_ammo = 4
+	max_ammo = 5
 	multiload = 0
 
 /obj/item/ammo_box/magazine/internal/shot/ammo_count(countempties = 1)
@@ -302,12 +302,20 @@
 	..()
 	icon_state = "c20r45-[round(ammo_count(),2)]"
 
-obj/item/ammo_box/magazine/tommygunm45
+/obj/item/ammo_box/magazine/tommygunm45
 	name = "drum magazine (.45)"
 	icon_state = "drum45"
 	ammo_type = /obj/item/ammo_casing/c45
 	caliber = ".45"
 	max_ammo = 50
+
+/obj/item/ammo_box/magazine/stick45
+	name = "stick magazine (.45)"
+	icon_state = "grease"
+	ammo_type = /obj/item/ammo_casing/c45
+	caliber = ".45"
+	max_ammo = 30
+	multiple_sprites = 1
 
 /obj/item/ammo_box/magazine/m50
 	name = "handgun magazine (.50ae)"
@@ -347,11 +355,11 @@ obj/item/ammo_box/magazine/tommygunm45
 /obj/item/ammo_box/magazine/d12g
 	name = "shotgun drum magazine"
 	icon_state = "riotmag"
-	ammo_type = /obj/item/ammo_casing/shotgun
+	ammo_type = /obj/item/ammo_casing/shotgun/buckshot
 	origin_tech = "combat=3;syndicate=1"
 	caliber = "shotgun"
 	max_ammo = 12
-
+	multiple_sprites = 2
 
 /obj/item/ammo_box/magazine/m12g
 	name = "shotgun magazine (12g slugs)"
@@ -430,3 +438,28 @@ obj/item/ammo_box/magazine/tommygunm45
 /obj/item/ammo_box/magazine/toy/m762/update_icon()
 	..()
 	icon_state = "a762-[round(ammo_count(),10)]"
+
+/obj/item/ammo_box/magazine/d22
+	name = "drum magazine .22"
+	icon_state = "drum22"
+	caliber = "22"
+	ammo_type = /obj/item/ammo_casing/c22
+	max_ammo = 180
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m22
+	name = "magazine .22"
+	icon_state = "22mag"
+	caliber = "22"
+	ammo_type = /obj/item/ammo_casing/c22
+	max_ammo = 16
+	multiple_sprites = 2
+
+/obj/item/ammo_box/magazine/m9mm
+	name = "pistol magazine 9mm"
+	icon_state = "9x19p"
+	origin_tech = "combat=3"
+	ammo_type = /obj/item/ammo_casing/c9mm
+	caliber = "9mm"
+	max_ammo = 13
+	multiple_sprites = 2

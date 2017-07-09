@@ -428,6 +428,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer
 
 /datum/outfit/desert_ranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = list("Ranger", "Desert Rangers")
 	if(visualsOnly)
 		return
 
@@ -460,6 +461,7 @@
 	mask = /obj/item/clothing/mask/cigarette/cigar/havana
 
 /datum/outfit/chief_ranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = list("NCR","Ranger")
 	if(visualsOnly)
 		return
 
@@ -487,6 +489,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 
 /datum/outfit/bos_paladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 
@@ -518,6 +521,7 @@
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
 
 /datum/outfit/bos_knight/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 
@@ -548,6 +552,7 @@
 		/obj/item/weapon/gun/energy/laser/pistol=1)
 
 /datum/outfit/bos_initiate/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 
@@ -578,6 +583,7 @@
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
 
 /datum/outfit/bos_scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 

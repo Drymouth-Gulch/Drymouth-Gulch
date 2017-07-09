@@ -16,7 +16,7 @@
 	if(!opened)
 		opened = !opened
 		user.visible_message("[user] pops the cap off of [src].")
-		var/obj/item/stack/caps/C = new /obj/item/stack/caps(src.loc)
+		var/obj/item/stack/caps/C = new /obj/item/stack/caps(src.loc, amount = 1)
 		C.pickup(user)
 		if(!user.put_in_active_hand(C))
 			C.dropped(user)

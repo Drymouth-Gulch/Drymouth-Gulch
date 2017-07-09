@@ -356,3 +356,7 @@
 
 /obj/item/ammo_casing/needler/dart/attackby()
 	return
+
+/obj/item/ammo_casing/c22
+	caliber = "22"
+	projectile_type = /obj/item/projectile/bullet/weakbullet4

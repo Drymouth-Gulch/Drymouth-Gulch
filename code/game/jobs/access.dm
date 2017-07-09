@@ -430,10 +430,10 @@
 			return "Code Gold"
 
 /proc/get_all_jobs()
-	return list("Assistant", "Overseer", "Engineer", "Scientist", "Sheriff", "Settler", "Dweller", "Legionary",
-				"Decan", "Vexillarius", "Centurion", "Legat", "Prime Recruit", "Colonel", "Major", "Lieutenant", "Trooper", "Veteran Ranger",
-				"Recruit Ranger", "Ranger", "Sergeant", "Recruit", "Warden", "Officer",
-				"Raider", "Wastelander", "Security Officer", "Initiate", "Scribe", "Knight", "Paladin")
+	return list("Assistant", "Overseer", "Engineer", "Scientist", "Sheriff", "Settler", "Dweller", "Legionnaire Recruit",
+				"Legion Decanus", "Legion Vexillarius", "Legion Centurion", "Legion Legate", "Veteran Legionnaire", "NCR Colonel", "NCR Major", "NCR Lieutenant", "NCR Trooper", "NCR Veteran Ranger",
+				"NCR Recruit Ranger", "NCR Ranger", "NCR Sergeant", "NCR Recruit", "Warden", "Officer",
+				"Raider", "Wastelander", "Security Officer", "BOS Initiate", "BOS Scribe", "BOS Knight", "BOS Paladin")
 
 /proc/get_all_job_icons() //For all existing HUD icons
 	return get_all_jobs() + list("Prisoner")

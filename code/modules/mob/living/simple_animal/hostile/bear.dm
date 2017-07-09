@@ -1,7 +1,7 @@
 //Space bears!
 /mob/living/simple_animal/hostile/bear
-	name = "space bear"
-	desc = "You don't need to be faster than a space bear, you just need to outrun your crewmates."
+	name = "yao guai"
+	desc = "Don't feed the yao guai..."
 	icon_state = "bear"
 	icon_living = "bear"
 	icon_dead = "bear_dead"
@@ -14,7 +14,7 @@
 	taunt_chance = 25
 	turns_per_move = 5
 	see_in_dark = 6
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear = 5, /obj/item/clothing/head/bearpelt = 1)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/bear = 5)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"

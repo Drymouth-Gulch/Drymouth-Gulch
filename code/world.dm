@@ -149,11 +149,11 @@ var/global/list/map_transition_config = MAP_TRANSITION_CONFIG
 	load_mode()
 	load_motd()
 	load_admins()
-	//if(config.usewhitelist)
-	//load_whitelist()
+//	if(config.usewhitelist)
+//	load_whitelist()
 	appearance_loadbanfile()
 	LoadBans()
-	//investigate_reset()
+//	investigate_reset()
 
 	if(config && config.server_name != null && config.server_suffix && world.port > 0)
 		config.server_name += " #[(world.port % 1000) / 100]"
