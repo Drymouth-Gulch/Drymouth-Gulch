@@ -118,3 +118,91 @@
 		unbuckle_mob()
 		M.emote("scream")
 		M.AdjustWeakened(10)
+
+/obj/structure/cross
+	name = "cross"
+	icon = 'icons/obj/cross.dmi'
+	icon_state = "cross"
+	desc = "A cross fashioned from an old telephone pole and some rope."
+	density = 1
+	anchored = 1
+	buckle_lying = 0
+	can_buckle = 1
+	bound_height = 64
+
+/obj/structure/cross/attack_paw(mob/user)
+	return src.attack_hand(usr)
+
+/obj/structure/cross/attackby(obj/item/I, mob/user, params)
+	if(istype(I, /obj/item/weapon/crowbar))
+		if(!src.buckled_mob)
+			playsound(loc, 'sound/items/Crowbar.ogg', 100, 1)
+			if(do_after(user, 30/I.toolspeed, target = src))
+				user << "<span class='notice'>You tear down the cross.</span>"
+				new /obj/item/stack/sheet/mineral/wood(loc, 10)
+				qdel(src)
+		else
+			user << "<span class='notice'>You can't do that while something's on the cross!</span>"
+		return
+	if(istype(I, /obj/item/weapon/grab))
+		var/obj/item/weapon/grab/G = I
+		if(istype(G.affecting, /mob/living/))
+			if(!buckled_mob)
+				if(do_mob(user, src, 60))
+					if(buckled_mob) //to prevent spam/queing up attacks
+						return
+					if(G.affecting.buckled)
+						return
+					var/mob/living/H = G.affecting
+					playsound(src.loc, "sound/effects/crossed.ogg", 20, 1) // thanks hippie
+					H.visible_message("<span class='danger'>[user] ties [G.affecting] to the cross!</span>", "<span class='userdanger'>[user] ties you to the cross!</span>")
+					H.loc = src.loc
+					H.emote("scream")
+					H.adjustBruteLoss(10)
+					H.buckled = src
+					H.dir = 2
+					buckled_mob = H
+					H.pixel_y = 16
+					H.overlays += image('icons/obj/cross.dmi', "lashing")
+					return
+		user << "<span class='danger'>You can't use that on the cross!</span>"
+		return
+	..()
+
+/obj/structure/cross/user_buckle_mob(mob/living/M, mob/living/user)
+	return
+
+/obj/structure/cross/user_unbuckle_mob(mob/living/carbon/human/user)
+	if(buckled_mob && buckled_mob.buckled == src)
+		var/mob/living/M = buckled_mob
+		if(M != user)
+			M.visible_message(\
+				"[user.name] tries to pull [M.name] free of the [src]!",\
+				"<span class='notice'>[user.name] is trying to pull you off the [src], opening up fresh wounds!</span>",\
+				"<span class='italics'>You hear rope being unraveled.</span>")
+			if(!do_after(user, 300, target = src))
+				if(M && M.buckled)
+					M.visible_message(\
+					"[user.name] fails to free [M.name]!",\
+					"<span class='notice'>[user.name] fails to pull you off of the [src].</span>")
+				return
+
+		else
+			M.visible_message(\
+			"<span class='warning'>[M.name] struggles to break free from the [src]!</span>",\
+			"<span class='notice'>You struggle to break free from the [src], exacerbating your wounds! (Stay still for two minutes.)</span>",\
+			"<span class='italics'>You hear violent scraping and struggling.</span>")
+			M.adjustBruteLoss(20)
+			if(!do_after(M, 1200, target = src))
+				if(M && M.buckled)
+					M << "<span class='warning'>You fail to free yourself!</span>"
+				return
+		if(!M.buckled)
+			return
+		M.pixel_y = 0
+		M.adjustBruteLoss(40)
+		src.visible_message(text("<span class='danger'>[M] falls free of the [src]!</span>"))
+		unbuckle_mob()
+		M.emote("scream")
+		M.AdjustWeakened(10)
+		M.overlays -= image('icons/obj/cross.dmi', "lashing")
