@@ -15,18 +15,18 @@
 #define SCOUTDRONE_HACKED "drone_scout_hacked"
 
 /mob/living/simple_animal/drone
-	name = "Drone"
-	desc = "A maintenance drone, an expendable robot built to perform station repairs."
+	name = "Eyebot"
+	desc = "Reconnaissance and surveillance robot with radio antennas pointing out its back and loudspeakers in the front. "
 	icon = 'icons/mob/drone.dmi'
 	icon_state = "drone_maint_grey"
 	icon_living = "drone_maint_grey"
 	icon_dead = "drone_maint_dead"
 	gender = NEUTER
-	health = 30
-	maxHealth = 30
+	health = 50
+	maxHealth = 50
 	unsuitable_atmos_damage = 0
 	wander = 0
-	speed = 0
+	speed = 2
 	ventcrawler = 2
 	healable = 0
 	density = 0
@@ -35,12 +35,12 @@
 	status_flags = (CANPUSH | CANSTUN | CANWEAKEN)
 	gender = NEUTER
 	voice_name = "synthesized chirp"
-	speak_emote = list("chirps")
+	speak_emote = list("Beeps", "Boops")
 	bubble_icon = "machine"
 	languages = DRONE
 	mob_size = MOB_SIZE_SMALL
 	has_unlimited_silicon_privilege = 1
-	damage_coeff = list(BRUTE = 1, BURN = 1, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
+	damage_coeff = list(BRUTE = 0.75, BURN = 2, TOX = 0, CLONE = 0, STAMINA = 0, OXY = 0)
 	staticOverlays = list()
 	var/staticChoice = "static"
 	var/list/staticChoices = list("static", "blank", "letter")
