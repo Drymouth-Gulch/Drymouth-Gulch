@@ -119,7 +119,7 @@
 		M.emote("scream")
 		M.AdjustWeakened(10)
 
-/obj/structure/cross
+/obj/structure/kitchenspike/cross
 	name = "cross"
 	icon = 'icons/obj/cross.dmi'
 	icon_state = "cross"
@@ -130,10 +130,7 @@
 	can_buckle = 1
 	bound_height = 64
 
-/obj/structure/cross/attack_paw(mob/user)
-	return src.attack_hand(usr)
-
-/obj/structure/cross/attackby(obj/item/I, mob/user, params)
+/obj/structure/kitchenspike/cross/attackby(obj/item/I, mob/user, params)
 	if(istype(I, /obj/item/weapon/crowbar))
 		if(!src.buckled_mob)
 			playsound(loc, 'sound/items/Crowbar.ogg', 100, 1)
@@ -169,10 +166,7 @@
 		return
 	..()
 
-/obj/structure/cross/user_buckle_mob(mob/living/M, mob/living/user)
-	return
-
-/obj/structure/cross/user_unbuckle_mob(mob/living/carbon/human/user)
+/obj/structure/kitchenspike/cross/user_unbuckle_mob(mob/living/carbon/human/user)
 	if(buckled_mob && buckled_mob.buckled == src)
 		var/mob/living/M = buckled_mob
 		if(M != user)
