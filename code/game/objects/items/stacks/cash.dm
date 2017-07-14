@@ -53,6 +53,10 @@
 	throw_range = 2
 	w_class = 1
 	//burn_state = FLAMMABLE
+	
+/obj/item/stack/coin/New()
+	..()
+	amount = rand(1,50)
 
 /obj/item/stack/coin/coins
 	icon_state = "coins"
