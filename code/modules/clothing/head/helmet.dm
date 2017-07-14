@@ -457,15 +457,15 @@
 /obj/item/clothing/head/helmet/power_armor/f13/advanced
 	name = "Advanced power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advanced"
-	item_state = "advanced"
+	icon_state = "advhelmet"
+	item_state = "advhelmet"
 	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
 
 /obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2
 	name = "Advanced power helmet MK2"
 	desc = "It's an advanced power armor Mk II helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advanced"
-	item_state = "advanced"
+	icon_state = "advhelmet"
+	item_state = "advhelmet"
 	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
 
 /obj/item/clothing/head/helmet/power_armor/f13/t51b
