@@ -127,3 +127,14 @@
 	range = 10
 	irradiate = 5
 	eyeblur = 2
+
+/obj/item/projectile/protectron
+	name = "laser"
+	icon_state = "laser"
+	pass_flags = PASSTABLE | PASSGLASS | PASSGRILLE
+	damage = 25
+	damage_type = BURN
+	hitsound = 'sound/f13weapons/sear.ogg'
+	hitsound_wall = 'sound/f13weapons/sear_wall.ogg'
+	flag = "laser"
+	eyeblur = 2
