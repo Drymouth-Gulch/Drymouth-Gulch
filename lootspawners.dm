@@ -540,7 +540,7 @@ obj
 								del src
 				tier4
 					New()
-						switch(rand(1,6))
+						switch(rand(1,7))
 							if(1)
 								var/obj/item/clothing/suit/armor/f13/rangercombat/lb = new
 								var/obj/item/clothing/head/helmet/f13/rangercombat/lb2 = new
@@ -560,21 +560,36 @@ obj
 							if(4)
 								var/obj/item/clothing/suit/armor/f13/combat/lb = new
 								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
+								var/obj/item/clothing/under/f13/combat/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 							if(5)
 								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/salvaged/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/salvaged/lb2 = new
+								var/obj/item/clothing/under/f13/ncr/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 							if(6)
 								var/obj/item/clothing/suit/armor/f13/power_armor/t45d/salvaged/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/t45d/broken/lb2 = new
+								var/obj/item/clothing/under/f13/combat/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
+							if(7)
+								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/lb = new
+								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/lb2 = new
+								var/obj/item/clothing/under/f13/reconbroken/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
+								del src
+								return
 				tier5
 					New()
 						switch(rand(1,8))
@@ -599,8 +614,10 @@ obj
 							if(4)
 								var/obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2/lb2 = new
+								var/obj/item/clothing/under/f13/enclaveo/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 								return
 							if(5)
@@ -608,8 +625,8 @@ obj
 								lb.loc=src.loc
 								del src
 							if(6)
-								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/lb2 = new
+								var/obj/item/clothing/suit/armor/f13/power_armor/tesla/lb = new
+								var/obj/item/clothing/head/helmet/power_armor/tesla/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
@@ -617,8 +634,10 @@ obj
 							if(7)
 								var/obj/item/clothing/suit/armor/f13/power_armor/t45d/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/t45d/lb2 = new
+								var/obj/item/clothing/under/f13/recon/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 								return
 							if(8)
