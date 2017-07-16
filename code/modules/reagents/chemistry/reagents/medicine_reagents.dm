@@ -1154,3 +1154,22 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 		M.Jitter(5)
 	..()
 	return
+
+/datum/reagent/medicine/fixer
+	name = "Fixer"
+	id = "fixer"
+	description = "Treats addictions while also purging other chemicals from the body. Side effects include nausea."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+
+/datum/reagent/medicine/fixer/on_mob_life(mob/living/M)
+	for(var/datum/reagent/R in M.reagents.reagent_list)
+		if(R != src)
+			M.reagents.remove_reagent(R.id,2)
+	for(var/datum/reagent/R in M.reagents.addiction_list)
+		M.reagents.addiction_list.Remove(R)
+		M << "<span class='notice'>You feel like you've gotten over your need for [R.name].</span>"
+	M.Dizzy(2)
+	..()
+	return
