@@ -325,8 +325,8 @@
 
 // SPACE VINES (Note that this code is very similar to Biomass code)
 /obj/effect/spacevine
-	name = "space vines"
-	desc = "An extremely expansionistic species of vine."
+	name = "Mutant Vines"
+	desc = "Well, at least something's growing"
 	icon = 'icons/effects/spacevines.dmi'
 	icon_state = "Light1"
 	anchored = 1

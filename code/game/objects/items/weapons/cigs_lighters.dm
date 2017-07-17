@@ -491,7 +491,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	item_state = "zippo"
 
 /obj/item/weapon/lighter/vault13
-	name = "vault 13 lighter"
+	name = "vault 113 lighter"
 	desc = "True relic from a legendary vault."
 	icon_state = "13"
 	item_state = "zippo"

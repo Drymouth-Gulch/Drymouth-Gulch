@@ -282,10 +282,3 @@
 	max_w_class = 3
 	max_combined_w_class = 21
 	storage_slots = 21
-
-/obj/item/weapon/storage/belt/webbing/alt
-	name = "webbing gear"
-	desc = "A kit of load bearing gear consisting of pouches, suspenders and a belt."
-	icon_state = "explorer2"
-	item_state = "explorer2"
-	storage_slots = 7

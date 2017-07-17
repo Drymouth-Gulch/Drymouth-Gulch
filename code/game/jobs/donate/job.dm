@@ -12,8 +12,6 @@ var/const/BOSP			=(1<<55)*/
 	department_flag = WASTELAND
 	faction = "Wasteland"
 	status = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
 	supervisors = "nobody"
 	selection_color = "#ffddf0"
 	minimal_player_age = 7
@@ -37,7 +35,7 @@ var/const/BOSP			=(1<<55)*/
 	r_hand = /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
 
 //SourcePony
-/datum/job/slimeman
+/datum/job/mercenary
 	title = "Mercenary"
 	flag = MERCENARY
 	department_head = list("nobody")
@@ -49,14 +47,12 @@ var/const/BOSP			=(1<<55)*/
 	supervisors = "the head of security"
 	selection_color = "#ffddf0"
 	minimal_player_age = 7
-	donaters = 1
-	donatorrank = 3
-	outfit = /datum/outfit/job/slimeman
+	outfit = /datum/outfit/job/mercenary
 
 	access = list()
 	minimal_access = list()
 
-/datum/outfit/job/slimeman
+/datum/outfit/job/mercenary
 	name = "Mercenary"
 	id = null
 	uniform = /obj/item/clothing/under/f13/mercadv
@@ -70,21 +66,18 @@ var/const/BOSP			=(1<<55)*/
 //SEPERATED
 
 /datum/job/bosinitiate
-	title = "Initiate"
+	title = "BOS Initiate"
 	flag = INITIATE
 	department_head = list("Paladin")
 	department_flag = BOS
 	faction = "BOS"
-	status = "Initiate"
+	status = "BOS Initiate"
 	total_positions = 3
 	spawn_positions = 3
-	supervisors = "Paladin"
+	supervisors = "BOS Paladin"
 	selection_color = "#ffddf0"
 	minimal_player_age = 7
-	donaters = 1
-	donatorrank = 3
 	outfit = /datum/outfit/bos_initiate
-
 	access = list(73)
 	minimal_access = list(73)
 
@@ -92,57 +85,49 @@ var/const/BOSP			=(1<<55)*/
 //SourcePony
 
 /datum/job/bosscribe
-	title = "Scribe"
+	title = "BOS Scribe"
 	flag = SCRIBE
 	department_head = list("Paladin")
 	department_flag = BOS
 	faction = "BOS"
-	status = "Scribe"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "Paladin"
+	status = "BOS Scribe"
+	supervisors = "BOS Paladin"
 	selection_color = "#ffddf0"
 	minimal_player_age = 7
-	donaters = 1
-	donatorrank = 3
 	outfit = /datum/outfit/bos_scribe
 
 	access = list(73)
 	minimal_access = list(73)
 
 /datum/job/bosknight
-	title = "Knight"
+	title = "BOS Knight"
 	flag = KNIGHT
 	department_head = list("Paladin")
 	department_flag = BOS
 	faction = "BOS"
-	status = "Knight"
+	status = "BOS Knight"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "Paladin"
+	supervisors = "BOS Paladin"
 	selection_color = "#ffddf0"
 	minimal_player_age = 7
-	donaters = 1
-	donatorrank = 4
 	outfit = /datum/outfit/bos_knight
 
 	access = list(73)
 	minimal_access = list(73)
 
 /datum/job/bospaladin
-	title = "Paladin"
+	title = "BOS Paladin"
 	flag = PALADIN
 	department_head = list("Paladin")
 	department_flag = BOS
 	faction = "BOS"
-	status = "Paladin"
+	status = "BOS Paladin"
 	total_positions = 1
 	spawn_positions = 1
-	supervisors = "none"
+	supervisors = "The BOS Elder"
 	selection_color = "#ffddf0"
 	minimal_player_age = 7
-	donaters = 1
-	donatorrank = 4
 	outfit = /datum/outfit/bos_paladin
 
 	access = list(73)
@@ -360,29 +345,6 @@ var/const/BOSP			=(1<<55)*/
 	helmet.attack_self(H)
 
 	H.internal = H.l_store
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /datum/outfit/syndicate
 	name = "Syndicate Operative - Basic"

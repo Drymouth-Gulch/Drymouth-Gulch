@@ -182,7 +182,7 @@
 	filling_color = "#B22222"
 
 /obj/item/weapon/reagent_containers/food/snacks/yumyum
-	name = "Yumyum"
+	name = "Yumyum Deviled Eggs"
 	desc = "YumYum was a pre-War company in the United States, producing packaged foods. YumYum Deviled Eggs was their major product."
 	icon_state = "yumyum"
 	bonus_reagents = list("radium" = 1, "vitamin" = 2)
@@ -190,8 +190,8 @@
 	filling_color = "#B22222"
 
 /obj/item/weapon/reagent_containers/food/snacks/fancylads
-	name = "Fancy lads"
-	desc = "The presence of snack cakes is a nod to the urban myth that Twinkies and other similar foods would survive a nuclear war. The slogan is 'A big delight in every bite'."
+	name = "Fancy lads Snack Cakes"
+	desc = "A plain white box with a red label in the middle above a stylised picture of a tied bow. The slogan on the box says 'A big delight in every bite'."
 	icon_state = "fancylads"
 	bonus_reagents = list("radium" = 1, "vitamin" = 1)
 	list_reagents = list("nutriment" = 20)

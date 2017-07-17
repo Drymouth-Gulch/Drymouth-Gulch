@@ -1087,16 +1087,21 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	if(iscarbon(M))
 		var/mob/living/carbon/N = M
 		N.hal_screwyhud = 5
+	if(M.health = M.maxHealth)
+		M.hallucination += 5
+	M.status_flags |= IGNORESLOWDOWN
 	M.adjustBruteLoss(-0.50*REM)
 	M.adjustFireLoss(-0.50*REM)
-	M.AdjustStunned(-2)
+	M.AdjustParalysis(-5)
+	M.AdjustStunned(-5)
+	M.AdjustWeakened(-5)
+	M.adjustStaminaLoss(-15)
 	..()
 
-/datum/reagent/medicine/medx/reaction_mob(mob/living/M, method=INJECT, reac_volume, show_message = 1)
+/datum/reagent/medicine/medx/reaction_mob(mob/living/M, method=PATCH, reac_volume, show_message = 1)
 	if(iscarbon(M) && M.stat != DEAD)
-		if(method==INJECT)
-			if(show_message)
-				M << "<span class>Your senses start to numb through out your body...</span>" //It's a painkiller, after all
+		if(show_message)
+			M << pick("You feel <b>FUCKING INVINCIBLE!</b>.", "You feel your senses numbing.", "You feel like you can push it to the limit.") //It's a painkiller, after all
 	..()
 
 /datum/reagent/medicine/medx/on_mob_delete(mob/living/M)
@@ -1152,5 +1157,24 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 		M.adjustToxLoss(3*REM)
 		M.Dizzy(5)
 		M.Jitter(5)
+	..()
+	return
+
+/datum/reagent/medicine/fixer
+	name = "Fixer"
+	id = "fixer"
+	description = "Treats addictions while also purging other chemicals from the body. Side effects include nausea."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	metabolization_rate = 0.5 * REAGENTS_METABOLISM
+
+/datum/reagent/medicine/fixer/on_mob_life(mob/living/M)
+	for(var/datum/reagent/R in M.reagents.reagent_list)
+		if(R != src)
+			M.reagents.remove_reagent(R.id,2)
+	for(var/datum/reagent/R in M.reagents.addiction_list)
+		M.reagents.addiction_list.Remove(R)
+		M << "<span class='notice'>You feel like you've gotten over your need for [R.name].</span>"
+	M.Dizzy(2)
 	..()
 	return

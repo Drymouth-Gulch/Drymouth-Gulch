@@ -7,6 +7,7 @@
 	burn_state = FLAMMABLE
 	can_hold = list(
 		/obj/item/stack/spacecash,
+		/obj/item/stack/coin,
 		/obj/item/weapon/card,
 		/obj/item/clothing/mask/cigarette,
 		/obj/item/device/flashlight/pen,

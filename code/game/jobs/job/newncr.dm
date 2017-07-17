@@ -2,7 +2,7 @@
 Trooper
 */
 /datum/job/ncrlieutenant
-	title = "Lieutenant"
+	title = "NCR Lieutenant"
 	flag = NCRLIEUTENANT
 	department_head = list("The NCR Captain")
 	department_flag = NCR
@@ -20,12 +20,12 @@ Trooper
 	outfit = /datum/outfit/job/ncrlieutenant
 
 /datum/outfit/job/ncrlieutenant
-	name = "Lieutenant"
+	name = "NCR Lieutenant"
 	id = /obj/item/weapon/card/id/ncr
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/ncr
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
@@ -34,29 +34,31 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/deagle=1, \
-		/obj/item/weapon/melee/classic_baton/telescopic=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
+		/obj/item/weapon/melee/classic_baton/telescopic=1, \
+		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrlieutenant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
-		H.status="Lieutenant"
+		H.status="NCR Lieutenant"
 		n.access = list(67,69,70,71,72,20)
 
 /datum/job/ncrm
-	title = "Captain"
+	title = "NCR Captain"
 	flag = NCRMAJOR
 	department_head = list("NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
-	status = "Captain"
+	status = "NCR Captain"
 	total_positions = 1
 	spawn_positions = 1
 //	donaters = 1
 //	donatorrank = 4
-	supervisors = "Colonel"
+	supervisors = "NCR Colonel"
 	//spawn_point = locate(/obj/effect/landmark/start/ncr/commander)
 	selection_color = "#ffeeee"
 	access = list(67,68,69,70,71,72)
@@ -88,7 +90,7 @@ Trooper
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/ncr
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
@@ -97,15 +99,17 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1, \
-		/obj/item/weapon/melee/classic_baton/telescopic=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
+		/obj/item/weapon/melee/classic_baton/telescopic=1, \
+		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrcolonel/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
-		H.status="Colonel"
+		H.status="NCR Colonel"
 		n.access = list(67,68,69,70,71,72)
 
 /datum/outfit/job/ncrmajor
@@ -113,7 +117,7 @@ Trooper
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
 	shoes = /obj/item/clothing/shoes/combat/ncr
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
@@ -122,25 +126,27 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
+		/obj/item/stack/caps=3)
 /datum/outfit/job/ncrmajor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
-		H.status="Captain"
+		H.status="NCR Captain"
 		n.access = list(67,68,69,70,71,72)
 /*
 Sergeant
 */
 /datum/job/ncrsergeant
-	title = "Sergeant"
+	title = "NCR Sergeant"
 	flag = NCRSERGEANT
 	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
-	status = "Sergeant"
+	status = "NCR Sergeant"
 	total_positions = 2
 	spawn_positions = 2
 	supervisors = "The NCR Lieutenant"
@@ -151,7 +157,7 @@ Sergeant
 	outfit = /datum/outfit/job/ncrsergeant
 
 /datum/outfit/job/ncrsergeant
-	name = "Sergeant"
+	name = "NCR Sergeant"
 	id = /obj/item/weapon/card/id/ncr
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -164,26 +170,29 @@ Sergeant
 	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman/servicerifle
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
-		/obj/item/weapon/kitchen/knife/combat=1)
+		/obj/item/weapon/kitchen/knife/combat=1, \
+		/obj/item/stack/caps=2,\
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
 /datum/outfit/job/ncrsergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
-		H.status="Sergant"
+		H.status="Sergeant"
 		n.access = list(67,72)
 
 /*
 Trooper
 */
 /datum/job/ncrtrooper
-	title = "Trooper"
+	title = "NCR Trooper"
 	flag = NCRTROOPER
 	department_head = list("The NCR Captain")
 	department_flag = NCR
 	faction = "NCR" // This faction is used for late joins
-	status = "Trooper"
+	status = "NCR Trooper"
 	total_positions = 10
 	spawn_positions = 6
 	supervisors = "NCR Sergeant"
@@ -207,8 +216,11 @@ Trooper
 	suit_store = /obj/item/weapon/gun/projectile/automatic/marksman/servicerifle
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
-		/obj/item/weapon/kitchen/knife/combat=1)
+		/obj/item/weapon/kitchen/knife/combat=1, \
+		/obj/item/stack/caps=1, \
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
 /datum/outfit/job/ncrtrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
@@ -235,7 +247,7 @@ Recruit
 	outfit = /datum/outfit/job/ncrrecruit
 
 /datum/outfit/job/ncrrecruit
-	name = "Recruit"
+	name = "NCR Recruit"
 	id = /obj/item/weapon/card/id/ncr
 	gloves = /obj/item/clothing/gloves/f13/legion/ncr
 	uniform = /obj/item/clothing/under/f13/ncr
@@ -248,9 +260,12 @@ Recruit
 	suit_store = /obj/item/weapon/gun/projectile/shotgun/boltaction
 	backpack_contents = list(/obj/item/ammo_box/a762=3, \
 		/obj/item/clothing/mask/facewrap=1, \
-		/obj/item/weapon/kitchen/knife/combat=1)
+		/obj/item/weapon/kitchen/knife/combat=1,\
+		/obj/item/stack/caps=1,\
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
 
 /datum/outfit/job/ncrrecruit/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "NCR Recruit"
@@ -263,7 +278,7 @@ Recruit
 Veteran Ranger
 */
 /datum/job/ncrvetranger
-	title = "Veteran Ranger"
+	title = "NCR Veteran Ranger"
 	flag = NCRVETRANGER
 	department_head = list("The NCR Captain")
 	department_flag = NCR
@@ -271,8 +286,6 @@ Veteran Ranger
 	status = "Vetran Ranger"
 	total_positions = 1
 	spawn_positions = 1
-//	donaters = 1
-//	donatorrank = 3
 	supervisors = "NCR Lieutenat"
 	selection_color = "#ffeeee"
 	minimal_player_age = 0
@@ -283,12 +296,12 @@ Veteran Ranger
 	minimal_access = list(67)
 
 /datum/outfit/job/ncrvetranger
-	name = "Veteran Ranger"
+	name = "NCR Veteran Ranger"
 	id = /obj/item/weapon/card/id/ncr/ranger
 	gloves = /obj/item/clothing/gloves/combat
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	suit = /obj/item/clothing/suit/armor/f13/rangercombat
 	head = /obj/item/clothing/head/helmet/f13/rangercombat
@@ -300,6 +313,7 @@ Veteran Ranger
 		/obj/item/weapon/melee/classic_baton/telescopic=1)
 	mask = /obj/item/clothing/mask/gas/sechailer
 /datum/outfit/job/ncrvetranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = list("NCR","Ranger")
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
@@ -311,7 +325,7 @@ Veteran Ranger
 NCR Ranger
 */
 /datum/job/ncrranger
-	title = "Ranger"
+	title = "NCR Ranger"
 	flag = NCRRANGER
 	department_head = list("The NCR Captain")
 	department_flag = NCR
@@ -334,7 +348,7 @@ NCR Ranger
 	name = "NCR Ranger"
 	id = /obj/item/weapon/card/id/ncr/ranger
 	gloves = /obj/item/clothing/gloves/combat
-	belt = /obj/item/weapon/storage/belt/webbing/alt
+	belt = /obj/item/weapon/storage/belt/ncr
 	ears = /obj/item/device/radio/headset/headset_ncr
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat
@@ -348,16 +362,18 @@ NCR Ranger
 		/obj/item/ammo_box/magazine/d12g=2, \
 		/obj/item/weapon/melee/classic_baton=1)
 /datum/outfit/job/ncrranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = list("NCR","Ranger")
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
 		H.status="Ranger"
+		H.faction = list("NCR","Ranger")
 		n.access = list(67)
 
 /datum/job/ncrrecranger
-	title = "Recruit Ranger"
+	title = "NCR Recruit Ranger"
 	flag = NCRRECRANGER
 	department_head = list("The NCR Captain")
 	department_flag = NCR
@@ -367,7 +383,7 @@ NCR Ranger
 	spawn_positions = 3 //does not matter for late join
 //	donaters = 1
 //	donatorrank = 3
-	supervisors = "NCR Lieutenat"
+	supervisors = "NCR Lieutenant"
 	selection_color = "#ffeeee"
 	minimal_player_age = 0
 	access = list(67)
@@ -375,7 +391,7 @@ NCR Ranger
 	outfit = /datum/outfit/job/ncrrecranger
 
 /datum/outfit/job/ncrrecranger
-	name = "Recruit Ranger"
+	name = "NCR Recruit Ranger"
 	id = /obj/item/weapon/card/id/ncr/ranger
 	uniform = /obj/item/clothing/under/f13/ranger
 	shoes = /obj/item/clothing/shoes/workboots
@@ -389,16 +405,18 @@ NCR Ranger
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 1, \
+	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/gun/projectile/revolver/m29=1, \
 	/obj/item/ammo_box/m44=2, \
 	/obj/item/weapon/gun/projectile/revolver/caravan_shotgun=1, \
 	/obj/item/weapon/melee/classic_baton=1)
 /datum/outfit/job/ncrrecranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = list("NCR","Ranger")
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
 		n.registered_name = H.real_name
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
 		H.status="Recruit Ranger"
+		H.faction = list("NCR","Ranger")
 		n.access = list(67)

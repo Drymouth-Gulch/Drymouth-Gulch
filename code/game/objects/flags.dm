@@ -1,6 +1,6 @@
 /obj/item/flag
 	name = "empty flag"
-	desc = "you can put there some leather."
+	desc = "you could put some leather there."
 	density = 1
 	anchored = 1
 	w_class = 4
@@ -14,12 +14,14 @@
 
 /obj/item/flag/ncr
 	name = "NCR flag"
+	desc = "NCR Flag"
 	icon_state = "ncrflag"
 	item_state = "ncrflag"
 	faction = "NCR"
 
 /obj/item/flag/legion
 	name = "Legion flag"
+	desc = "Legion Flag"
 	icon_state = "legionflag"
 	item_state = "legionflag"
 	faction = "Legion"

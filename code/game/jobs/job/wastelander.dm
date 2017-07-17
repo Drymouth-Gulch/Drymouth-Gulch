@@ -51,7 +51,7 @@ Wastelandwhore
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 1)
+	/obj/item/stack/caps = 1)
 	l_hand = /obj/item/weapon/switchblade
 
 /*
@@ -85,7 +85,7 @@ Wastelandpusher
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/coin/coins = 4)
+	/obj/item/stack/caps = 4)
 
 
 /datum/outfit/job/wastelander/pre_equip(mob/living/carbon/human/H)
@@ -107,7 +107,7 @@ Wastelandpusher
 	/obj/item/weapon/reagent_containers/blood/radaway=2, \
 	/obj/item/weapon/storage/wallet=1, \
 	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/stack/coin/coins = 1)
+	/obj/item/stack/caps = 1)
 //	if (prob(80))
 //		l_hand = pick(/obj/item/weapon/kitchen/knife)
 //Due to how large this one is it gets its own file
@@ -120,23 +120,24 @@ Chaplain
 	flag = PREACHER
 	//department_head = list("Head of Personnel")
 	department_flag = WASTELAND
-	faction = "Vault"
+	faction = "Wasteland"
 	total_positions = 1
 	spawn_positions = 1
 	supervisors = "God"
 	selection_color = "#dddddd"
 
 	outfit = /datum/outfit/job/preacher
-
-	access = list(access_morgue, access_chapel_office, access_crematorium, access_theatre)
-	minimal_access = list(access_morgue, access_chapel_office, access_crematorium, access_theatre)
-
 /datum/outfit/job/preacher
 	name = "Preacher"
-
-	gloves = /obj/item/clothing/gloves/pda/chaplain
-	uniform = /obj/item/clothing/under/f13/vault/v13
-	backpack_contents = list(/obj/item/device/camera/spooky = 1)
+	id = null
+	gloves = /obj/item/clothing/gloves/fingerless
+	uniform = /obj/item/clothing/under/rank/chaplain
+	shoes = /obj/item/clothing/shoes/combat/swat
+	suit = /obj/item/clothing/suit/hooded/chaplain_hoodie
+	backpack_contents = list(/obj/item/ammo_box/a762=2, \
+		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
+	mask = /obj/item/clothing/mask/gas/syndicate
+	r_hand = /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
 
 
 /datum/outfit/job/preacher/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)

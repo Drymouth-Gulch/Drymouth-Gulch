@@ -165,13 +165,13 @@
 	speak_chance = 5
 	turns_per_move = 5
 	see_in_dark = 10
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider = 2, /obj/item/weapon/reagent_containers/food/snacks/spiderleg = 8)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/radlegred = 2, /obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider/radmeatred = 3)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "hits"
 	maxHealth = 200
 	health = 200
-	melee_damage_lower = 15
+	melee_damage_lower = 10
 	melee_damage_upper = 20
 	faction = list("scorpions")
 	var/busy = 0
@@ -187,14 +187,15 @@
 
 /mob/living/simple_animal/hostile/rad_scorpion/blue
 	name = "giant rad scorpion"
-	desc = "Furry and black, it makes you shudder to look at it. This one has deep red eyes."
+	desc = "Furry, blue and looks deadly, it's been mutated for years."
 	icon_state = "radscorpion"
 	icon_living = "radscorpion"
 	icon_dead = "radscorpion_d"
 	icon_gib = "radscorpion_g"
-	maxHealth = 200
-	health = 200
-	melee_damage_lower = 10
+	maxHealth = 250
+	health = 250
+	melee_damage_lower = 15
 	melee_damage_upper = 20
 	move_to_delay = 5
 	faction = list("scorpions")
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/radlegblue = 2, /obj/item/weapon/reagent_containers/food/snacks/meat/slab/spider/radmeatblue = 3)

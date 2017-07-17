@@ -141,9 +141,26 @@
 
 	if(heavy_weapon)
 		if(user.get_inactive_hand())
-			if(prob(15))
-				if(user.drop_item())
-					user.visible_message("<span class='danger'>[src] flies out of [user]'s hands!</span>", "<span class='userdanger'>[src] kicks out of your grip!</span>")
+			var/kickback = rand(1,100)
+			user << "<span class='userdanger'>[src] kicks around as you fire one handed!</span>"
+			switch(kickback)
+				if(1 to 15) //15% chance
+					if(user.drop_item())
+						user.visible_message("<span class='danger'>[src] flies out of [user]'s hands!</span>", "<span class='userdanger'>[src] kicks out of your hand!</span>")
+				if(16 to 45) //30% chance
+					//var/obj/item/bodypart/headsToSmack = user.get_bodypart(
+					//var/obj/item/bodypart/affecting = H.get_bodypart("[(user.active_hand_index % 2 == 0) ? "r" : "l" ]_arm")
+					if(user.apply_damage(rand(1,10), damagetype = BRUTE, def_zone = "head", blocked = 0))
+						user.visible_message("<span class='danger'>[src] recoils up and smacks [user] in the face!</span>", "<span class='userdanger'>[src] recoils up and smacks you in the face!</span>")
+						user.update_damage_overlays()
+				if(46 to 50) //5% chance
+					if(user.apply_damage(rand(1,10), damagetype = BRUTE, def_zone = "head", blocked = 0))
+						user.Weaken(4)
+						user.visible_message("<span class='danger'>[src] recoils up and smacks [user] in the face, knocking them to the floor!</span>", "<span class='userdanger'>[src] recoils up and smacks you in the face, knocking you to the floor!</span>")
+						user.update_damage_overlays()
+			return
+
+
 
 /obj/item/weapon/gun/emp_act(severity)
 	for(var/obj/O in contents)

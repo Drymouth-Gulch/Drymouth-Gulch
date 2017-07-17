@@ -3,14 +3,14 @@ Legion
 */
 //recruit
 /datum/job/legrecruit
-	title = "Legionary Recruit"
+	title = "Legionnaire Recruit"
 	flag = LEGIONARY
 	department_head = list("Centurion")
 	department_flag = LEGION
 	faction = "Legion"
 	total_positions = 10
 	spawn_positions = -1
-	supervisors = "Decan"
+	supervisors = "Legion Decanus"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
@@ -20,7 +20,7 @@ Legion
 	minimal_access = list()
 
 /datum/outfit/job/legrecruit
-	name = "Recruit"
+	name = "Legionnaire Recruit"
 	id = null
 	ears = null
 	belt = null
@@ -40,33 +40,34 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/caps = 1, \
+	/obj/item/stack/coin/coins = 2, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/c357/c38=2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
+/datum/outfit/job/legrecruit/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
+
 //decan
 /datum/job/legdecan
-	title = "Decan"
+	title = "Legion Decanus"
 	flag = LEGDECAN
 	department_head = list("Centurion")
 	department_flag = LEGION
 	faction = "Legion"
-	status = "Decan"
+	status = "Legion Decanus"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Centurion"
+	supervisors = "Legion Centurion"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
-
 	outfit = /datum/outfit/job/legdecan
-
 	access = list()
 	minimal_access = list()
 
 /datum/outfit/job/legdecan
-	name = "Decan"
+	name = "Legion Decanus"
 	id = null
 	ears = null
 	belt = null
@@ -87,30 +88,29 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/caps = 1, \
+	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/magazine/d12g=2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
+/datum/outfit/job/legdecan/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
+
 //vexillarius
 /datum/job/legvex
-	title = "Vexillarius"
+	title = "Legion Vexillarius"
 	flag = LEGVEX
 	department_head = list("Centurion")
 	department_flag = LEGION
 	faction = "Legion"
-	status = "Vexillarius"
+	status = "Legion Vexillarius"
 	total_positions = 2
 	spawn_positions = 2
-	supervisors = "Centurion"
+	supervisors = "Legion Centurion"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
-//	donaters = 1
-//	donatorrank = 3
-
 	outfit = /datum/outfit/job/legvex
-
 	access = list()
 	minimal_access = list()
 
@@ -134,25 +134,28 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/caps = 1, \
+	/obj/item/stack/coin/bag = 1, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/magazine/m556=1, \
 	/obj/item/device/flashlight/flare/torch=1)
 
+/datum/outfit/job/legvex/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
+
 //centurion
 /datum/job/legcenturion
-	title = "Centurion"
+	title = "Legion Centurion"
 	flag = LEGCENTURION
 	department_head = list("Centurion")
 	department_flag = LEGION
 	faction = "Legion"
-	status = "Centurion"
+	status = "Legion Centurion"
 	total_positions = 1
 	spawn_positions = 1
 	donaters = 1
 	donatorrank = 3
-	supervisors = "Legate"
+	supervisors = "Legion Legate"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
 
@@ -182,10 +185,13 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/caps = 1, \
+	/obj/item/stack/coin/bag = 2, \
 	/obj/item/weapon/powergauntlet = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/device/flashlight/flare/torch=1)
+
+/datum/outfit/job/legcenturion/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
 
 /*  Job removed for reasons
 //legat
@@ -230,34 +236,35 @@ Legion
 	r_hand = /obj/item/weapon/claymore/hog
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/caps = 100, \
+	/obj/item/stack/coin/bag = 2, \
 	/obj/item/weapon/powergauntlet = 1,\
 	/obj/item/ammo_box/magazine/m556=3, \
 	/obj/item/weapon/restraints/legcuffs/bola/tribal=2, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
+/datum/outfit/job/leglegate/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"
+
 //prime recruit
-/datum/job/legVET
-	title = "Veteran"
+/datum/job/legvet
+	title = "Veteran Legionnaire"
 	flag = LEGVET
 	department_head = list("Centurion")
 	department_flag = LEGION
 	faction = "Legion"
-	status = "Veteran"
+	status = "Veteran Legionnaire"
 	total_positions = 10
 	spawn_positions = 6
-	supervisors = "Decan"
+	supervisors = "Legion Decanus"
 	selection_color = "#ffeeee"
 	minimal_player_age = 7
-
 	outfit = /datum/outfit/job/legvet
-
 	access = list()
 	minimal_access = list()
 
 /datum/outfit/job/legvet
-	name = "Veteran"
+	name = "Veteran Legionnaire"
 	id = null
 	ears = null
 	belt = null
@@ -277,8 +284,11 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/caps = 1, \
+	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/storage/box/lethalshot=1,
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/device/flashlight/flare/torch=1)
+
+/datum/outfit/job/legvet/post_equip(mob/living/carbon/human/H)
+	H.faction = "Legion"

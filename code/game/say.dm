@@ -53,7 +53,7 @@ var/list/freqtospan = list(
 	//Radio freq/name display
 	var/freqpart = radio_freq ? "\[[get_radio_name(radio_freq)]\] " : ""
 	//Speaker name
-	var/namepart =  "<b><i>[speaker.job] -</b></i> [speaker.GetVoice()][speaker.get_alt_name()]"
+	var/namepart =  "[speaker.GetVoice()][speaker.get_alt_name()]"
 	//End name span.
 	var/endspanpart = "</span>"
 	//Message

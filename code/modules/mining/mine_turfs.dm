@@ -9,7 +9,7 @@ var/global/list/rockTurfEdgeCache
 /turf/simulated/mineral //wall piece
 	name = "rock"
 	icon = 'icons/turf/mining.dmi'
-	icon_state = "rock_nochance"
+	icon_state = "outershade"
 	baseturf = /turf/ground/mountain
 	//oxygen = 0
 	//nitrogen = 0
@@ -29,6 +29,7 @@ var/global/list/rockTurfEdgeCache
 	var/hidden = 1
 
 /turf/simulated/mineral/volcanic
+	icon_state = "rock_volcanic"
 	environment_type = "basalt"
 	turf_type = /turf/ground/mountain
 	baseturf = /turf/ground/mountain
@@ -177,6 +178,7 @@ var/global/list/rockTurfEdgeCache
 
 /turf/simulated/mineral/uranium
 	name = "uranium deposit"
+	icon_state = "rock_Uranium"
 	mineralType = /obj/item/weapon/ore/uranium
 	spreadChance = 5
 	spread = 1
@@ -185,6 +187,7 @@ var/global/list/rockTurfEdgeCache
 
 /turf/simulated/mineral/diamond
 	name = "diamond deposit"
+	icon_state ="rock_Diamond"
 	mineralType = /obj/item/weapon/ore/diamond
 	spreadChance = 0
 	spread = 1
@@ -193,6 +196,7 @@ var/global/list/rockTurfEdgeCache
 
 /turf/simulated/mineral/gold
 	name = "gold deposit"
+	icon_state = "rock_Gold"
 	mineralType = /obj/item/weapon/ore/gold
 	spreadChance = 5
 	spread = 1
@@ -201,6 +205,7 @@ var/global/list/rockTurfEdgeCache
 
 /turf/simulated/mineral/silver
 	name = "silver deposit"
+	icon_state = "rock_silver"
 	mineralType = /obj/item/weapon/ore/silver
 	spreadChance = 5
 	spread = 1
@@ -401,11 +406,13 @@ var/global/list/rockTurfEdgeCache
 		return
 
 	SpawnMonster(T)
+/*
 	if(prob(20))
 		new /obj/effect/spider/stickyweb (T)
 	var/turf/simulated/floor/t = new turf_type(T)
 	spawn(2)
 		t.fullUpdateMineralOverlays()
+*/
 
 /turf/ground/mountain/cave/proc/SpawnMonster(turf/T)
 	if(prob(2))

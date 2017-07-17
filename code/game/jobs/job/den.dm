@@ -28,7 +28,11 @@
 	shoes = /obj/item/clothing/shoes/workboots
 	suit = /obj/item/clothing/suit/armor/vest/det_suit
 	head = /obj/item/clothing/head/fluff/cowboy
-	suit_store = /obj/item/weapon/gun/projectile/automatic/pistol/m1911
+	suit_store = pick(/obj/item/weapon/gun/projectile/automatic/pistol/m1911,\
+	/obj/item/weapon/gun/projectile/revolver/police,\
+	/obj/item/weapon/gun/projectile/revolver/colt6250,\
+	/obj/item/weapon/gun/projectile/revolver/that_gun,\
+	/obj/item/weapon/gun/projectile/revolver/m29)
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_hand = /obj/item/weapon/gun/projectile/shotgun
 	ears = /obj/item/device/radio/headset/headset_den

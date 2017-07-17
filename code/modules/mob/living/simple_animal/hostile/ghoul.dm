@@ -25,6 +25,7 @@
 
 	faction = list("ghoul")
 	gold_core_spawnable = 1
+	environment_smash = 0
 
 /mob/living/simple_animal/hostile/ghoul/glowing
 	name = "Glowing Feral Ghoul"

@@ -859,7 +859,7 @@ var/list/obj/machinery/newscaster/allCasters = list()
 
 /obj/item/weapon/newspaper
 	name = "newspaper"
-	desc = "An issue of The Griffon, the newspaper circulating aboard Vault-tec Space Stations."
+	desc = "An issue of The Griffon, a newspaper sponsored by Vault-tec ."
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "newspaper"
 	w_class = 2
