@@ -34,7 +34,7 @@
 		if(y_shift)
 			r_hand_image.pixel_y += y_shift
 
-		hands_overlays += r_hand_image
+		hands_overlays += null
 
 		if(client && hud_used)
 			r_hand.layer = 20
@@ -51,7 +51,7 @@
 		if(y_shift)
 			l_hand_image.pixel_y += y_shift
 
-		hands_overlays += l_hand_image
+		hands_overlays += null
 
 		if(client && hud_used)
 			l_hand.layer = 20
@@ -81,7 +81,7 @@
 		var/image/head_overlay = head.build_worn_icon(state = head.icon_state, default_layer = DRONE_HEAD_LAYER, default_icon_file = 'icons/mob/head.dmi')
 		head_overlay.pixel_y += -15
 
-		drone_overlays[DRONE_HEAD_LAYER]	= head_overlay
+		drone_overlays[DRONE_HEAD_LAYER]	= null
 
 	apply_overlay(DRONE_HEAD_LAYER)
 
