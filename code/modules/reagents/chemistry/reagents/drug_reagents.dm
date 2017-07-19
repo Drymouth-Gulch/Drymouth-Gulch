@@ -346,6 +346,7 @@
 	M.adjustStaminaLoss(-1)
 	M.adjustBrainLoss(0.25)
 	M.hallucination += 5
+	..()
 	return
 
 /datum/reagent/drug/psycho/overdose_process(mob/living/M)
