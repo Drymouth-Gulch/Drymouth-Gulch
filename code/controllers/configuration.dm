@@ -286,7 +286,7 @@
 				if("no_dead_vote")
 					config.vote_no_dead = 1
 				if("default_no_vote")
-					config.vote_no_default = 1
+					config.vote_no_default = 0
 				if("vote_delay")
 					config.vote_delay = text2num(value)
 				if("vote_period")

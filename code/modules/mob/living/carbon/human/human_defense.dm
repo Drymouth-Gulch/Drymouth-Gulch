@@ -107,7 +107,9 @@
 	var/dammod = 0
 	var/mob/living/carbon/human/humanUser = user
 	if (istype(humanUser) && humanUser.dna && humanUser.dna.species && humanUser.dna.species.id=="bigmutant")
-		dammod = 15
+		dammod = dammod+15
+	if (user.reagents.has_reagent("psycho"))
+		dammod = dammod+20
 	// the attacked_by code varies among species
 	return dna.species.spec_attacked_by(I,user,def_zone,affecting,hit_area,src.a_intent,target_limb,target_area,src, dammod)
 

@@ -457,16 +457,26 @@
 /obj/item/clothing/head/helmet/power_armor/f13/advanced
 	name = "Advanced power helmet"
 	desc = "It's an advanced power armor Mk I helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advanced"
-	item_state = "advanced"
+	icon_state = "advhelmet1"
+	item_state = "advhelmet1"
 	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
 
 /obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2
 	name = "Advanced power helmet MK2"
-	desc = "It's an advanced power armor Mk II helmet, typically used by the Enclave. It looks somewhat threatening."
-	icon_state = "advanced"
-	item_state = "advanced"
+	desc = "It's an improved model of advanced power armor used exclusively by the Enclave military forces, developed after the Great War.<br>Like its older brother, the standard advanced power armor, it's matte black with a menacing appearance, but with a few significant differences - it appears to be composed entirely of lightweight ceramic composites rather than the usual combination of metal and ceramic plates.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
+	icon_state = "advhelmet2"
+	item_state = "advhelmet2"
 	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
+
+
+/obj/item/clothing/head/helmet/power_armor/tesla
+	name = "tesla power helmet"
+	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
+	icon_state = "tesla"
+	item_state = "tesla"
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE
+	armor = list(melee = 50, bullet = 30, laser = 80, energy = 80, bomb = 30, bio = 100, rad = 80)
+
 
 /obj/item/clothing/head/helmet/power_armor/f13/t51b
 	name = "T-51b power helmet"

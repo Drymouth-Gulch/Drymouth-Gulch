@@ -40,7 +40,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin = rand(1, 20), \
+	/obj/item/stack/coin/coins = 2, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/c357/c38=2, \
@@ -88,7 +88,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin = rand(25, 75), \
+	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/magazine/d12g=2, \
@@ -134,7 +134,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin = rand(10, 50), \
+	/obj/item/stack/coin/bag = 1, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder=1, \
 	/obj/item/ammo_box/magazine/m556=1, \
@@ -185,7 +185,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin = rand(100, 250), \
+	/obj/item/stack/coin/bag = 2, \
 	/obj/item/weapon/powergauntlet = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
 	/obj/item/device/flashlight/flare/torch=1)
@@ -236,7 +236,7 @@ Legion
 	r_hand = /obj/item/weapon/claymore/hog
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin = 1000, \
+	/obj/item/stack/coin/bag = 2, \
 	/obj/item/weapon/powergauntlet = 1,\
 	/obj/item/ammo_box/magazine/m556=3, \
 	/obj/item/weapon/restraints/legcuffs/bola/tribal=2, \
@@ -284,7 +284,7 @@ Legion
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/legcuffs/bola/raider=1, \
 	/obj/item/stack/spear/bundle=1, \
-	/obj/item/stack/coin = rand(5, 20), \
+	/obj/item/stack/coin/coins = 3, \
 	/obj/item/weapon/machete = 1, \
 	/obj/item/weapon/storage/box/lethalshot=1,
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
