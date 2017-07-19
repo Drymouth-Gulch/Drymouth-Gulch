@@ -526,7 +526,7 @@
 	desc = "It's a set of T-45b power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
-	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
+	armor = list(melee = 60, bullet = 50, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 50)
 	slowdown = 2
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45b/salvaged
@@ -534,7 +534,7 @@
 	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
-	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 80)
+	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 70)
 	slowdown = 3
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
@@ -542,7 +542,7 @@
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list(melee = 70, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 70)
+	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t45d/salvaged
 	name = "Salvaged T-45d power armor"
@@ -550,15 +550,15 @@
 	item_state = "t45dpowerarmor"
 	name = "Salvaged T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle. This suit appears worn and battered."
-	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 60, bio = 100, rad = 80)
+	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
 	slowdown = 3
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "Advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
-	icon_state = "advpowerarmor"
-	item_state = "advpowerarmor"
-	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
+	icon_state = "advpowerarmor1"
+	item_state = "advpowerarmor1"
+	armor = list(melee = 70, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 70)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
 	name = "Advanced power armor MKII"
@@ -566,14 +566,21 @@
 	icon_state = "advpowerarmor2"
 	item_state = "advpowerarmor2"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
+	armor = list(melee = 80, bullet = 70, laser = 70, energy = 70, bomb = 70, bio = 100, rad = 80)
+
+/obj/item/clothing/suit/armor/f13/power_armor/tesla
+	name = "tesla power armor"
+	desc = "A variant of the Enclave's advanced power armor Mk I, jury-rigged with a Tesla device that is capable of dispersing a large percentage of the damage done by directed-energy attacks.<br>As it's made of complex composite materials designed to block most of energy damage - it's notably weaker against kinetic impacts."
+	icon_state = "tesla"
+	item_state = "tesla"
+	armor = list(melee = 40, bullet = 25, laser = 75, energy = 75, bomb = 30, bio = 100, rad = 95)
 
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
 	icon_state = "t51bpowerarmor"
 	item_state = "t51bpowerarmor"
-	armor = list(melee = 85, bullet = 65, laser = 65, energy = 65, bomb = 65, bio = 100, rad = 100)
+	armor = list(melee = 75, bullet = 55, laser = 5, energy = 55, bomb = 55, bio = 100, rad = 95)
 
 //Fallout 13
 
@@ -660,7 +667,7 @@
 	icon_state = "combat_armor"
 	item_state = "combat_armor"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 50, laser = 25, energy = 20, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 30, bullet = 30, laser = 15, energy = 20, bomb = 20, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -675,7 +682,7 @@
 	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all initiates."
 	icon_state = "brotherhood_armor"
 	item_state = "brotherhood_armor"
-	armor = list(melee = 60, bullet = 60, laser = 45, energy = 20, bomb = 20, bio = 0, rad = 80)
+	armor = list(melee = 40, bullet = 40, laser = 25, energy = 10, bomb = 20, bio = 0, rad = 60)
 
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "ranger combat armor"

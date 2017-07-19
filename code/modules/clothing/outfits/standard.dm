@@ -473,7 +473,7 @@
 /datum/outfit/bos_paladin
 	name = "BoS Paladin"
 	id = /obj/item/weapon/card/id/bos
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/device/radio/headset/heads/hos/alt
@@ -505,12 +505,12 @@
 /datum/outfit/bos_knight
 	name = "BoS Knight"
 	id = /obj/item/weapon/card/id/bos
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/device/radio/headset/heads/hos/alt
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
-	head = /obj/item/clothing/head/helmet/power_armor/f13/t51b
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
+	head = /obj/item/clothing/head/helmet/power_armor/f13/t45d
 	suit_store = /obj/item/weapon/gun/energy/laser/scatter
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
@@ -537,7 +537,7 @@
 /datum/outfit/bos_initiate
 	name = "BoS Initiate"
 	id = /obj/item/weapon/card/id/bos
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/device/radio/headset/heads/hos/alt
