@@ -441,46 +441,6 @@
 	put_on_delay = 60
 	strip_delay = 60
 
-/obj/item/clothing/suit/armor/f13/legrecruit
-	name = "Legion recruit armor"
-	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units.<br>Like most Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
-	icon_state = "legrecruit"
-	item_state = "legrecruit"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 50, bullet = 20, laser = 10, energy = 10, bomb = 20, bio = 0, rad = 0)
-	put_on_delay = 60
-	strip_delay = 60
-
-/obj/item/clothing/suit/armor/f13/legvexil
-	name = "Legion vexillarius armor"
-	desc = "The armor appears to be based off of a suit of Legion veteran armor, with the addition of circular metal plates attached to the torso, as well as a banner displaying the flag of the Legion worn on the back."
-	icon_state = "legvexil"
-	item_state = "legvexil"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 60, bullet = 30, laser = 20, energy = 10, bomb = 30, bio = 0, rad = 0)
-	put_on_delay = 60
-	strip_delay = 60
-
-/obj/item/clothing/suit/armor/f13/legcenturion
-	name = "Legion centurion armor"
-	desc = "The Legion centurion armor is by far the strongest suit of armor available to Caesar's Legion. The armor is composed from other pieces of armor taken from that of the wearer's defeated opponents in combat."
-	icon_state = "legcenturion"
-	item_state = "legcenturion"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 70, bullet = 40, laser = 30, energy = 20, bomb = 20, bio = 0, rad = 30)
-	put_on_delay = 60
-	strip_delay = 60
-
-/obj/item/clothing/suit/armor/f13/leglegat
-	name = "Legion legat armor"
-	desc = "The armor appears to be a full suit of heavy gauge steel and offers full body protection. It also has a cloak in excellent condition, but the armor itself bears numerous battle scars and the helmet is missing half of the left horn. The Legate's suit appears originally crafted, in contrast to other Legion armor which consists of repurposed pre-War sports equipment."
-	icon_state = "leglegat"
-	item_state = "leglegat"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 80, bullet = 50, laser = 40, energy = 30, bomb = 30, bio = 0, rad = 40)
-	put_on_delay = 60
-	strip_delay = 60
-
 /obj/item/clothing/suit/armor/f13/combat
 	name = "combat armor"
 	desc = "An old combat armor, out of use around the time of the war."
@@ -511,6 +471,37 @@
 	put_on_delay = 60
 	strip_delay = 60
 
+// salvaged/broken power armor, does not require PA training
+
+/obj/item/clothing/suit/armor/f13/brokenpa
+	unacidable = 1
+	slowdown = 1
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 100
+	strip_delay = 200
+
+/obj/item/clothing/suit/armor/f13/brokenpa/t45b
+	name = "Salvaged T-45b power armor"
+	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
+	icon_state = "t45bpowerarmor"
+	item_state = "t45bpowerarmor"
+	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 70)
+	slowdown = 3
+
+/obj/item/clothing/suit/armor/f13/brokenpa/t45d
+	name = "Salvaged T-45d power armor"
+	icon_state = "t45dpowerarmor"
+	item_state = "t45dpowerarmor"
+	name = "Salvaged T-45d power armor"
+	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle. This suit appears worn and battered."
+	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
+	slowdown = 3
+
+// power armor
+
 /obj/item/clothing/suit/armor/f13/power_armor
 	unacidable = 1
 	slowdown = 1
@@ -521,6 +512,15 @@
 	put_on_delay = 100
 	strip_delay = 200
 
+/obj/item/clothing/suit/armor/f13/power_armor/mob_can_equip(mob/user, slot)
+	if (ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if (H.martial_art != /datum/martial_art/patraining && slot == slot_wear_suit)
+			H << "<span class='warning'>You don't have the proper training to operate the power armor!</span>"
+			return 0
+			..()
+	return ..()
+
 /obj/item/clothing/suit/armor/f13/power_armor/t45b
 	name = "T-45b power armor"
 	desc = "It's a set of T-45b power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."
@@ -529,29 +529,12 @@
 	armor = list(melee = 60, bullet = 50, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 50)
 	slowdown = 2
 
-/obj/item/clothing/suit/armor/f13/power_armor/t45b/salvaged
-	name = "Salvaged T-45b power armor"
-	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
-	icon_state = "t45bpowerarmor"
-	item_state = "t45bpowerarmor"
-	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 70)
-	slowdown = 3
-
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
-
-/obj/item/clothing/suit/armor/f13/power_armor/t45d/salvaged
-	name = "Salvaged T-45d power armor"
-	icon_state = "t45dpowerarmor"
-	item_state = "t45dpowerarmor"
-	name = "Salvaged T-45d power armor"
-	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle. This suit appears worn and battered."
-	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
-	slowdown = 3
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "Advanced power armor"
@@ -623,13 +606,13 @@
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 55, bullet = 25, laser = 15, energy = 10, bomb = 40, bio = 0, rad = 0)
+	armor = list(melee = 55, bullet = 40, laser = 15, energy = 10, bomb = 40, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/legrecruit/vet
 	name = "legion veteran armor"
-	armor = list (melee = 60, bullet = 30, laser = 15, energy = 10, bomb = 20, bio = 0, rad = 0)
+	armor = list (melee = 60, bullet = 45, laser = 15, energy = 10, bomb = 20, bio = 0, rad = 0)
 
 /obj/item/clothing/suit/armor/f13/legvexil
 	name = "Legion vexillarius armor"
@@ -637,7 +620,7 @@
 	icon_state = "legvexil"
 	item_state = "legvexil"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 60, bullet = 30, laser = 15, energy = 10, bomb = 20, bio = 0, rad = 0)
+	armor = list(melee = 60, bullet = 45, laser = 15, energy = 10, bomb = 20, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -647,7 +630,7 @@
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 80, bullet = 40, laser = 35, energy = 20, bomb = 20, bio = 0, rad = 35)
+	armor = list(melee = 80, bullet = 60, laser = 35, energy = 20, bomb = 20, bio = 0, rad = 35)
 	put_on_delay = 60
 	strip_delay = 60
 
