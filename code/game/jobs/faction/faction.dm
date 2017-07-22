@@ -215,4 +215,4 @@ datum/f13_faction/BOS
 1. As a member of the Brotherhood of Steel your job is to find and protect advanced pre-war tech from the savage Wastelanders that would abuse it.<br>\
 2. You value advanced military hardware above almost anything else, and would be difficult to persuade in pursuing anything else.<br>\
 3. The Brotherhood of Steel rarely recruits outsiders, however, they are in fairly desperate times. Who knows what they might do in order to survive?.<br>"
-	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key)
+	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key, /datum/table_recipe/paholodisk)
