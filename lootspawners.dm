@@ -594,16 +594,16 @@ obj
 								lb3.loc=src.loc
 								del src
 							if(4)
-								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/salvaged/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/salvaged/lb2 = new
+								var/obj/item/clothing/suit/armor/f13/brokenpa/t45b/lb = new
+								var/obj/item/clothing/head/helmet/f13/brokenpa/t45b/lb2 = new
 								var/obj/item/clothing/under/f13/ncr/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
 							if(5)
-								var/obj/item/clothing/suit/armor/f13/power_armor/t45d/salvaged/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/f13/t45d/broken/lb2 = new
+								var/obj/item/clothing/suit/armor/f13/brokenpa/t45d/lb = new
+								var/obj/item/clothing/head/helmet/f13/brokenpa/t45d/lb2 = new
 								var/obj/item/clothing/under/f13/combat/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
