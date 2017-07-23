@@ -386,6 +386,9 @@
 	usr << "<span class='notice'>Head Kick</span>: Disarm Harm Harm. Decent damage, forces opponent to drop item in hand."
 	usr << "<span class='notice'>Elbow Drop</span>: Harm Disarm Harm Disarm Harm. Opponent must be on the ground. Deals huge damage, instantly kills anyone in critical condition."
 
+/datum/martial_art/patraining
+	name = "Power Armor Training"
+
 //ITEMS
 
 /obj/item/clothing/gloves/boxing

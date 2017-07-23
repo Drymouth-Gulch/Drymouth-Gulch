@@ -286,7 +286,7 @@
 	desc = "It's leather legion recruit helmet."
 	icon_state = "legrecruit"
 	item_state = "legrecruit"
-	armor = list(melee = 35, bullet = 15, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 35, bullet = 30, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -298,22 +298,24 @@
 	desc = "It's a metal legion veteran helmet, looks pretty sturdy."
 	icon_state = "legvet"
 	item_state = "legvet"
-	armor = list(melee = 40, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 35, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
 	strip_delay = 50
 	burn_state = FIRE_PROOF
+
 /obj/item/clothing/head/helmet/riot/vaultsec
 	name = "security helmet"
 	desc = "A standard issue vault security helmet, pretty robust."
 	armor = list(melee = 60, bullet = 25, laser = 25,energy = 10, bomb = 25, bio = 2, rad = 0)
+
 /obj/item/clothing/head/helmet/f13/legvexil
 	name = "legion vexillarius helmet"
 	desc = "It's leather legion vexillarius helmet."
 	icon_state = "legvexil"
 	item_state = "legvexil"
-	armor = list(melee = 40, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 40, bullet = 35, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -325,7 +327,7 @@
 	desc = "It's leather legion decan helmet."
 	icon_state = "legdecan"
 	item_state = "legdecan"
-	armor = list(melee = 45, bullet = 20, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
+	armor = list(melee = 45, bullet = 35, laser = 10,energy = 0, bomb = 30, bio = 0, rad = 0)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -337,7 +339,7 @@
 	desc = "It's metal legion centurion helmet."
 	icon_state = "legcenturion"
 	item_state = "legcenturion"
-	armor = list(melee = 75, bullet = 40, laser = 25,energy = 15, bomb = 40, bio = 0, rad = 50)
+	armor = list(melee = 75, bullet = 60, laser = 25,energy = 15, bomb = 40, bio = 0, rad = 50)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -422,6 +424,39 @@
 	if (prob(hit_reflect_chance))
 		return 1
 
+//Busted/salvaged power armor helmets, does not require PA training
+
+/obj/item/clothing/head/helmet/f13/brokenpa
+	flags = HEADCOVERSEYES | HEADCOVERSMOUTH | STOPSPRESSUREDMAGE | BLOCKHAIR
+	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE
+	cold_protection = HEAD
+	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
+	heat_protection = HEAD
+	max_heat_protection_temperature = SPACE_HELM_MAX_TEMP_PROTECT
+	unacidable = 1
+	ispowerarmor = 1
+	put_on_delay = 20
+	strip_delay = 200
+	burn_state = FIRE_PROOF
+	flash_protect = 2
+	tint = 0
+
+/obj/item/clothing/head/helmet/f13/brokenpa/t45d
+	name = "broken T-45d power helmet"
+	desc = "This power armor helmet is so decrepit and battle-worn that it have ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
+	icon_state = "brokenhelmet"
+	item_state = "brokenhelmet"
+	armor = list(melee = 30, bullet = 20, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 10)
+	flash_protect = 0
+
+/obj/item/clothing/head/helmet/f13/brokenpa/t45b
+	name = "Salvaged T-45b helmet"
+	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
+	icon_state = "t45bhelmet"
+	item_state = "t45bhelmet"
+	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 30, bio = 100, rad = 20)
+	flash_protect = 0
+
 //Power armor helmets
 
 /obj/item/clothing/head/helmet/power_armor/f13
@@ -439,20 +474,21 @@
 	flash_protect = 2
 	tint = 0
 
+/obj/item/clothing/head/helmet/power_armor/f13/mob_can_equip(mob/user, slot)
+	if (ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if (H.martial_art != /datum/martial_art/patraining && slot == slot_head)
+			H << "<span class='warning'>You don't have the proper training to operate the power armor!</span>"
+			return 0
+			..()
+	return ..()
+
 /obj/item/clothing/head/helmet/power_armor/f13/t45b
 	name = "T-45b power helmet"
 	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
 	icon_state = "t45bhelmet"
 	item_state = "t45bhelmet"
 	armor = list(melee = 70, bullet = 60, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
-
-/obj/item/clothing/head/helmet/power_armor/f13/t45b/salvaged
-	name = "Salvaged T-45b helmet"
-	desc = "It's a pre-War power armor helmet, recovered and maintained by NCR engineers."
-	icon_state = "t45bhelmet"
-	item_state = "t45bhelmet"
-	armor = list(melee = 70, bullet = 50, laser = 50,energy = 50, bomb = 30, bio = 100, rad = 20)
-	flash_protect = 0
 
 /obj/item/clothing/head/helmet/power_armor/f13/advanced
 	name = "Advanced power helmet"
@@ -484,14 +520,6 @@
 	icon_state = "t51bhelmet"
 	item_state = "t51bhelmet"
 	armor = list(melee = 80, bullet = 60, laser = 60,energy = 60, bomb = 40, bio = 100, rad = 60)
-
-/obj/item/clothing/head/helmet/power_armor/f13/t45d/broken
-	name = "broken T-45d power helmet"
-	desc = "This power armor helmet is so decrepit and battle-worn that it have ceased it's primary function of protecting the wearer from harm.<br>It still can provide some very basic protection though."
-	icon_state = "brokenhelmet"
-	item_state = "brokenhelmet"
-	armor = list(melee = 30, bullet = 20, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 10)
-	flash_protect = 0
 
 /obj/item/clothing/head/helmet/power_armor/f13/t45d
 	name = "T-45d power helmet"

@@ -605,6 +605,17 @@
 	show = 0
 	category = CAT_ARMOR
 
+////// BoS
+
+/datum/table_recipe/paholodisk
+	name = "Power Armor Training Disk"
+	result = /obj/item/weapon/holodisk/powerarmor
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/metal = 10)
+	tools = list(/obj/item/device/multitool, /obj/item/weapon/wirecutters)
+	time = 60
+	show = 0
+	category = CAT_MISC
 
 /////// DEN
 
