@@ -96,8 +96,8 @@
 	return
 
 /obj/item/weapon/gun/medbeam/proc/on_beam_tick(var/mob/living/target)
-	target.adjustBruteLoss(-4)
-	target.adjustFireLoss(-4)
+	target.adjustBruteLoss(-1)
+	target.adjustFireLoss(-1)
 	return
 
 /obj/item/weapon/gun/medbeam/proc/on_beam_release(var/mob/living/target)
