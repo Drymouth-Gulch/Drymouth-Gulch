@@ -95,7 +95,7 @@
 
 /mob/living/simple_animal/hostile/deathclaw
 	name = "Deathclaw"
-	desc = "A huge monster"
+	desc = "You'd have to be the meanest, toughest, roughest bastard in the wasteland to have any chance against this thing, and I don't think that's you."
 	icon = 'icons/mob/deathclaw.dmi'
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"
@@ -103,7 +103,8 @@
 	//speak_chance = 40
 	//speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	//speak_emote = list("shouts", "yells")
-	speed = 3
+	speed = -6
+	environment_smash = 2
 	turns_per_move = 5
 	response_help = "touches"
 	response_disarm = "tries to push aside"
@@ -117,6 +118,11 @@
 	melee_damage_upper = 60
 	attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
+	
+/mob/living/simple_animal/hostile/deathclaw/Aggro()
+	..()
+	summon_backup(10)
+	say("HROAAAAAAAAR!")
 
 
 /mob/living/simple_animal/hostile/badmutant
