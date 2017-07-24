@@ -1,6 +1,6 @@
 /mob/living/simple_animal/hostile/robot
 	name = "Protectron"
-	desc = "A prewar Robco brand protectron.."
+	desc = "A prewar Robco brand protectron, still defending what's left of the Old World."
 	icon_state = "protectronWB"
 	icon_living = "protectronWB"
 	icon_dead = "protectronWB-d"
@@ -10,16 +10,14 @@
 	response_help = "pokes"
 	response_disarm = "shoves"
 	response_harm = "hits"
-	speed = 4.5
-	stat_attack = 1
+	speed = 2.5
+	stat_attack = 0
 	robust_searching = 1
 	maxHealth = 300
 	health = 300
 	harm_intent_damage = 15
 	melee_damage_lower = 25
 	melee_damage_upper = 40
-	minimum_distance = 2
-	retreat_distance = 2
 	attacktext = "punches"
 	attack_sound = 'sound/weapons/punch1.ogg'
 	a_intent = "harm"
@@ -29,9 +27,9 @@
 	unsuitable_atmos_damage = 15
 	faction = list("syndicate")
 	status_flags = CANPUSH
-	vision_range = 12
+	vision_range = 9
 	aggro_vision_range = 12
-	idle_vision_range = 12
+	idle_vision_range = 9
 
 /mob/living/simple_animal/hostile/robot/death(gibbed)
 	..(gibbed)
@@ -45,6 +43,9 @@
 	name = "Protectron"
 	desc = "Pre-war type of protectron, hmmm... its really dangerous machine."
 	rapid = 1
+	speed = 9
 	ranged = 1
+	minimum_distance = 4
+	retreat_distance = 4
 	projectiletype = /obj/item/projectile/protectron
 	projectilesound = 'sound/weapons/laser.ogg'
