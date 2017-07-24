@@ -6,13 +6,13 @@
 	icon_gib = "carp_gib"
 	speak_chance = 0
 	turns_per_move = 15
-	butcher_results = list()
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/carpmeat = 3)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	emote_taunt = list("gnashes")
+	emote_taunt = list("buzzes")
 	taunt_chance = 30
-	speed = -5
+	speed = -7
 	maxHealth = 50
 	health = 50
 
@@ -21,7 +21,7 @@
 	melee_damage_upper = 20
 	attacktext = "stings"
 	attack_sound = 'sound/weapons/bite.ogg'
-	speak_emote = list("gnashes")
+	speak_emote = list("buzzes")
 
 	//Space carp aren't affected by cold.
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -47,6 +47,7 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.adjustStaminaLoss(4)
+		H.reagents.add_reagent("carpotoxin",4)
 
 /mob/living/simple_animal/hostile/molerat
 	name = "Molerat"
