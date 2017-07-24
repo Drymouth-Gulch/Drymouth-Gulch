@@ -4,35 +4,6 @@ var/const/BOSI			=(1<<52)
 var/const/BOSK			=(1<<53)
 var/const/BOSS			=(1<<54)
 var/const/BOSP			=(1<<55)*/
-//SourcePony
-/datum/job/messiah
-	title = "Messiah"
-	flag = CULTLEADER
-	department_head = list("nobody")
-	department_flag = WASTELAND
-	faction = "Wasteland"
-	status = "Wastelander"
-	supervisors = "nobody"
-	selection_color = "#ffddf0"
-	minimal_player_age = 7
-	donaters = 1
-	donatorrank = 3
-	outfit = /datum/outfit/job/messiah
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/messiah
-	name = "Messiah"
-	id = null
-	gloves = /obj/item/clothing/gloves/fingerless
-	uniform = /obj/item/clothing/under/rank/chaplain
-	shoes = /obj/item/clothing/shoes/combat/swat
-	suit = /obj/item/clothing/shoes/jackboots
-	backpack_contents = list(/obj/item/ammo_box/a762=2, \
-		/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
-	mask = /obj/item/clothing/mask/gas/syndicate
-	r_hand = /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
 
 
 //SEPERATED

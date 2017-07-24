@@ -10,7 +10,6 @@
 BEFORE ADDING ADMINS TO FALLOUT 13 READ ADMIN_RANKS.TXT
 ###############################################################################################
 Xarvox = President
-Namjay1170 = President
 RenGusta = President
 LaughingRabbit = Elder
 Superballs = Elder

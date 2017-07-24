@@ -140,7 +140,6 @@ var/const/PREACHER			=(1<<29)*/
 var/list/assistant_occupations = list()
 
 var/list/wasteland_occupations = list(
-	"Messiah",
 	"Wastelander",
 	"Raider",
 	"Whore",
