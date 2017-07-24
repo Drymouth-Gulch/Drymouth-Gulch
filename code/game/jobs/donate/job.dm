@@ -34,34 +34,6 @@ var/const/BOSP			=(1<<55)*/
 	mask = /obj/item/clothing/mask/gas/syndicate
 	r_hand = /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
 
-//SourcePony
-/datum/job/mercenary
-	title = "Mercenary"
-	flag = MERCENARY
-	department_head = list("nobody")
-	department_flag = WASTELAND
-	faction = "Wasteland"
-	status = "Wastelander"
-	total_positions = 1
-	spawn_positions = 1
-	supervisors = "the head of security"
-	selection_color = "#ffddf0"
-	minimal_player_age = 7
-	outfit = /datum/outfit/job/mercenary
-
-	access = list()
-	minimal_access = list()
-
-/datum/outfit/job/mercenary
-	name = "Mercenary"
-	id = null
-	uniform = /obj/item/clothing/under/f13/mercadv
-	shoes = /obj/item/clothing/shoes/jackboots
-	suit = /obj/item/clothing/suit/armor/fluff/chestplate/mk2
-	head = /obj/item/clothing/head/helmet/f13/metalmask/mk2
-	glasses = /obj/item/clothing/glasses/sunglasses
-	suit_store = /obj/item/weapon/gun/projectile/automatic/assault_rifle
-	backpack_contents = list(/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
 
 //SEPERATED
 
