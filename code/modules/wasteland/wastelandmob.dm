@@ -104,7 +104,7 @@
 	//speak_chance = 40
 	//speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	//speak_emote = list("shouts", "yells")
-	speed = -6
+	speed = -5
 	environment_smash = 2
 	turns_per_move = 5
 	response_help = "touches"
