@@ -505,7 +505,7 @@
 	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
 
 
-/obj/item/clothing/head/helmet/power_armor/tesla
+/obj/item/clothing/head/helmet/power_armor/f13/tesla
 	name = "tesla power helmet"
 	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
 	icon_state = "tesla"
