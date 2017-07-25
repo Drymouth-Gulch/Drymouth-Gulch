@@ -654,7 +654,7 @@ obj
 								del src
 							if(6)
 								var/obj/item/clothing/suit/armor/f13/power_armor/tesla/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/tesla/lb2 = new
+								var/obj/item/clothing/head/helmet/power_armor/f13/tesla/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
