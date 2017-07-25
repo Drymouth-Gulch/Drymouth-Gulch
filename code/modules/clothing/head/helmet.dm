@@ -477,7 +477,7 @@
 /obj/item/clothing/head/helmet/power_armor/f13/mob_can_equip(mob/user, slot)
 	if (ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if (H.martial_art != /datum/martial_art/patraining && slot == slot_head)
+		if (!H.martial_art && H.martial_art.name != "Power Armor Training" && slot == slot_head)
 			H << "<span class='warning'>You don't have the proper training to operate the power armor!</span>"
 			return 0
 			..()
