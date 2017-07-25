@@ -24,7 +24,7 @@
 
 /obj/item/projectile/bullet/slug
 	damage = 65
-	armour_penetration = -10
+	stamina = 65
 
 /obj/item/projectile/bullet/weakbullet //beanbag, heavy stamina damage
 	damage = 5
@@ -56,8 +56,8 @@
 
 /obj/item/projectile/bullet/pellet
 	name = "pellet"
-	damage = 20
-	armour_penetration = -15
+	damage = 15
+	armour_penetration = -20
 
 /obj/item/projectile/bullet/pellet/weak
 	damage = 3
