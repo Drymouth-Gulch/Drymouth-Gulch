@@ -22,25 +22,14 @@
 	build_path = /obj/item/device/firing_pin/implant/loyalty
 	category = list("Firing Pins")
 
-/datum/design/stunrevolver
-	name = "Stun Revolver"
-	desc = "A high-tech revolver that fires internal, reusable taser cartridges in a revolving cylinder. The cartridges can be recharged using conventional rechargers."
-	id = "stunrevolver"
-	req_tech = list("combat" = 3, "materials" = 3, "powerstorage" = 2)
+/datum/design/bulldog
+	name = "Advanced Shotgun"
+	desc = "A auto pumping shotgun used for close quarters, can be loaded with shells as well as specialized 8 round magazines."
+	id = "bulldog"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 4000, MAT_GLASS = 1000)
-	build_path = /obj/item/weapon/gun/energy/stunrevolver
-	category = list("Weapons")
-
-/datum/design/nuclear_gun
-	name = "Advanced Energy Gun"
-	desc = "An energy gun with an experimental miniaturized reactor."
-	id = "nuclear_gun"
-	req_tech = list("combat" = 4, "materials" = 5, "powerstorage" = 3)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 5000, MAT_GLASS = 1000, MAT_URANIUM = 2000)
-	reliability = 76
-	build_path = /obj/item/weapon/gun/energy/gun/nuclear
+	materials = list(MAT_METAL = 75000, MAT_SILVER = 20000, MAT_GOLD = 20000, MAT_URANIUM = 20000)
+	build_path = /obj/item/weapon/gun/projectile/automatic/shotgun/bulldog
 	category = list("Weapons")
 
 /datum/design/tele_shield
@@ -180,10 +169,62 @@
 	build_path = /obj/item/weaponcrafting/reciever
 	category = list("Weapons")
 
+//Bulldog aka Advanced Shotgun magazines
+
+/datum/design/m12mag
+	name = "Advanced shotgun 8 round slug magazine"
+	desc = "A 8 round drum consisting of slug rounds for the advanced shotgun."
+	id = "m12mag"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g
+	category = list("Weapons")
+
+/datum/design/m12buckshotmag
+	name = "Advanced shotgun 8 round buckshot magazine"
+	desc = "A 8 round drum consisting of buckshot rounds for the advanced shotgun."
+	id = "m12buckshotmag"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g/buckshot
+	category = list("Weapons")
+
+/datum/design/m12stunslugmag
+	name = "Advanced shotgun 8 round stun slug magazine"
+	desc = "A 8 round drum consisting of stun slug rounds for the advanced shotgun."
+	id = "m12stunslugmag"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g/stun
+	category = list("Weapons")
+
+/datum/design/m12dragonmag
+	name = "Advanced shotgun 8 round dragonbreaths magazine"
+	desc = "A 8 round drum consisting of dragonbreath rounds for the advanced shotgun."
+	id = "m12dragonmag"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g/dragon
+	category = list("Weapons")
+
+/datum/design/m12bioterrormag
+	name = "Advanced shotgun 8 round bioterror dart magazine"
+	desc = "A 8 round drum consisting of bioterror rounds for the advanced shotgun."
+	id = "m12bioterrormag"
+	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 15000)
+	build_path = /obj/item/ammo_box/magazine/m12g/bioterror
+	category = list("Weapons")
+
 //WT550 Mags
 /*
 /datum/design/mag_oldsmg
-	name = "WT-550 Auto Gun Magazine (4.6×30mm)"
+	name = "WT-550 Auto Gun Magazine (4.6Ã—30mm)"
 	desc = "A 20 round magazine for the out of date security WT-550 Auto Rifle"
 	id = "mag_oldsmg"
 	req_tech = list("combat" = 1, "materials" = 1)
@@ -193,21 +234,21 @@
 	category = list("Ammo")
 
 /datum/design/mag_oldsmg/ap_mag
-	name = "WT-550 Auto Gun Armour Piercing Magazine (4.6×30mm AP)"
+	name = "WT-550 Auto Gun Armour Piercing Magazine (4.6Ã—30mm AP)"
 	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
 	id = "mag_oldsmg_ap"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtap
 
 /datum/design/mag_oldsmg/ic_mag
-	name = "WT-550 Auto Gun Incendiary Magazine (4.6×30mm IC)"
+	name = "WT-550 Auto Gun Incendiary Magazine (4.6Ã—30mm IC)"
 	desc = "A 20 round armour piercing magazine for the out of date security WT-550 Auto Rifle"
 	id = "mag_oldsmg_ic"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_GLASS = 1000)
 	build_path = /obj/item/ammo_box/magazine/wt550m9/wtic
 
 /datum/design/mag_oldsmg/tx_mag
-	name = "WT-550 Auto Gun Urnaium Magazine (4.6×30mm TX)"
+	name = "WT-550 Auto Gun Urnaium Magazine (4.6Ã—30mm TX)"
 	desc = "A 20 round urnaium tipped magazine for the out of date security WT-550 Auto Rifle"
 	id = "mag_oldsmg_tx"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000)
