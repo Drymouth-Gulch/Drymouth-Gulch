@@ -195,14 +195,14 @@ var/next_external_rsc = 0
 		void = new()
 
 	screen += void*/
-
+	/*
 	if(prefs.lastchangelog != changelog_hash) //bolds the changelog button on the interface so we know there are updates.
 		src << "<span class='info'>You have unread updates in the changelog.</span>"
 		if(config.aggressive_changelog)
 			src.changes()
 		else
 			winset(src, "rpane.changelogb", "background-color=#eaeaea;font-style=bold")
-
+	*/
 	if (ckey in clientmessages)
 		for (var/message in clientmessages[ckey])
 			src << message
