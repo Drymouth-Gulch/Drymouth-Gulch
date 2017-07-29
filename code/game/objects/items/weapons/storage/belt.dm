@@ -70,6 +70,7 @@
 		/obj/item/weapon/reagent_containers/pill,
 		/obj/item/weapon/reagent_containers/pill/patch,
 		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/reagent_containers/stimpak,
 		/obj/item/weapon/lighter,
 		/obj/item/weapon/storage/fancy/cigarettes,
 		/obj/item/weapon/storage/pill_bottle,
