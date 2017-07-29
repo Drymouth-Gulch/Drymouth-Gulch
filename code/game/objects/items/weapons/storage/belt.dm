@@ -192,7 +192,7 @@
 	desc = "A bandolier for holding shotgun ammunition."
 	icon_state = "bandolier"
 	item_state = "bandolier"
-	storage_slots = 6
+	storage_slots = 12
 	can_hold = list(
 		/obj/item/ammo_casing/shotgun
 		)
