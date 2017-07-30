@@ -344,6 +344,15 @@
 	parts = list()
 	category = CAT_MISC
 
+/obj/item/weapon/storage/belt/bandolier
+/datum/table_recipe/bandolier
+	name = "Bandolier"
+	result = /obj/item/weapon/storage/belt/bandolier
+	time = 15
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2)
+	parts = list()
+	category = CAT_MISC
+
 /datum/table_recipe/leatherarmor
 	name = "leather armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
