@@ -59,9 +59,6 @@ mob/proc/get_age_pitch()
 /mob/proc/has_vagina()
 	return (gender == FEMALE)
 
-/mob/proc/has_breasts()
-	return (gender == FEMALE)
-
 /mob/proc/has_anus()
 	return 1
 

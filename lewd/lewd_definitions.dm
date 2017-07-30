@@ -134,7 +134,7 @@
 	user_not_tired = 1
 	require_user_naked = 1
 	require_target_naked = 1
-	require_target_breasts = 1
+	require_target_vagina = 1
 	max_distance = 0
 
 /datum/interaction/lewd/breastfuck/display_interaction(var/mob/user, var/mob/target)
