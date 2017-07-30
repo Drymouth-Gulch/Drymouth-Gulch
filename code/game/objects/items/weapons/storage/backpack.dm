@@ -297,8 +297,18 @@
 	w_class = 3
 	storage_slots = 6
 	can_hold = list(
-		/obj/item/stack/spear
+		/obj/item/stack/spear,
+		/obj/item/weapon/restraints/legcuffs/bola
 		)
+
+/obj/item/weapon/storage/backpack/spearquiver/New()
+	..()
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/weapon/restraints/legcuffs/bola(src)
 
 /obj/item/weapon/storage/backpack/dufflebag
 	name = "dufflebag"
