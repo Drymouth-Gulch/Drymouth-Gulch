@@ -278,8 +278,8 @@
 /obj/item/weapon/storage/belt/legion
 	name = "legionnaire marching belt"
 	desc = "A belt capable of holding the necessities of a legionnaire."
-	icon_state = "ncr_belt"
-	item_state = "ncr_belt"
+	icon_state = "legion_belt"
+	item_state = "legion_belt"
 
 /obj/item/weapon/storage/belt/webbing
 	name = "webbing vest"

@@ -148,7 +148,7 @@
 	icon_state = "machete"
 	item_state = "machete"
 	flags = CONDUCT
-	slot_flags = SLOT_BELT
+	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 35
 	throwforce = 15
 	w_class = 3

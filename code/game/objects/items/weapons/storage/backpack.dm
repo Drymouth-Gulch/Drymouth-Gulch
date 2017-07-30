@@ -289,10 +289,12 @@
 	new /obj/item/stack/tile/plasteel(src)
 	new /obj/item/weapon/crowbar(src)
 
-/obj/item/weapon/storage/backpack/satchel_flat/spearquiver
+/obj/item/weapon/storage/backpack/spearquiver
 	name = "spear quiver"
 	desc = "A leather and iron quiver designed to hold throwing spears."
 	icon_state = "spearquiver_3"
+	item_state = "throwingholster"
+	w_class = 3
 	storage_slots = 6
 	can_hold = list(
 		/obj/item/stack/spear
