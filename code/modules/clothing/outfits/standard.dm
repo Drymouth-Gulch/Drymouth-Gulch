@@ -490,6 +490,8 @@
 
 /datum/outfit/bos_paladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
 	if(visualsOnly)
 		return
 
@@ -522,6 +524,8 @@
 
 /datum/outfit/bos_knight/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
 	if(visualsOnly)
 		return
 
@@ -584,6 +588,8 @@
 
 /datum/outfit/bos_scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
 	if(visualsOnly)
 		return
 

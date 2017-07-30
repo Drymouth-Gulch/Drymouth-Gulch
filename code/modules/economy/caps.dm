@@ -16,11 +16,3 @@
 		icon_state = "20"
 	else
 		icon_state = "[amount]"
-
-/obj/item/stack/caps/New()
-	..()
-	if(prob(20)) //20% chance
-		amount = rand(100,250)
-	else
-		amount = rand(1,100)
-	update_icon()

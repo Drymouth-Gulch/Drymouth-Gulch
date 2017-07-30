@@ -1,6 +1,6 @@
 /obj/mecha/combat/durand
-	desc = "An aging combat exosuit utilized by the Nanotrasen corporation. Originally developed to combat hostile alien lifeforms."
-	name = "\improper Durand"
+	desc = "The pinnacle of powered armor technology in the U.S. military arsenal."
+	name = "\improper T-60b"
 	icon_state = "durand"
 	step_in = 4
 	dir_in = 1 //Facing North.

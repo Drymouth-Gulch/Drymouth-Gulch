@@ -168,7 +168,7 @@
 
 
 /obj/structure/mecha_wreckage/durand
-	name = "\improper Durand wreckage"
+	name = "\improper T-60b wreckage"
 	icon_state = "durand-broken"
 
 /obj/structure/mecha_wreckage/durand/New()

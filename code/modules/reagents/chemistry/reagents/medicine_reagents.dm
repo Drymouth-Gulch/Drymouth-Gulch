@@ -1087,8 +1087,8 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	if(iscarbon(M))
 		var/mob/living/carbon/N = M
 		N.hal_screwyhud = 5
-	if(M.health = M.maxHealth)
-		M.hallucination += 5
+	if(M.health == M.maxHealth)
+		M.hallucination += 1
 	M.status_flags |= IGNORESLOWDOWN
 	M.adjustBruteLoss(-0.50*REM)
 	M.adjustFireLoss(-0.50*REM)

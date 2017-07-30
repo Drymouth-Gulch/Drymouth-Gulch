@@ -232,7 +232,7 @@
 							for(var/mat in materials_used)
 								new_item.materials[mat] = materials_used[mat] / multiplier
 							new_item.autolathe_crafted(src)
-						busy = FALSE
+						busy = 0
 						updateUsrDialog()
 
 		if(href_list["search"])

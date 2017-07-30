@@ -125,44 +125,44 @@
 	construct = new /datum/construction/mecha/durand_chassis(src)
 
 /obj/item/mecha_parts/part/durand_torso
-	name = "\improper Durand torso"
-	desc = "A torso part of Durand. Contains power unit, processing core and life support systems within a robust protective frame."
+	name = "\improper T-60b torso"
+	desc = "A torso part of T-60b. Contains power unit, processing core and life support systems within a robust protective frame."
 	icon_state = "durand_harness"
 	origin_tech = "programming=2;materials=3;biotech=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_head
-	name = "\improper Durand head"
-	desc = "A Durand head. Houses advanced surveilance and targeting sensors."
+	name = "\improper T-60b head"
+	desc = "A T-60b head. Houses advanced surveilance and targeting sensors."
 	icon_state = "durand_head"
 	origin_tech = "programming=2;materials=3;magnets=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_left_arm
-	name = "\improper Durand left arm"
-	desc = "A Durand left arm. Data and power sockets are compatible with most exosuit tools and weapons. Packs a really mean punch as well."
+	name = "\improper T-60b left arm"
+	desc = "A Durand T-60b. Data and power sockets are compatible with most exosuit tools and weapons. Packs a really mean punch as well."
 	icon_state = "durand_l_arm"
 	origin_tech = "programming=2;materials=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_right_arm
-	name = "\improper Durand right arm"
-	desc = "A Durand right arm. Data and power sockets are compatible with most exosuit tools and weapons. Packs a really mean punch as well."
+	name = "\improper T-60b right arm"
+	desc = "A T-60b right arm. Data and power sockets are compatible with most exosuit tools and weapons. Packs a really mean punch as well."
 	icon_state = "durand_r_arm"
 	origin_tech = "programming=2;materials=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_left_leg
-	name = "\improper Durand left leg"
-	desc = "A Durand left leg. Built particlarly sturdy to support the Durand's heavy weight and defensive needs."
+	name = "\improper T-60b left leg"
+	desc = "A T-60b left leg. Built particlarly sturdy to support the Durand's heavy weight and defensive needs."
 	icon_state = "durand_l_leg"
 	origin_tech = "programming=2;materials=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_right_leg
 	name = "\improper Durand right leg"
-	desc = "A Durand right leg. Built particlarly sturdy to support the Durand's heavy weight and defensive needs."
+	desc = "A T-60b right leg. Built particlarly sturdy to support the Durand's heavy weight and defensive needs."
 	icon_state = "durand_r_leg"
 	origin_tech = "programming=2;materials=3;engineering=3"
 
 /obj/item/mecha_parts/part/durand_armor
 	gender = PLURAL
-	name = "\improper Durand armor plates"
+	name = "\improper T-60b armor plates"
 	desc = "A set of armor plates for the Durand. Built heavy to resist an incredible amount of brute force."
 	icon_state = "durand_armor"
 	origin_tech = "materials=5;combat=4;engineering=5"
