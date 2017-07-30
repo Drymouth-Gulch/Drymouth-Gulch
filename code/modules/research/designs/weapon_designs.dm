@@ -211,16 +211,6 @@
 	build_path = /obj/item/ammo_box/magazine/m12g/dragon
 	category = list("Ammo")
 
-/datum/design/m12bioterrormag
-	name = "Advanced shotgun 8 round bioterror dart magazine"
-	desc = "A 8 round drum consisting of bioterror rounds for the advanced shotgun."
-	id = "m12bioterrormag"
-	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 15000)
-	build_path = /obj/item/ammo_box/magazine/m12g/bioterror
-	category = list("Ammo")
-
 //WT550 Mags
 /*
 /datum/design/mag_oldsmg
