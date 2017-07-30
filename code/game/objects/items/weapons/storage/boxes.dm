@@ -826,3 +826,8 @@
 	new /obj/item/ammo_casing/shotgun/ion(src)
 	new /obj/item/ammo_casing/shotgun/ion(src)
 
+/obj/item/weapon/storage/box/firstaid
+	name = "first-aid kit"
+	desc = "A folded cardboard box for holding medical supplies."
+	icon_state = "firstaid_2"
+	item_state = "firstaid"

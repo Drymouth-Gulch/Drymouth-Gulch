@@ -273,6 +273,7 @@
 	level = 1
 	cant_hold = list(/obj/item/weapon/storage/backpack/satchel_flat) //muh recursive backpacks
 
+
 /obj/item/weapon/storage/backpack/satchel_flat/hide(var/intact)
 	if(intact)
 		invisibility = 101
@@ -287,6 +288,15 @@
 	..()
 	new /obj/item/stack/tile/plasteel(src)
 	new /obj/item/weapon/crowbar(src)
+
+/obj/item/weapon/storage/backpack/satchel_flat/spearquiver
+	name = "spear quiver"
+	desc = "A leather and iron quiver designed to hold throwing spears."
+	icon_state = "spearquiver_3"
+	storage_slots = 6
+	can_hold = list(
+		/obj/item/stack/spear
+		)
 
 /obj/item/weapon/storage/backpack/dufflebag
 	name = "dufflebag"

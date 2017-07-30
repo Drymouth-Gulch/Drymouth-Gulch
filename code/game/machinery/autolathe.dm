@@ -222,6 +222,7 @@
 							N.amount = multiplier
 							N.update_icon()
 							N.autolathe_crafted(src)
+							busy = 0
 					else
 						spawn(32*coeff*multiplier)
 						use_power(power)

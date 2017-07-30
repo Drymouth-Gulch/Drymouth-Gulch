@@ -360,3 +360,7 @@
 /obj/item/ammo_casing/c22
 	caliber = "22"
 	projectile_type = /obj/item/projectile/bullet/weakbullet4
+
+/obj/item/ammo_casing/c2mm
+	caliber = "2mm"
+	projectile_type = /obj/item/projectile/bullet/sniper/gauss
