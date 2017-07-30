@@ -296,6 +296,7 @@
 	item_state = "throwingholster"
 	w_class = 3
 	storage_slots = 6
+	max_combined_w_class = 30 // Just guessing here, shouldn't be a problem?
 	can_hold = list(
 		/obj/item/stack/spear,
 		/obj/item/weapon/restraints/legcuffs/bola
