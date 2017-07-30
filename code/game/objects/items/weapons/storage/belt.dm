@@ -280,6 +280,7 @@
 	desc = "A belt capable of holding the necessities of a legionnaire."
 	icon_state = "legion_belt"
 	item_state = "legion_belt"
+	max_w_class = 3 // This is so that it can hold the Machete.
 
 /obj/item/weapon/storage/belt/webbing
 	name = "webbing vest"
