@@ -76,7 +76,7 @@
 
 /datum/interaction/lewd/finger
 	command = "finger"
-	description = "Finger them."
+	description = "Finger their pussy."
 	require_user_hands = 1
 	require_target_vagina = 1
 	interaction_sound = null
@@ -86,6 +86,20 @@
 
 /datum/interaction/lewd/finger/display_interaction(var/mob/user, var/mob/target)
 	user.do_fingering(target)
+
+/datum/interaction/lewd/fingerass
+	command = "fingerm"
+	description = "Finger their ass."
+	require_user_hands = 1
+	require_target_anus = 1
+	interaction_sound = null
+	user_not_tired = 1
+	require_target_naked = 1
+	max_distance = 0
+
+/datum/interaction/lewd/fingerass/display_interaction(var/mob/user, var/mob/target)
+	user.do_fingerass(target)
+
 
 /datum/interaction/lewd/facefuck
 	command = "facefuck"
@@ -99,9 +113,36 @@
 /datum/interaction/lewd/facefuck/display_interaction(var/mob/user, var/mob/target)
 	user.do_facefuck(target)
 
+/datum/interaction/lewd/handjob
+	command = "handjob"
+	description = "Jerk them off."
+	interaction_sound = null
+	require_user_hands = 1
+	require_target_penis = 1
+	user_not_tired = 1
+	require_target_naked = 1
+	max_distance = 1
+
+/datum/interaction/lewd/handjob/display_interaction(var/mob/user, var/mob/target)
+	user.do_handjob(target)
+
+/datum/interaction/lewd/breastfuck
+	command = "breastfuck"
+	description = "Fuck their breasts."
+	interaction_sound = null
+	require_user_penis = 1
+	user_not_tired = 1
+	require_user_naked = 1
+	require_target_naked = 1
+	require_target_breasts = 1
+	max_distance = 0
+
+/datum/interaction/lewd/breastfuck/display_interaction(var/mob/user, var/mob/target)
+	user.do_breastfuck(target)
+
 /datum/interaction/lewd/mount
 	command = "mount"
-	description = "Mount their cock."
+	description = "Mount with your pussy."
 	require_user_vagina = 1
 	require_target_penis = 1
 	interaction_sound = null
@@ -113,6 +154,22 @@
 
 /datum/interaction/lewd/mount/display_interaction(var/mob/user, var/mob/target)
 	user.do_mount(target)
+
+/datum/interaction/lewd/mountass
+	command = "mountm"
+	description = "Mount with your ass."
+	require_user_vagina = 0
+	require_user_anus = 1
+	require_target_penis = 1
+	interaction_sound = null
+	user_not_tired = 1
+	target_not_tired = 1
+	require_user_naked = 1
+	require_target_naked = 1
+	max_distance = 0
+
+/datum/interaction/lewd/mountass/display_interaction(var/mob/user, var/mob/target)
+	user.do_mountass(target)
 
 /datum/interaction/lewd/rimjob
 	command = "rimjob"
