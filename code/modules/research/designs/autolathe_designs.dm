@@ -576,7 +576,7 @@
 	id = "a556"
 	build_type = AUTOLATHE
 	materials = list(MAT_METAL = 40000)
-	build_path = /obj/item/ammo_casing/a556/surplus
+	build_path = /obj/item/ammo_box/a556/surplus
 	category = list("hacked", "Security")
 
 /datum/design/spraycan

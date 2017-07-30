@@ -259,7 +259,7 @@ obj
 									del src
 					tier5
 						New()
-							switch(rand(1,10))
+							switch(rand(1,11))
 								if(1)
 									var/obj/item/weapon/gun/energy/laser/plasma_rifle/lb = new
 									lb.loc=src.loc
@@ -281,7 +281,7 @@ obj
 									lb.loc=src.loc
 									del src
 								if(6)
-									var/obj/item/weapon/gun/projectile/automatic/shotgun/pancor/lb = new
+									var/obj/item/weapon/gun/projectile/automatic/shotgun/caws/lb = new
 									lb.loc=src.loc
 									del src
 								if(7)
@@ -298,6 +298,10 @@ obj
 									del src
 								if(10)
 									var/obj/item/weapon/gun/projectile/automatic/assault_rifle/infiltrator/lb = new
+									lb.loc=src.loc
+									del src
+								if(11)
+									var/obj/item/weapon/gun/projectile/automatic/bozar/lb = new
 									lb.loc=src.loc
 									del src
 					ammo
@@ -654,7 +658,7 @@ obj
 								del src
 							if(6)
 								var/obj/item/clothing/suit/armor/f13/power_armor/tesla/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/tesla/lb2 = new
+								var/obj/item/clothing/head/helmet/power_armor/f13/tesla/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
