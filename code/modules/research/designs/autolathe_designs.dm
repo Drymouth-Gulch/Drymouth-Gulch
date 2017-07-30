@@ -571,6 +571,14 @@
 	build_path = /obj/item/ammo_box/needler
 	category = list("hacked", "Security")
 
+/datum/design/a556
+	name = "ammo box (5.56x45mm Surplus)"
+	id = "a556"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 40000)
+	build_path = /obj/item/ammo_casing/a556/surplus
+	category = list("hacked", "Security")
+
 /datum/design/spraycan
 	name = "Spraycan"
 	id = "spraycan"

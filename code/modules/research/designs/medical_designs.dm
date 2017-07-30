@@ -107,7 +107,7 @@
 	build_path = /obj/item/bodybag/bluespace
 	category = list("Medical Designs")
 
-/datum/design/plasmarefiller
+//datum/design/plasmarefiller
 	name = "Plasma-man jumpsuit refill"
 	desc = "A refill pack for the auto-extinguisher on Plasma-man suits."
 	id = "plasmarefiller"

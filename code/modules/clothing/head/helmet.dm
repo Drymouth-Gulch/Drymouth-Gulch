@@ -94,10 +94,10 @@
 
 /obj/item/clothing/head/helmet/swat
 	name = "\improper SWAT helmet"
-	desc = "An extremely robust, space-worthy helmet in a nefarious red and black stripe pattern."
+	desc = "A decent helmet providing head protection"
 	icon_state = "swatsyndie"
 	item_state = "swatsyndie"
-	armor = list(melee = 60, bullet = 40, laser = 45,energy = 25, bomb = 50, bio = 10, rad = 0)
+	armor = list(melee = 40, bullet = 20, laser = 25,energy = 15, bomb = 20, bio = 10, rad = 0)
 	cold_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELM_MIN_TEMP_PROTECT
 	heat_protection = HEAD
