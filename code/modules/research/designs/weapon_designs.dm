@@ -179,7 +179,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g
-	category = list("Weapons")
+	category = list("Ammo")
 
 /datum/design/m12buckshotmag
 	name = "Advanced shotgun 8 round buckshot magazine"
@@ -189,7 +189,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/buckshot
-	category = list("Weapons")
+	category = list("Ammo")
 
 /datum/design/m12stunslugmag
 	name = "Advanced shotgun 8 round stun slug magazine"
@@ -199,7 +199,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/stun
-	category = list("Weapons")
+	category = list("Ammo")
 
 /datum/design/m12dragonmag
 	name = "Advanced shotgun 8 round dragonbreaths magazine"
@@ -209,7 +209,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/dragon
-	category = list("Weapons")
+	category = list("Ammo")
 
 /datum/design/m12bioterrormag
 	name = "Advanced shotgun 8 round bioterror dart magazine"
@@ -219,7 +219,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/bioterror
-	category = list("Weapons")
+	category = list("Ammo")
 
 //WT550 Mags
 /*
