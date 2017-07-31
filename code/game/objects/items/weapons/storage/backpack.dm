@@ -289,14 +289,27 @@
 	new /obj/item/stack/tile/plasteel(src)
 	new /obj/item/weapon/crowbar(src)
 
-/obj/item/weapon/storage/backpack/satchel_flat/spearquiver
+/obj/item/weapon/storage/backpack/spearquiver
 	name = "spear quiver"
 	desc = "A leather and iron quiver designed to hold throwing spears."
 	icon_state = "spearquiver_3"
+	item_state = "throwingholster"
+	w_class = 3
 	storage_slots = 6
+	max_combined_w_class = 30 // Just guessing here, shouldn't be a problem?
 	can_hold = list(
-		/obj/item/stack/spear
+		/obj/item/stack/spear,
+		/obj/item/weapon/restraints/legcuffs/bola
 		)
+
+/obj/item/weapon/storage/backpack/spearquiver/New()
+	..()
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/stack/spear(src)
+	new /obj/item/weapon/restraints/legcuffs/bola(src)
 
 /obj/item/weapon/storage/backpack/dufflebag
 	name = "dufflebag"

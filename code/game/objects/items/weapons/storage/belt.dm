@@ -280,8 +280,13 @@
 /obj/item/weapon/storage/belt/legion
 	name = "legionnaire marching belt"
 	desc = "A belt capable of holding the necessities of a legionnaire."
-	icon_state = "ncr_belt"
-	item_state = "ncr_belt"
+	icon_state = "legion_belt"
+	item_state = "legion_belt"
+	max_w_class = 3 // This is so that it can hold the Machete.
+	cant_hold = list(
+		/obj/item/weapon/gun/,
+		/obj/item/weapon/storage/
+		)
 
 /obj/item/weapon/storage/belt/webbing
 	name = "webbing vest"
