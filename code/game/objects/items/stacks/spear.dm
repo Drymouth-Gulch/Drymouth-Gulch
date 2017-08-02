@@ -9,12 +9,10 @@
 	w_class = 3
 	force = 20
 	throwforce = 40		//I need to add armor pen eventually.
-	throw_speed = 3
+	throw_speed = 2
 	throw_range = 7
 	materials = list(MAT_METAL=1000)
-	embed_chance = 100
-	embedded_fall_chance = 80
-	embedded_impact_pain_multiplier = 7
+	embedded_impact_pain_multiplier = 3
 	max_amount = 5
 	attack_verb = list("attacked", "poked", "jabbed", "torn", "gored")
 	sharpness = IS_SHARP
