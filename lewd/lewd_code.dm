@@ -48,7 +48,7 @@
 				else
 					message = "cums on \the [partner]."
 			if(CUM_TARGET_BREASTS)
-				if(partner.is_nude() && partner.has_breasts())
+				if(partner.is_nude() && partner.has_vagina())
 					message = "cums onto \the [partner]'s breasts."
 				else
 					message = "cums on \the [partner]'s chest and neck."
@@ -220,14 +220,14 @@
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/do_fingering(var/mob/partner)
-	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s pussy.", "fingers \the [partner] hard."))].</span>")
+	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s pussy.", "fingers \the [partner] hard."))]</span>")
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(partner, src)
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/do_fingerass(var/mob/partner)
-	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s asshole.", "fingers \the [partner] hard."))].</span>")
+	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s asshole.", "fingers \the [partner] hard."))]</span>")
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(partner, src)
@@ -250,9 +250,9 @@
 		message = "wraps their hand around \the [partner]'s cock."
 		partner.set_is_fucking(src, CUM_TARGET_HAND)
 
-	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
+	playsound(src, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
 	visible_message("<b>\The [src]</b> [message]")
-	handle_post_sex(lust_increase, CUM_TARGET_HAND, partner)
+	partner.handle_post_sex(lust_increase, CUM_TARGET_HAND, src)
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
