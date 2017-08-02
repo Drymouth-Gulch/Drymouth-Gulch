@@ -105,3 +105,4 @@
 #define CUM_TARGET_VAGINA "vagina"
 #define CUM_TARGET_ANUS "anus"
 #define CUM_TARGET_HAND "hand"
+#define CUM_TARGET_BREASTS "breasts"
