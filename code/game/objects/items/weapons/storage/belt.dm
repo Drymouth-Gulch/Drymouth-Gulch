@@ -61,6 +61,7 @@
 	desc = "Can hold various medical equipment."
 	icon_state = "medicalbelt"
 	item_state = "medical"
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
 		/obj/item/weapon/dnainjector,
@@ -77,7 +78,9 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/reagent_containers/hypospray,
 		/obj/item/device/rad_laser,
-		/obj/item/device/sensor_device
+		/obj/item/device/sensor_device,
+		/obj/item/weapon/reagent_containers/stimpak,
+		/obj/item/weapon/reagent_containers/blood/radaway
 		)
 
 
@@ -192,9 +195,10 @@
 	desc = "A bandolier for holding shotgun ammunition."
 	icon_state = "bandolier"
 	item_state = "bandolier"
-	storage_slots = 6
+	storage_slots = 14
 	can_hold = list(
-		/obj/item/ammo_casing/shotgun
+		/obj/item/ammo_casing,
+		/obj/item/ammo_box/magazine
 		)
 
 /obj/item/weapon/storage/belt/holster
