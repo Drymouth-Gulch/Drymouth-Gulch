@@ -279,10 +279,10 @@
 	new /obj/item/weapon/reagent_containers/pill/mentats(src)
 	new /obj/item/weapon/reagent_containers/pill/mentats(src)
 	new /obj/item/weapon/reagent_containers/pill/mentats(src)
-
+	
 /obj/item/weapon/storage/pill_bottle/fixer
 	name = "tin of fixer"
-	icon_state = "fixer"
+	icon_state = "mentats"
 	desc = "A tin container of fixer."
 
 /obj/item/weapon/storage/pill_bottle/fixer/New()
