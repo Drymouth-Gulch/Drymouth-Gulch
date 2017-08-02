@@ -145,7 +145,7 @@
 /obj/item/weapon/machete
 	name = "Machete"
 	desc = "The machete appears to be a makeshift weapon, and consists of a lawn mower blade strapped to a wooden handle. It is the primary melee weapon of Caesar's Legion. Aside from having a low Strength requirement, it also does bonus damage to limbs."
-	icon_state = "imp_machete"
+	icon_state = "machete"
 	item_state = "machete"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT
