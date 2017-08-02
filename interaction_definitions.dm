@@ -70,38 +70,3 @@
 	simple_message = "USER high fives TARGET!"
 	interaction_sound = 'honk/sound/interactions/slap.ogg'
 	needs_physical_contact = 1
-
-/datum/interaction/headpat
-    command = "headpat"
-    description = "Pat their head. Aww..."
-    require_user_hands = 1
-    simple_message = "USER headpats TARGET!"
-    needs_physical_contact = 1
-
-/datum/interaction/salute
-    command = "salute"
-    description = "Give them a firm salute!"
-    require_user_hands = 1
-    simple_message = "USER salutes TARGET sharply!"
-    max_distance = 25
-
-/datum/interaction/fistbump
-    command = "fistbump"
-    description = "Bump it!"
-    require_user_hands = 1
-    simple_message = "USER fistbumps TARGET! Yeah!"
-    needs_physical_contact = 1
-
-/datum/interaction/pinkypromise
-    command = "pinkypromise"
-    description = "Make a pinky promise with them!"
-    require_user_hands = 1
-    simple_message = "USER hooks their pinky with TARGET's! Pinky Promise!"
-    needs_physical_contact = 1
-
-/datum/interaction/bird
-    command = "bird"
-    description = "Flip them the bird!"
-    require_user_hands = 1
-    simple_message = "USER gives TARGET the bird!"
-    max_distance = 25
