@@ -10,7 +10,7 @@
 		dat += "<br>...are sexually exhausted for the time being."
 	if(is_nude())
 		dat += "<br>...are naked."
-		if(has_breasts())
+		if(has_vagina())
 			dat += "<br>...have breasts."
 		if(has_penis())
 			dat += "<br>...have a penis."
