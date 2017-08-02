@@ -464,8 +464,6 @@
 	damageS=10
 	rangeG=0
 	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
-	zoomable = TRUE
-	zoom_amt = 7
 
 /obj/item/weapon/gun/projectile/automatic/bozar/New()
 	..()
