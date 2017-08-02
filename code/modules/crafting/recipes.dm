@@ -59,6 +59,15 @@
 	time = 40
 	category = CAT_WEAPON
 
+/datum/table_recipe/dynamite
+	name = "Dynamite"
+	result = /obj/item/weapon/grenade/syndieminibomb
+	reqs = list(/datum/reagent/blackpowder = 50,
+				/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/metal = 5)
+	time = 60
+	category = CAT_WEAPON
+
 /datum/table_recipe/stunprod
 	name = "Stunprod"
 	result = /obj/item/weapon/melee/baton/cattleprod
@@ -335,6 +344,15 @@
 	parts = list()
 	category = CAT_MISC
 
+/obj/item/weapon/storage/belt/bandolier
+/datum/table_recipe/bandolier
+	name = "Bandolier"
+	result = /obj/item/weapon/storage/belt/bandolier
+	time = 15
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2)
+	parts = list()
+	category = CAT_MISC
+
 /datum/table_recipe/leatherarmor
 	name = "leather armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
@@ -407,6 +425,16 @@
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
 	time = 20
+	category = CAT_MED
+
+/datum/table_recipe/healpoultice
+	name = "Healing poultice"
+	result = /obj/item/weapon/reagent_containers/pill/patch/healpoultice
+	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/feracactus = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/fungus = 1)
+	time = 40
 	category = CAT_MED
 
 /datum/table_recipe/stimpak
@@ -596,6 +624,17 @@
 	show = 0
 	category = CAT_ARMOR
 
+////// BoS
+
+/datum/table_recipe/paholodisk
+	name = "Power Armor Training Disk"
+	result = /obj/item/weapon/holodisk/powerarmor
+	reqs = list(/obj/item/stack/cable_coil = 5,
+				/obj/item/stack/sheet/metal = 10)
+	tools = list(/obj/item/device/multitool, /obj/item/weapon/wirecutters)
+	time = 60
+	show = 0
+	category = CAT_MISC
 
 /////// DEN
 

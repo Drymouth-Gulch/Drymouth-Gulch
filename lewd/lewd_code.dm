@@ -42,6 +42,16 @@
 					message = "cums in \the [partner]'s asshole."
 				else
 					message = "cums on \the [partner]'s backside."
+			if(CUM_TARGET_HAND)
+				if(partner.has_hand())
+					message = "cums in \the [partner]'s hand."
+				else
+					message = "cums on \the [partner]."
+			if(CUM_TARGET_BREASTS)
+				if(partner.is_nude() && partner.has_breasts())
+					message = "cums onto \the [partner]'s breasts."
+				else
+					message = "cums on \the [partner]'s chest and neck."
 			else
 				message = "cums on the floor!"
 
@@ -64,10 +74,10 @@
 		add_logs(partner, src, "came on")
 
 	if(multiorgasms > (sexual_potency/3))
-		refactory_period = 45
+		refactory_period = 10
 		druggy = 30
 	else
-		refactory_period = rand(30, 45)
+		refactory_period = rand(5, 10)
 		druggy = 6
 
 /mob/living/carbon/human/cum(var/mob/partner, var/target_orifice)
@@ -183,9 +193,9 @@
 	var/message
 	var/lust_increase = 10
 	if(partner.is_fucking(src, CUM_TARGET_VAGINA))
-		message = "rides \the [partner]'s dick"
+		message = "rides \the [partner]'s dick."
 	else
-		message = "slides themselves onto \the [partner]'s cock"
+		message = "slides their pussy onto \the [partner]'s cock."
 		partner.set_is_fucking(src, CUM_TARGET_VAGINA)
 	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
 	visible_message("<b>\The [src]</b> [message]")
@@ -194,8 +204,30 @@
 	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
+/mob/proc/do_mountass(var/mob/partner)
+	var/message
+	var/lust_increase = 10
+	if(partner.is_fucking(src, CUM_TARGET_ANUS))
+		message = "rides \the [partner]'s dick."
+	else
+		message = "lowers their ass onto \the [partner]'s cock."
+		partner.set_is_fucking(src, CUM_TARGET_ANUS)
+	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
+	visible_message("<b>\The [src]</b> [message]")
+	partner.handle_post_sex(lust_increase, CUM_TARGET_ANUS, src)
+	handle_post_sex(lust_increase, null, partner)
+	partner.dir = get_dir(partner,src)
+	do_fucking_animation(get_dir(src, partner))
+
 /mob/proc/do_fingering(var/mob/partner)
-	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner]", "fingers \the [partner]'s pussy", "fingers \the [partner] hard"))].</span>")
+	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s pussy.", "fingers \the [partner] hard."))].</span>")
+	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
+	partner.handle_post_sex(10, null, src)
+	partner.dir = get_dir(partner, src)
+	do_fucking_animation(get_dir(src, partner))
+
+/mob/proc/do_fingerass(var/mob/partner)
+	visible_message("<b>\The [src]<b> [pick(list("fingers \the [partner].", "fingers \the [partner]'s asshole.", "fingers \the [partner] hard."))].</span>")
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(partner, src)
@@ -206,6 +238,38 @@
 	playsound(loc, "honk/sound/interactions/champ_fingering.ogg", 50, 1, -1)
 	partner.handle_post_sex(10, null, src)
 	partner.dir = get_dir(src, partner)
+	do_fucking_animation(get_dir(src, partner))
+
+/mob/proc/do_handjob(var/mob/partner)
+	var/message
+	var/lust_increase = 10
+
+	if(partner.is_fucking(src, CUM_TARGET_HAND))
+		message = "[pick(list("jerks \the [partner] off.", "works \the [partner]'s shaft.", "wanks \the [partner]'s cock hard."))]"
+	else
+		message = "wraps their hand around \the [partner]'s cock."
+		partner.set_is_fucking(src, CUM_TARGET_HAND)
+
+	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
+	visible_message("<b>\The [src]</b> [message]")
+	handle_post_sex(lust_increase, CUM_TARGET_HAND, partner)
+	partner.dir = get_dir(partner,src)
+	do_fucking_animation(get_dir(src, partner))
+
+/mob/proc/do_breastfuck(var/mob/partner)
+	var/message
+	var/lust_increase = 10
+
+	if(is_fucking(partner, CUM_TARGET_BREASTS))
+		message = "[pick(list("fucks \the [partner]'s' breasts.", "grinds their cock between \the [partner]'s boobs.", "thrusts into \the [partner]'s tits."))]"
+	else
+		message = "pushes \the [partner]'s breasts together and presses his dick between them."
+		set_is_fucking(partner , CUM_TARGET_BREASTS)
+
+	playsound(loc, "honk/sound/interactions/bang[rand(1, 3)].ogg", 70, 1, -1)
+	visible_message("<b>\The [src]</b> [message]")
+	handle_post_sex(lust_increase, CUM_TARGET_BREASTS, partner)
+	partner.dir = get_dir(partner,src)
 	do_fucking_animation(get_dir(src, partner))
 
 /mob/proc/handle_post_sex(var/amount, var/orifice, var/mob/partner)

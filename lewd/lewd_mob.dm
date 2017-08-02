@@ -62,6 +62,9 @@ mob/proc/get_age_pitch()
 /mob/proc/has_anus()
 	return 1
 
+/mob/proc/has_hand()
+	return 1
+
 ///mob/living/carbon/human/has_penis()
 	//return species.has_penis(src)
 

@@ -10,6 +10,8 @@
 		dat += "<br>...are sexually exhausted for the time being."
 	if(is_nude())
 		dat += "<br>...are naked."
+		if(has_breasts())
+			dat += "<br>...have breasts."
 		if(has_penis())
 			dat += "<br>...have a penis."
 		if(has_vagina())
@@ -102,3 +104,4 @@
 #define CUM_TARGET_MOUTH "mouth"
 #define CUM_TARGET_VAGINA "vagina"
 #define CUM_TARGET_ANUS "anus"
+#define CUM_TARGET_HAND "hand"

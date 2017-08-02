@@ -69,8 +69,8 @@
 	var/wikiurl = "http://www.fallss.esy.es/wiki/doku.php?id=ru:start" // default wiki link
 	var/forumurl = "https://fallout13.us/" // default forums
 	var/rulesurl = "https://fallout13.us/viewtopic.php?f=12&t=128&sid=3e22d9ba8496594efce8d590d3260e21" // default rules
-	var/githuburl = "https://bitbucket.org/Jackerzz/fallout/issues?status=new&status=open" //default github
-	var/discordurl = "https://discord.gg/aQ8ch8x"
+	var/githuburl = "https://github.com/Drymouth-Gulch/Drymouth-Gulch" //default github
+	var/discordurl = "https://discord.gg/gCfPS9R"
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0
 
@@ -286,7 +286,7 @@
 				if("no_dead_vote")
 					config.vote_no_dead = 1
 				if("default_no_vote")
-					config.vote_no_default = 1
+					config.vote_no_default = 0
 				if("vote_delay")
 					config.vote_delay = text2num(value)
 				if("vote_period")

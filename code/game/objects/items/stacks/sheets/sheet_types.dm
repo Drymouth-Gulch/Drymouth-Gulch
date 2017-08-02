@@ -108,6 +108,7 @@ var/global/list/datum/stack_recipe/wood_recipes = list ( \
 	new/datum/stack_recipe("display case chassis", /obj/structure/displaycase_chassis, 5, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("wooden buckler", /obj/item/weapon/shield/riot/buckler, 20, time = 40), \
 	new/datum/stack_recipe("campfire", /obj/structure/campfire, 5, time = 40), \
+	new/datum/stack_recipe("cross", /obj/structure/kitchenspike/cross, 15, time = 30), \
 	)
 
 /obj/item/stack/sheet/mineral/wood
@@ -198,6 +199,7 @@ var/global/list/datum/stack_recipe/cardboard_recipes = list ( \
 	new/datum/stack_recipe("pizza box", /obj/item/pizzabox), \
 	new/datum/stack_recipe("folder", /obj/item/weapon/folder), \
 	new/datum/stack_recipe("large box", /obj/structure/closet/cardboard, 4), \
+	new/datum/stack_recipe("first-aid kit", /obj/item/weapon/storage/box/firstaid), \
 )
 
 /obj/item/stack/sheet/cardboard	//BubbleWrap

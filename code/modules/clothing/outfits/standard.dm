@@ -473,7 +473,7 @@
 /datum/outfit/bos_paladin
 	name = "BoS Paladin"
 	id = /obj/item/weapon/card/id/bos
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/device/radio/headset/heads/hos/alt
@@ -487,9 +487,15 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
+	
+/datum/outfit/bos_paladin/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
+	if(visualsOnly)
+		return
 
 /datum/outfit/bos_paladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 
@@ -505,12 +511,12 @@
 /datum/outfit/bos_knight
 	name = "BoS Knight"
 	id = /obj/item/weapon/card/id/bos
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/device/radio/headset/heads/hos/alt
-	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
-	head = /obj/item/clothing/head/helmet/power_armor/f13/t51b
+	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
+	head = /obj/item/clothing/head/helmet/power_armor/f13/t45d
 	suit_store = /obj/item/weapon/gun/energy/laser/scatter
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
@@ -519,9 +525,15 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
+	
+/datum/outfit/bos_knight/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
+	if(visualsOnly)
+		return
 
 /datum/outfit/bos_knight/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 
@@ -537,7 +549,7 @@
 /datum/outfit/bos_initiate
 	name = "BoS Initiate"
 	id = /obj/item/weapon/card/id/bos
-	uniform = /obj/item/clothing/under/syndicate
+	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	ears = /obj/item/device/radio/headset/heads/hos/alt
@@ -581,9 +593,15 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
+		
+/datum/outfit/bos_scribe/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
+	if(visualsOnly)
+		return
 
 /datum/outfit/bos_scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	H.faction = ("BOS")
 	if(visualsOnly)
 		return
 
@@ -595,7 +613,3 @@
 	W.access += get_centcom_access("BoS Scribe")
 	W.assignment = "BoS Scribe"
 	W.update_label()
-
-
-
-

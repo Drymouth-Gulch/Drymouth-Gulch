@@ -222,14 +222,19 @@
 							N.amount = multiplier
 							N.update_icon()
 							N.autolathe_crafted(src)
+							busy = 0
 					else
-						var/list/materials_used = list(MAT_METAL=metal_cost/coeff, MAT_GLASS=glass_cost/coeff)
+						spawn(32*coeff*multiplier)
+						use_power(power)
+						var/list/materials_used = list(MAT_METAL=metal_cost*coeff*multiplier, MAT_GLASS=glass_cost*coeff*multiplier)
 						materials.use_amount(materials_used)
-						var/obj/item/new_item = new being_built.build_path(T)
-						new_item.materials = materials_used.Copy()
-						new_item.autolathe_crafted(src)
-					busy = 0
-					src.updateUsrDialog()
+						for(var/i=1, i<=multiplier, i++)
+							var/obj/item/new_item = new being_built.build_path(T)
+							for(var/mat in materials_used)
+								new_item.materials[mat] = materials_used[mat] / multiplier
+							new_item.autolathe_crafted(src)
+						busy = 0
+						updateUsrDialog()
 
 		if(href_list["search"])
 			matching_designs.Cut()
@@ -306,6 +311,11 @@
 				dat += " <a href='?src=\ref[src];make=[D.id];multiplier=25'>x25</a>"
 			if(max_multiplier > 0 && !disabled)
 				dat += " <a href='?src=\ref[src];make=[D.id];multiplier=[max_multiplier]'>x[max_multiplier]</a>"
+		else
+			if(!disabled && can_build(D, 5))
+				dat += " <a href='?src=\ref[src];make=[D.id];multiplier=5'>x5</a>"
+			if(!disabled && can_build(D, 10))
+				dat += " <a href='?src=\ref[src];make=[D.id];multiplier=10'>x10</a>"
 
 		dat += "[get_design_cost(D)]<br>"
 

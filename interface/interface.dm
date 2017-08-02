@@ -11,7 +11,7 @@
 	else
 		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
 	return
-
+/*
 /client/verb/wiki()
 	set name = "Wiki"
 	set desc = "Visit the wiki."
@@ -35,7 +35,7 @@
 	else
 		src << "<span class='danger'>The forum URL is not set in the server configuration.</span>"
 	return
-
+*/
 /client/verb/rules()
 	set name = "Rules"
 	set desc = "Show Server Rules."
@@ -48,10 +48,10 @@
 	)
 	src << browse('html/rules.html', "size=320x640;window=rules")
 	return
-/*
+
 /client/verb/github()
-	set name = "Bug Tracker"
-	set desc = "Tell us about bugs"
+	set name = "Github"
+	set desc = "Watch us buff Protectrons"
 	set hidden = 1
 	if(config.githuburl)
 		if(alert("This will open the Github repository in your browser. Are you sure?",,"Yes","No")=="No")
@@ -60,7 +60,7 @@
 	else
 		src << "<span class='danger'>The Github URL is not set in the server configuration.</span>"
 	return
-*/
+/*
 /client/verb/reportissue()
 	set name = "Report issue"
 	set desc = "Report an issue"
@@ -72,7 +72,7 @@
 	else
 		src << "<span class='danger'>The BitBucket URL is not set in the server configuration.</span>"
 	return
-
+*/
 /client/verb/hotkeys_help()
 	set name = "hotkeys-help"
 	set category = "OOC"

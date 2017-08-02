@@ -38,7 +38,6 @@ var/const/AI				=(1<<6)
 var/const/CYBORG			=(1<<7)
 
 var/const/WASTELAND			=(1<<5)
-var/const/MERCENARY			=(1<<0)
 var/const/CULTLEADER		=(1<<1)
 var/const/WASTELANDER		=(1<<2)
 var/const/RAIDER			=(1<<3)
@@ -141,8 +140,6 @@ var/const/PREACHER			=(1<<29)*/
 var/list/assistant_occupations = list()
 
 var/list/wasteland_occupations = list(
-	"Mercenary",
-	"Messiah",
 	"Wastelander",
 	"Raider",
 	"Whore",

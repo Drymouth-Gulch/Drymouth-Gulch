@@ -917,7 +917,7 @@
 	item_state = "bl_suit"
 	item_color = "enclaveo"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 20, bullet = 10, laser = 5,energy = 5, bomb = 5, bio = 0, rad = 5)
+	armor = list(melee = 10, bullet = 10, laser = 5,energy = 5, bomb = 5, bio = 0, rad = 5)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/combat
@@ -927,7 +927,7 @@
 	item_state = "bl_suit"
 	item_color = "combat_shirt"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS
-	armor = list(melee = 15, bullet = 15, laser = 5,energy = 5, bomb = 5, bio = 0, rad = 5)
+	armor = list(melee = 5, bullet = 5, laser = 0,energy = 0, bomb = 5, bio = 0, rad = 0)
 	can_adjust = 0
 
 /obj/item/clothing/under/f13/settler
@@ -1046,7 +1046,6 @@
 	icon_state = "vault13"
 	item_color = "vault13"
 
-
 /obj/item/clothing/under/f13/recon
 	name = "recon armor"
 	desc = "Intended to serve as the under-armor of the T-45d power armor, the recon armor is a vacuum-sealed asbestos jumpsuit covering the entire body.<br>Attached to it is the interface and mounts for the power armor.<br>Its purpose is twofold - it allows the user to actually operate the armor and protect soft tissue from moving parts inside the suit and heat."
@@ -1055,7 +1054,20 @@
 	item_color = "recon"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HEAD
 	flags = BLOCKHAIR //It doesn't block the hair! What I did wrong?
-	armor = list(melee = 30, bullet = 30, laser = 20, energy = 20, bomb = 20, bio = 50, rad = 50)
+	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
+	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/reconbroken
+	name = "broken recon armor"
+	desc = "Intended to serve as the under-armor of the T-45d power armor, the recon armor is a vacuum-sealed asbestos jumpsuit covering the entire body.<br>Attached to it is the interface and mounts for the power armor.<br>Its purpose is twofold - it allows the user to actually operate the armor and protect soft tissue from moving parts inside the suit and heat.This one is in bad condition."
+	icon_state = "recon"
+	item_state = "reconbroken"
+	item_color = "reconbroken"
+	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HEAD
+	flags = BLOCKHAIR
+	armor = list(melee = 5, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	can_adjust = 0
@@ -1067,7 +1079,7 @@
     item_state = "lb_suit"
     item_color = "ncr_uniform"
     body_parts_covered = CHEST|GROIN|LEGS|ARMS
-    armor = list(melee = 10, bullet = 5, laser = 5,energy = 5, bomb = 5, bio = 0, rad = 5)
+    armor = list(melee = 5, bullet = 5, laser = 5,energy = 5, bomb = 0, bio = 0, rad = 0)
     can_adjust = 0
 
 //Plasmameme

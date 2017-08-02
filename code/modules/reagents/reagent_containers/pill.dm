@@ -161,3 +161,9 @@
 	list_reagents = list("mentats" = 50)
 	roundstart = 1
 
+/obj/item/weapon/reagent_containers/pill/fixer
+	name = "fixer pill"
+	desc = "A drug used to treat addictions and help purge narcotics from the body."
+	icon_state = "pill20"
+	list_reagents = list("fixer" = 20)
+	roundstart = 1
