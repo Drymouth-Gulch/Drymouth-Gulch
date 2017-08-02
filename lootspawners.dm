@@ -73,7 +73,7 @@ obj
 									del src
 					meds
 						New()
-							switch(rand(1,4))
+							switch(rand(1,5))
 								if(1)
 									var/obj/item/weapon/reagent_containers/stimpak/regular/lb = new
 									lb.loc=src.loc
@@ -90,12 +90,16 @@ obj
 									var/obj/item/weapon/storage/pill_bottle/mentats/lb = new
 									lb.loc=src.loc
 									del src
+								if(5)
+									var/obj/item/weapon/storage/pill_bottle/fixer/lb = new
+									lb.loc=src.loc
+									del src
 						drugs
 				wasteland //1.5
 					equipment
 					meds
 						New()
-							switch(rand(1,4))
+							switch(rand(1,5))
 								if(1)
 									var/obj/item/weapon/reagent_containers/pill/patch/healpowder/lb = new
 									lb.loc=src.loc
@@ -110,6 +114,10 @@ obj
 									del src
 								if(4)
 									var/obj/item/weapon/storage/pill_bottle/mentats/lb = new
+									lb.loc=src.loc
+									del src
+								if(5)
+									var/obj/item/weapon/storage/pill_bottle/fixer/lb = new
 									lb.loc=src.loc
 									del src
 						drugs
@@ -229,6 +237,16 @@ obj
 								if(13)
 									var/obj/item/weapon/gun/projectile/revolver/m29/scoped/lb = new
 									lb.loc=src.loc
+									del src
+								if(14)
+									var/obj/item/weapon/gun/syringe/syringer/lb = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb2
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb3
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb4
+									lb.loc=src.loc
+									lb2.loc=src.loc
+									lb3.loc=src.loc
+									lb4.loc=src.loc
 									del src
 					tier4
 						New()
@@ -548,6 +566,18 @@ obj
 								del src
 							if(9)
 								var/obj/item/clothing/suit/armor/f13/leatherarmor/lb = new
+								lb.loc=src.loc
+								del src
+							if(10)
+								var/obj/item/clothing/suit/f13/mfp/lb = new
+								lb.loc=src.loc
+								del src
+							if(11)
+								var/obj/item/clothing/suit/f13/veteran/lb = new
+								lb.loc=src.loc
+								del src
+							if(12)
+								var/obj/item/clothing/suit/f13/duster/lb = new
 								lb.loc=src.loc
 								del src
 				tier2
