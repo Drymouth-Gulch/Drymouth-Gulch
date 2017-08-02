@@ -1,5 +1,5 @@
 "aa" = (/turf/indestructible/riveted,/area/start)
-"ab" = (/turf/simulated/mineral/random,/area/space)
+"ab" = (/turf/ground/desert,/area/space)
 "ac" = (/obj/effect/landmark/start,/turf/simulated/floor/plating,/area/start)
 "ad" = (/turf/indestructible/splashscreen,/area/start)
 "ae" = (/turf/indestructible/riveted,/area/centcom/evac)
@@ -270,7 +270,7 @@
 "fj" = (/obj/machinery/vending/engivend,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
 "fk" = (/obj/item/weapon/storage/backpack/dufflebag/syndie/ammo/loaded,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
 "fl" = (/obj/structure/rack,/obj/item/weapon/gun/energy/laser/captain/scattershot,/obj/item/weapon/gun/projectile/automatic/pistol,/obj/item/weapon/storage/belt/military,/turf/simulated/floor/plasteel/black,/area/centcom/ferry)
-"fm" = (/obj/structure/ladder/unbreakable{name = "upper vault ladder"},/turf/simulated/mineral/random,/area/space)
+"fm" = (/obj/structure/ladder/unbreakable{name = "upper vault ladder"},/turf/ground/desert,/area/space)
 
 (1,1,1) = {"
 aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababababab
