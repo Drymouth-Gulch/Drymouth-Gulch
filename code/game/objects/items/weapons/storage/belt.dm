@@ -60,6 +60,7 @@
 	name = "medical belt"
 	desc = "Can hold various medical equipment."
 	icon_state = "medicalbelt"
+	storage_slots = 14
 	item_state = "medical"
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
@@ -194,7 +195,7 @@
 	desc = "A bandolier for holding shotgun ammunition."
 	icon_state = "bandolier"
 	item_state = "bandolier"
-	storage_slots = 12
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/ammo_casing/shotgun
 		)
