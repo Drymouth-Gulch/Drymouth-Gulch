@@ -164,6 +164,6 @@
 /obj/item/weapon/reagent_containers/pill/fixer
 	name = "fixer pill"
 	desc = "A drug used to treat addictions and help purge narcotics from the body."
-	icon_state = "pill20"
+	icon_state = "pill3"
 	list_reagents = list("fixer" = 20)
 	roundstart = 1

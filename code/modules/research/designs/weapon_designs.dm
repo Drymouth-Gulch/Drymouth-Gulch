@@ -179,7 +179,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g
-	category = list("Weapons")
+	category = list("Ammo")
 
 /datum/design/m12buckshotmag
 	name = "Advanced shotgun 8 round buckshot magazine"
@@ -189,37 +189,7 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/buckshot
-	category = list("Weapons")
-
-/datum/design/m12stunslugmag
-	name = "Advanced shotgun 8 round stun slug magazine"
-	desc = "A 8 round drum consisting of stun slug rounds for the advanced shotgun."
-	id = "m12stunslugmag"
-	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 15000)
-	build_path = /obj/item/ammo_box/magazine/m12g/stun
-	category = list("Weapons")
-
-/datum/design/m12dragonmag
-	name = "Advanced shotgun 8 round dragonbreaths magazine"
-	desc = "A 8 round drum consisting of dragonbreath rounds for the advanced shotgun."
-	id = "m12dragonmag"
-	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 15000)
-	build_path = /obj/item/ammo_box/magazine/m12g/dragon
-	category = list("Weapons")
-
-/datum/design/m12bioterrormag
-	name = "Advanced shotgun 8 round bioterror dart magazine"
-	desc = "A 8 round drum consisting of bioterror rounds for the advanced shotgun."
-	id = "m12bioterrormag"
-	req_tech = list("combat" = 6, "materials" = 7, "syndicate" = 5)
-	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 15000)
-	build_path = /obj/item/ammo_box/magazine/m12g/bioterror
-	category = list("Weapons")
+	category = list("Ammo")
 
 //WT550 Mags
 /*

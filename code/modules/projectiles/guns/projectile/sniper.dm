@@ -154,3 +154,11 @@
 	stun = 0
 	weaken = 0
 	breakthings = FALSE
+
+/obj/item/projectile/bullet/sniper/gauss
+	icon_state = "ion"
+	damage = 80
+	armour_penetration = 60
+	forcedodge = 1
+	breakthings = FALSE
+	range = 20

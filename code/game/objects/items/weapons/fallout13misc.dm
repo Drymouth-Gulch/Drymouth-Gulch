@@ -70,6 +70,56 @@
 	soundFile =  'sound/f13items/holodisk_pa.ogg'
 	soundLength = 30
 
+/obj/item/weapon/holodisk/music1
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording one'"
+	soundFile =  'sound/f13music/new_vegas_show_1.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/music2
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording two'"
+	soundFile =  'sound/f13music/new_vegas_show_2.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/music3
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording three'"
+	soundFile =  'sound/f13music/new_vegas_show_3.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/music4
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording four'"
+	soundFile =  'sound/f13music/new_vegas_show_4.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/music5
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording five'"
+	soundFile =  'sound/f13music/new_vegas_show_5.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/music6
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording six'"
+	soundFile =  'sound/f13music/new_vegas_show_6.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/musicspecial1
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording special1'"
+	soundFile =  'sound/f13music/new_vegas_show_bonus_1.ogg'
+	soundLength = 186
+
+/obj/item/weapon/holodisk/musicspecial2
+	desc = "A durable laser-readable storage device. This one is labeled 'NV Recording special2 personal favourite'"
+	soundFile =  'sound/f13music/new_vegas_show_bonus_2.ogg'
+	soundLength = 246
+
+/obj/item/weapon/holodisk/questfinished
+	desc = "A durable laser-readable storage device. This one is labeled 'A curious sound'"
+	soundFile =  'sound/f13music/quest.ogg'
+	soundLength = 12
+
+/obj/item/weapon/holodisk/clown
+	desc = "A durable laser-readable storage device. This one is labeled 'Chick chicka boom'"
+	soundFile =  'sound/ambience/clown.ogg'
+	soundLength = 61
+
 /obj/item/weapon/holodisk/powerarmor/playAudio(mob/user)
 	if(!src.busy)
 		src.busy = 1

@@ -361,6 +361,15 @@
 	max_ammo = 12
 	multiple_sprites = 2
 
+/obj/item/ammo_box/magazine/m2mm
+	name = "2mm electromagnetic magazine"
+	icon_state = "2mm"
+	ammo_type = /obj/item/ammo_casing/c2mm
+	origin_tech = "combat=3;syndicate=1"
+	caliber = "2mm"
+	max_ammo = 20
+	multiple_sprites = 2
+
 /obj/item/ammo_box/magazine/m12g
 	name = "shotgun magazine (12g slugs)"
 	icon_state = "m12gb"

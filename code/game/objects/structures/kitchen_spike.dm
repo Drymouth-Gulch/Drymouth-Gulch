@@ -159,7 +159,7 @@
 					H.buckled = src
 					H.dir = 2
 					buckled_mob = H
-					H.pixel_y = 16
+					H.pixel_y = 26
 					H.overlays += image('icons/obj/cross.dmi', "lashing")
 					return
 		user << "<span class='danger'>You can't use that on the cross!</span>"
