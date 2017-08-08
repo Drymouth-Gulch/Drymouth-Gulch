@@ -73,7 +73,7 @@ obj
 									del src
 					meds
 						New()
-							switch(rand(1,4))
+							switch(rand(1,5))
 								if(1)
 									var/obj/item/weapon/reagent_containers/stimpak/regular/lb = new
 									lb.loc=src.loc
@@ -88,6 +88,10 @@ obj
 									del src
 								if(4)
 									var/obj/item/weapon/storage/pill_bottle/mentats/lb = new
+									lb.loc=src.loc
+									del src
+								if(5)
+									var/obj/item/weapon/storage/pill_bottle/fixer/lb = new
 									lb.loc=src.loc
 									del src
 						drugs
@@ -110,6 +114,10 @@ obj
 									del src
 								if(4)
 									var/obj/item/weapon/storage/pill_bottle/mentats/lb = new
+									lb.loc=src.loc
+									del src
+								if(5)
+									var/obj/item/weapon/storage/pill_bottle/fixer/lb = new
 									lb.loc=src.loc
 									del src
 						drugs
@@ -177,7 +185,7 @@ obj
 									del src
 					tier3
 						New()
-							switch(rand(1,13))
+							switch(rand(1,14))
 								if(1)
 									var/obj/item/weapon/gun/projectile/revolver/that_gun/lb = new
 									lb.loc=src.loc
@@ -229,6 +237,16 @@ obj
 								if(13)
 									var/obj/item/weapon/gun/projectile/revolver/m29/scoped/lb = new
 									lb.loc=src.loc
+									del src
+								if(14)
+									var/obj/item/weapon/gun/syringe/syringer/lb = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb2 = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb3 = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb4 = new
+									lb.loc=src.loc
+									lb2.loc=src.loc
+									lb3.loc=src.loc
+									lb4.loc=src
 									del src
 					tier4
 						New()
@@ -550,6 +568,10 @@ obj
 								var/obj/item/clothing/suit/armor/f13/leatherarmor/lb = new
 								lb.loc=src.loc
 								del src
+							if(10)
+								var/obj/item/clothing/suit/f13/mfp/lb = new
+								lb.loc=src.loc
+								del src
 				tier2
 					New()
 						switch(rand(1,2))
@@ -567,16 +589,24 @@ obj
 								del src
 				tier3
 					New()
-						switch(rand(1))
+						switch(rand(1,2))
 							if(1)
 								var/obj/item/clothing/suit/armor/fluff/chestplate/mk2/lb = new
 								var/obj/item/clothing/head/helmet/f13/metalmask/mk2/lb2 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
+							if(2)
+								var/obj/item/clothing/suit/armor/f13/combat/lb = new
+								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
+								var/obj/item/clothing/under/f13/combat/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
+								del src
 				tier4
 					New()
-						switch(rand(1,7))
+						switch(rand(1,5))
 							if(1)
 								var/obj/item/clothing/suit/armor/f13/rangercombat/lb = new
 								var/obj/item/clothing/head/helmet/f13/rangercombat/lb2 = new
@@ -590,14 +620,6 @@ obj
 								lb2.loc=src.loc
 								del src
 							if(3)
-								var/obj/item/clothing/suit/armor/f13/combat/lb = new
-								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
-								var/obj/item/clothing/under/f13/combat/lb3 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								lb3.loc=src.loc
-								del src
-							if(4)
 								var/obj/item/clothing/suit/armor/f13/brokenpa/t45b/lb = new
 								var/obj/item/clothing/head/helmet/f13/brokenpa/t45b/lb2 = new
 								var/obj/item/clothing/under/f13/ncr/lb3 = new
@@ -605,7 +627,7 @@ obj
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
-							if(5)
+							if(4)
 								var/obj/item/clothing/suit/armor/f13/brokenpa/t45d/lb = new
 								var/obj/item/clothing/head/helmet/f13/brokenpa/t45d/lb2 = new
 								var/obj/item/clothing/under/f13/combat/lb3 = new
@@ -613,7 +635,7 @@ obj
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
-							if(7)
+							if(5)
 								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/lb2 = new
 								var/obj/item/clothing/under/f13/reconbroken/lb3 = new

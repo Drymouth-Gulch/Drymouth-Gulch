@@ -119,7 +119,7 @@
 	interaction_sound = null
 	require_user_hands = 1
 	require_target_penis = 1
-	user_not_tired = 1
+	target_not_tired = 1
 	require_target_naked = 1
 	max_distance = 1
 
