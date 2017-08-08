@@ -152,7 +152,7 @@
 	if(istype(next, /turf/ground) || istype(current, /turf/ground))
 		..()
 	else
-		to_chat(user, "<span class='warning'>Boats don't go on land!</span>")
+		user << "<span class='warning'>Boats don't go on land!</span>"
 		return 0
 	
 	if(ishuman(user))
