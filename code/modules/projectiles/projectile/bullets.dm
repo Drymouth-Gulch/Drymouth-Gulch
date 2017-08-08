@@ -56,8 +56,9 @@
 
 /obj/item/projectile/bullet/pellet
 	name = "pellet"
-	damage = 20
-	armour_penetration = -15
+	damage = 15
+	armour_penetration = -20
+	range = 7
 
 /obj/item/projectile/bullet/pellet/weak
 	damage = 3
@@ -126,6 +127,7 @@
 /obj/item/projectile/bullet/rpellet
 	damage = 3
 	stamina = 25
+	range = 7
 
 /obj/item/projectile/bullet/stunshot //taser slugs for shotguns, nothing special
 	name = "stunshot"
@@ -160,7 +162,7 @@
 /obj/item/projectile/bullet/incendiary/shell/dragonsbreath
 	name = "dragonsbreath round"
 	damage = 5
-
+	range = 7
 
 /obj/item/projectile/bullet/meteorshot
 	name = "meteor"

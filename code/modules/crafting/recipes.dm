@@ -58,7 +58,7 @@
 	parts = list(/obj/item/weapon/reagent_containers/food/drinks/bottle = 1)
 	time = 40
 	category = CAT_WEAPON
-	
+
 /datum/table_recipe/dynamite
 	name = "Dynamite"
 	result = /obj/item/weapon/grenade/syndieminibomb
@@ -425,6 +425,16 @@
 	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1)
 	time = 20
+	category = CAT_MED
+
+/datum/table_recipe/healpoultice
+	name = "Healing poultice"
+	result = /obj/item/weapon/reagent_containers/pill/patch/healpoultice
+	reqs = list(/obj/item/weapon/reagent_containers/food/snacks/grown/broc = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/xander = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/feracactus = 1,
+				/obj/item/weapon/reagent_containers/food/snacks/grown/fungus = 1)
+	time = 40
 	category = CAT_MED
 
 /datum/table_recipe/stimpak

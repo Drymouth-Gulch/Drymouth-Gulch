@@ -146,6 +146,15 @@
 
 //MOVEMENT
 /obj/vehicle/relaymove(mob/user, direction)
+	var/turf/next = get_step(src, direction)
+	var/turf/current = get_turf(src)
+
+	if(istype(next, /turf/ground) || istype(current, /turf/ground))
+		..()
+	else
+		user << "<span class='warning'>Boats don't go on land!</span>"
+		return 0
+	
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
 		for(var/obj/item/clothing/suit/armor/C in H)
