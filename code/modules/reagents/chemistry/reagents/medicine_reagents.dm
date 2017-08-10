@@ -1060,6 +1060,21 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	..()
 	return
 
+/datum/reagent/medicine/healing_poultice
+	name = "healing poultice"
+	id = "healing_poultice"
+	description = "Restores limb condition and heals rapidly."
+	reagent_state = LIQUID
+	color = "#C8A5DC"
+	metabolization_rate = 1.25 * REAGENTS_METABOLISM
+
+/datum/reagent/medicine/healing_poultice/on_mob_life(mob/living/M)
+	M.adjustFireLoss(-4*REM)
+	M.adjustBruteLoss(-4*REM)
+	M.adjustToxLoss(-0.5*REM)
+	..()
+
+
 /datum/reagent/medicine/radaway
 	name = "Radaway"
 	id = "radaway"
@@ -1087,8 +1102,8 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	if(iscarbon(M))
 		var/mob/living/carbon/N = M
 		N.hal_screwyhud = 5
-	if(M.health = M.maxHealth)
-		M.hallucination += 5
+	if(M.health == M.maxHealth)
+		M.hallucination += 1
 	M.status_flags |= IGNORESLOWDOWN
 	M.adjustBruteLoss(-0.50*REM)
 	M.adjustFireLoss(-0.50*REM)

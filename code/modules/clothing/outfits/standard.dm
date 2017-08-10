@@ -487,10 +487,15 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
+	
+/datum/outfit/bos_paladin/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
+	if(visualsOnly)
+		return
 
 /datum/outfit/bos_paladin/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	H.faction = ("BOS")
-	H.martial_art = /datum/martial_art/patraining
 	if(visualsOnly)
 		return
 
@@ -520,10 +525,15 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
+	
+/datum/outfit/bos_knight/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
+	if(visualsOnly)
+		return
 
 /datum/outfit/bos_knight/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	H.faction = ("BOS")
-	H.martial_art = /datum/martial_art/patraining
 	if(visualsOnly)
 		return
 
@@ -583,10 +593,15 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
+		
+/datum/outfit/bos_scribe/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
+	H.faction = ("BOS")
+	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+	F.teach(H)
+	if(visualsOnly)
+		return
 
 /datum/outfit/bos_scribe/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	H.faction = ("BOS")
-	H.martial_art = /datum/martial_art/patraining
 	if(visualsOnly)
 		return
 
@@ -598,7 +613,3 @@
 	W.access += get_centcom_access("BoS Scribe")
 	W.assignment = "BoS Scribe"
 	W.update_label()
-
-
-
-

@@ -95,7 +95,7 @@ Trooper
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/pancor
+	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/caws
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
@@ -122,7 +122,7 @@ Trooper
 	suit = /obj/item/clothing/suit/armor/f13/ncrarmor/mantle
 	head = /obj/item/clothing/head/beret/ncr
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/pancor
+	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/caws
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \

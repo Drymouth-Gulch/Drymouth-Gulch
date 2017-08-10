@@ -6,13 +6,13 @@
 	icon_gib = "carp_gib"
 	speak_chance = 0
 	turns_per_move = 15
-	butcher_results = list()
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/carpmeat = 3)
 	response_help = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm = "hits"
-	emote_taunt = list("gnashes")
+	emote_taunt = list("buzzes")
 	taunt_chance = 30
-	speed = -5
+	speed = -7
 	maxHealth = 50
 	health = 50
 
@@ -21,7 +21,7 @@
 	melee_damage_upper = 20
 	attacktext = "stings"
 	attack_sound = 'sound/weapons/bite.ogg'
-	speak_emote = list("gnashes")
+	speak_emote = list("buzzes")
 
 	//Space carp aren't affected by cold.
 	atmos_requirements = list("min_oxy" = 0, "max_oxy" = 0, "min_tox" = 0, "max_tox" = 0, "min_co2" = 0, "max_co2" = 0, "min_n2" = 0, "max_n2" = 0)
@@ -47,6 +47,7 @@
 	if(ishuman(target))
 		var/mob/living/carbon/human/H = target
 		H.adjustStaminaLoss(4)
+		H.reagents.add_reagent("carpotoxin",4)
 
 /mob/living/simple_animal/hostile/molerat
 	name = "Molerat"
@@ -95,7 +96,7 @@
 
 /mob/living/simple_animal/hostile/deathclaw
 	name = "Deathclaw"
-	desc = "A huge monster"
+	desc = "You'd have to be the meanest, toughest, roughest bastard in the wasteland to have any chance against this thing, and I don't think that's you."
 	icon = 'icons/mob/deathclaw.dmi'
 	icon_state = "deathclaw"
 	icon_living = "deathclaw"
@@ -103,7 +104,8 @@
 	//speak_chance = 40
 	//speak = list("GRRRRRR!", "ARGH!", "NNNNNGH!", "HMPH!", "ARRRRR!")
 	//speak_emote = list("shouts", "yells")
-	speed = 3
+	speed = -5
+	environment_smash = 2
 	turns_per_move = 5
 	response_help = "touches"
 	response_disarm = "tries to push aside"
@@ -117,6 +119,11 @@
 	melee_damage_upper = 60
 	attacktext = "slashes"
 	attack_sound = 'sound/weapons/bladeslice.ogg'
+	
+/mob/living/simple_animal/hostile/deathclaw/Aggro()
+	..()
+	summon_backup(10)
+	say("HROAAAAAAAAR!")
 
 
 /mob/living/simple_animal/hostile/badmutant

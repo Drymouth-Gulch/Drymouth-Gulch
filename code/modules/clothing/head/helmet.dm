@@ -477,7 +477,7 @@
 /obj/item/clothing/head/helmet/power_armor/f13/mob_can_equip(mob/user, slot)
 	if (ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if (H.martial_art != /datum/martial_art/patraining && slot == slot_head)
+		if (!H.martial_art && H.martial_art.name != "Power Armor Training" && slot == slot_head)
 			H << "<span class='warning'>You don't have the proper training to operate the power armor!</span>"
 			return 0
 			..()
@@ -505,7 +505,7 @@
 	armor = list(melee = 90, bullet = 80, laser = 80, energy = 80, bomb = 80, bio = 100, rad = 90)
 
 
-/obj/item/clothing/head/helmet/power_armor/tesla
+/obj/item/clothing/head/helmet/power_armor/f13/tesla
 	name = "tesla power helmet"
 	desc = "A helmet typically used by Enclave special forces.<br>There are three orange energy capacitors on the side."
 	icon_state = "tesla"

@@ -12,7 +12,7 @@
 	chamber_sound = 'sound/effects/wep_magazines/smg_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/proto
-	name = "\improper NanoTrasen Saber SMG"
+	name = "\improper Advanced SABR SMG"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
@@ -364,6 +364,19 @@
 	w_class = 4
 	heavy_weapon = 1
 
+/obj/item/weapon/gun/projectile/automatic/shotgun/caws
+	name = "HK CAWS"
+	desc = "A select fire automatic shotgun, the Pancor's little brother."
+	icon_state = "caws"
+	item_state = "bulldog"
+	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
+	mag_type = /obj/item/ammo_box/magazine/d12g
+	can_suppress = 0
+	burst_size = 3
+	fire_delay = 4
+	w_class = 4
+	heavy_weapon = 1
+
 /obj/item/weapon/gun/projectile/automatic/shotgun/riot
 	name = "riot shotgun"
 	desc = "A semi-automatic shotgun with a drum magazine of 12, allowing for robust crowd control."
@@ -411,7 +424,7 @@
 	rangeG=0
 	fire_sound = 'sound/f13weapons/american180.ogg'
 
-/obj/item/weapon/gun/projectile/automatic/assault_rifle/infiltrator/New()
+/obj/item/weapon/gun/projectile/automatic/american180/New()
 	..()
 	update_icon()
 	src.setgundamage(src.damageG,src.damageA,src.damageS,src.rangeG)
@@ -429,3 +442,53 @@
 	can_suppress = 0
 	burst_size = 3
 	fire_delay = 3
+
+/obj/item/weapon/gun/projectile/automatic/bozar
+	name = "Bozar"
+	desc = "The ultimate refinement of the sniper's art, the Bozar is a scoped, accurate, light machine gun that will make nice big holes in your enemy. Uses 5.56."
+	icon_state = "bozar"
+	item_state = "sniper"
+	slot_flags = SLOT_BACK
+	origin_tech = "combat=6;materials=1"
+	mag_type = /obj/item/ammo_box/magazine/m556
+	can_suppress = 0
+	burst_size = 3
+	fire_delay = 4
+	w_class = 4
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	heavy_weapon = 1
+	damageG=40
+	damageA=0
+	damageS=10
+	rangeG=0
+	fire_sound = 'sound/f13weapons/bozar_fire.ogg'
+	zoomable = TRUE
+	zoom_amt = 7
+
+/obj/item/weapon/gun/projectile/automatic/bozar/New()
+	..()
+	update_icon()
+	src.setgundamage(src.damageG,src.damageA,src.damageS,src.rangeG)
+	return
+
+/obj/item/weapon/gun/projectile/automatic/m72
+	name = "M72 Gauss Rifle"
+	desc = "The M72 rifle is of German design. It uses an electromagnetic field to propel rounds at tremendous speed... and pierce almost any obstacle. Its range, accuracy and stopping power is almost unparalleled."
+	icon_state = "m72"
+	item_state = "shotgun"
+	slot_flags = SLOT_BACK
+	w_class = 4
+	origin_tech = "combat=6;materials=1"
+	mag_type = /obj/item/ammo_box/magazine/m2mm
+	fire_sound = 'sound/f13weapons/gauss_rifle.ogg'
+	can_suppress = 0
+	burst_size = 1//Setting it to 0 is dumb. Just set it to one.
+	fire_delay = 3
+	zoomable = TRUE
+	zoom_amt = 7
+	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
+	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
+	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
+	heavy_weapon = 1

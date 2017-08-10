@@ -199,6 +199,7 @@ var/global/list/datum/stack_recipe/cardboard_recipes = list ( \
 	new/datum/stack_recipe("pizza box", /obj/item/pizzabox), \
 	new/datum/stack_recipe("folder", /obj/item/weapon/folder), \
 	new/datum/stack_recipe("large box", /obj/structure/closet/cardboard, 4), \
+	new/datum/stack_recipe("first-aid kit", /obj/item/weapon/storage/box/firstaid), \
 )
 
 /obj/item/stack/sheet/cardboard	//BubbleWrap

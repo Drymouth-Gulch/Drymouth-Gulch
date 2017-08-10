@@ -60,6 +60,7 @@
 	name = "medical belt"
 	desc = "Can hold various medical equipment."
 	icon_state = "medicalbelt"
+	storage_slots = 14
 	item_state = "medical"
 	can_hold = list(
 		/obj/item/device/healthanalyzer,
@@ -68,7 +69,9 @@
 		/obj/item/weapon/reagent_containers/glass/beaker,
 		/obj/item/weapon/reagent_containers/glass/bottle,
 		/obj/item/weapon/reagent_containers/pill,
+		/obj/item/weapon/reagent_containers/pill/patch,
 		/obj/item/weapon/reagent_containers/syringe,
+		/obj/item/weapon/reagent_containers/stimpak,
 		/obj/item/weapon/lighter,
 		/obj/item/weapon/storage/fancy/cigarettes,
 		/obj/item/weapon/storage/pill_bottle,
@@ -192,7 +195,7 @@
 	desc = "A bandolier for holding shotgun ammunition."
 	icon_state = "bandolier"
 	item_state = "bandolier"
-	storage_slots = 6
+	storage_slots = 14
 	can_hold = list(
 		/obj/item/ammo_casing/shotgun
 		)
@@ -268,11 +271,23 @@
 	name = "yellow fannypack"
 	icon_state = "fannypack_yellow"
 	item_state = "fannypack_yellow"
+
 /obj/item/weapon/storage/belt/ncr
 	name = "NCR duty belt"
 	desc = "A standard issue robust duty belt for all NCR troopers."
 	icon_state = "ncr_belt"
 	item_state = "ncr_belt"
+
+/obj/item/weapon/storage/belt/legion
+	name = "legionnaire marching belt"
+	desc = "A belt capable of holding the necessities of a legionnaire."
+	icon_state = "legion_belt"
+	item_state = "legion_belt"
+	max_w_class = 3 // This is so that it can hold the Machete.
+	cant_hold = list(
+		/obj/item/weapon/gun/,
+		/obj/item/weapon/storage/
+		)
 
 /obj/item/weapon/storage/belt/webbing
 	name = "webbing vest"

@@ -129,7 +129,8 @@
 		spawn(src.soundLength)
 			if(ishuman(user))
 				var/mob/living/carbon/human/H = user
-				H.martial_art = /datum/martial_art/patraining
+				var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
+				F.teach(H)
 				H << "<span class='boldannounce'>You have received the specialized training needed to move in any form of Power Armor.</span>"
 			src.icon_state = initial(src.icon_state)
 			src.busy = 0

@@ -56,6 +56,7 @@ var/datum/subsystem/vote/SSvote
 		if(votes > greatest_votes)
 			greatest_votes = votes
 	//default-vote for everyone who didn't vote
+/*
 	if(!config.vote_no_default && choices.len)
 		var/non_voters = (clients.len - total_votes)
 		if(non_voters > 0)
@@ -68,6 +69,7 @@ var/datum/subsystem/vote/SSvote
 					choices[master_mode] += non_voters
 					if(choices[master_mode] >= greatest_votes)
 						greatest_votes = choices[master_mode]
+*/
 	//get all options with that many votes and return them in a list
 	. = list()
 	if(greatest_votes)

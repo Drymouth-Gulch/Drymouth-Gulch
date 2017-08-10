@@ -39,6 +39,14 @@
 	item_state = "bandaid"
 	icon_state = "heal_powder"
 
+/obj/item/weapon/reagent_containers/pill/patch/healpoultice
+	name = "Healing poultice"
+	desc = "A concoction of broc flower, cave fungus, agrave fruit and xander root."
+	list_reagents = list("healing_poultice" = 18)
+	icon = 'icons/obj/syringe.dmi'
+	item_state = "bandaid"
+	icon_state = "heal_poultice"
+
 /obj/item/weapon/reagent_containers/pill/patch/jet
 	name = "Jet"
 	desc = "Jet is a highly addictive drug first synthesized by Myron. It is extracted from brahmin dung fumes and administered via an inhaler."
