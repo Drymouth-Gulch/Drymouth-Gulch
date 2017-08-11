@@ -99,7 +99,7 @@ obj
 					equipment
 					meds
 						New()
-							switch(rand(1,4))
+							switch(rand(1,6))
 								if(1)
 									var/obj/item/weapon/reagent_containers/pill/patch/healpowder/lb = new
 									lb.loc=src.loc
@@ -119,6 +119,16 @@ obj
 								if(5)
 									var/obj/item/weapon/storage/pill_bottle/fixer/lb = new
 									lb.loc=src.loc
+									del src
+								if(6)
+									var/obj/item/weapon/gun/syringe/syringer/lb = new
+									var/obj/item/weapon/reagent_containers/syringe/stimulants/lb2 = new
+									var/obj/item/weapon/reagent_containers/syringe/stimulants/lb3 = new
+									var/obj/item/weapon/reagent_containers/syringe/stimulants/lb4 = new
+									lb.loc=src.loc
+									lb2.loc=src.loc
+									lb3.loc=src.loc
+									lb4.loc=src
 									del src
 						drugs
 			weaponspawners //1.6
@@ -238,16 +248,6 @@ obj
 									var/obj/item/weapon/gun/projectile/revolver/m29/scoped/lb = new
 									lb.loc=src.loc
 									del src
-								if(14)
-									var/obj/item/weapon/gun/syringe/syringer/lb = new
-									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb2 = new
-									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb3 = new
-									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb4 = new
-									lb.loc=src.loc
-									lb2.loc=src.loc
-									lb3.loc=src.loc
-									lb4.loc=src
-									del src
 					tier4
 						New()
 							switch(rand(1,6))
@@ -277,7 +277,7 @@ obj
 									del src
 					tier5
 						New()
-							switch(rand(1,11))
+							switch(rand(1,12))
 								if(1)
 									var/obj/item/weapon/gun/energy/laser/plasma_rifle/lb = new
 									lb.loc=src.loc
@@ -321,6 +321,16 @@ obj
 								if(11)
 									var/obj/item/weapon/gun/projectile/automatic/bozar/lb = new
 									lb.loc=src.loc
+									del src
+								if(12)
+									var/obj/item/weapon/gun/syringe/syringer/lb = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb2 = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb3 = new
+									var/obj/item/weapon/reagent_containers/syringe/bioterror/lb4 = new
+									lb.loc=src.loc
+									lb2.loc=src.loc
+									lb3.loc=src.loc
+									lb4.loc=src
 									del src
 					ammo
 						tier1

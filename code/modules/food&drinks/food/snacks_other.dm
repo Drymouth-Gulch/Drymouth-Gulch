@@ -153,6 +153,7 @@
 	name = "tin of beans"
 	desc = "Musical fruit in a slightly less musical container."
 	icon_state = "beans"
+	trash = /obj/item/trash/tin/tin2
 	bonus_reagents = list("radium" = 1, "vitamin" = 1)
 	list_reagents = list("nutriment" = 10)
 	filling_color = "#B22222"
@@ -249,6 +250,7 @@
 	name = "Pork n' Beans"
 	desc = "Pork n' Beans come in a small brown and orange tin, with a label that reads 'Greasy Prospector Improved Pork And Beans'. Toward the bottom of the label is printed that the beans come 'With Hickory Smoked Pig Fat Chunks.'"
 	icon_state = "porknbeans"
+	trash = /obj/item/trash/tin
 	bonus_reagents = list("radium" = 5, "vitamin" = 2)
 	list_reagents = list("nutriment" = 35)
 	filling_color = "#B22222"
