@@ -215,6 +215,12 @@
 
 //Fallout 13
 
+/obj/item/clothing/head/helmet/riot/vaultsec
+	name = "security helmet"
+	desc = "A standard issue vault security helmet, pretty robust."
+	armor = list(melee = 60, bullet = 20, laser = 25,energy = 10, bomb = 25, bio = 2, rad = 0)
+
+//Raider
 /obj/item/clothing/head/helmet/f13/raider
 	name = "supa-fly raider helmet"
 	desc = "It's a makeshift raider helmet, made of leather. It heavily smells with chems and sweat."
@@ -260,12 +266,13 @@
 	strip_delay = 50
 	burn_state = FIRE_PROOF
 
+//Combat armor
 /obj/item/clothing/head/helmet/f13/combat
 	name = "combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
 	icon_state = "combat_helmet"
 	item_state = "combat_helmet"
-	armor = list(melee = 45, bullet = 45, laser = 15,energy = 25, bomb = 10, bio = 0, rad = 0)
+	armor = list(melee = 38, bullet = 40, laser = 15,energy = 20, bomb = 10, bio = 0, rad = 20)
 	flags_inv = HIDEEARS
 	flags = BLOCKHAIR
 	put_on_delay = 10
@@ -274,13 +281,28 @@
 	flash_protect = 1
 	tint = 0
 
+/obj/item/clothing/head/helmet/f13/combat/mk2
+	name = "combat helmet mk2"
+	desc = "An improved combat helmet based off the original pre-war model."
+	icon_state = "combat_helmet_mk2"
+	item_state = "combat_helmet_mk2"
+	armor = list(melee = 50, bullet = 45, laser = 25,energy = 25, bomb = 20, bio = 0, rad = 50)
+
 /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	name = "brotherhood combat helmet"
 	desc = "An improved combat helmet, seen commonly worn on initiates"
 	icon_state = "brotherhood_helmet"
 	item_state = "brotherhood_helmet"
-	armor = list(melee = 55, bullet = 50, laser = 35,energy = 25, bomb = 10, bio = 0, rad = 90)
+	armor = list(melee = 55, bullet = 55, laser = 35,energy = 30, bomb = 30, bio = 0, rad = 75)
 
+/obj/item/clothing/head/helmet/f13/combat/enclave
+	name = "enclave combat helmet"
+	desc = "An intimidating helmet that is issued with it's corresponding suit."
+	icon_state = "enclave_helmet"
+	item_state = "enclave_helmet"
+	armor = list(melee = 70, bullet = 65, laser = 50,energy = 50, bomb = 50, bio = 0, rad = 100)
+
+//Legion
 /obj/item/clothing/head/helmet/f13/legrecruit
 	name = "legion recruit helmet"
 	desc = "It's leather legion recruit helmet."
@@ -304,11 +326,6 @@
 	put_on_delay = 10
 	strip_delay = 50
 	burn_state = FIRE_PROOF
-
-/obj/item/clothing/head/helmet/riot/vaultsec
-	name = "security helmet"
-	desc = "A standard issue vault security helmet, pretty robust."
-	armor = list(melee = 60, bullet = 25, laser = 25,energy = 10, bomb = 25, bio = 2, rad = 0)
 
 /obj/item/clothing/head/helmet/f13/legvexil
 	name = "legion vexillarius helmet"
@@ -358,6 +375,7 @@
 	strip_delay = 50
 	burn_state = FIRE_PROOF
 
+//Ranger Armors
 /obj/item/clothing/head/helmet/f13/rangercombat
 	name = "ranger combat helmet"
 	desc = "An old combat helmet, out of use around the time of the war."
@@ -388,6 +406,7 @@
 	item_state = "elite_riot"
 	armor = list(melee = 75, bullet = 68, laser = 50,energy = 50, bomb = 45, bio = 0, rad = 100)
 
+//Metal masks
 /obj/item/clothing/head/helmet/f13/metalmask
 	name = "metal mask"
 	desc = "A crudely formed metal hockey mask."

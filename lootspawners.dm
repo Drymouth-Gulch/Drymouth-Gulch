@@ -587,6 +587,14 @@ obj
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								del src
+							if(3)
+								var/obj/item/clothing/suit/armor/f13/combat/lb = new
+								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
+								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
+								lb.loc=src.loc
+								lb2.loc=src.loc
+								lb3.loc=src.loc
+								del src
 				tier3
 					New()
 						switch(rand(1,2))
@@ -597,9 +605,9 @@ obj
 								lb2.loc=src.loc
 								del src
 							if(2)
-								var/obj/item/clothing/suit/armor/f13/combat/lb = new
-								var/obj/item/clothing/head/helmet/f13/combat/lb2 = new
-								var/obj/item/clothing/under/f13/combat/lb3 = new
+								var/obj/item/clothing/suit/armor/f13/combat/mk2/lb = new
+								var/obj/item/clothing/head/helmet/f13/combat/mk2/lb2 = new
+								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
 								lb3.loc=src.loc
@@ -616,8 +624,10 @@ obj
 							if(2)
 								var/obj/item/clothing/suit/armor/f13/combat/brotherhood/lb = new
 								var/obj/item/clothing/head/helmet/f13/combat/brotherhood/lb2 = new
+								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
+								lb3.loc=src.loc
 								del src
 							if(3)
 								var/obj/item/clothing/suit/armor/f13/brokenpa/t45b/lb = new

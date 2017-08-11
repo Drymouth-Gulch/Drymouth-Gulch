@@ -825,6 +825,7 @@
 	item_state = "sl_suit"
 	item_color = "cowboyg"
 	can_adjust = 0
+
 /obj/item/clothing/under/f13/ranger
 	name = "ranger outfit"
 	desc = "It's a real cowboy uniform with a brown vest and red bandana."

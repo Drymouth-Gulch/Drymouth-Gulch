@@ -352,7 +352,7 @@ NCR Ranger
 	ears = /obj/item/device/radio/headset/headset_ncr
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat
-	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
+	suit = /obj/item/clothing/suit/armor/f13/ncrarmor
 	head = /obj/item/clothing/head/f13/ranger
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/riot
