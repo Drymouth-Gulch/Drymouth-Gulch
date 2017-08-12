@@ -5,7 +5,7 @@
 	icon_state = "syndicate"
 	item_state = "flashbang"
 	origin_tech = "materials=3;magnets=4;syndicate=4"
-	det_time = 40
+	det_time = 60
 
 /obj/item/weapon/grenade/dynamite/attackby(obj/item/I, mob/user, params)
 	if(I.is_hot() && !active)
