@@ -51,7 +51,7 @@
 	toxpwr = 0
 	metabolization_rate = 10 * REAGENTS_METABOLISM
 
-/datum/reagent/toxin/mutagen/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume)
+/datum/reagent/toxin/fev/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume)
 	if(!..())
 		return
 	if(!M.has_dna())
