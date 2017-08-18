@@ -410,3 +410,17 @@
 	icon_state = "duffle-clown"
 	item_state = "duffle-clown"
 
+/obj/item/weapon/storage/backpack/cloak
+	name = "desert cloak"
+	desc = "A worn desert cloak rigged over load bearing webbing, protects the user from the sunlight."
+	icon_state = "pouch_cloak"
+	item_state = "pouch_cloak"
+	flags = BLOCKHAIR
+	max_combined_w_class = 35
+
+/obj/item/weapon/storage/backpack/combat_ruck
+	name = "combat ruck"
+	desc = "A large ruck-sack commonly issued and seen with combat armor sets. Easily interfaces to most armors without straps, allowing for chafeless comfort."
+	icon_state = "combat_ruck"
+	item_state = "combat_ruck"
+	max_combined_w_class = 45

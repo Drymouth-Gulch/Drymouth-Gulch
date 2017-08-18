@@ -707,6 +707,7 @@
 #include "code\game\objects\items\weapons\weaponry.dm"
 #include "code\game\objects\items\weapons\grenades\chem_grenade.dm"
 #include "code\game\objects\items\weapons\grenades\clusterbuster.dm"
+#include "code\game\objects\items\weapons\grenades\dynamite.dm"
 #include "code\game\objects\items\weapons\grenades\emgrenade.dm"
 #include "code\game\objects\items\weapons\grenades\flashbang.dm"
 #include "code\game\objects\items\weapons\grenades\ghettobomb.dm"

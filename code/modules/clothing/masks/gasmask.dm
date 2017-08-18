@@ -65,6 +65,9 @@
 	vchange = !vchange
 	user << "<span class='notice'>The voice changer is now [vchange ? "on" : "off"]!</span>"
 
+/obj/item/clothing/mask/gas/voice/tactical
+	name = "tactical gas mask"
+
 
 /obj/item/clothing/mask/gas/clown_hat
 	name = "clown wig and mask"

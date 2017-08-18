@@ -16,3 +16,13 @@
 	desc = "A compact shrapnel grenade meant to devestate nearby organisms and cause some damage in the process. Pull pin and throw opposite direction."
 	icon_state = "concussion"
 	origin_tech = "materials=3;magnets=4;syndicate=2"
+
+/obj/item/weapon/grenade/tincan
+	name = "tin can grenade"
+	desc = "An improvised explosive device consisting of a tin can filled with gunpowder. Effective to some extent."
+	icon_state = "tincan"
+
+/obj/item/weapon/grenade/tincan/prime()
+	update_mob()
+	explosion(src.loc,-1,1,2, flame_range = pick(1,4))
+	qdel(src)

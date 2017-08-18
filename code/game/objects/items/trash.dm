@@ -66,3 +66,11 @@
 	burn_state = FIRE_PROOF
 /obj/item/trash/attack(mob/M, mob/living/user)
 	return
+
+/obj/item/trash/tin
+	name = "pork and beans tin"
+	icon_state = "porknbeans"
+
+/obj/item/trash/tin/tin2
+	name = "empty tin of beans"
+	icon_state = "beans"
