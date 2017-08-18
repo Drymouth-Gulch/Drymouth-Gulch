@@ -30,16 +30,19 @@
 			if(CUM_TARGET_MOUTH)
 				if(partner.has_mouth() && partner.mouth_is_free())
 					message = "cums right in \the [partner]'s mouth."
+					partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s face."
 			if(CUM_TARGET_VAGINA)
 				if(partner.is_nude() && partner.has_vagina())
 					message = "cums in \the [partner]'s pussy."
+					partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s belly."
 			if(CUM_TARGET_ANUS)
 				if(partner.is_nude() && partner.has_anus())
 					message = "cums in \the [partner]'s asshole."
+					partner.reagents.add_reagent("cum", 10)
 				else
 					message = "cums on \the [partner]'s backside."
 			if(CUM_TARGET_HAND)

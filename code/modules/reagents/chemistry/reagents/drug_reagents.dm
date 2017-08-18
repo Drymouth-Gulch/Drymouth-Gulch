@@ -159,7 +159,7 @@
 	M.AdjustStunned(-2)
 	M.AdjustWeakened(-2)
 	M.adjustStaminaLoss(-2)
-	M.status_flags |= GOTTAGOREALLYFAST
+	M.status_flags |= IGNORESLOWDOWN
 	M.Jitter(2)
 	M.adjustBrainLoss(0.25)
 	if(prob(5))
@@ -420,7 +420,7 @@
 	var/high_message = pick("You feel hyper.", "You feel like you need to go faster.", "You feel like you can run the world.")
 	if(prob(5))
 		M << "<span class='notice'>[high_message]</span>"
-	M.status_flags |= GOTTAGOREALLYFAST
+	M.status_flags |= IGNORESLOWDOWN
 	M.Jitter(2)
 	M.adjustBrainLoss(0.25)
 	if(prob(5))
@@ -501,7 +501,7 @@
 	if(prob(7))
 		M.emote(pick("drool","moan","giggle","laugh"))
 	M.druggy = max(M.druggy, 15)
-	M.status_flags |= GOTTAGOFAST
+	M.status_flags |= IGNORESLOWDOWN
 	..()
 	return
 

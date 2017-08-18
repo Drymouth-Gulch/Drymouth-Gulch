@@ -79,3 +79,16 @@
 		if(0 to 9)			icon_state = "radaway_empty"
 		if(10 to 50) 		icon_state = "radaway_half"
 		if(51 to INFINITY)	icon_state = "radaway"
+
+/obj/item/weapon/reagent_containers/blood/fev
+	name = "Strange blood bag."
+	icon_state = "radaway_empty"
+	desc = "A strange looking bloodbag."
+	list_reagents = list("fev" = 100)
+
+/obj/item/weapon/reagent_containers/blood/fev/update_icon()
+	var/percent = round((reagents.total_volume / volume) * 50)
+	switch(percent)
+		if(0 to 9)			icon_state = "fev_empty"
+		if(10 to 50) 		icon_state = "fev_half"
+		if(51 to INFINITY)	icon_state = "fev"

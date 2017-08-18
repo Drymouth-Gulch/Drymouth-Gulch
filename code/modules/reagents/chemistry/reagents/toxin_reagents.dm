@@ -43,9 +43,32 @@
 		M.domutcheck()
 	..()
 
+/datum/reagent/toxin/fev
+	name = "FEV"
+	id = "fev"
+	description = "The Forced Evolutionary Virus."
+	color = "#464646" // rgb: 070, 070, 070
+	toxpwr = 0
+	metabolization_rate = 10 * REAGENTS_METABOLISM
+
+/datum/reagent/toxin/mutagen/reaction_mob(mob/living/carbon/M, method=TOUCH, reac_volume)
+	if(!..())
+		return
+	if(!M.has_dna())
+		return  //No robots, AIs, aliens, Ians or other mobs should be affected by this.
+	if((method==VAPOR && prob(min(33, reac_volume))) || method==INGEST || method==PATCH || method==INJECT)
+		randmuti(M)
+		if(prob(75))
+			randmutb(M)
+		else
+			randmutg(M)
+		M.updateappearance()
+		M.domutcheck()
+	..()
+
 /datum/reagent/toxin/mutagen/on_mob_life(mob/living/carbon/M)
 	if(istype(M))
-		M.apply_effect(5,IRRADIATE,0)
+		M.apply_effect(5,IRRADIATE,2)
 	..()
 
 /datum/reagent/toxin/plasma
