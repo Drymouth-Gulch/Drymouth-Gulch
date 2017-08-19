@@ -99,7 +99,7 @@ obj
 					equipment
 					meds
 						New()
-							switch(rand(1,6))
+							switch(rand(1,5))
 								if(1)
 									var/obj/item/weapon/reagent_containers/pill/patch/healpowder/lb = new
 									lb.loc=src.loc
