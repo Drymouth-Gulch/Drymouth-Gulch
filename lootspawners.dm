@@ -99,7 +99,7 @@ obj
 					equipment
 					meds
 						New()
-							switch(rand(1,6))
+							switch(rand(1,5))
 								if(1)
 									var/obj/item/weapon/reagent_containers/pill/patch/healpowder/lb = new
 									lb.loc=src.loc
@@ -119,16 +119,6 @@ obj
 								if(5)
 									var/obj/item/weapon/storage/pill_bottle/fixer/lb = new
 									lb.loc=src.loc
-									del src
-								if(6)
-									var/obj/item/weapon/gun/syringe/syringer/lb = new
-									var/obj/item/weapon/reagent_containers/syringe/stimulants/lb2 = new
-									var/obj/item/weapon/reagent_containers/syringe/stimulants/lb3 = new
-									var/obj/item/weapon/reagent_containers/syringe/stimulants/lb4 = new
-									lb.loc=src.loc
-									lb2.loc=src.loc
-									lb3.loc=src.loc
-									lb4.loc=src
 									del src
 						drugs
 			weaponspawners //1.6
