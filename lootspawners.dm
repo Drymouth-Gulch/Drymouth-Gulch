@@ -614,7 +614,7 @@ obj
 								del src
 				tier4
 					New()
-						switch(rand(1,5))
+						switch(rand(1,3))
 							if(1)
 								var/obj/item/clothing/suit/armor/f13/rangercombat/lb = new
 								var/obj/item/clothing/head/helmet/f13/rangercombat/lb2 = new
@@ -624,10 +624,8 @@ obj
 							if(2)
 								var/obj/item/clothing/suit/armor/f13/combat/brotherhood/lb = new
 								var/obj/item/clothing/head/helmet/f13/combat/brotherhood/lb2 = new
-								var/obj/item/weapon/storage/backpack/combat_ruck/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
-								lb3.loc=src.loc
 								del src
 							if(3)
 								var/obj/item/clothing/suit/armor/f13/brokenpa/t45b/lb = new
@@ -637,23 +635,6 @@ obj
 								lb2.loc=src.loc
 								lb3.loc=src.loc
 								del src
-							if(4)
-								var/obj/item/clothing/suit/armor/f13/brokenpa/t45d/lb = new
-								var/obj/item/clothing/head/helmet/f13/brokenpa/t45d/lb2 = new
-								var/obj/item/clothing/under/f13/combat/lb3 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								lb3.loc=src.loc
-								del src
-							if(5)
-								var/obj/item/clothing/suit/armor/f13/power_armor/t45b/lb = new
-								var/obj/item/clothing/head/helmet/power_armor/f13/t45b/lb2 = new
-								var/obj/item/clothing/under/f13/reconbroken/lb3 = new
-								lb.loc=src.loc
-								lb2.loc=src.loc
-								lb3.loc=src.loc
-								del src
-								return
 				tier5
 					New()
 						switch(rand(1,8))
@@ -678,10 +659,8 @@ obj
 							if(4)
 								var/obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2/lb = new
 								var/obj/item/clothing/head/helmet/power_armor/f13/advanced/mk2/lb2 = new
-								var/obj/item/clothing/under/f13/enclaveo/lb3 = new
 								lb.loc=src.loc
 								lb2.loc=src.loc
-								lb3.loc=src.loc
 								del src
 								return
 							if(5)
