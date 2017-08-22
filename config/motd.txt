@@ -2,8 +2,12 @@
 
 <h1>Welcome to Drymouth Gulch!</h1>
 
-<i><b>The development is like two or three guys maybe and only one or two are decent coders, so please be patient.
+<i><b>Development is active, but we are always seeking new staff!
+
+<i><b>Here's our Discord! https://discord.gg/2yH5Tsu
+
+<i><b>Here's our Legacy Github! https://github.com/Drymouth-Gulch/Drymouth-Gulch
 
 <i><b>This server takes place before the Second Battle of Hoover Dam.
 
-<i>This server is running Fallout13 Legacy code, with some <s> incredibly stupid </s> features removed, such as the whitelist.</i>
+<i>This server is running Fallout13 Legacy code, which is based on fairly old /tg/code. We've purged the whitelist from the code, and crank out updates to keep the old girl working every now and then, but our main focus is currently on a rebase.</i>
