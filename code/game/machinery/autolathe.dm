@@ -256,8 +256,8 @@
 		tot_rating += MB.rating
 	tot_rating *= 25000
 	materials.max_amount = tot_rating * 3
-	T=1.2
-	for(var/obj/item/stock_parts/manipulator/M in component_parts)
+	var/T=1.2
+	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
 		T -= M.rating*0.2
 	prod_coeff = min(1,max(0,T)) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
 
