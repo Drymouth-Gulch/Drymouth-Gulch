@@ -29,9 +29,9 @@
 	update_icon()
 
 /obj/structure/closet/initialize()
+	..()
 	if(!opened)		// if closed, any item at the crate's loc is put in the contents
 		take_contents()
-	. = ..()
 
 /obj/structure/closet/update_icon()
 	overlays.Cut()
@@ -100,8 +100,9 @@
 		throwing = 0
 
 /obj/structure/closet/proc/take_contents()
+
 	for(var/atom/movable/AM in loc)
-		if(AM != src && insert(AM) == -1) // limit reached
+		if(insert(AM) == -1) // limit reached
 			break
 
 /obj/structure/closet/proc/open()
