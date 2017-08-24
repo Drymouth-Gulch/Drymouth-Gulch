@@ -487,7 +487,7 @@
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
 	armor = list(melee = 70, bullet = 60, laser = 60, energy = 50, bomb = 50, bio = 100, rad = 60)
-	
+
 /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	name = "T-51b power armor"
 	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
@@ -605,6 +605,13 @@
 	armor = list(melee = 45, bullet = 30, laser = 15, energy = 20, bomb = 20, bio = 0, rad = 0)
 	put_on_delay = 60
 	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combat/mk2
+	name = "combat armor mk2"
+	desc = "An enhanced version of the common combat armor."
+	icon_state = "combat_armor_mk2"
+	item_state = "combat_armor_mk2"
+	armor = list(melee = 40, bullet = 40, laser = 20, energy = 25, bomb = 20, bio = 0, rad = 75)
 
 /obj/item/clothing/suit/armor/f13/combat/ncr
 	name = "ranger patrol armor"
