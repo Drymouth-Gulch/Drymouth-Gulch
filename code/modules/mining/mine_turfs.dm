@@ -20,6 +20,7 @@ var/global/list/rockTurfEdgeCache
 	//temperature = TCMB
 	var/environment_type = "asteroid"
 	var/turf/ground/mountain/turf_type = /turf/ground/mountain //For basalt vs normal asteroid
+	var/data_having_type
 	var/mineralType = null
 	var/mineralAmt = 3
 	var/spread = 0 //will the seam spread?
@@ -336,9 +337,20 @@ var/global/list/rockTurfEdgeCache
 	var/length = 100
 	var/mob_spawn_list// = list("Casador" = 1, "Rat" = 1, "None" = 98)
 	var/sanity = 1
+	var/forward_cave_dir = 1
+	var/backward_cave_dir = 2
+	var/going_backwards = TRUE
 	var/turf_type = /turf/ground/mountain
+	var/has_data = FALSE
+	var/data_having_type = /turf/ground/mountain/cave/has_data
 
 /turf/ground/mountain/cave/New(loc, var/length, var/go_backwards = 1, var/exclude_dir = -1)
+
+	if(!has_data)
+		produce_tunnel_from_data()
+	else
+		..()	//do not continue after changeturfing or we will do a double initialize
+	/*
 
 	// If length (arg2) isn't defined, get a random length; otherwise assign our length to the length arg.
 	if(!length)
@@ -359,6 +371,32 @@ var/global/list/rockTurfEdgeCache
 	SpawnFloor(src)
 	..()
 
+	*/
+
+/turf/ground/mountain/cave/proc/get_cave_data(set_length, exclude_dir = -1)
+	// If set_length (arg1) isn't defined, get a random length; otherwise assign our length to the length arg.
+	if(!set_length)
+		length = rand(25, 50)
+	else
+		length = set_length
+
+	// Get our directiosn
+	var/forward_cave_dir = pick(alldirs - exclude_dir)
+	// Get the opposite direction of our facing direction
+	backward_cave_dir = angle2dir(dir2angle(forward_cave_dir) + 180)
+
+/turf/ground/mountain/cave/proc/produce_tunnel_from_data(tunnel_length, excluded_dir = -1)
+	get_cave_data(tunnel_length, excluded_dir)
+	// Make our tunnels
+	make_tunnel(forward_cave_dir)
+	if(going_backwards)
+		make_tunnel(backward_cave_dir)
+	// Kill ourselves by replacing ourselves with a normal floor.
+	SpawnFloor(src)
+
+/turf/ground/mountain/cave/has_data //subtype for producing a tunnel with given data
+	has_data = TRUE
+
 /turf/ground/mountain/cave/proc/make_tunnel(dir)
 
 	var/turf/simulated/mineral/tunnel = src
@@ -377,14 +415,17 @@ var/global/list/rockTurfEdgeCache
 			var/turf/simulated/mineral/edge = get_step(tunnel, angle2dir(dir2angle(dir) + edge_angle))
 			if(istype(edge))
 				SpawnFloor(edge)
-
+		if(!sanity)
+			break
 		// Move our tunnel forward
 		tunnel = get_step(tunnel, dir)
 
 		if(istype(tunnel))
 			// Small chance to have forks in our tunnel; otherwise dig our tunnel.
 			if(i > 3 && prob(20))
-				new src.type(tunnel, rand(10, 15), 0, dir)
+				var/turf/ground/mountain/cave/C = tunnel.ChangeTurf(data_having_type,FALSE,FALSE,TRUE)
+				C.going_backwards = FALSE
+				C.produce_tunnel_from_data(rand(10, 15), dir)
 			else
 				SpawnFloor(tunnel)
 		else //if(!istype(tunnel, src.parent)) // We hit space/normal/wall, stop our tunnel.

@@ -104,7 +104,6 @@
 	icon_state = "bulletproofalt"
 	item_state = "armor"
 
-//Tesla Armor
 /obj/item/clothing/suit/armor/laserproof
 	name = "tesla armor"
 	desc = "A prewar armor design by Nikola Tesla before being confinscated by the U.S. government. Provides the best energy weapons resistance."
@@ -325,6 +324,7 @@
 	item_state = "knight_tabard"
 
 //Fluff
+
 /obj/item/clothing/suit/armor/fluff/jensen
 	name = "armored trenchcoat"
 	desc = "A trenchcoat augmented with a special alloy for some protection and style."
@@ -337,17 +337,6 @@
 	put_on_delay = 10
 	strip_delay = 30
 
-/obj/item/clothing/suit/armor/f13/kit
-	name = "armor kit"
-	desc = "Separate armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
-	icon_state = "armorkit"
-	item_state = "armorkit"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
-	put_on_delay = 30
-	strip_delay = 30
-
-//Metal Armor
 /obj/item/clothing/suit/armor/fluff/chestplate
 	name = "metal armor"
 	desc = "A set of polished plates formed together to form a crude set of armor."
@@ -370,8 +359,18 @@
 	slowdown = 0.5
 	put_on_delay = 30
 	strip_delay = 10
+//Fallout 13
 
-//Raider Armors
+/obj/item/clothing/suit/armor/f13/kit
+	name = "armor kit"
+	desc = "Separate armor parts you can wear over the clothing to get the most basic protection from the dangers of wasteland.<br>It is unable to reflect laser beams and probably won't shield you from a random bullet, but it sure is better than going into the battle without any armor at all."
+	icon_state = "armorkit"
+	item_state = "armorkit"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 30, bullet = 20, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	put_on_delay = 30
+	strip_delay = 30
+
 /obj/item/clothing/suit/armor/f13/raider
 	name = "supa-fly raider armor"
 	desc = "Fabulous mutant powers were revealed to me the day I held aloft my bumper sword and said...<br>BY THE POWER OF NUKA-COLA, I AM RAIDER MAN!"
@@ -418,9 +417,8 @@
 	put_on_delay = 40
 	strip_delay = 40
 
-//Old metal armor
 /obj/item/clothing/suit/armor/f13/bmetalarmor
-	name = "raider metal armor"
+	name = "metal armor"
 	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks like it might impair movement"
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
@@ -432,7 +430,7 @@
 	strip_delay = 60
 
 /obj/item/clothing/suit/armor/f13/ibmetalarmor
-	name = "reinforced raider metal armor"
+	name = "metal armor Mk I"
 	desc = "A set of improved metal armor made from various bits of scrap metal and upgraded with plasteel.<br>Will protect against bullets and dissipate lasers a bit better, still slowing you down."
 	icon_state = "bmetalarmor"
 	item_state = "bmetalarmor"
@@ -443,45 +441,11 @@
 	put_on_delay = 60
 	strip_delay = 60
 
-//Combat armor
-
-/obj/item/clothing/suit/armor/f13/combat
-	name = "combat armor"
-	desc = "An old combat armor, out of use around the time of the war."
-	icon_state = "combat_armor"
-	item_state = "combat_armor"
-	body_parts_covered = CHEST|GROIN|LEGS|FEET
-	armor = list(melee = 30, bullet = 30, laser = 15, energy = 20, bomb = 20, bio = 0, rad = 50)
-	put_on_delay = 60
-	strip_delay = 60
-	flags_inv = HIDEJUMPSUIT
-
-/obj/item/clothing/suit/armor/f13/combat/mk2
-	name = "combat armor mk2"
-	desc = "An enhanced version of the common combat armor."
-	icon_state = "combat_armor_mk2"
-	item_state = "combat_armor_mk2"
-	armor = list(melee = 40, bullet = 40, laser = 20, energy = 25, bomb = 20, bio = 0, rad = 75)
-
-/obj/item/clothing/suit/armor/f13/combat/brotherhood
-	name = "brotherhood combat armor"
-	desc = "A quality set of combat armor, commonly worn by Brotherhood of Steel Initiates."
-	icon_state = "brotherhood_armor"
-	item_state = "brotherhood_armor"
-	armor = list(melee = 60, bullet = 50, laser = 30, energy = 30, bomb = 30, bio = 0, rad = 100)
-
-/obj/item/clothing/suit/armor/f13/combat/enclave
-	name = "enclave combat armor"
-	desc = "A highly advanced suit of combat armor that even supersedes the Brotherhood's technological capabilities. A very excellent piece of armor standard issue for all non-powered armor Enclave infantry."
-	icon_state = "enclave_armor"
-	item_state = "enclave_armor"
-	armor = list(melee = 70, bullet = 70, laser = 55, energy = 40, bomb = 30, bio = 0, rad = 100)
-
 // salvaged/broken power armor, does not require PA training
 
 /obj/item/clothing/suit/armor/f13/brokenpa
 	unacidable = 1
-	slowdown = 1
+	slowdown = 3
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HANDS
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS
@@ -491,20 +455,10 @@
 
 /obj/item/clothing/suit/armor/f13/brokenpa/t45b
 	name = "Salvaged T-45b power armor"
-	desc = "It's a set of T-45d power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors.<br>Due to the lack of servomotors in the limbs, this armor is so heavy that it feels like you're carrying a brahmin on your back!"
+	desc = "It's a set of T-45b power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."
 	icon_state = "t45bpowerarmor"
 	item_state = "t45bpowerarmor"
-	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 70)
-	slowdown = 3
-
-/obj/item/clothing/suit/armor/f13/brokenpa/t45d
-	name = "Salvaged T-45d power armor"
-	icon_state = "t45dpowerarmor"
-	item_state = "t45dpowerarmor"
-	name = "Salvaged T-45d power armor"
-	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle. This suit appears worn and battered."
-	armor = list(melee = 50, bullet = 40, laser = 40, energy = 40, bomb = 50, bio = 100, rad = 70)
-	slowdown = 3
+	armor = list(melee = 60, bullet = 60, laser = 55, energy = 50, bomb = 50, bio = 100, rad = 50)
 
 // power armor
 
@@ -527,27 +481,26 @@
 			..()
 	return ..()
 
-/obj/item/clothing/suit/armor/f13/power_armor/t45b
-	name = "T-45b power armor"
-	desc = "It's a set of T-45b power armor recovered by the NCR during the NCR-Brotherhood War.<br>NCR technicians have restored it to working order by replacing the back-mounted cylinders with a custom air conditioning module and stripping out the joint servomotors."
-	icon_state = "t45bpowerarmor"
-	item_state = "t45bpowerarmor"
-	armor = list(melee = 60, bullet = 50, laser = 40, energy = 40, bomb = 40, bio = 100, rad = 50)
-	slowdown = 2
-
 /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	name = "T-45d power armor"
 	desc = "Originally developed and manufactured for the United States Army by American defense contractor West Tek, the T-45d power armor was the first version of power armor to be successfully deployed in battle."
 	icon_state = "t45dpowerarmor"
 	item_state = "t45dpowerarmor"
-	armor = list(melee = 60, bullet = 50, laser = 50, energy = 50, bomb = 50, bio = 100, rad = 60)
+	armor = list(melee = 70, bullet = 60, laser = 60, energy = 50, bomb = 50, bio = 100, rad = 60)
+
+/obj/item/clothing/suit/armor/f13/power_armor/t51b
+	name = "T-51b power armor"
+	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
+	icon_state = "t51bpowerarmor"
+	item_state = "t51bpowerarmor"
+	armor = list(melee = 75, bullet = 65, laser = 65, energy = 55, bomb = 55, bio = 100, rad = 95)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced
 	name = "Advanced power armor"
 	desc = "An advanced suit of armor typically used by the Enclave.<br>It is composed of lightweight metal alloys, reinforced with ceramic castings at key stress points.<br>Additionally, like the T-51b power armor, it includes a recycling system that can convert human waste into drinkable water, and an air conditioning system for it's user's comfort."
 	icon_state = "advpowerarmor1"
 	item_state = "advpowerarmor1"
-	armor = list(melee = 70, bullet = 60, laser = 60, energy = 60, bomb = 60, bio = 100, rad = 70)
+	armor = list(melee = 75, bullet = 65, laser = 65, energy = 60, bomb = 60, bio = 100, rad = 70)
 
 /obj/item/clothing/suit/armor/f13/power_armor/advanced/mk2
 	name = "Advanced power armor MKII"
@@ -563,13 +516,6 @@
 	icon_state = "tesla"
 	item_state = "tesla"
 	armor = list(melee = 40, bullet = 25, laser = 75, energy = 75, bomb = 30, bio = 100, rad = 95)
-
-/obj/item/clothing/suit/armor/f13/power_armor/t51b
-	name = "T-51b power armor"
-	desc = "The pinnacle of pre-war technology. This suit of power armor provides substantial protection to the wearer."
-	icon_state = "t51bpowerarmor"
-	item_state = "t51bpowerarmor"
-	armor = list(melee = 75, bullet = 55, laser = 5, energy = 55, bomb = 55, bio = 100, rad = 95)
 
 //Fallout 13
 
@@ -594,7 +540,18 @@
 	put_on_delay = 40
 	strip_delay = 40
 
-//Legion Armor
+/obj/item/clothing/suit/armor/f13/bmetalarmor
+	name = "raider metal armor"
+	desc = "A set of sturdy metal armor made from various bits of scrap metal. It looks like it might impair movement"
+	icon_state = "bmetalarmor"
+	item_state = "bmetalarmor"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
+	armor = list(melee = 60, bullet = 35, laser = 20, energy = 20, bomb = 20, bio = 0, rad = 5)
+	slowdown = 1
+	flags_inv = HIDEJUMPSUIT
+	put_on_delay = 60
+	strip_delay = 60
+
 /obj/item/clothing/suit/armor/f13/legrecruit
 	name = "legion recruit armor"
 	desc = "Legion recruit armor is a common light armor, supplied to recruit legionaries and to recruit decanus units. Like most Legion armor, it is made from repurposed sports equipment, consisting of a football player's protective shoulder and chest pads reinforced with additional leather padding and worn over a baseball catcher's vest."
@@ -639,14 +596,43 @@
 	put_on_delay = 60
 	strip_delay = 60
 
-//Ranger Armors
+/obj/item/clothing/suit/armor/f13/combat
+	name = "combat armor"
+	desc = "An old combat armor, out of use around the time of the war."
+	icon_state = "combat_armor"
+	item_state = "combat_armor"
+	body_parts_covered = CHEST|GROIN|LEGS|FEET
+	armor = list(melee = 45, bullet = 30, laser = 15, energy = 20, bomb = 20, bio = 0, rad = 0)
+	put_on_delay = 60
+	strip_delay = 60
+
+/obj/item/clothing/suit/armor/f13/combat/mk2
+	name = "combat armor mk2"
+	desc = "An enhanced version of the common combat armor."
+	icon_state = "combat_armor_mk2"
+	item_state = "combat_armor_mk2"
+	armor = list(melee = 40, bullet = 40, laser = 20, energy = 25, bomb = 20, bio = 0, rad = 75)
+
+/obj/item/clothing/suit/armor/f13/combat/ncr
+	name = "ranger patrol armor"
+	desc = "A set of standard issue ranger patrol armor that provides defense similar to a suit of pre-war combat armor."
+	icon_state = "ncr_patrol"
+	item_state = "ncr_patrol"
+
+/obj/item/clothing/suit/armor/f13/combat/brotherhood
+	name = "brotherhood combat armor"
+	desc = "A superior combat armor set made by the Brotherhood of Steel, standard issue for all initiates."
+	icon_state = "brotherhood_armor"
+	item_state = "brotherhood_armor"
+	armor = list(melee = 40, bullet = 40, laser = 25, energy = 10, bomb = 20, bio = 0, rad = 60)
+
 /obj/item/clothing/suit/armor/f13/rangercombat
 	name = "ranger combat armor"
 	desc = "The NCR ranger combat armor, or black armor consists of a pre-war L.A.P.D. riot suit under a duster with rodeo jeans. Considered one of the most prestigious suits of armor to earn and wear while in service of the NCR Rangers."
 	icon_state = "ranger"
 	item_state = "ranger"
 	body_parts_covered = CHEST|GROIN|LEGS|FEET|ARMS
-	armor = list(melee = 60, bullet = 60, laser = 45, energy = 20, bomb = 20, bio = 0, rad = 80)
+	armor = list(melee = 50, bullet = 45, laser = 25, energy = 20, bomb = 20, bio = 0, rad = 80)
 	put_on_delay = 60
 	strip_delay = 60
 
@@ -665,7 +651,6 @@
 	item_state = "elite_riot"
 	armor = list(melee = 75, bullet = 75, laser = 60, energy = 35, bomb = 35, bio = 0, rad = 100)
 
-//NCR Armors
 /obj/item/clothing/suit/armor/f13/ncrarmor
 	name = "NCR vest"
 	desc = "A standard issue NCR protective vest."

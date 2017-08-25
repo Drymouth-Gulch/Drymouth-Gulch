@@ -190,7 +190,7 @@
 
 			var/power = max(2000, (metal_cost+glass_cost)*multiplier/5)
 
-			if((materials.amount(MAT_METAL) >= metal_cost*multiplier/coeff) && (materials.amount(MAT_GLASS) >= glass_cost*multiplier/coeff))
+			if((materials.amount(MAT_METAL) >= metal_cost*multiplier*coeff) && (materials.amount(MAT_GLASS) >= glass_cost*multiplier*coeff))
 				busy = 1
 				use_power(power)
 				icon_state = "autolathe"
@@ -256,8 +256,10 @@
 		tot_rating += MB.rating
 	tot_rating *= 25000
 	materials.max_amount = tot_rating * 3
+	var/T=1.2
 	for(var/obj/item/weapon/stock_parts/manipulator/M in component_parts)
-		prod_coeff += M.rating - 1
+		T -= M.rating*0.2
+	prod_coeff = min(1,max(0,T)) // Coeff going 1 -> 0,8 -> 0,6 -> 0,4
 
 /obj/machinery/autolathe/proc/main_win(mob/user)
 	var/dat = "<div class='statusDisplay'><h3>Autolathe Menu:</h3><br>"
@@ -349,12 +351,12 @@
 	dat += "</div>"
 	return dat
 
-/obj/machinery/autolathe/proc/can_build(datum/design/D)
+/obj/machinery/autolathe/proc/can_build(datum/design/D, amount = 1)
 	var/coeff = (ispath(D.build_path,/obj/item/stack) ? 1 : 2 ** prod_coeff)
 
-	if(D.materials[MAT_METAL] && (materials.amount(MAT_METAL) < (D.materials[MAT_METAL] / coeff)))
+	if(D.materials[MAT_METAL] && (materials.amount(MAT_METAL) < (D.materials[MAT_METAL] * coeff * amount)))
 		return 0
-	if(D.materials[MAT_GLASS] && (materials.amount(MAT_GLASS) < (D.materials[MAT_GLASS] / coeff)))
+	if(D.materials[MAT_GLASS] && (materials.amount(MAT_GLASS) < (D.materials[MAT_GLASS] * coeff * amount)))
 		return 0
 	return 1
 
@@ -362,9 +364,9 @@
 	var/coeff = (ispath(D.build_path,/obj/item/stack) ? 1 : 2 ** prod_coeff)
 	var/dat
 	if(D.materials[MAT_METAL])
-		dat += "[D.materials[MAT_METAL] / coeff] metal "
+		dat += "[D.materials[MAT_METAL] * coeff] metal "
 	if(D.materials[MAT_GLASS])
-		dat += "[D.materials[MAT_GLASS] / coeff] glass"
+		dat += "[D.materials[MAT_GLASS] * coeff] glass"
 	return dat
 
 /obj/machinery/autolathe/proc/shock(mob/user, prb)

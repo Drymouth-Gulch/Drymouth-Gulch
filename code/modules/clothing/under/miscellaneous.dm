@@ -1055,7 +1055,7 @@
 	item_color = "recon"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HEAD
 	flags = BLOCKHAIR //It doesn't block the hair! What I did wrong?
-	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 15, bullet = 10, laser = 10, energy = 10, bomb = 0, bio = 0, rad = 0)
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	can_adjust = 0
@@ -1068,7 +1068,7 @@
 	item_color = "reconbroken"
 	body_parts_covered = CHEST|GROIN|LEGS|ARMS|HEAD
 	flags = BLOCKHAIR
-	armor = list(melee = 5, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
+	armor = list(melee = 10, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
 	cold_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	heat_protection = CHEST|GROIN|LEGS|FEET|ARMS|HEAD
 	can_adjust = 0
