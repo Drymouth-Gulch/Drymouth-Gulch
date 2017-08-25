@@ -268,6 +268,7 @@ update_label("John Doe", "Clowny")
 	desc = "A pair of Brotherhood of Steel holotags."
 	icon_state = "bos"
 	item_state = "gold_id"
+	access = list("73")
 
 /obj/item/weapon/card/id/syndicate
 	name = "agent card"
