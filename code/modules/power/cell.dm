@@ -28,7 +28,7 @@
 /obj/item/weapon/stock_parts/cell/proc/updateicon()
 	overlays.Cut()
 	if(charge < 0.01)
-		return
+		overlays += image('icons/obj/power.dmi', "cell-o3")
 	else if(charge/maxcharge >=0.995)
 		overlays += image('icons/obj/power.dmi', "cell-o2")
 	else
@@ -64,6 +64,7 @@
 			return 0
 	charge += power_used
 	return power_used
+	updateicon()
 
 /obj/item/weapon/stock_parts/cell/examine(mob/user)
 	..()
@@ -287,7 +288,36 @@
 /obj/item/weapon/stock_parts/cell/emproof/corrupt()
 	return
 
-//Батарейки для пушек
+/obj/item/weapon/stock_parts/cell/ammo
+	name = "ammo cell"
+	desc = "You shouldn't be holding this."
+
+/obj/item/weapon/stock_parts/cell/ammo/New()
+	..()
+	return
+	
+/obj/item/weapon/stock_parts/cell/ammo/proc/updateicon()
+	return
+
+/obj/item/weapon/stock_parts/cell/ammo/mfc
+	name = "microfusion cell"
+	desc = "A microfusion cell, typically used as ammunition for large energy weapons. It cannot be recharged."
+	maxcharge = 1000
+	chargerate = 0
+	
+/obj/item/weapon/stock_parts/cell/ammo/ecp
+	name = "electron charge pack"
+	desc = "An electron charge pack, typically used as ammunition for rapidly-firing energy weapons."
+	maxcharge = 2400
+	chargerate = 400
+	
+/obj/item/weapon/stock_parts/cell/ammo/ec
+	name = "energy cell"
+	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."
+	maxcharge = 300
+	chargerate = 300
+
+//ГЃГ ГІГ Г°ГҐГ©ГЄГЁ Г¤Г«Гї ГЇГіГёГҐГЄ
 /obj/item/weapon/stock_parts/cell/device/laser/update_icon()
 	var/ratio = charge / maxcharge
 	if(charge)
