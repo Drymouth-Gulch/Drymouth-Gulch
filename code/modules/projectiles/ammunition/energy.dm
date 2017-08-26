@@ -9,47 +9,15 @@
 
 /obj/item/ammo_casing/energy/laser
 	projectile_type = /obj/item/projectile/beam
+	e_cost = 50
 	select_name = "kill"
 	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
 
 /obj/item/ammo_casing/energy/laser/pistol
 	projectile_type = /obj/item/projectile/beam/pistol
+	e_cost = 10
 	select_name = "kill"
 	fire_sound = 'sound/f13weapons/laser_pistol.ogg'
-
-/obj/item/ammo_casing/energy/lasergun
-	projectile_type = /obj/item/projectile/beam
-	e_cost = 83
-	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
-	select_name = "kill"
-
-/obj/item/ammo_casing/energy/plasmagun
-	projectile_type = /obj/item/projectile/beam/plasma_beam
-	e_cost = 83
-	select_name = "kill"
-	fire_sound = 'sound/f13weapons/plasma_rifle.ogg'
-	hitsound = 'sound/f13weapons/plasmarifle.ogg'
-//	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
-
-/obj/item/ammo_casing/energy/plasmagun/scatter
-	projectile_type = /obj/item/projectile/beam/plasma_scatter
-	pellets = 5
-	variance = 25
-	select_name = "kill"
-	fire_sound = 'sound/f13weapons/multiplas_rifle.ogg'
-	hitsound = 'sound/f13weapons/plasmarifle.ogg'
-//	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
-
-/obj/item/ammo_casing/energy/plasmapistol
-	projectile_type = /obj/item/projectile/beam/plasma_pistol
-	e_cost = 83
-	select_name = "kill"
-	fire_sound = 'sound/f13weapons/plasma_pistol.ogg'
-	hitsound = 'sound/f13weapons/plasmarifle.ogg'
-//	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
-
-/obj/item/ammo_casing/energy/laser/hos
-	e_cost = 100
 
 /obj/item/ammo_casing/energy/laser/practice
 	projectile_type = /obj/item/projectile/beam/practice
@@ -66,6 +34,39 @@
 	projectile_type = /obj/item/projectile/beam/heavylaser
 	select_name = "anti-vehicle"
 	fire_sound = 'sound/weapons/lasercannonfire.ogg'
+
+/obj/item/ammo_casing/energy/plasma
+	projectile_type = /obj/item/projectile/beam/plasma
+	e_cost = 100
+	select_name = "kill"
+	fire_sound = 'sound/f13weapons/plasma_rifle.ogg'
+
+/obj/item/ammo_casing/energy/plasma/scatter
+	projectile_type = /obj/item/projectile/beam/plasma/scatter
+	pellets = 5
+	variance = 25
+	select_name = "kill"
+	fire_sound = 'sound/f13weapons/multiplas_rifle.ogg'
+
+/obj/item/ammo_casing/energy/plasma/pistol
+	projectile_type = /obj/item/projectile/beam/plasma/pistol
+	e_cost = 18.75
+	select_name = "kill"
+
+/obj/item/ammo_casing/energy/plasma/cutter
+	projectile_type = /obj/item/projectile/plasma
+	select_name = "plasma burst"
+	fire_sound = 'sound/weapons/plasma_cutter.ogg'
+	delay = 15
+	e_cost = 25
+
+/obj/item/ammo_casing/energy/plasma/cutter/adv
+	projectile_type = /obj/item/projectile/plasma/adv
+	delay = 10
+	e_cost = 10
+
+/obj/item/ammo_casing/energy/laser/hos
+	e_cost = 100
 
 /obj/item/ammo_casing/energy/laser/pulse
 	projectile_type = /obj/item/projectile/beam/pulse
@@ -156,18 +157,6 @@
 	select_name  = "disable"
 	e_cost = 50
 	fire_sound = "sound/weapons/taser2.ogg"
-
-/obj/item/ammo_casing/energy/plasma
-	projectile_type = /obj/item/projectile/plasma
-	select_name = "plasma burst"
-	fire_sound = 'sound/weapons/plasma_cutter.ogg'
-	delay = 15
-	e_cost = 25
-
-/obj/item/ammo_casing/energy/plasma/adv
-	projectile_type = /obj/item/projectile/plasma/adv
-	delay = 10
-	e_cost = 10
 
 /obj/item/ammo_casing/energy/wormhole
 	projectile_type = /obj/item/projectile/beam/wormhole
