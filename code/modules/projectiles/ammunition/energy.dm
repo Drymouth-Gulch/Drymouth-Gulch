@@ -7,26 +7,6 @@
 	var/select_name = "energy"
 	fire_sound = 'sound/weapons/Laser.ogg'
 
-/obj/item/projectile/beam/pistol
-	name = "laser"
-	icon_state = "laser"
-	damage = 20
-
-/obj/item/projectile/beam/plasma_beam
-	name = "plasma beam"
-	icon_state = "plasma_beam"
-	damage = 50
-
-/obj/item/projectile/beam/plasma_scatter
-	name = "plasma scatter"
-	icon_state = "plasma_beam"
-	damage = 13
-
-/obj/item/projectile/beam/plasma_pistol
-	name = "plasma beam"
-	icon_state = "plasma_beam"
-	damage = 35
-
 /obj/item/ammo_casing/energy/laser
 	projectile_type = /obj/item/projectile/beam
 	select_name = "kill"
