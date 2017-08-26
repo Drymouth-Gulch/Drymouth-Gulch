@@ -291,6 +291,7 @@
 /obj/item/weapon/stock_parts/cell/ammo
 	name = "ammo cell"
 	desc = "You shouldn't be holding this."
+	w_class = 1
 
 /obj/item/weapon/stock_parts/cell/ammo/New()
 	..()
