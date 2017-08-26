@@ -303,7 +303,7 @@
 /obj/item/weapon/stock_parts/cell/ammo/mfc
 	name = "microfusion cell"
 	desc = "A microfusion cell, typically used as ammunition for large energy weapons. It cannot be recharged."
-	maxcharge = 1000
+	maxcharge = 1200
 	chargerate = 0
 	
 /obj/item/weapon/stock_parts/cell/ammo/ecp
