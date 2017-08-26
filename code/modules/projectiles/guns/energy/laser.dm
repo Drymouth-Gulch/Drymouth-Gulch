@@ -6,18 +6,18 @@
 	w_class = 4
 	materials = list(MAT_METAL=2000)
 	origin_tech = "combat=3;magnets=2"
-	ammo_type = list(/obj/item/ammo_casing/energy/lasergun)
+	ammo_type = list(/obj/item/ammo_casing/energy/laser)
 	ammo_x_offset = 1
 	shaded_charge = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
 /obj/item/weapon/gun/energy/laser/practice
-	name = "laser gun"//practice laser gun
-	desc = "The fact is that you've got <b>REPLICA</b> written down the side of your gun..."//desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
+	name = "laser gun"
+	desc = "A modified version of the basic laser gun, this one fires less concentrated energy bolts designed for target practice."
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/practice)
 	clumsy_check = 0
 	needs_permit = 0
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
 /obj/item/weapon/gun/energy/laser/pistol
 	name = "laser pistol"
@@ -26,38 +26,64 @@
 	item_state = "pistol"
 	w_class = 2
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/ec
 
-/obj/item/weapon/gun/energy/laser/plasma_rifle
+/obj/item/weapon/gun/energy/laser/scatter
+	name = "tribeam laser rifle"
+	desc = "A laser gun equipped with a refraction kit that spreads bolts."
+	icon_state = "tribeam"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
+
+/obj/item/weapon/gun/energy/lasercannon
+	name = "laser cannon"
+	desc = "With the L.A.S.E.R. cannon, the lasing medium is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
+	icon_state = "lasercannon"
+	item_state = "laser"
+	w_class = 4
+	force = 10
+	flags =  CONDUCT
+	slot_flags = SLOT_BACK
+	origin_tech = "combat=4;materials=3;powerstorage=3"
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
+	pin = null
+	ammo_x_offset = 3
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
+
+/obj/item/weapon/gun/energy/xray
+	name = "prototype AER14 laser rifle"
+	desc = "A prototype laser rifle that has it's wiring exposed and extra circuitry taped to the stock. Only few prototypes of these were manufactured and distributed for testing."
+	icon_state = "aer14"
+	item_state = "laser"
+	origin_tech = "combat=5;materials=3;magnets=2;syndicate=2"
+	ammo_type = list(/obj/item/ammo_casing/energy/xray)
+	ammo_x_offset = 3
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
+
+/obj/item/weapon/gun/energy/laser/plasma
 	name ="plasma rifle"
 	item_state = "plasma"
 	icon_state = "plasma"
 	desc = "A energy weapon that fires heated plasma clots. Due to the high accuracy and range is a good tool to eliminate the enemy."
 	origin_tech = "combat=3;magnets=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmagun)
-	ammo_x_offset = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-	w_class = 4
-
-/obj/item/weapon/gun/energy/laser/plasma_rifle/multiplas
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
+	
+/obj/item/weapon/gun/energy/laser/plasma/scatter
 	name = "multiplas rifle"
 	item_state = "plasma"
 	icon_state = "multiplas"
 	desc = "A plasma rifle designed to fire multiple shots."
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmagun/scatter)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-	w_class = 4
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
-/obj/item/weapon/gun/energy/laser/plasma_rifle/pistol
+/obj/item/weapon/gun/energy/laser/plasma/pistol
 	name ="plasma pistol"
-	item_state = "plasma"
 	icon_state = "plasma_pistol"
 	desc = "An energy sidearm that fires heated plasma clots."
-	origin_tech = "combat=3;magnets=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/plasmapistol)
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/pistol)
 	w_class = 2
-	ammo_x_offset = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/ec
 
 /obj/item/weapon/gun/energy/laser/retro
 	name ="retro laser gun"
@@ -96,40 +122,6 @@
 
 /obj/item/weapon/gun/energy/laser/cyborg/emp_act()
 	return
-
-/obj/item/weapon/gun/energy/laser/scatter
-	name = "tribeam laser rifle"
-	desc = "A laser gun equipped with a refraction kit that spreads bolts."
-	icon_state = "tribeam"
-	item_state = "laser"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-	w_class = 4
-
-/obj/item/weapon/gun/energy/lasercannon
-	name = "laser cannon"
-	desc = "With the L.A.S.E.R. cannon, the lasing medium is enclosed in a tube lined with uranium-235 and subjected to high neutron flux in a nuclear reactor core. This incredible technology may help YOU achieve high excitation rates with small laser volumes!"
-	icon_state = "lasercannon"
-	item_state = "laser"
-	w_class = 4
-	force = 10
-	flags =  CONDUCT
-	slot_flags = SLOT_BACK
-	origin_tech = "combat=4;materials=3;powerstorage=3"
-	ammo_type = list(/obj/item/ammo_casing/energy/laser/heavy)
-	pin = null
-	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
-
-/obj/item/weapon/gun/energy/xray
-	name = "prototype AER14 laser rifle"
-	desc = "A prototype laser rifle that has it's wiring exposed and extra circuitry taped to the stock. Only few prototypes of these were manufactured and distributed for testing."
-	icon_state = "aer14"
-	item_state = "laser"
-	origin_tech = "combat=5;materials=3;magnets=2;syndicate=2"
-	ammo_type = list(/obj/item/ammo_casing/energy/xray)
-	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
 
 ////////Laser Tag////////////////////
 
