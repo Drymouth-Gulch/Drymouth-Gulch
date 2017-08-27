@@ -212,13 +212,13 @@ var/global/normal_ooc_colour = "#002eb8"
 	log_ooc("(LOCAL) [mob.name]/[key] : [msg]")
 
 	var/mob/source = mob.get_looc_source()
-
+	/* no use for display_name
 	var/display_name = key
 	if(holder && holder.fakekey)
 		display_name = holder.fakekey
 	if(mob.stat != DEAD)
 		display_name = mob.name
-
+	*/
 	var/turf/T = get_turf(source)
 	var/list/listening = list()
 	listening |= src	// We can always hear ourselves.
@@ -257,6 +257,7 @@ var/global/normal_ooc_colour = "#002eb8"
 
 	for(var/client/C in listening)
 		if(C.prefs.toggles & CHAT_OOC)
+			/*
 			display_name = src.key
 			if(holder)
 				if(holder.fakekey)
@@ -264,6 +265,7 @@ var/global/normal_ooc_colour = "#002eb8"
 						display_name = "[holder.fakekey]/([src.key])"
 					else
 						display_name = holder.fakekey
+			*/
 			C << "<font color='#3399ff'><span class='ooc'><span class='prefix'>LOOC:</span> <EM>[mob.name]:</EM> <span class='message'>[msg]</span></span></font>"
 
 /mob/proc/get_looc_source()
