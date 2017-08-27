@@ -49,19 +49,6 @@
 	build_path = /obj/item/device/mmi/radio_enabled
 	category = list("Misc","Medical Designs")
 
-/datum/design/posibrain
-	name = "Positronic Brain"
-	desc = "The latest in Artificial Intelligences."
-	id = "mmi_posi"
-	req_tech = list("programming" = 5, "biotech" = 4)
-	build_type = PROTOLATHE | MECHFAB
-	materials = list(MAT_METAL = 1700, MAT_GLASS = 1350, MAT_GOLD = 500) //Gold, because SWAG.
-	reliability = 74
-	construction_time = 75
-	build_path = /obj/item/device/mmi/posibrain
-	category = list("Misc", "Medical Designs")
-
-
 /datum/design/synthetic_flash
 	name = "Flash"
 	desc = "When a problem arises, SCIENCE is the solution."
