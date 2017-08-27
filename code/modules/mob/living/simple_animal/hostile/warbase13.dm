@@ -47,5 +47,5 @@
 	ranged = 1
 	minimum_distance = 4
 	retreat_distance = 4
-	projectiletype = /obj/item/projectile/protectron
+	projectiletype = /obj/item/projectile/beam/protectron
 	projectilesound = 'sound/weapons/laser.ogg'

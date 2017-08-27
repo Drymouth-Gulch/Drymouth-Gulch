@@ -298,8 +298,8 @@
 /obj/item/weapon/stock_parts/cell/ammo/New()
 	..()
 	return
-	
-/obj/item/weapon/stock_parts/cell/ammo/proc/updateicon()
+
+/obj/item/weapon/stock_parts/cell/ammo/updateicon()
 	return
 
 /obj/item/weapon/stock_parts/cell/ammo/mfc
@@ -308,14 +308,14 @@
 	icon_state = "mfc"
 	maxcharge = 1200
 	chargerate = 0
-	
+
 /obj/item/weapon/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
 	desc = "An electron charge pack, typically used as ammunition for rapidly-firing energy weapons."
 	icon_state = "icell"
 	maxcharge = 2400
 	chargerate = 400
-	
+
 /obj/item/weapon/stock_parts/cell/ammo/ec
 	name = "energy cell"
 	desc = "An energy cell, typically used as ammunition for small-arms energy weapons."

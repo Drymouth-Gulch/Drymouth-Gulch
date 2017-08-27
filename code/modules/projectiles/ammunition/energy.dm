@@ -25,8 +25,6 @@
 
 /obj/item/ammo_casing/energy/laser/scatter
 	projectile_type = /obj/item/projectile/beam/scatter
-	pellets = 3
-	variance = 25
 	select_name = "fire"
 	fire_sound = 'sound/f13weapons/laser_rifle.ogg'
 
@@ -43,8 +41,6 @@
 
 /obj/item/ammo_casing/energy/plasma/scatter
 	projectile_type = /obj/item/projectile/beam/plasma/scatter
-	pellets = 5
-	variance = 25
 	select_name = "kill"
 	fire_sound = 'sound/f13weapons/multiplas_rifle.ogg'
 

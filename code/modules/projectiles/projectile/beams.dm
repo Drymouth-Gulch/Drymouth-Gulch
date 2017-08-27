@@ -7,10 +7,9 @@
 	hitsound = 'sound/f13weapons/sear.ogg'
 	hitsound_wall = 'sound/f13weapons/sear_wall.ogg'
 	flag = "laser"
-	eyeblur = 1
+	speed = 0
 
 /obj/item/projectile/beam/practice
-	name = "laser"
 	damage = 0
 	hitsound = null
 	nodamage = 1
@@ -19,9 +18,7 @@
 	damage = 20
 
 /obj/item/projectile/beam/scatter
-	name = "laser pellet"
-	icon_state = "scatterlaser"
-	damage = 8
+	damage = 12
 
 /obj/item/projectile/beam/heavylaser
 	name = "heavy laser"
@@ -34,7 +31,7 @@
 /obj/item/projectile/beam/xray
 	name = "xray beam"
 	icon_state = "xray"
-	damage = 15
+	damage = 20
 	irradiate = 30
 	range = 15
 	forcedodge = 1
@@ -45,13 +42,14 @@
 	damage = 50
 	hitsound = 'sound/f13weapons/plasmarifle.ogg'
 	hitsound_wall = 'sound/f13weapons/plasmaout.ogg'
+	speed = 1
 
 /obj/item/projectile/beam/plasma/scatter
 	name = "plasma scatter"
-	damage = 13
+	damage = 18
 
 /obj/item/projectile/beam/plasma/pistol
-	damage = 35
+	damage = 30
 
 /obj/item/projectile/beam/plasma/turbo
 	name = "turbo plasma beam"

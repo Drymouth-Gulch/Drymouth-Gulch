@@ -5,7 +5,7 @@
 	icon = 'icons/obj/guns/energy.dmi'
 
 	var/obj/item/weapon/stock_parts/cell/power_supply //What type of power cell this uses
-	//var/cell_type = /obj/item/weapon/stock_parts/cell
+	var/cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 	var/modifystate = 0
 	var/list/ammo_type = list(/obj/item/ammo_casing/energy)
 	var/select = 1 //The state of the select fire switch. Determines from the ammo_type list what kind of shot is fired next.
@@ -18,7 +18,6 @@
  	//var/charge_cost = 200 //How much energy is needed to fire.
  	//var/max_shots = 10 //Determines the capacity of the weapon's power cell. Specifying a cell_type overrides this value.
  	//var/max_shots = 10
-	var/cell_type = /obj/item/weapon/stock_parts/cell/device/laser/high
 
 /obj/item/weapon/gun/energy/emp_act(severity)
 	power_supply.use(round(power_supply.charge / severity))
@@ -42,6 +41,7 @@
 	fire_delay = shot.delay
 	if(selfcharge)
 		SSobj.processing |= src
+	newshot()
 	update_icon()
 	return
 
@@ -65,11 +65,9 @@
 		select_fire(user)
 		update_icon()
 
-/obj/item/weapon/gun/energy/afterattack(atom/target as mob|obj|turf, mob/living/user as mob|obj, params)
-	newshot() //prepare a new shot
-	..()
-
 /obj/item/weapon/gun/energy/can_shoot()
+	if (!power_supply)
+		return 0
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	return power_supply.charge >= shot.e_cost
 
@@ -87,6 +85,7 @@
 		var/obj/item/ammo_casing/energy/shot = chambered
 		power_supply.use(shot.e_cost)//... drain the power_supply cell
 	chambered = null //either way, released the prepared shot
+	newshot()
 	return
 
 /obj/item/weapon/gun/energy/proc/select_fire(mob/living/user)
@@ -103,6 +102,8 @@
 
 /obj/item/weapon/gun/energy/update_icon()
 	overlays.Cut()
+	if (!power_supply)
+		return
 	var/ratio = Ceiling((power_supply.charge / power_supply.maxcharge) * 4)
 	var/obj/item/ammo_casing/energy/shot = ammo_type[select]
 	var/iconState = "[icon_state]_charge"
@@ -195,16 +196,18 @@
 /////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/weapon/gun/energy/proc/load_battery(var/obj/item/A, mob/user)
-	if(istype(A, /obj/item/weapon/stock_parts/cell/device/laser))
-		var/obj/item/weapon/stock_parts/cell/device/laser/AM = A
-		if(power_supply)
-			user << "<span class='warning'>[src] already has a battery loaded.</span>"
-			return
-		user.remove_from_mob(AM)
-		AM.loc = src
-		power_supply = AM
-		user.visible_message("[user] inserts [AM] into [src].", "<span class='notice'>You insert [AM] into [src].</span>")
-		update_icon()
+	if (cell_type)
+		if(istype(A, cell_type))
+			var/obj/item/AM = A
+			if(power_supply)
+				user << "<span class='warning'>[src] already has a battery loaded.</span>"
+				return
+			user.remove_from_mob(AM)
+			AM.loc = src
+			power_supply = AM
+			user.visible_message("[user] inserts [AM] into [src].", "<span class='notice'>You insert [AM] into [src].</span>")
+			newshot()
+			update_icon()
 /////////////////////////////////////////////////////////////////////////////////
 
 /obj/item/weapon/gun/energy/attack_hand(mob/user as mob)

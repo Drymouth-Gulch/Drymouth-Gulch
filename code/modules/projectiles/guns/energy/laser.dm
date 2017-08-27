@@ -30,8 +30,11 @@
 
 /obj/item/weapon/gun/energy/laser/scatter
 	name = "tribeam laser rifle"
-	desc = "A laser gun equipped with a refraction kit that spreads bolts."
+	desc = "A laser gun equipped with a refraction kit that allows it to fire three beams at once."
 	icon_state = "tribeam"
+	burst_size = 3
+	fire_delay = 0
+	spread = 8
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
@@ -68,12 +71,14 @@
 	origin_tech = "combat=3;magnets=3"
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
-	
+
 /obj/item/weapon/gun/energy/laser/plasma/scatter
 	name = "multiplas rifle"
 	item_state = "plasma"
 	icon_state = "multiplas"
 	desc = "A plasma rifle designed to fire multiple shots."
+	burst_size = 3
+	fire_delay = 4
 	ammo_type = list(/obj/item/ammo_casing/energy/plasma/scatter)
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
@@ -90,7 +95,7 @@
 	icon_state = "retro"
 	desc = "An older model of the basic lasergun, no longer used by Nanotrasen's private security or military forces. Nevertheless, it is still quite deadly and easy to maintain, making it a favorite amongst pirates and other outlaws."
 	ammo_x_offset = 3
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
 /obj/item/weapon/gun/energy/laser/captain
 	name = "antique laser gun"
@@ -101,7 +106,7 @@
 	origin_tech = null
 	ammo_x_offset = 3
 	selfcharge = 1
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
 /obj/item/weapon/gun/energy/laser/captain/scattershot
 	name = "scatter shot laser rifle"
@@ -110,7 +115,7 @@
 	desc = "An industrial-grade heavy-duty laser rifle with a modified laser lense to scatter its shot into multiple smaller lasers. The inner-core can self-charge for theorically infinite use."
 	origin_tech = "combat=5;materials=4;powerstorage=4"
 	ammo_type = list(/obj/item/ammo_casing/energy/laser, /obj/item/ammo_casing/energy/laser/scatter)
-	cell_type = /obj/item/weapon/stock_parts/cell/device/laser
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/mfc
 
 /obj/item/weapon/gun/energy/laser/cyborg
 	can_charge = 0
