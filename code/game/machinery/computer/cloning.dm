@@ -103,13 +103,6 @@
 
 	var/dat = ""
 	dat += "<a href='byond://?src=\ref[src];refresh=1'>Refresh</a>"
-	if(scanner && pod1 && ((scanner.scan_level > 2) || (pod1.efficiency > 5)))
-		if(!autoprocess)
-			dat += "<a href='byond://?src=\ref[src];task=autoprocess'>Autoprocess</a>"
-		else
-			dat += "<a href='byond://?src=\ref[src];task=stopautoprocess'>Stop autoprocess</a>"
-	else
-		dat += "<span class='linkOff'>Autoprocess</span>"
 	dat += "<h3>Cloning Pod Status</h3>"
 	dat += "<div class='statusDisplay'>[temp]&nbsp;</div>"
 
