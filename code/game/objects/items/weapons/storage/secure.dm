@@ -186,7 +186,7 @@
 
 /obj/item/weapon/storage/secure/briefcase/syndie/New()
 	for(var/i = 0, i < storage_slots - 2, i++)
-		new /obj/item/stack/spacecash/c1000(src)
+		new /obj/item/stack/spacecash/random/high(src)
 	return ..()
 
 

@@ -36,7 +36,8 @@ Trooper
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
 		/obj/item/weapon/melee/classic_baton/telescopic=1, \
-		/obj/item/stack/caps=3)
+		/obj/item/stack/caps/random/med, \
+		/obj/item/stack/spacecash/random/high)
 /datum/outfit/job/ncrlieutenant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -127,7 +128,8 @@ Trooper
 		/obj/item/ammo_box/magazine/d12g=3, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
-		/obj/item/stack/caps=3)
+		/obj/item/stack/caps/random/med, \
+		/obj/item/stack/spacecash/random/high)
 /datum/outfit/job/ncrmajor/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -171,8 +173,9 @@ Sergeant
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/stack/caps=2,\
-		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
+		/obj/item/stack/caps/random/med, \
+		/obj/item/stack/spacecash/random/high)
 /datum/outfit/job/ncrsergeant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -217,8 +220,9 @@ Trooper
 	backpack_contents = list(/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/ammo_box/magazine/m556/r20=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/stack/caps=1, \
-		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1, \
+		/obj/item/stack/caps/random/low, \
+		/obj/item/stack/spacecash/random/low)
 /datum/outfit/job/ncrtrooper/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = "NCR"
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -245,6 +249,7 @@ Recruit
 	access = list(67)
 	minimal_access = list(67)
 	outfit = /datum/outfit/job/ncrrecruit
+	late_join = 1
 
 /datum/outfit/job/ncrrecruit
 	name = "NCR Recruit"
@@ -261,8 +266,9 @@ Recruit
 	backpack_contents = list(/obj/item/ammo_box/a762=3, \
 		/obj/item/clothing/mask/facewrap=1, \
 		/obj/item/weapon/kitchen/knife/combat=1,\
-		/obj/item/stack/caps=1,\
-		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1)
+		/obj/item/weapon/gun/projectile/automatic/pistol/ninemil=1,\
+		/obj/item/stack/caps/random/low, \
+		/obj/item/stack/spacecash/random/low)
 
 /datum/outfit/job/ncrrecruit/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = "NCR"
@@ -310,7 +316,9 @@ Veteran Ranger
 	backpack_contents = list(/obj/item/weapon/gun/projectile/revolver/sequoia=1, \
 		/obj/item/ammo_box/c4570=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
-		/obj/item/weapon/melee/classic_baton/telescopic=1)
+		/obj/item/weapon/melee/classic_baton/telescopic=1, \
+		/obj/item/stack/caps/random/med, \
+		/obj/item/stack/spacecash/random/med)
 	mask = /obj/item/clothing/mask/gas/sechailer
 /datum/outfit/job/ncrvetranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = list("NCR","Ranger")
@@ -360,7 +368,8 @@ NCR Ranger
 		/obj/item/weapon/restraints/handcuffs=2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/ammo_box/magazine/d12g=2, \
-		/obj/item/weapon/melee/classic_baton=1)
+		/obj/item/weapon/melee/classic_baton=1, \
+		/obj/item/weapon/storage/wallet/random=1)
 /datum/outfit/job/ncrranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = list("NCR","Ranger")
 	for(var/obj/item/weapon/card/id/ncr/n in H.contents)
@@ -404,7 +413,7 @@ NCR Ranger
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
-	/obj/item/weapon/storage/wallet=1, \
+	/obj/item/weapon/storage/wallet/random=1, \
 	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/gun/projectile/revolver/m29=1, \
 	/obj/item/ammo_box/m44=2, \

@@ -44,7 +44,7 @@
 	var/outfit = null
 
 	var/whitelist_on = 0
-
+	var/late_join = 0 //Allows late joins outside of the blanket faction setting
 	var/donaters = 0
 	var/donatorrank = 0
 

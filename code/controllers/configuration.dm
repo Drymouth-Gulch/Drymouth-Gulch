@@ -70,7 +70,7 @@
 	var/forumurl = "https://fallout13.us/" // default forums
 	var/rulesurl = "https://fallout13.us/viewtopic.php?f=12&t=128&sid=3e22d9ba8496594efce8d590d3260e21" // default rules
 	var/githuburl = "https://github.com/Drymouth-Gulch/Drymouth-Gulch" //default github
-	var/discordurl = "https://discord.gg/gCfPS9R"
+	var/discordurl = "https://discord.gg/WkYEa4s"
 	var/forbid_singulo_possession = 0
 	var/useircbot = 0
 

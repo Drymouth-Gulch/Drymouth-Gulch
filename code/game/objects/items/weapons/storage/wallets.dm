@@ -88,10 +88,9 @@
 
 /obj/item/weapon/storage/wallet/random/New()
 	..()
-	var/item1_type = pick( /obj/item/stack/spacecash/c10,/obj/item/stack/spacecash/c100,/obj/item/stack/spacecash/c1000,/obj/item/stack/spacecash/c20,/obj/item/stack/spacecash/c200,/obj/item/stack/spacecash/c50, /obj/item/stack/spacecash/c500)
-	var/item2_type
-	if(prob(50))
-		item2_type = pick( /obj/item/stack/spacecash/c10,/obj/item/stack/spacecash/c100,/obj/item/stack/spacecash/c1000,/obj/item/stack/spacecash/c20,/obj/item/stack/spacecash/c200,/obj/item/stack/spacecash/c50, /obj/item/stack/spacecash/c500)
+	var/item1_type = pick(/obj/item/stack/caps/random, /obj/item/stack/caps/random/low, /obj/item/stack/caps/random/med ,/obj/item/stack/caps/random/high)
+	//if(prob(50)) - MORE MONEY! Used to roll to assign item 2
+	var/item2_type = pick( /obj/item/stack/spacecash/random, /obj/item/stack/spacecash/random/low, /obj/item/stack/spacecash/random/med, /obj/item/stack/spacecash/random/high)
 	var/item3_type = pick( /obj/item/weapon/coin/silver, /obj/item/weapon/coin/silver, /obj/item/weapon/coin/gold, /obj/item/weapon/coin/iron, /obj/item/weapon/coin/iron, /obj/item/weapon/coin/iron )
 
 	spawn(2)

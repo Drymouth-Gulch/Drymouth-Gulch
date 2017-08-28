@@ -160,15 +160,16 @@ mob/proc/set_faction(var/faction)
 /datum/f13_faction/vault
 	name = "Vault"
 	first_spawn = 1
-	late_join = 1
+	late_join = 0
 	color = "#005A20"
 	head_status = "Overseer"
 	verbs = list(/mob/proc/begin_head_voting)
 	craft_recipes = list(/datum/table_recipe/vlt_encryption_key)
+
 /datum/f13_faction/ncr
 	name = "NCR"
 	first_spawn = 1
-	late_join = 1
+	late_join = 0
 	color = "#020080"
 	head_status = "Colonel"
 	flag = "ncr"
@@ -178,10 +179,11 @@ mob/proc/set_faction(var/faction)
 2. However, NCR troopers are typically fairly poorly trained, and often drafted against their will.<br>\
 3. Feel free to explore the potential characters that this guideline allows, so long as you aren't being a cunt.<br>"
 	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key)
+
 /datum/f13_faction/legion
 	name = "Legion"
 	first_spawn = 1
-	late_join = 1
+	late_join = 0
 	head_status = "Centurion"
 	color = "#C24D44"
 	flag = "legion"
@@ -191,14 +193,16 @@ mob/proc/set_faction(var/faction)
 	1. As a member of The Legion, your goal is to purge the area of Profligates and capture the land for Caesar.<br>\
 	2. You cannot use advanced medicine and most advanced technology. Autolathes and machine guns are okay, anything more advanced will result in being spoken to.<br>\
 	3. As Legion, you are fanatically dedicated to your ideals, and to Caesar. Feel free to explore the potential characters that this guideline allows, so long as you aren't being a cunt."
+
 /datum/f13_faction/wasteland
 	name = "Wasteland"
 	late_join = 1
+
 /datum/f13_faction/den
 	name = "Den"
 	color = "#804B00"
 	first_spawn = 1
-	late_join = 1
+	late_join = 0
 	head_status = "Sheriff"
 	verbs = list(/mob/proc/begin_head_voting)
 	craft_recipes = list(/datum/table_recipe/den_encryption_key)
@@ -206,7 +210,7 @@ mob/proc/set_faction(var/faction)
 datum/f13_faction/BOS
 	name = "BOS"
 	first_spawn = 1
-	late_join = 1
+	late_join = 0
 	color = "#020080"
 	head_status = "Paladin"
 	flag = "bos"

@@ -96,7 +96,7 @@
 "bR" = (/turf/indestructible/rock,/area/mine/unexplored)
 "bS" = (/obj/structure/fungus,/turf/simulated/floor/vines,/area/space/lowradiation)
 "bT" = (/obj/spawners/objectspawners/weaponspawners/gun/tier2,/turf/simulated/floor/vines,/area/space/middleradiation)
-"bU" = (/obj/item/stack/coin/bag,/obj/item/stack/coin/bag,/obj/item/stack/coin/bag,/turf/simulated/floor/vines,/area/space)
+"bU" = (/obj/item/stack/coin/random,/obj/item/stack/coin/random,/obj/item/stack/coin/random,/turf/simulated/floor/vines,/area/space)
 "bV" = (/obj/effect/decal/remains/human,/turf/simulated/floor/vines,/area/space/middleradiation)
 "bW" = (/turf/indestructible/rock,/area/awaymission)
 "bX" = (/turf/simulated/wall/r_wall,/area/enclave/base1)

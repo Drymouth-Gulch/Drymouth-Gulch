@@ -171,7 +171,7 @@
 	for(var/obj/item/briefcase_item in sec_briefcase)
 		qdel(briefcase_item)
 	for(var/i=3, i>0, i--)
-		sec_briefcase.handle_item_insertion(new /obj/item/stack/spacecash/c1000,1)
+		sec_briefcase.handle_item_insertion(new /obj/item/stack/spacecash/random,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/weapon/gun/projectile/revolver/mateba,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/ammo_box/m44,1)
@@ -487,7 +487,7 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	
+
 /datum/outfit/bos_paladin/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
 	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
@@ -522,7 +522,7 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	
+
 /datum/outfit/bos_knight/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
 	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
@@ -584,7 +584,7 @@
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
-		
+
 /datum/outfit/bos_scribe/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
 	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
