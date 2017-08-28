@@ -102,7 +102,7 @@
 
 /obj/structure/academy_wizard_spawner/proc/summon_wizard()
 	var/turf/T = src.loc
-	
+
 	var/mob/living/carbon/human/wizbody = new(T)
 	wizbody.equipOutfit(/datum/outfit/wizard/academy)
 	var/obj/item/weapon/implant/exile/Implant = new/obj/item/weapon/implant/exile(wizbody)
@@ -110,7 +110,7 @@
 	wizbody.faction |= "wizard"
 	wizbody.real_name = "Academy Teacher"
 	wizbody.name = "Academy Teacher"
-	
+
 	var/datum/mind/wizmind = new /datum/mind()
 	wizmind.name = "Wizard Defender"
 	wizmind.special_role = "Academy Defender"
@@ -118,13 +118,13 @@
 	wizmind.objectives += O
 	wizmind.transfer_to(wizbody)
 	ticker.mode.wizards |= wizmind
-	
+
 	wizmind.AddSpell(new /obj/effect/proc_holder/spell/targeted/ethereal_jaunt)
 	wizmind.AddSpell(new /obj/effect/proc_holder/spell/targeted/projectile/magic_missile)
 	wizmind.AddSpell(new /obj/effect/proc_holder/spell/dumbfire/fireball)
 
 	current_wizard = wizbody
-	
+
 	give_control()
 
 /obj/structure/academy_wizard_spawner/proc/update_status()
@@ -241,7 +241,7 @@
 			for(var/direction in alldirs)
 				var/turf/T = get_step(Start,direction)
 				if(rand(0,1))
-					new /obj/item/stack/spacecash/c1000(T)
+					new /obj/item/stack/spacecash/random(T)
 				else
 					var/obj/item/weapon/moneybag/M = new(T)
 					for(var/i in 1 to rand(5,50))

@@ -47,11 +47,11 @@ Wastelandwhore
 /datum/outfit/job/wastelandwhore/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(/obj/item/clothing/under/f13/female/flapper)
+	r_pocket = pick(/obj/item/device/flashlight/flare/torch, /obj/item/device/flashlight/flare)
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
-	backpack_contents = list(/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/caps = 1)
+	backpack_contents = list(/obj/item/weapon/storage/wallet/random=1)
 	l_hand = /obj/item/weapon/switchblade
 
 /*
@@ -81,11 +81,11 @@ Wastelandpusher
 /datum/outfit/job/pusher/pre_equip(mob/living/carbon/human/H)
 	..()
 	uniform = pick(/obj/item/clothing/under/f13/bennys)
+	r_pocket = pick(/obj/item/device/flashlight/flare/torch, /obj/item/device/flashlight/flare)
 	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
-	backpack_contents = list(/obj/item/weapon/storage/wallet=1, \
-	/obj/item/stack/caps = 4)
+	backpack_contents = list(/obj/item/weapon/storage/wallet/random=1)
 
 
 /datum/outfit/job/wastelander/pre_equip(mob/living/carbon/human/H)
@@ -98,16 +98,15 @@ Wastelandpusher
 //	mask = /obj/item/clothing/mask/surgical
 //	gloves = /obj/item/clothing/gloves/color/white
 	l_pocket = /obj/item/weapon/reagent_containers/food/drinks/flask/survival
-	r_pocket = /obj/item/device/flashlight/flare/torch
+	r_pocket = pick(/obj/item/device/flashlight/flare/torch, /obj/item/device/flashlight/flare)
 	belt = pick (simple_start_weapon)
-	//back = /obj/item/weapon/storage/backpack
+	back = /obj/item/weapon/storage/backpack
 	backpack = /obj/item/weapon/storage/backpack
-	//satchel = /obj/item/weapon/storage/backpack/satchel_norm
+	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/reagent_containers/stimpak/regular=3, \
 	/obj/item/weapon/reagent_containers/blood/radaway=2, \
-	/obj/item/weapon/storage/wallet=1, \
-	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1, \
-	/obj/item/stack/caps = 1)
+	/obj/item/weapon/storage/wallet/random=1, \
+	/obj/item/weapon/reagent_containers/food/drinks/flask/survival=1)
 //	if (prob(80))
 //		l_hand = pick(/obj/item/weapon/kitchen/knife)
 //Due to how large this one is it gets its own file

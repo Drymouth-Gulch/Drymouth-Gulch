@@ -36,6 +36,8 @@
 	glasses = /obj/item/clothing/glasses/sunglasses
 	l_hand = /obj/item/weapon/gun/projectile/shotgun
 	ears = /obj/item/device/radio/headset/headset_den
+	r_pocket = pick(/obj/item/device/flashlight/flare/torch, /obj/item/device/flashlight/flare)
+	l_pocket = /obj/item/weapon/storage/wallet/random
 
 /datum/job/settler
 	title = "Settler"
@@ -67,3 +69,5 @@
 		/obj/item/clothing/under/f13/lumberjack,\
 		/obj/item/clothing/under/f13/roving)
 	ears = /obj/item/device/radio/headset/headset_den
+	r_pocket = pick(/obj/item/device/flashlight/flare/torch, /obj/item/device/flashlight/flare)
+	l_pocket = /obj/item/weapon/storage/wallet/random

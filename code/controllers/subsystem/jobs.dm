@@ -44,9 +44,9 @@ var/datum/subsystem/job/SSjob
 		if(!job)
 			continue
 		var/datum/f13_faction/faction = get_faction_datum(job.faction)
-		if(job.title == "Legionary Recruit" || job.title == "NCR Recruit")  //I hate myself for this, but it gets the job done for now
-			desert_occupations += job							//This is so legion and ncr recruits can latespawn, faction check in next bit would stop this
-		if(faction == null || !faction.late_join)
+		if(faction == null)
+			continue
+		if(!faction.late_join && !job.late_join)
 			continue
 		desert_occupations += job
 

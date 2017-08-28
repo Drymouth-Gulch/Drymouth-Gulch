@@ -42,11 +42,11 @@
 /obj/structure/closet/secure_closet/freezer/money/New()
 	..()
 	for(var/i = 0, i < 3, i++)
-		new /obj/item/stack/spacecash/c1000(src)
+		new /obj/item/stack/spacecash/random(src)
 	for(var/i = 0, i < 5, i++)
-		new /obj/item/stack/spacecash/c500(src)
+		new /obj/item/stack/spacecash/random/high(src)
 	for(var/i = 0, i < 6, i++)
-		new /obj/item/stack/spacecash/c200(src)
+		new /obj/item/stack/spacecash/random/med(src)
 
 
 /obj/structure/closet/fridge
