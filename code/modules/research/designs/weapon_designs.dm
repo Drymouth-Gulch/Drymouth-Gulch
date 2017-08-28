@@ -144,7 +144,7 @@
 	reliability = 79
 	build_path = /obj/item/weapon/grenade/chem_grenade/large
 	category = list("Weapons")
-*/
+/*
 /datum/design/smg
 	name = "NanoTrasen Saber SMG"
 	desc = "A prototype advancment over the WT-550 auto rifle made using lightweight materials on a traditional frame, designed to fire standard 9mm rounds."
@@ -348,20 +348,20 @@
 	category = list("Weapons")
 */
 
-/datum/design/laserbattery
-	name = "Laser Battery"
-	desc = "A laser battery used for energy weapons."
-	id = "laserbettery"
+/datum/design/microfusion
+	name = "Microfusion Cell"
+	desc = "A microfusion cell used for energy weapons, can't be recharged."
+	id = "microfusion"
 	req_tech = list("combat" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000)
-	build_path = /obj/item/weapon/stock_parts/cell/device/laser
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/mfc
 	category = list("Weapons")
 	
-/datum/design/highlaserbattery
-	name = "High Capacity Laser Battery"
-	desc = "A high capacity laser battery used for energy weapons."
-	id = "suppressor"
+/datum/design/ec
+	name = "Energy Cell"
+	desc = "A cell used mainly for energy based pistols."
+	id = "ec"
 	req_tech = list("combat" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000, MAT_URANIUM = 10000, MAT_GOLD = 10000)
@@ -369,11 +369,11 @@
 	category = list("Weapons")
 
 /datum/design/superlaserbattery
-	name = "Super Capacity Laser Battery"
-	desc = "A super capacity laser battery used for energy weapons."
-	id = "suppressor"
+	name = "Electron Charge Pack"
+	desc = "A electron charge pack used in laser weaponry."
+	id = "ecp"
 	req_tech = list("combat" = 1)
 	build_type = PROTOLATHE
-	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000, MAT_URANIUM = 10000, MAT_GOLD = 10000, MAT_DIAMOND = 10000)
-	build_path = /obj/item/weapon/stock_parts/cell/device/laser/super
+	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000, MAT_URANIUM = 10000, MAT_GOLD = 10000, MAT_DIAMOND = 5000)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/ecp
 	category = list("Weapons")
