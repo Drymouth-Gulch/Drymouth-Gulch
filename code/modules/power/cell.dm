@@ -307,7 +307,7 @@
 	desc = "A microfusion cell, typically used as ammunition for large energy weapons. It cannot be recharged."
 	icon_state = "mfc"
 	maxcharge = 1200
-	chargerate = 0
+	chargerate = 300
 
 /obj/item/weapon/stock_parts/cell/ammo/ecp
 	name = "electron charge pack"
