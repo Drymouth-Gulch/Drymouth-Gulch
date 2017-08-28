@@ -570,6 +570,22 @@
 	materials = list(MAT_METAL = 40000)
 	build_path = /obj/item/ammo_box/needler
 	category = list("hacked", "Security")
+	
+/datum/design/energycell
+	name = "Energy cell"
+	id = "ec"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 60000, MAT_GLASS = 40000)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/ec
+	category = list("hacked", "Security")
+	
+/datum/design/microfusioncell
+	name = "Microfusion cell"
+	id = "mfc"
+	build_type = AUTOLATHE
+	materials = list(MAT_METAL = 80000, MAT_GLASS = 60000)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/mfc
+	category = list("hacked", "Security")
 
 /datum/design/a556
 	name = "ammo box (5.56x45mm Surplus)"
