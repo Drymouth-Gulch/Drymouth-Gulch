@@ -1,6 +1,35 @@
 /////////////////////////////////////////
 /////////////////Weapons/////////////////
 /////////////////////////////////////////
+/datum/design/laserpistol
+	name = "Laser Pistol"
+	desc = "A laser pistol, can be recharged with a recharger or by swapping out it's internal battery."
+	id = "laserpistol"
+	req_tech = list("materials" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000, MAT_GLASS = 30000, MAT_SILVER = 20000, MAT_GOLD = 20000, MAT_URANIUM = 20000)
+	build_path = /obj/item/weapon/gun/energy/laser/pistol
+	category = list("Weapons")
+
+/datum/design/laserrifle
+	name = "Laser Rifle"
+	desc = "A laser rifle, can be recharged with a recharger or by swapping out it's internal battery."
+	id = "laserrifle"
+	req_tech = list("materials" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000, MAT_GLASS = 30000, MAT_SILVER = 10000, MAT_GOLD = 10000, MAT_URANIUM = 10000, MAT_DIAMOND = 10000)
+	build_path = /obj/item/weapon/gun/energy/laser
+	category = list("Weapons")
+
+/datum/design/scatterlaser
+	name = "Scatter Laser Rifle"
+	desc = "A laser rifle that shoots out three weaker smaller lasers. Can be recharged with a recharger or by swapping out it's internal battery."
+	id = "scatterlaser"
+	req_tech = list("materials" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000, MAT_GLASS = 30000, MAT_SILVER = 5000, MAT_GOLD = 5000, MAT_URANIUM = 5000, MAT_DIAMOND = 5000) //Worse than the regular rifle
+	build_path = /obj/item/weapon/gun/energy/laser/scatter
+	category = list("Weapons")
 
 /datum/design/pin_testing
 	name = "test-range firing pin"
@@ -21,7 +50,7 @@
 	materials = list(MAT_SILVER = 600, MAT_DIAMOND = 600, MAT_URANIUM = 200)
 	build_path = /obj/item/device/firing_pin/implant/loyalty
 	category = list("Firing Pins")
-
+/*
 /datum/design/bulldog
 	name = "Advanced Shotgun"
 	desc = "A auto pumping shotgun used for close quarters, can be loaded with shells as well as specialized 8 round magazines."
@@ -93,7 +122,7 @@
 	materials = list(MAT_METAL = 5000, MAT_GLASS = 500, MAT_SILVER = 3000)
 	build_path = /obj/item/weapon/gun/energy/temperature
 	category = list("Weapons")
-
+*/
 /datum/design/flora_gun
 	name = "Floral Somatoray"
 	desc = "A tool that discharges controlled radiation which induces mutation in plant cells. Harmless to other organic life."
@@ -115,7 +144,7 @@
 	reliability = 79
 	build_path = /obj/item/weapon/grenade/chem_grenade/large
 	category = list("Weapons")
-
+/*
 /datum/design/smg
 	name = "NanoTrasen Saber SMG"
 	desc = "A prototype advancment over the WT-550 auto rifle made using lightweight materials on a traditional frame, designed to fire standard 9mm rounds."
@@ -125,7 +154,7 @@
 	materials = list(MAT_METAL = 8000, MAT_SILVER = 2000, MAT_DIAMOND = 1000)
 	build_path = /obj/item/weapon/gun/projectile/automatic/proto
 	category = list("Weapons")
-/*
+
 /datum/design/xray
 	name = "Xray Laser Gun"
 	desc = "Not quite as menacing as it sounds"
@@ -168,7 +197,7 @@
 	materials = list(MAT_METAL = 6500, MAT_SILVER = 500)
 	build_path = /obj/item/weaponcrafting/reciever
 	category = list("Weapons")
-
+/*
 //Bulldog aka Advanced Shotgun magazines
 
 /datum/design/m12mag
@@ -190,7 +219,7 @@
 	materials = list(MAT_METAL = 15000)
 	build_path = /obj/item/ammo_box/magazine/m12g/buckshot
 	category = list("Ammo")
-
+*/
 //WT550 Mags
 /*
 /datum/design/mag_oldsmg
@@ -254,32 +283,9 @@
 	id = "mag_oldsmg_tx"
 	materials = list(MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000)
 	build_path = /obj/item/ammo_box/a556/tox
-
-/datum/design/mag_oldsmge/bleed_mag
-	name = "experimental ammo hemorrhage (5.56 bleed)"
-	desc = "a box of 20 bleeding 5.56 ammo"
-	id = "mag_oldsmg_bleed"
-	req_tech = list("combat" = 6, "engineering" = 5, "syndicate" = 3)
-	materials = list (MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000, MAT_DIAMOND = 1000)
-	build_path = /obj/item/ammo_box/a556/bleed
-
-/datum/design/mag_oldsmge/sleep_mag
-	name = "experimental ammo sleeping (5.56 sopoforic)"
-	desc = "a box of 20 sleeping 5.56 ammo"
-	id = "mag_oldsmg_sleep"
-	req_tech = list("combat" = 6, "engineering" = 5, "syndicate" = 3)
-	materials = list (MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000, MAT_DIAMOND = 1000, MAT_GOLD = 800)
-	build_path = /obj/item/ammo_box/a556/sopoforic
-
-/datum/design/mag_oldsmge/pen_mag
-	name = "experimental ammo penetrator (5.56 penetrator)"
-	desc = "a box of 20 penetrator 5.56 ammo"
-	id = "mag_oldsmg_pen"
-	req_tech = list("combat" = 6, "engineering" = 5, "syndicate" = 3)
-	materials = list (MAT_METAL = 6000, MAT_SILVER = 600, MAT_URANIUM = 2000, MAT_DIAMOND = 2000)
-	build_path = /obj/item/ammo_box/a556/penetrator
+	
 //SABR Mags
-
+/*
 /datum/design/mag_smg
 	name = "SABR SMG Magazine (9mm)"
 	desc = "A 30-round magazine for the prototype submachine gun."
@@ -339,4 +345,35 @@
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 2000, MAT_SILVER = 500)
 	build_path = /obj/item/weapon/suppressor
+	category = list("Weapons")
+*/
+
+/datum/design/microfusion
+	name = "Microfusion Cell"
+	desc = "A microfusion cell used for energy weapons, can't be recharged."
+	id = "microfusion"
+	req_tech = list("combat" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/mfc
+	category = list("Weapons")
+	
+/datum/design/ec
+	name = "Energy Cell"
+	desc = "A cell used mainly for energy based pistols."
+	id = "ec"
+	req_tech = list("combat" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000, MAT_URANIUM = 10000, MAT_GOLD = 10000)
+	build_path = /obj/item/weapon/stock_parts/cell/device/laser/high
+	category = list("Weapons")
+
+/datum/design/superlaserbattery
+	name = "Electron Charge Pack"
+	desc = "A electron charge pack used in laser weaponry."
+	id = "ecp"
+	req_tech = list("combat" = 1)
+	build_type = PROTOLATHE
+	materials = list(MAT_METAL = 30000, MAT_PLASMA = 10000, MAT_URANIUM = 10000, MAT_GOLD = 10000, MAT_DIAMOND = 5000)
+	build_path = /obj/item/weapon/stock_parts/cell/ammo/ecp
 	category = list("Weapons")

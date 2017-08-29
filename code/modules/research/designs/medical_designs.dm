@@ -7,7 +7,7 @@
 	name = "Mass-Spectrometer"
 	desc = "A device for analyzing chemicals in the blood."
 	id = "mass_spectrometer"
-	req_tech = list("biotech" = 2, "magnets" = 2)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 30, MAT_GLASS = 20)
 	reliability = 76
@@ -18,7 +18,7 @@
 	name = "Advanced Mass-Spectrometer"
 	desc = "A device for analyzing chemicals in the blood and their quantities."
 	id = "adv_mass_spectrometer"
-	req_tech = list("biotech" = 2, "magnets" = 4)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 30, MAT_GLASS = 20)
 	reliability = 74
@@ -29,7 +29,7 @@
 	name = "Man-Machine Interface"
 	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity."
 	id = "mmi"
-	req_tech = list("programming" = 2, "biotech" = 3)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 1000, MAT_GLASS = 500)
 	construction_time = 75
@@ -41,7 +41,7 @@
 	name = "Radio-enabled Man-Machine Interface"
 	desc = "The Warrior's bland acronym, MMI, obscures the true horror of this monstrosity. This one comes with a built-in radio."
 	id = "mmi_radio"
-	req_tech = list("programming" = 2, "biotech" = 4)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 1200, MAT_GLASS = 500)
 	construction_time = 75
@@ -53,7 +53,7 @@
 	name = "Positronic Brain"
 	desc = "The latest in Artificial Intelligences."
 	id = "mmi_posi"
-	req_tech = list("programming" = 5, "biotech" = 4)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE | MECHFAB
 	materials = list(MAT_METAL = 1700, MAT_GLASS = 1350, MAT_GOLD = 500) //Gold, because SWAG.
 	reliability = 74
@@ -66,7 +66,7 @@
 	name = "Flash"
 	desc = "When a problem arises, SCIENCE is the solution."
 	id = "sflash"
-	req_tech = list("magnets" = 3, "combat" = 2)
+	req_tech = list("materials" = 1)
 	build_type = MECHFAB
 	materials = list(MAT_METAL = 750, MAT_GLASS = 750)
 	construction_time = 100
@@ -78,7 +78,7 @@
 	name = "Bluespace Beaker"
 	desc = "A bluespace beaker, powered by experimental bluespace technology and Element Cuban combined with the Compound Pete. Can hold up to 300 units."
 	id = "bluespacebeaker"
-	req_tech = list("bluespace" = 2, "materials" = 6)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 3000, MAT_PLASMA = 3000, MAT_DIAMOND = 500)
 	reliability = 76
@@ -89,7 +89,7 @@
 	name = "Cryostasis Beaker"
 	desc = "A cryostasis beaker that allows for chemical storage without reactions. Can hold up to 50 units."
 	id = "splitbeaker"
-	req_tech = list("materials" = 2)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 3000)
 	reliability = 76
@@ -100,18 +100,18 @@
 	name = "Bluespace body bag"
 	desc = "A bluespace body bag, powered by experimental bluespace technology. It can hold loads of bodies and the largest of creatures."
 	id = "bluespacebodybag"
-	req_tech = list("bluespace" = 2, "materials" = 6)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 3000, MAT_PLASMA = 2000, MAT_DIAMOND = 500)
 	reliability = 76
 	build_path = /obj/item/bodybag/bluespace
 	category = list("Medical Designs")
-
+/*
 //datum/design/plasmarefiller
 	name = "Plasma-man jumpsuit refill"
 	desc = "A refill pack for the auto-extinguisher on Plasma-man suits."
 	id = "plasmarefiller"
-	req_tech = list("materials" = 2, "combat" = 2)
+	req_tech = list("materials" = 1)
 	build_type = PROTOLATHE
 	materials = list(MAT_METAL = 4000, MAT_PLASMA = 1000)
 	reliability = 76
@@ -127,11 +127,11 @@
 	materials = list(MAT_METAL = 5000, MAT_GLASS = 4000, MAT_URANIUM = 8000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/weapon/gun/medbeam
 	category = list("Medical Designs")
-
+*/ //Vault already has one
 /////////////////////////////////////////
 //////////Cybernetic Implants////////////
 /////////////////////////////////////////
-
+/*
 /datum/design/cyberimp_welding
 	name = "Welding Shield implant"
 	desc = "These reactive micro-shields will protect you from welders and flashes without obscuring your vision."
@@ -241,12 +241,12 @@
 	materials = list(MAT_METAL = 200, MAT_GLASS = 200, MAT_GOLD = 500, MAT_URANIUM = 1000, MAT_DIAMOND = 2000)
 	build_path = /obj/item/organ/internal/cyberimp/chest/reviver
 	category = list("Misc", "Medical Designs")
-
+*/
 
 /////////////////////////////////////////
 ////////////Regular Implants/////////////
 /////////////////////////////////////////
-
+/*
 /datum/design/implanter
 	name = "Implanter"
 	desc = "A sterile automatic implant injector."
@@ -286,3 +286,4 @@
 	materials = list(MAT_METAL = 50, MAT_GLASS = 500, MAT_GOLD = 500, MAT_URANIUM = 100, MAT_DIAMOND = 200)
 	build_path = /obj/item/weapon/implantcase/adrenaline
 	category = list("Medical Designs")
+*/
