@@ -258,7 +258,7 @@ obj
 									lb.loc=src.loc
 									del src
 								if(5)
-									var/obj/item/weapon/gun/energy/laser/plasma_rifle/pistol/lb = new
+									var/obj/item/weapon/gun/energy/laser/plasma/pistol/lb = new
 									lb.loc=src.loc
 									del src
 								if(6)
@@ -269,11 +269,11 @@ obj
 						New()
 							switch(rand(1,12))
 								if(1)
-									var/obj/item/weapon/gun/energy/laser/plasma_rifle/lb = new
+									var/obj/item/weapon/gun/energy/laser/plasma/lb = new
 									lb.loc=src.loc
 									del src
 								if(2)
-									var/obj/item/weapon/gun/energy/laser/plasma_rifle/multiplas/lb = new
+									var/obj/item/weapon/gun/energy/laser/plasma/scatter/lb = new
 									lb.loc=src.loc
 									del src
 								if(3)
@@ -362,7 +362,7 @@ obj
 										lb.loc=src.loc
 										del src
 									if(5)
-										var/obj/item/weapon/stock_parts/cell/device/laser/lb = new
+										var/obj/item/weapon/stock_parts/cell/ammo/ec/lb = new
 										lb.loc=src.loc
 										del src
 									if(6)
@@ -397,7 +397,7 @@ obj
 										lb.loc=src.loc
 										del src
 									if(7)
-										var/obj/item/weapon/stock_parts/cell/device/laser/high/lb = new
+										var/obj/item/weapon/stock_parts/cell/ammo/ec/lb = new
 										lb.loc=src.loc
 										del src
 									if(8)
@@ -448,7 +448,7 @@ obj
 										lb.loc=src.loc
 										del src
 									if(9)
-										var/obj/item/weapon/stock_parts/cell/device/laser/super/lb = new
+										var/obj/item/weapon/stock_parts/cell/ammo/mfc/lb = new
 										lb.loc=src.loc
 										del src
 						tier5
@@ -515,7 +515,7 @@ obj
 										lb.loc=src.loc
 										del src
 									if(16)
-										var/obj/item/weapon/stock_parts/cell/device/laser/hyper/lb = new
+										var/obj/item/weapon/stock_parts/cell/ammo/ecp/lb = new
 										lb.loc=src.loc
 										del src
 			armorspawners //1.8
