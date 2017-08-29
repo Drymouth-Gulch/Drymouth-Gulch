@@ -404,6 +404,7 @@
 	item_state = "det_suit"
 	body_parts_covered = CHEST|LEGS|FEET|ARMS
 	armor = list(melee = 30, bullet = 20, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
+	allowed = list(/obj/item/weapon/gun/projectile/shotgun/boltaction/scoped)
 
 /obj/item/clothing/suit/f13/autumn //Based of Colonel Autumn's uniform.
 	name = "tan trenchcoat"

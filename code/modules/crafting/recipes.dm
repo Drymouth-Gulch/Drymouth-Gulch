@@ -21,15 +21,14 @@
 	category = CAT_WEAPON
 
 /datum/table_recipe/IED
-	name = "tin can grenade"
-	result = /obj/item/weapon/grenade/tincan
-	reqs = list(/datum/reagent/blackpowder = 50,
+	name = "IED"
+	result = /obj/item/weapon/grenade/iedcasing
+	reqs = list(/datum/reagent/fuel = 50,
 				/obj/item/stack/cable_coil = 1,
 				/obj/item/device/assembly/igniter = 1,
-				/obj/item/trash/tin = 1)
-	parts = list(/obj/item/trash/tin = 1)
-	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
-	time = 50
+				/obj/item/weapon/reagent_containers/food/drinks/soda_cans = 1)
+	parts = list(/obj/item/weapon/reagent_containers/food/drinks/soda_cans = 1)
+	time = 15
 	category = CAT_WEAPON
 
 /datum/table_recipe/lance
@@ -361,6 +360,15 @@
 				/obj/item/stack/cable_coil = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
+	category = CAT_ARMOR
+
+/datum/table_recipe/armorkit
+	name = "armor kit"
+	result = /obj/item/clothing/suit/armor/f13/kit
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2,
+				/obj/item/stack/cable_coil = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 60
 	category = CAT_ARMOR
 
 /datum/table_recipe/leatherhat
