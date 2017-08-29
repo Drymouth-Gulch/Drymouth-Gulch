@@ -363,6 +363,15 @@
 	time = 120
 	category = CAT_ARMOR
 
+/datum/table_recipe/armorkit
+	name = "armor kit"
+	result = /obj/item/clothing/suit/armor/f13/kit
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2,
+				/obj/item/stack/cable_coil = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 60
+	category = CAT_ARMOR
+
 /datum/table_recipe/leatherhat
 	name = "leather hat"
 	result = /obj/item/clothing/head/lizard

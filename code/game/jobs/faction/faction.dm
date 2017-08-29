@@ -16,7 +16,7 @@ proc/get_faction_members(var/faction)
 /datum/f13_faction
 	var/name = "UNKNOWN"
 
-	var/late_join = 0
+	var/late_join = 1
 
 	var/first_spawn = 0
 
