@@ -171,7 +171,7 @@
 	for(var/obj/item/briefcase_item in sec_briefcase)
 		qdel(briefcase_item)
 	for(var/i=3, i>0, i--)
-		sec_briefcase.handle_item_insertion(new /obj/item/stack/spacecash/random,1)
+		sec_briefcase.handle_item_insertion(new /obj/item/stack/spacecash/c1000,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/weapon/gun/projectile/revolver/mateba,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/ammo_box/m44,1)
@@ -483,7 +483,7 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
@@ -503,7 +503,10 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Paladin"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = list(73)
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("BoS Paladin")
+	W.assignment = "BoS Paladin"
+	W.update_label()
 
 /datum/outfit/bos_knight
 	name = "BoS Knight"
@@ -518,7 +521,7 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
@@ -538,7 +541,10 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Knight"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = list(73)
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("BoS Knight")
+	W.assignment = "BoS Knight"
+	W.update_label()
 
 /datum/outfit/bos_initiate
 	name = "BoS Initiate"
@@ -566,7 +572,10 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Initiate"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = list(73)
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("BoS Initiate")
+	W.assignment = "BoS Initiate"
+	W.update_label()
 
 /datum/outfit/bos_scribe
 	name = "BoS Scribe"
@@ -580,7 +589,7 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 	suit_store = /obj/item/weapon/gun/projectile/automatic/smg10mm
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
@@ -600,4 +609,7 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Scribe"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = list(73)
+	W.access = get_all_accesses()
+	W.access += get_centcom_access("BoS Scribe")
+	W.assignment = "BoS Scribe"
+	W.update_label()
