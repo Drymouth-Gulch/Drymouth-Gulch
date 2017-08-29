@@ -182,4 +182,4 @@
 	retreat_distance = 2
 	minimum_distance = 2
 	projectilesound = 'sound/f13weapons/plasma_rifle.ogg'
-	projectiletype = /obj/item/projectile/beam/plasma_beam
+	projectiletype = /obj/item/projectile/beam/plasma
