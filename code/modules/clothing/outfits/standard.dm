@@ -483,11 +483,11 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	
+
 /datum/outfit/bos_paladin/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
 	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
@@ -521,11 +521,11 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
-	
+
 /datum/outfit/bos_knight/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
 	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
@@ -589,11 +589,11 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 	suit_store = /obj/item/weapon/gun/projectile/automatic/smg10mm
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
-		
+
 /datum/outfit/bos_scribe/pre_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = ("BOS")
 	var/datum/martial_art/patraining/F = new/datum/martial_art/patraining(null)
