@@ -12,6 +12,7 @@ var/const/NCRRECRANGER			=(1<<8)
 var/const/LEGION			=(1<<1)
 var/const/LEGLEGAT			=(1<<0) //Job commented out under Code/Job/Job/NewLegion
 var/const/LEGCENTURION		=(1<<1)
+//var/const/PRAEGUARD			=(1<<0)
 var/const/LEGVEX			=(1<<2)
 var/const/LEGDECAN			=(1<<3)
 var/const/LEGVET			=(1<<4)
@@ -116,9 +117,10 @@ var/const/RAIDER        	=(1<<18)
 
 
 //~~Legion~~
-var/const/LEGRECRUIT		=(1<<10)
-var/const/LEGDECAN			=(1<<11)
-var/const/LEGVEX			=(1<<12)
+var/const/LEGRECRUIT		=(1<<9)
+var/const/LEGDECAN			=(1<<10)
+var/const/LEGVEX			=(1<<11)
+var/const/PRAEGUARD			=(1<<12)
 var/const/LEGCENTURION		=(1<<13)
 var/const/LEGLEGAT			=(1<<14)
 var/const/LEGVET			=(1<<15)
@@ -150,6 +152,7 @@ var/list/wasteland_occupations = list(
 var/list/legion_positions = list(
 	//"Legat",
 	"Legion Centurion",
+	"Praetorian Guard",
 	"Legion Vexillarius",
 	"Legion Decanus",
 	"Veteran Legionnaire",
@@ -165,7 +168,7 @@ var/list/ncr_positions = list(
 	"NCR Recruit",
 	"NCR Veteran Ranger",
 	"NCR Ranger",
-	"NCR Recruit Ranger"
+	"NCR Scout Ranger"
 )
 
 var/list/vault_occupations = list(

@@ -360,7 +360,7 @@ NCR Ranger
 	ears = /obj/item/device/radio/headset/headset_ncr
 	uniform = /obj/item/clothing/under/f13/cowboyb
 	shoes = /obj/item/clothing/shoes/combat/swat
-	suit = /obj/item/clothing/suit/armor/f13/ncrarmor
+	suit = /obj/item/clothing/suit/armor/f13/combat/ncr
 	head = /obj/item/clothing/head/f13/ranger
 	glasses = /obj/item/clothing/glasses/sunglasses
 	suit_store = /obj/item/weapon/gun/projectile/automatic/shotgun/riot
@@ -382,7 +382,7 @@ NCR Ranger
 		n.access = list(67)
 
 /datum/job/ncrrecranger
-	title = "NCR Recruit Ranger"
+	title = "NCR Scout Ranger"
 	flag = NCRRECRANGER
 	department_head = list("The NCR Captain")
 	department_flag = NCR
@@ -400,16 +400,18 @@ NCR Ranger
 	outfit = /datum/outfit/job/ncrrecranger
 
 /datum/outfit/job/ncrrecranger
-	name = "NCR Recruit Ranger"
+	name = "NCR Scout Ranger"
 	id = /obj/item/weapon/card/id/ncr/ranger
 	uniform = /obj/item/clothing/under/f13/ranger
 	shoes = /obj/item/clothing/shoes/workboots
+	suit = /obj/item/clothing/suit/f13/duster
 	head = /obj/item/clothing/head/fluff/cowboy
 	ears = /obj/item/device/radio/headset/headset_ncr
 	back = /obj/item/weapon/storage/backpack
 	belt = /obj/item/weapon/storage/belt/ncr
 	gloves = /obj/item/clothing/gloves/combat
 	glasses = /obj/item/clothing/glasses/sunglasses
+	suit_store = /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
 	backpack = /obj/item/weapon/storage/backpack
 	satchel = /obj/item/weapon/storage/backpack/satchel_norm
 	backpack_contents = list(/obj/item/weapon/restraints/handcuffs=1, \
@@ -417,7 +419,7 @@ NCR Ranger
 	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/gun/projectile/revolver/m29=1, \
 	/obj/item/ammo_box/m44=2, \
-	/obj/item/weapon/gun/projectile/revolver/caravan_shotgun=1, \
+	/obj/item/ammo_box/magazine/m762=1, \
 	/obj/item/weapon/melee/classic_baton=1)
 /datum/outfit/job/ncrrecranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = list("NCR","Ranger")
@@ -426,6 +428,6 @@ NCR Ranger
 		n.assignment = "[H.job]"
 		//n.update_label(W.registered_name, W.assignment)
 		n.name="[H.real_name] ([H.job])"
-		H.status="Recruit Ranger"
+		H.status="Scout Ranger"
 		H.faction = list("NCR","Ranger")
 		n.access = list(67)
