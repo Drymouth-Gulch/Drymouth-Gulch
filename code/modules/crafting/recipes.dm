@@ -21,14 +21,15 @@
 	category = CAT_WEAPON
 
 /datum/table_recipe/IED
-	name = "IED"
-	result = /obj/item/weapon/grenade/iedcasing
-	reqs = list(/datum/reagent/fuel = 50,
+	name = "tin can grenade"
+	result = /obj/item/weapon/grenade/tincan
+	reqs = list(/datum/reagent/blackpowder = 50,
 				/obj/item/stack/cable_coil = 1,
 				/obj/item/device/assembly/igniter = 1,
-				/obj/item/weapon/reagent_containers/food/drinks/soda_cans = 1)
-	parts = list(/obj/item/weapon/reagent_containers/food/drinks/soda_cans = 1)
-	time = 15
+				/obj/item/trash/tin = 1)
+	parts = list(/obj/item/trash/tin = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 50
 	category = CAT_WEAPON
 
 /datum/table_recipe/lance
