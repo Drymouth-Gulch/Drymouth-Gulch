@@ -419,7 +419,7 @@ NCR Ranger
 	/obj/item/stack/caps = 1, \
 	/obj/item/weapon/gun/projectile/revolver/m29=1, \
 	/obj/item/ammo_box/m44=2, \
-	/obj/item/ammo_box/magazine/m762=1, \
+	/obj/item/ammo_box/a762=3, \
 	/obj/item/weapon/melee/classic_baton=1)
 /datum/outfit/job/ncrrecranger/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	H.faction = list("NCR","Ranger")
