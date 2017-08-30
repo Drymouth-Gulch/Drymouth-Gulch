@@ -503,10 +503,7 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Paladin"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = get_all_accesses()
-	W.access += get_centcom_access("BoS Paladin")
-	W.assignment = "BoS Paladin"
-	W.update_label()
+	W.access = list(73)
 
 /datum/outfit/bos_knight
 	name = "BoS Knight"
@@ -541,10 +538,7 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Knight"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = get_all_accesses()
-	W.access += get_centcom_access("BoS Knight")
-	W.assignment = "BoS Knight"
-	W.update_label()
+	W.access = list(73)
 
 /datum/outfit/bos_initiate
 	name = "BoS Initiate"
@@ -572,10 +566,7 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Initiate"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = get_all_accesses()
-	W.access += get_centcom_access("BoS Initiate")
-	W.assignment = "BoS Initiate"
-	W.update_label()
+	W.access = list(73)
 
 /datum/outfit/bos_scribe
 	name = "BoS Scribe"
@@ -609,7 +600,4 @@
 	W.registered_name = H.real_name
 	W.assignment = "BoS Scribe"
 	W.update_label(W.registered_name, W.assignment)
-	W.access = get_all_accesses()
-	W.access += get_centcom_access("BoS Scribe")
-	W.assignment = "BoS Scribe"
-	W.update_label()
+	W.access = list(73)
