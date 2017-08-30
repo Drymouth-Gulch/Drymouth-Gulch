@@ -238,8 +238,8 @@
 
 	if(ishuman(user))
 		var/mob/living/carbon/human/H = user
-		if(H.martial_art && H.martial_art.name == "The Sleeping Carp") //great dishonor to famiry
-			user << "<span class='warning'>Use of ranged weaponry would bring dishonor to the clan.</span>"
+		if(H.martial_art && H.martial_art.name == "Caesar's Martial Philosphy") //great dishonor to famiry
+			user << "<span class='warning'>Use of ranged weaponry would violate your teachings and disgrace the Legion</span>"
 			return 0
 	return 1
 
