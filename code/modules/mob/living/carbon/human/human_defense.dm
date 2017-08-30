@@ -110,6 +110,8 @@
 		dammod = dammod+15
 	if (user.reagents.has_reagent("psycho"))
 		dammod = dammod+20
+	if(martial_art && martial_art.name == "Caesar's Martial Philosphy")
+		dammod = dammod+20
 	// the attacked_by code varies among species
 	return dna.species.spec_attacked_by(I,user,def_zone,affecting,hit_area,src.a_intent,target_limb,target_area,src, dammod)
 
