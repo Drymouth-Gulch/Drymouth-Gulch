@@ -471,22 +471,22 @@
 	..(gibbed)
 
 /obj/item/asteroid/goliath_hide
-	name = "goliath hide plates"
-	desc = "Pieces of a goliath's rocky hide, these might be able to make your suit a bit more durable to attack from the local fauna."
-	icon = 'icons/obj/mining.dmi'
-	icon_state = "goliath_hide"
+	name = "Makeshift Kevlar Plate"
+	desc = "Pieces of metal sewn in between hide.. these might be able to make your clothes a bit more bulletproof."
+	icon = 'icons/obj/items.dmi'
+	icon_state = "sheet-hide"
 	flags = NOBLUDGEON
 	w_class = 3
 	layer = 4
 
 /obj/item/asteroid/goliath_hide/afterattack(atom/target, mob/user, proximity_flag)
 	if(proximity_flag)
-		if(istype(target, /obj/item/clothing/suit/space/hardsuit/mining) || istype(target, /obj/item/clothing/head/helmet/space/hardsuit/mining))
+		if(istype(target, /obj/item/clothing/under) || istype(target, /obj/item/clothing/head/helmet/space/hardsuit/mining))
 			var/obj/item/clothing/C = target
 			var/list/current_armor = C.armor
-			if(current_armor.["melee"] < 80)
-				current_armor.["melee"] = min(current_armor.["melee"] + 10, 80)
-				user << "<span class='info'>You strengthen [target], improving its resistance against melee attacks.</span>"
+			if(current_armor.["bullet"] < 80)
+				current_armor.["bullet"] = min(current_armor.["bullet"] + 10, 80)
+				user << "<span class='info'>You strengthen [target], improving its resistance against bullets</span>"
 				qdel(src)
 			else
 				user << "<span class='warning'>You can't improve [C] any further!</span>"
