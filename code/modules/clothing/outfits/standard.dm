@@ -580,7 +580,7 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 	suit_store = /obj/item/weapon/gun/projectile/automatic/smg10mm
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/ec = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
