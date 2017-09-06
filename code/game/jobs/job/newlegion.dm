@@ -189,6 +189,7 @@ Legion
 	/obj/item/stack/coin/random/high = 2, \
 	/obj/item/weapon/powergauntlet = 1, \
 	/obj/item/weapon/reagent_containers/pill/patch/healpowder = 2, \
+	/obj/item/weapon/sleeping_carp_scroll= 2, \
 	/obj/item/device/flashlight/flare/torch=1)
 
 /datum/outfit/job/legcenturion/post_equip(mob/living/carbon/human/H)

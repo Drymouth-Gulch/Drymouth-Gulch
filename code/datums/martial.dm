@@ -263,8 +263,8 @@
 #define HEAD_KICK_COMBO "DHH"
 #define ELBOW_DROP_COMBO "HDHDH"
 /datum/martial_art/the_sleeping_carp
-	name = "The Sleeping Carp"
-	deflection_chance = 100
+	name = "Caesar's Martial Philosphy"
+	deflection_chance = 0
 
 /datum/martial_art/the_sleeping_carp/proc/check_streak(mob/living/carbon/human/A, mob/living/carbon/human/D)
 	if(findtext(streak,WRIST_WRENCH_COMBO))
@@ -374,12 +374,12 @@
 		return 1
 	return ..()
 
-/mob/living/carbon/human/proc/sleeping_carp_help()
+/mob/living/carbon/human/proc/caesar_philosphy_help()
 	set name = "Recall Teachings"
-	set desc = "Remember the martial techniques of the Sleeping Carp clan."
-	set category = "Sleeping Carp"
+	set desc = "Remember the martial techniques of Caesar's martial philosphy."
+	set category = "Martial Philosphy"
 
-	usr << "<b><i>You retreat inward and recall the teachings of the Sleeping Carp...</i></b>"
+	usr << "<b><i>You retreat inward and recall the teachings of the martial philosphy...</i></b>"
 	usr << "<span class='notice'>Wrist Wrench</span>: Disarm Disarm. Forces opponent to drop item in hand."
 	usr << "<span class='notice'>Back Kick</span>: Harm Grab. Opponent must be facing away. Knocks down."
 	usr << "<span class='notice'>Stomach Knee</span>: Grab Harm. Knocks the wind out of opponent and stuns."
@@ -451,24 +451,22 @@
 		icon_state = "blankscroll"
 
 /obj/item/weapon/sleeping_carp_scroll
-	name = "mysterious scroll"
-	desc = "A scroll filled with strange markings. It seems to be drawings of some sort of martial art."
-	icon = 'icons/obj/wizard.dmi'
-	icon_state = "scroll2"
+	name = "Caesar's martial philosophy"
+	desc = "A complete manual of Caesar's martial philosophy on unarmed combat.."
+	icon = 'icons/obj/library.dmi'
+	icon_state = "book1"
 
 /obj/item/weapon/sleeping_carp_scroll/attack_self(mob/living/carbon/human/user)
-	if(!istype(user) || !user)
-		return
-	if(!is_in_gang(user, "Sleeping Carp")) //Only the Sleeping Carp can use the scroll
-		user << "<span class='warning'>You can't comprehend the runes and symbols drawn on [src].</span>"
+	if (user.status == "Legion") //lets hope this works
+		user << "<span class='warning'>This book is written in a language you've never read before.. You cannot comprehend a single word.. [src].</span>"
 		return 0
-	user << "<span class='sciradio'>You have learned the ancient martial art of the Sleeping Carp! Your hand-to-hand combat has become much more effective, and you are now able to deflect any projectiles \
-	directed toward you. However, you are also unable to use any ranged weaponry. You can learn more about your newfound art by using the Recall Teachings verb in the Sleeping Carp tab.</span>"
-	user.verbs += /mob/living/carbon/human/proc/sleeping_carp_help
+	user << "<span class='sciradio'>You have studied and dedicated yourself to Caesar's martial philosphy honing your hand to hand combat abilities to an extreme level of sophistication\
+	 However, you are also unable to use any ranged weaponry as this would violate the martial philosphy you have dedicated yourself too. You can learn more about your newfound art by using the Recall Teachings verb in the Martial Philosphy tab.</span>"
+	user.verbs += /mob/living/carbon/human/proc/caesar_philosphy_help
 	var/datum/martial_art/the_sleeping_carp/theSleepingCarp = new(null)
 	theSleepingCarp.teach(user)
 	user.drop_item()
-	visible_message("<span class='warning'>[src] lights up in fire and quickly burns to ash.</span>")
+	visible_message("<span class='warning'>After reading the book you light it on fire to destroy its secrets.</span>")
 	new /obj/effect/decal/cleanable/ash(get_turf(src))
 	qdel(src)
 

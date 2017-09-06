@@ -46,8 +46,8 @@ var/datum/subsystem/job/SSjob
 		var/datum/f13_faction/faction = get_faction_datum(job.faction)
 		if(faction == null)
 			continue
-		if(!faction.late_join && !job.late_join)
-			continue
+		//if(!faction.late_join && !job.late_join)
+		//	continue
 		desert_occupations += job
 
 

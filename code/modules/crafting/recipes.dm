@@ -60,6 +60,15 @@
 	time = 40
 	category = CAT_WEAPON
 
+/datum/table_recipe/imolotov
+	name = "This week in Molotov"
+	result = /obj/item/weapon/reagent_containers/food/drinks/bottle/molotov
+	reqs = list(/obj/item/weapon/newspaper = 1,
+				/obj/item/weapon/reagent_containers/food/drinks/bottle = 1)
+	parts = list(/obj/item/weapon/reagent_containers/food/drinks/bottle = 1)
+	time = 40
+	category = CAT_WEAPON
+
 /datum/table_recipe/dynamite
 	name = "Dynamite"
 	result = /obj/item/weapon/grenade/syndieminibomb
@@ -354,6 +363,16 @@
 	parts = list()
 	category = CAT_MISC
 
+/datum/table_recipe/ikev
+	name = "Improvised Kevlar Plate"
+	result = /obj/item/asteroid/goliath_hide
+	time = 30
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2,
+				/obj/item/stack/sheet/plasteel = 1)
+	tools = list(/obj/item/weapon/wrench, /obj/item/weapon/weldingtool)
+	parts = list()
+	category = CAT_MISC
+
 /datum/table_recipe/leatherarmor
 	name = "leather armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
@@ -361,6 +380,15 @@
 				/obj/item/stack/cable_coil = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
+	category = CAT_ARMOR
+
+/datum/table_recipe/armorkit
+	name = "armor kit"
+	result = /obj/item/clothing/suit/armor/f13/kit
+	reqs = list(/obj/item/stack/sheet/gekkonhide = 2,
+				/obj/item/stack/cable_coil = 1)
+	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
+	time = 60
 	category = CAT_ARMOR
 
 /datum/table_recipe/leatherhat

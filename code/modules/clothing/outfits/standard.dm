@@ -171,7 +171,7 @@
 	for(var/obj/item/briefcase_item in sec_briefcase)
 		qdel(briefcase_item)
 	for(var/i=3, i>0, i--)
-		sec_briefcase.handle_item_insertion(new /obj/item/stack/spacecash/random,1)
+		sec_briefcase.handle_item_insertion(new /obj/item/stack/spacecash/random/high,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/weapon/gun/energy/kinetic_accelerator/crossbow,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/weapon/gun/projectile/revolver/mateba,1)
 	sec_briefcase.handle_item_insertion(new /obj/item/ammo_box/m44,1)
@@ -483,7 +483,7 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
@@ -518,7 +518,7 @@
 	belt = /obj/item/weapon/storage/belt/military
 	back = /obj/item/weapon/storage/backpack/satchel
 	glasses = /obj/item/clothing/glasses/night
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/mfc = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/projectile/revolver/colt6250=1)
 	mask = /obj/item/clothing/mask/gas/sechailer/swat
@@ -580,7 +580,7 @@
 	back = /obj/item/weapon/storage/backpack/satchel
 	suit_store = /obj/item/weapon/gun/projectile/automatic/smg10mm
 	glasses = /obj/item/clothing/glasses/sunglasses/swat
-	backpack_contents = list(/obj/item/weapon/stock_parts/cell/device/laser/hyper = 2, \
+	backpack_contents = list(/obj/item/weapon/stock_parts/cell/ammo/ec = 2, \
 		/obj/item/weapon/kitchen/knife/combat=1, \
 		/obj/item/weapon/gun/energy/laser/pistol=1,\
 		/obj/item/weapon/reagent_containers/stimpak/super=4)
