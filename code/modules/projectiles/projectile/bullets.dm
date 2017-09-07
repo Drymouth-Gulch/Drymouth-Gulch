@@ -10,93 +10,88 @@
 
 
 
-/obj/item/projectile/bullet/deagleAE
-	damage = 65
-	armour_penetration = 10
-
-/obj/item/projectile/bullet/magnum
-	damage = 55
-	armour_penetration = -10
-
-/obj/item/projectile/bullet/mag357
+/obj/item/projectile/bullet/deagleAE //50ae
 	damage = 50
-	armour_penetration = 5
 
-/obj/item/projectile/bullet/slug
+/obj/item/projectile/bullet/magnum //44
+	damage = 40
+	armour_penetration = -10
+
+/obj/item/projectile/bullet/mag357 //357
+	damage = 35
+	armour_penetration = -10
+
+/obj/item/projectile/bullet/slug //slug
 	damage = 65
 	armour_penetration = -10
 
-/obj/item/projectile/bullet/weakbullet //beanbag, heavy stamina damage
+/obj/item/projectile/bullet/weakbullet //beanbag
 	damage = 5
 	stamina = 80
 
-/obj/item/projectile/bullet/weakbullet2 //detective revolver instastuns, but multiple shots are better for keeping punks down
-	damage = 20
-//	weaken = 3
-//	stamina = 50
+/obj/item/projectile/bullet/weakbullet2 //38
+	damage = 25
 
-/obj/item/projectile/bullet/weakbullet3
-	damage = 45
-	armour_penetration = -20
+/obj/item/projectile/bullet/weakbullet3 //9mm
+	damage = 30
+	armour_penetration = 10
 
-/obj/item/projectile/bullet/weakbullet4
-	damage = 5
-	armour_penetration = -5
+/obj/item/projectile/bullet/weakbullet4 //22lr
+	damage = 10
+	armour_penetration = -10
 
-/obj/item/projectile/bullet/toxinbullet
+/obj/item/projectile/bullet/toxinbullet //9mmtox
 	damage = 15
 	damage_type = TOX
 
-/obj/item/projectile/bullet/incendiary/firebullet
+/obj/item/projectile/bullet/incendiary/firebullet //9mmincid
 	damage = 10
 
-/obj/item/projectile/bullet/armourpiercing
+/obj/item/projectile/bullet/armourpiercing //9mmap
 	damage = 25
 	armour_penetration = 10
 
-/obj/item/projectile/bullet/pellet
+/obj/item/projectile/bullet/pellet //shotgunpellet
 	name = "pellet"
 	damage = 15
 	armour_penetration = -20
 	range = 7
 
-/obj/item/projectile/bullet/pellet/weak
+/obj/item/projectile/bullet/pellet/weak //improvshotgunpellet
 	damage = 3
 
 /obj/item/projectile/bullet/pellet/random/New()
 	damage = rand(10)
 
-/obj/item/projectile/bullet/midbullet
+/obj/item/projectile/bullet/midbullet //45
 	damage = 33
-	armour_penetration = -20
-	stamina = 65 //two round bursts from the c20r knocks people down
+	armour_penetration = -10
 
-
-/obj/item/projectile/bullet/midbullet2
+/obj/item/projectile/bullet/midbullet2 //unused
 	damage = 25
 
-/obj/item/projectile/bullet/midbullet3
-	damage = 40
-	armour_penetration = -15
+/obj/item/projectile/bullet/midbullet3 //10mm
+	damage = 30
+	armour_penetration = -10
 
-/obj/item/projectile/bullet/heavybullet
+/obj/item/projectile/bullet/heavybullet //5.56
 	damage = 35
 
-/obj/item/projectile/bullet/heavybullet/ap
+/obj/item/projectile/bullet/heavybullet/ap //5.56ap
 	damage = 30
 	armour_penetration = 10
 
-/obj/item/projectile/bullet/heavybullet/tox
+/obj/item/projectile/bullet/heavybullet/tox //5.56tox
 	damage = 25
 	damage_type = TOX
 
-/obj/item/projectile/bullet/incendiary/heavybullet
+/obj/item/projectile/bullet/incendiary/heavybullet //5.56incid
 	damage = 25
 
-/obj/item/projectile/bullet/heavybullet/surplus
+/obj/item/projectile/bullet/heavybullet/surplus //5.56surplus
 	damage = 20
 
-/obj/item/projectile/bullet/heavybullet/bleed
+/obj/item/projectile/bullet/heavybullet/bleed //5.56bleed
 	damage = 10
 	armour_penetration = 15
 
@@ -107,11 +102,11 @@
 
 	return ..()
 
-/obj/item/projectile/bullet/heavybullet/penetrator
+/obj/item/projectile/bullet/heavybullet/penetrator //5.56penet
 	damage = 30
 	forcedodge = 1
 
-/obj/item/projectile/bullet/heavybullet/sopoforic
+/obj/item/projectile/bullet/heavybullet/sopoforic //5.56sleep
 	armour_penetration = 0
 	nodamage = 1
 	stun = 0
@@ -124,12 +119,12 @@
 
 	return ..()
 
-/obj/item/projectile/bullet/rpellet
+/obj/item/projectile/bullet/rpellet //shotgunrubber
 	damage = 3
 	stamina = 25
 	range = 7
 
-/obj/item/projectile/bullet/stunshot //taser slugs for shotguns, nothing special
+/obj/item/projectile/bullet/stunshot //taserslug
 	name = "stunshot"
 	damage = 5
 	stun = 5
@@ -148,7 +143,7 @@
 		M.IgniteMob()
 
 
-/obj/item/projectile/bullet/incendiary/shell
+/obj/item/projectile/bullet/incendiary/shell //incidslug
 	name = "incendiary slug"
 	damage = 20
 
@@ -159,7 +154,7 @@
 		PoolOrNew(/obj/effect/hotspot, location)
 		location.hotspot_expose(700, 50, 1)
 
-/obj/item/projectile/bullet/incendiary/shell/dragonsbreath
+/obj/item/projectile/bullet/incendiary/shell/dragonsbreath //incidpellet
 	name = "dragonsbreath round"
 	damage = 5
 	range = 7
@@ -254,9 +249,10 @@
 	name = "dummy bullet"
 	damage = 0
 
-/obj/item/projectile/bullet/sequoia
+/obj/item/projectile/bullet/sequoia //45-70
 	name = "bullet"
-	damage = 70
+	damage = 60
+	armour_penetration = 10
 
 /obj/item/projectile/needle
 	name = "needler dart"

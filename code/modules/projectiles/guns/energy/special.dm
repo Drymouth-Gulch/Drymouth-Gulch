@@ -179,7 +179,7 @@
 	item_state = "plasmacutter"
 	modifystate = -1
 	origin_tech = "combat=1;materials=3;magnets=2;plasmatech=2;engineering=1"
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma)
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/cutter)
 	flags = CONDUCT | OPENCONTAINER
 	attack_verb = list("attacked", "slashed", "cut", "sliced")
 	can_charge = 0
@@ -210,7 +210,7 @@
 	name = "advanced plasma cutter"
 	icon_state = "adv_plasmacutter"
 	origin_tech = "combat=3;materials=4;magnets=3;plasmatech=3;engineering=2"
-	ammo_type = list(/obj/item/ammo_casing/energy/plasma/adv)
+	ammo_type = list(/obj/item/ammo_casing/energy/plasma/cutter/adv)
 
 /obj/item/weapon/gun/energy/wormhole_projector
 	name = "bluespace wormhole projector"

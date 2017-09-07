@@ -64,8 +64,8 @@
 
 
 /obj/item/projectile/bullet/saw
-	damage = 35
-	armour_penetration = 5
+	damage = 45
+	armour_penetration = 10
 
 /obj/item/projectile/bullet/saw/bleeding
 	damage = 15
