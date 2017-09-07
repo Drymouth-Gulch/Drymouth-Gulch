@@ -113,7 +113,7 @@
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
-	force = 40
+	force = 20
 	throwforce = 10
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
@@ -132,7 +132,7 @@
 	item_state = "katana"
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
-	force = 40
+	force = 20
 	throwforce = 10
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
@@ -140,6 +140,13 @@
 	block_chance = 50
 	sharpness = IS_SHARP
 	drawsound = 'sound/items/unholster_sword02.ogg'
+
+/obj/item/weapon/katana/cursed
+	slot_flags = null
+
+/obj/item/weapon/katana/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is slitting \his stomach open with the [src.name]! It looks like \he's trying to commit seppuku.</span>")
+	return(BRUTELOSS)
 
 //machete
 /obj/item/weapon/machete
@@ -157,13 +164,6 @@
 	block_chance = 20
 	sharpness = IS_SHARP
 	drawsound = 'sound/items/unholster_sword03.ogg'
-
-/obj/item/weapon/katana/cursed
-	slot_flags = null
-
-/obj/item/weapon/katana/suicide_act(mob/user)
-	user.visible_message("<span class='suicide'>[user] is slitting \his stomach open with the [src.name]! It looks like \he's trying to commit seppuku.</span>")
-	return(BRUTELOSS)
 
 /obj/item/weapon/wirerod
 	name = "wired rod"
