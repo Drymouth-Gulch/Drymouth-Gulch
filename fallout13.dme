@@ -12,11 +12,6 @@
 // END_PREFERENCES
 
 // BEGIN_INCLUDE
-#include "_interaction.dm"
-#include "interaction_definitions.dm"
-#include "interaction_interface.dm"
-#include "interaction_mob.dm"
-#include "lootspawners.dm"
 #include "_maps\__MAP_DEFINES.dm"
 #include "_maps\tgstation2.dm"
 #include "code\_compile_options.dm"
@@ -604,6 +599,7 @@
 #include "code\game\objects\effects\spawners\bombspawner.dm"
 #include "code\game\objects\effects\spawners\gibspawner.dm"
 #include "code\game\objects\effects\spawners\lootdrop.dm"
+#include "code\game\objects\effects\spawners\lootspawners.dm"
 #include "code\game\objects\effects\spawners\structure.dm"
 #include "code\game\objects\effects\spawners\vaultspawner.dm"
 #include "code\game\objects\items\apc_frame.dm"
@@ -1636,13 +1632,11 @@
 #include "code\orphaned procs\dbcore.dm"
 #include "code\orphaned procs\priority_announce.dm"
 #include "code\orphaned procs\statistics.dm"
-#include "honk\code\game\objects\effects\decals\Cleanable\misc.dm"
+#include "interactions\_interaction.dm"
+#include "interactions\interaction_definitions.dm"
+#include "interactions\interaction_interface.dm"
+#include "interactions\interaction_mob.dm"
 #include "interface\interface.dm"
 #include "interface\stylesheet.dm"
 #include "interface\skin.dmf"
-#include "lewd\_lewd.dm"
-#include "lewd\lewd_code.dm"
-#include "lewd\lewd_definitions.dm"
-#include "lewd\lewd_mob.dm"
-#include "lewd\lewd_species.dm"
 // END_INCLUDE

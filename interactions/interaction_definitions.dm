@@ -41,14 +41,6 @@
 	write_log_target = "was kissed by"
 	needs_physical_contact = 1
 
-/datum/interaction/kiss/evaluate_user(var/mob/user, var/silent=1)
-	if(..())
-		if(!user.has_lips())
-			if(!silent) user << "<span class='warning'>You don't have any lips.</span>"
-			return 0
-		return 1
-	return 0
-
 /datum/interaction/hug
 	command = "hug"
 	description = "Hug them."
@@ -105,3 +97,11 @@
 	require_user_hands = 1
 	simple_message = "USER gives TARGET the bird!"
 	max_distance = 25
+
+/datum/interaction/holdhand
+	command = "holdhand"
+	description = "Hold their hand."
+	require_user_hands = 1
+	simple_message = "USER holds TARGET's hand. Degenerate."
+	max_distance = 25
+	needs_physical_contact = 1

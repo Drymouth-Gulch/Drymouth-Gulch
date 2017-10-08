@@ -3,6 +3,7 @@
 **Contains a lot ammount of ERP and MEHANOYEBLYA**
 **CREDIT TO ATMTA STATION FOR MOST OF THIS CODE, I ONLY MADE IT WORK IN /vg/ - Matt
 ** Rewritten 30/08/16 by Zuhayr, sry if I removed anything important.
+**I removed ERP and replaced it with handholding. Nothing of worth was lost. - Vic
 ***********************************/
 
 
