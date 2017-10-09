@@ -689,7 +689,7 @@
 		H.transpiration_efficiency = 1.1
 	else if(H.water > THIRST_LEVEL_MIDDLE) //LITLE THIRST
 		if(H.transpiration_efficiency != 1)
-			H << "<span class='notice'>You feel slightly parched.</span>"
+			H << "<span class='notice'>YOU MOUTH DRY</span>"
 		H.transpiration_efficiency = 1
 	else if(H.water > THIRST_LEVEL_HARD) //MIDDLE THIRST
 		if(H.transpiration_efficiency != 0.9)
