@@ -46,7 +46,7 @@ obj/vehicle/motorcycle/attackby(obj/item/weapon/W, mob/user, params)
 			bcell.updateicon()
 			bcell.loc = get_turf(src.loc)
 			bcell = null
-			user << "<span class='notice'>You remove the cell from [src].</span>"
+			user << "<span class='notice'>You press the cell eject button and the spent [src] slides out into your hand.</span>"
 			update_icon()
 			return
 		..()
