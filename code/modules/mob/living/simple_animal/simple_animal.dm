@@ -455,8 +455,10 @@
 	update_canmove()
 	..()
 
-/mob/living/simple_animal/proc/make_babies() // <3 <3 <3
-	if(gender != FEMALE || stat || !scan_ready || !childtype || !species)
+/mob/living/simple_animal/proc/make_babies(var/andro = false) // <3 <3 <3
+	if(stat || !scan_ready || !childtype || !species)
+		return
+	if(gender != FEMALE && !andro)
 		return
 	scan_ready = 0
 	spawn(400)
@@ -472,12 +474,13 @@
 		else if(istype(M, species))
 			if(M.ckey)
 				continue
-			else if(!istype(M, childtype) && M.gender == MALE) //Better safe than sorry ;_;
+			else if(!istype(M, childtype)) //Can't breed with pupperinos
+				if(andro || M.gender == MALE) //
 				partner = M
 		else if(istype(M, /mob/))
 			alone = 0
 			continue
-	if(alone && partner && children < 3)
+	if(alone && partner && children < 3)//Magik numbers - Will be replaced with a define/var somewhere when im not lazy
 		new childtype(loc)
 
 /mob/living/simple_animal/stripPanelUnequip(obj/item/what, mob/who, where, child_override)
