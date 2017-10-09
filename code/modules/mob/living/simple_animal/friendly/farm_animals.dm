@@ -99,6 +99,9 @@
 	health = 50
 	var/obj/udder/udder = null
 	gold_core_spawnable = 2
+	var/fedAmount = 50 //Affects milk and breeding. 0-24 very little milk, no breeding, 25-74 normal milk, no breeding, 75-100 more milk, breedable
+	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
+	var/fed_desc = ("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
 
 /mob/living/simple_animal/cow/New()
 	udder = new()
@@ -118,8 +121,25 @@
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
+		fedAmount = math.floor(0.9 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
+		if(getFedState() == 2)
+			make_babies(true)	
 		udder.generateMilk()
-
+/mob/living/simple_animal/cow/proc/getFedState()
+	switch(fedAmount)
+		if(<0)
+			fedAmount = 0
+			return 0
+		else if(0 to 24)
+			return 0 //cant do much
+		else if(25 to 74)
+			return 1 //good for milkies
+		else if(75 to 100)
+			return 2 //can preggo
+		else if(>100)
+			fedAmount = 100
+			return 2		
+		
 /mob/living/simple_animal/cow/attack_hand(mob/living/carbon/M)
 	if(!stat && M.a_intent == "disarm" && icon_state != icon_dead)
 		M.visible_message("<span class='warning'>[M] tips over [src].</span>","<span class='notice'>You tip over [src].</span>")
@@ -281,7 +301,8 @@ var/global/chicken_count = 0
 
 /obj/udder/proc/generateMilk()
 	if(prob(5))
-		reagents.add_reagent("milk", rand(5, 10))
+		var/lets_get_some_milk_happening_based_on_food = getFedState()
+		reagents.add_reagent("milk", rand(1 + 5*lets_get_some_milk_happening_based_on_food, 5 + 10*lets_get_some_milk_happening_based_on_food))
 
 /obj/udder/proc/milkAnimal(obj/O, mob/user)
 	var/obj/item/weapon/reagent_containers/glass/G = O
