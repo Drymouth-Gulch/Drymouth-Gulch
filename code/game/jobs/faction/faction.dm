@@ -171,13 +171,13 @@ mob/proc/set_faction(var/faction)
 	first_spawn = 1
 	late_join = 0
 	color = "#020080"
-	head_status = "Colonel"
+	head_status = "Captain"
 	flag = "ncr"
 	verbs = list(/mob/proc/begin_head_voting)
-	welcome_text = "Tips for playing NCR:<br>\
-1. As a Trooper in the NCR, your goal is to capture the area so that the NCR may profit from it.<br>\
-2. However, NCR troopers are typically fairly poorly trained, and often drafted against their will.<br>\
-3. Feel free to explore the potential characters that this guideline allows, so long as you aren't being a cunt.<br>"
+	welcome_text = "Objectives and Guidelines:<br>\
+1. As a member of the NCR, your goal is to further the expansion of NCR territory in order to strengthen the war machine.<br>\
+2. However, members of the NCR are normally poorly trained, hence being drafted from farmers and factory workers. .<br>\
+3. Feel free to explore the potential characters that this guideline allows.<br>"
 	craft_recipes = list(/datum/table_recipe/ncr_combat_armor, /datum/table_recipe/ncr_encryption_key)
 
 /datum/f13_faction/legion
@@ -189,10 +189,10 @@ mob/proc/set_faction(var/faction)
 	flag = "legion"
 	craft_recipes = list(/datum/table_recipe/legion_recruit_armor, /datum/table_recipe/legion_recruit_helm, \
 						 /datum/table_recipe/legion_encryption_key)
-	welcome_text = "Tips for playing Legion:<br>\
-	1. As a member of The Legion, your goal is to purge the area of Profligates and capture the land for Caesar.<br>\
-	2. You cannot use advanced medicine and most advanced technology. Autolathes and machine guns are okay, anything more advanced will result in being spoken to.<br>\
-	3. As Legion, you are fanatically dedicated to your ideals, and to Caesar. Feel free to explore the potential characters that this guideline allows, so long as you aren't being a cunt."
+	welcome_text = "Objectives and Guidelines:<br>\
+	1. As a member of The Legion, your goal is to purge the area of profligates and expand your territory for the glory of the legion.<br>\
+	2. You cannot use energy weapons, medical beam guns, power armor or any drugs besides stimpacks, healing powder, and in extreme cases Hydra<br>\
+	3. As Legion, you are fanatically dedicated to your ideals, and to Caesar. Feel free to explore the potential characters that this guideline allows.<br>"
 
 /datum/f13_faction/wasteland
 	name = "Wasteland"
