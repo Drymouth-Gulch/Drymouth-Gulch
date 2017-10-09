@@ -96,7 +96,7 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	icon_state = "sheet-hairlesshide"
 	origin_tech = null
 
-/obj/item/stack/sheet/gekkonhide
+/obj/item/stack/sheet/animalhide/gekkonhide
 	name = "gekkon skin"
 	desc = "This is gekkon hide."
 	singular_name = "gekkon skin piece"
