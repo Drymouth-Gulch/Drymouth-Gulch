@@ -1,4 +1,4 @@
-/mob/var/suiciding = 0
+/mob/var/suiciding = 1
 
 /mob/living/carbon/human/verb/suicide()
 	set hidden = 1
