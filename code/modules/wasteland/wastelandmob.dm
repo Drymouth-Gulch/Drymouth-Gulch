@@ -86,7 +86,7 @@
 	response_harm = "hits"
 	maxHealth = 60
 	health = 60
-	butcher_results = list(/obj/item/stack/sheet/gekkonhide = 1, \
+	butcher_results = list(/obj/item/stack/sheet/animalhide/gekkonhide = 3, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/gekkon = 1)
 	faction = list("wmobs")
 	melee_damage_lower = 10
