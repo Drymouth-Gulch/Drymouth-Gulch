@@ -133,10 +133,13 @@
 	switch(fedAmount)
 		if(0 to 24)
 			return 0 //cant do much
+			desc = basedesc + fed_desc[0]
 		else if(25 to 74)
 			return 1 //good for milkies
+			desc = basedesc + fed_desc[1]
 		else if(75 to 100)
 			return 2 //can preggo
+			desc = basedesc + fed_desc[2]
 		
 /mob/living/simple_animal/cow/attack_hand(mob/living/carbon/M)
 	if(!stat && M.a_intent == "disarm" && icon_state != icon_dead)
