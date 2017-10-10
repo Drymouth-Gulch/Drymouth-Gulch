@@ -693,17 +693,17 @@
 		H.transpiration_efficiency = 1
 	else if(H.water > THIRST_LEVEL_HARD) //MIDDLE THIRST
 		if(H.transpiration_efficiency != 0.9)
-			H << "<span class='warning'>You are thirsty.</span>"
+			H << "<span class='warning'>You are very thirsty.</span>"
 		H.transpiration_efficiency = 0.9
 	else if(H.water > THIRST_LEVEL_DEADLY) //HARD THIRST
 		if(H.transpiration_efficiency != 0.6)
-			H << "<span class='warning'>You are dehydrated.</span>"
+			H << "<span class='warning'>You are very dehydrated, death will soon be apon you if you cannot find water.  .</span>"
 		if(prob(4))
 			H.AdjustWeakened(5)
 		H.transpiration_efficiency = 0.6
 	else
 		if(H.transpiration_efficiency != 0.1)
-			H << "<span class='warning'>You are severely dehydrated, the end is near.</span>"
+			H << "<span class='warning'>You are extremely dehydrated, the end draws near.</span>"
 		H.adjustOxyLoss(5)
 		H.transpiration_efficiency = 0.1
 		if(prob(10))
@@ -924,7 +924,7 @@
 						target.hair_style = "Bald"
 						target.update_hair()
 		if (totalRads>=50&&prob(2))
-			target << "<span class='danger'>You feel different..</span>"
+			target << "<span class='danger'>You feel different...</span>"
 			randmutb(target)
 			target.emote("gasp")
 			target.domutcheck()
