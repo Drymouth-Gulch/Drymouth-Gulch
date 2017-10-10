@@ -35,7 +35,7 @@
 
 /obj/item/weapon/shield/riot/roman
 	name = "roman shield"
-	desc = "A well constructed hard oak shield. Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
+	desc = "A well constructed hard-wood shield. Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
 	icon_state = "roman_shield"
 	item_state = "roman_shield"
 	block_chance = 45
