@@ -300,7 +300,8 @@
 	can_hold = list(
 		/obj/item/stack/spear,
 		/obj/item/weapon/restraints/legcuffs/bola,
-		/obj/item/weapon/shield/riot/roman
+		/obj/item/weapon/shield/riot/roman,
+		/obj/item/weapon/shield/riot/buckler
 		)
 
 /obj/item/weapon/storage/backpack/spearquiver/New()
