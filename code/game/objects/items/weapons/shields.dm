@@ -35,10 +35,12 @@
 
 /obj/item/weapon/shield/riot/roman
 	name = "roman shield"
-	desc = "Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
+	desc = "A well constructed hard-wood shield. Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
 	icon_state = "roman_shield"
 	item_state = "roman_shield"
 	block_chance = 45
+	w_class = 3
+	force = 20
 
 /obj/item/weapon/shield/riot/buckler
 	name = "wooden buckler"
