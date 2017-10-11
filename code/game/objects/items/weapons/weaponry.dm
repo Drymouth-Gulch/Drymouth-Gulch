@@ -114,10 +114,10 @@
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 40
-	throwforce = 10
+	throwforce = 20
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	block_chance = 20
+	block_chance = 30
 	sharpness = IS_SHARP
 	drawsound = 'sound/items/unholster_sword01.ogg'
 
@@ -133,7 +133,7 @@
 	flags = CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 40
-	throwforce = 10
+	throwforce = 15
 	w_class = 3
 	hitsound = 'sound/weapons/bladeslice.ogg'
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
