@@ -670,7 +670,7 @@
 
 	else if(H.nutrition < NUTRITION_LEVEL_STARVING - 100)
 		if(H.metabolism_efficiency != 0.6)
-			H << "<span class='warning'>You are deadly hungy.</span>"
+			H << "<span class='warning'>You are starving to death.</span>"
 		H.adjustOxyLoss(5)
 		H.metabolism_efficiency = 0.6
 
@@ -685,7 +685,7 @@
 	//THIRST//
 	if(H.water > THIRST_LEVEL_LIGHT)
 		if(H.transpiration_efficiency != 1.1)
-			H << "<span class='notice'>You quench your thirst.</span>"
+			H << "<span class='notice'>You are no longer thirsty.</span>"
 		H.transpiration_efficiency = 1.1
 	else if(H.water > THIRST_LEVEL_MIDDLE) //LITLE THIRST
 		if(H.transpiration_efficiency != 1)
@@ -693,17 +693,17 @@
 		H.transpiration_efficiency = 1
 	else if(H.water > THIRST_LEVEL_HARD) //MIDDLE THIRST
 		if(H.transpiration_efficiency != 0.9)
-			H << "<span class='warning'>Mouth completely dry, you feel weak.</span>"
+			H << "<span class='warning'>You are very thirsty.</span>"
 		H.transpiration_efficiency = 0.9
 	else if(H.water > THIRST_LEVEL_DEADLY) //HARD THIRST
 		if(H.transpiration_efficiency != 0.6)
-			H << "<span class='warning'>Thirst is slowly killing you.</span>"
+			H << "<span class='warning'>You are very dehydrated, death will soon be apon you if you cannot find water.  .</span>"
 		if(prob(4))
 			H.AdjustWeakened(5)
 		H.transpiration_efficiency = 0.6
 	else
 		if(H.transpiration_efficiency != 0.1)
-			H << "<span class='warning'>You are dying of thirst.</span>"
+			H << "<span class='warning'>You are extremely dehydrated, the end draws near.</span>"
 		H.adjustOxyLoss(5)
 		H.transpiration_efficiency = 0.1
 		if(prob(10))
@@ -918,7 +918,7 @@
 						target.hair_style = "Balding Hair"
 						target.update_hair()
 				else
-					target << "<span class='warning'>Your last hair is gone</span>"
+					target << "<span class='warning'>Your hair is completely gone.</span>"
 					spawn(50)
 						target.facial_hair_style = "Shaved"
 						target.hair_style = "Bald"
