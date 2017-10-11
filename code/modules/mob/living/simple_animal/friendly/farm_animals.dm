@@ -76,6 +76,45 @@
 		..()
 
 //cow
+/mob/living/simple_animal/calf
+	name = "brahmin calf"
+	desc = "Oh look a babby brahmin!"
+	icon_state = "cow"
+	icon_living = "cow"
+	icon_dead = "cow_dead"
+	icon_gib = "cow_gib"
+	speak = list("Moo?","Moo!","MOOOOOO","Heeey brooo!","Heeey yooou!")
+	speak_emote = list("moos","moos hauntingly")
+	emote_hear = list("brays.")
+	emote_see = list("shakes its head.")
+	speak_chance = 1
+	turns_per_move = 5
+	see_in_dark = 6
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 2)
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "kicks"
+	attacktext = "kicks"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	health = 20
+	var/amount_grown = 0
+	pass_flags = PASSMOB
+	gold_core_spawnable = 2
+
+/mob/living/simple_animal/calf/New()
+	..()
+	resize(0.5) //half the size of the babby cow
+
+/mob/living/simple_animal/calf/Life()
+	. =..()
+	if(!.)
+		return
+	if(!stat && !ckey)
+		amount_grown += rand(1,2)
+		if(amount_grown >= 100)
+			new /mob/living/simple_animal/cow(src.loc)
+			qdel(src)
+
 /mob/living/simple_animal/cow
 	name = "brahmin"
 	desc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
@@ -121,10 +160,11 @@
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
-		fedAmount = math.floor(0.9 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
+		fedAmount = round(0.9 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
 		if(getFedState() == 2)
 			make_babies(true)	
-		udder.generateMilk()
+		udder.generateMilk(getFedState)
+		
 /mob/living/simple_animal/cow/proc/getFedState()
 	if(fedAmount > 100)
 		fedAmount = 100
@@ -300,10 +340,9 @@ var/global/chicken_count = 0
 	reagents.my_atom = src
 	reagents.add_reagent("milk", 20)
 
-/obj/udder/proc/generateMilk()
+/obj/udder/proc/generateMilk(milkGenState = 2)
 	if(prob(5))
-		var/lets_get_some_milk_happening_based_on_food = getFedState()
-		reagents.add_reagent("milk", rand(1 + 5*lets_get_some_milk_happening_based_on_food, 5 + 10*lets_get_some_milk_happening_based_on_food))
+		reagents.add_reagent("milk", rand(1 + 5*milkGenState, 5 + 10*milkGenState))
 
 /obj/udder/proc/milkAnimal(obj/O, mob/user)
 	var/obj/item/weapon/reagent_containers/glass/G = O
