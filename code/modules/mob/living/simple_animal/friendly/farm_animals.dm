@@ -103,7 +103,7 @@
 
 /mob/living/simple_animal/calf/New()
 	..()
-	resize(0.5) //half the size of the babby cow
+	resize = 0.5 //half the size of the babby cow
 
 /mob/living/simple_animal/calf/Life()
 	. =..()
@@ -140,7 +140,7 @@
 	gold_core_spawnable = 2
 	var/fedAmount = 50 //Affects milk and breeding. 0-24 very little milk, no breeding, 25-74 normal milk, no breeding, 75-100 more milk, breedable
 	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
-	var/fed_desc = ("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
+	var/fed_desc = list("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
 
 /mob/living/simple_animal/cow/New()
 	udder = new()
@@ -162,9 +162,11 @@
 	if(stat == CONSCIOUS)
 		fedAmount = round(0.9 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
 		if(getFedState() == 2)
-			make_babies(true)	
-		udder.generateMilk(getFedState)
-		
+			make_babies(1)
+		udder.generateMilk(getFedState())
+
+
+
 /mob/living/simple_animal/cow/proc/getFedState()
 	if(fedAmount > 100)
 		fedAmount = 100
@@ -174,13 +176,13 @@
 		if(0 to 24)
 			return 0 //cant do much
 			desc = basedesc + fed_desc[0]
-		else if(25 to 74)
+		if(25 to 74)
 			return 1 //good for milkies
 			desc = basedesc + fed_desc[1]
-		else if(75 to 100)
+		if(75 to 100)
 			return 2 //can preggo
 			desc = basedesc + fed_desc[2]
-		
+
 /mob/living/simple_animal/cow/attack_hand(mob/living/carbon/M)
 	if(!stat && M.a_intent == "disarm" && icon_state != icon_dead)
 		M.visible_message("<span class='warning'>[M] tips over [src].</span>","<span class='notice'>You tip over [src].</span>")

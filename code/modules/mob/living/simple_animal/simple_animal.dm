@@ -455,7 +455,7 @@
 	update_canmove()
 	..()
 
-/mob/living/simple_animal/proc/make_babies(var/andro = false) // <3 <3 <3
+/mob/living/simple_animal/proc/make_babies(andro = 0) // <3 <3 <3
 	if(stat || !scan_ready || !childtype || !species)
 		return
 	if(gender != FEMALE && !andro)
@@ -476,7 +476,7 @@
 				continue
 			else if(!istype(M, childtype)) //Can't breed with pupperinos
 				if(andro || M.gender == MALE) //
-				partner = M
+					partner = M
 		else if(istype(M, /mob/))
 			alone = 0
 			continue

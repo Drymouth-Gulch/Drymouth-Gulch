@@ -1,4 +1,4 @@
-var/global/list/datum/stack_recipe/rod_recipes = list ( \
+var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	new/datum/stack_recipe("bedroll", /obj/item/roller/bedroll, 10, time = 30, one_per_turf = 0, on_floor = 0), \
 	)
 
@@ -34,7 +34,7 @@ var/global/list/datum/stack_recipe/rod_recipes = list ( \
 
 /obj/structure/bed/roller/bedroll
 	name = "bedroll"
-  desc = 'A bedroll for the wasteland camping enthusiast.'
+	desc = "=A bedroll for the wasteland camping enthusiast."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "bedroll_unrolled"
 	anchored = 0
