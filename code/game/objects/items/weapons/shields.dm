@@ -35,10 +35,22 @@
 
 /obj/item/weapon/shield/riot/roman
 	name = "roman shield"
-	desc = "Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
+	desc = "A large heavy oak shield from before the blast, its lashed together with heavy iron bands. Bears an inscription on the inside: <i>\"Romanes venio domus\"</i>."
 	icon_state = "roman_shield"
 	item_state = "roman_shield"
-	block_chance = 45
+	block_chance = 40
+	force = 20
+	burn_state = FLAMMABLE
+
+/obj/item/weapon/shield/riot/legion
+	name = "legion shield"
+	desc = "A well balanced hard wood shield, fashioned together with long iron bands. It has a legion emblem charred into the inside."
+	icon_state = "roman_shield"
+	item_state = "roman_shield"
+	block_chance = 38
+	w_class = 3
+	force = 15
+	burn_state = FLAMMABLE
 
 /obj/item/weapon/shield/riot/buckler
 	name = "wooden buckler"
