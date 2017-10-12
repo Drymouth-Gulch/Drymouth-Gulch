@@ -291,17 +291,15 @@
 
 /obj/item/weapon/storage/backpack/spearquiver
 	name = "spear quiver"
-	desc = "A leather and iron quiver designed to hold throwing spears, it has a leather strap to lash your shield to it."
+	desc = "A leather and iron quiver designed to hold throwing spears.
 	icon_state = "spearquiver_3"
 	item_state = "throwingholster"
 	w_class = 4
 	storage_slots = 7
-	max_combined_w_class = 45 // Just guessing here, shouldn't be a problem? buffed anyways cuz dat shield -ox
+	max_combined_w_class = 30
 	can_hold = list(
 		/obj/item/stack/spear,
-		/obj/item/weapon/restraints/legcuffs/bola,
-		/obj/item/weapon/shield/riot/legion,
-		/obj/item/weapon/shield/riot/buckler
+		/obj/item/weapon/restraints/legcuffs/bola
 		)
 
 /obj/item/weapon/storage/backpack/spearquiver/New()
@@ -312,7 +310,6 @@
 	new /obj/item/stack/spear(src)
 	new /obj/item/stack/spear(src)
 	new /obj/item/weapon/restraints/legcuffs/bola(src)
-	new /obj/item/weapon/shield/riot/legion(src)
 
 /obj/item/weapon/storage/backpack/dufflebag
 	name = "dufflebag"
