@@ -11,7 +11,7 @@
 	else
 		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
 	return
-/*
+
 /client/verb/wiki()
 	set name = "Wiki"
 	set desc = "Visit the wiki."
@@ -23,7 +23,7 @@
 	else
 		src << "<span class='danger'>The wiki URL is not set in the server configuration.</span>"
 	return
-
+*/
 /client/verb/vk()
 	set name = "VK"
 	set desc = "Visit the VK."
