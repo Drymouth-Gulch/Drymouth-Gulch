@@ -42,16 +42,6 @@
 	force = 20
 	burn_state = FLAMMABLE
 
-/obj/item/weapon/shield/riot/legion
-	name = "legion shield"
-	desc = "A well balanced hard wood shield, fashioned together with long iron bands. It has a legion emblem charred into the inside."
-	icon_state = "roman_shield"
-	item_state = "roman_shield"
-	block_chance = 25
-	w_class = 3
-	force = 15
-	burn_state = FLAMMABLE
-
 /obj/item/weapon/shield/riot/buckler
 	name = "wooden buckler"
 	desc = "A medieval wooden buckler."
