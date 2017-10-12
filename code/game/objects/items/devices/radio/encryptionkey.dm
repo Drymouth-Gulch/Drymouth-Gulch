@@ -159,7 +159,7 @@
 	desc = "An encryption key for a radio headset.  To access the science channel, use :q."
 	//icon_state = "sci_cypherkey"
 	channels = list("Enclave" = 1)
-	
+
 /obj/item/device/encryptionkey/headset_bos
 	name = "brotherhood radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the science channel, use :h."
