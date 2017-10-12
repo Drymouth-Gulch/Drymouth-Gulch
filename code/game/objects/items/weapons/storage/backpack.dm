@@ -313,7 +313,7 @@
 	new /obj/item/stack/spear(src)
 	new /obj/item/stack/spear(src)
 	new /obj/item/weapon/restraints/legcuffs/bola(src)
-	new /obj/item/weapon/shield/riot/legion
+	new /obj/item/weapon/shield/riot/legion(src)
 
 /obj/item/weapon/storage/backpack/dufflebag
 	name = "dufflebag"
