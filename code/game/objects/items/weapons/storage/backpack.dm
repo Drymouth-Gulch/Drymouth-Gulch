@@ -295,8 +295,8 @@
 	icon_state = "spearquiver_3"
 	item_state = "throwingholster"
 	w_class = 4
-	storage_slots = 7
-	max_combined_w_class = 30
+	storage_slots = 6
+	max_combined_w_class = 40
 	can_hold = list(
 		/obj/item/stack/spear,
 		/obj/item/weapon/restraints/legcuffs/bola
