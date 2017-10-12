@@ -476,7 +476,7 @@
 	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
-	ears = /obj/item/device/radio/headset/heads/hos/alt
+	ears = /obj/item/device/radio/headset/headset_bos
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t51b
 	head = /obj/item/clothing/head/helmet/power_armor/f13/t51b
 	suit_store = /obj/item/weapon/gun/energy/laser/scatter
@@ -511,7 +511,7 @@
 	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
-	ears = /obj/item/device/radio/headset/heads/hos/alt
+	ears = /obj/item/device/radio/headset/headset_bos
 	suit = /obj/item/clothing/suit/armor/f13/power_armor/t45d
 	head = /obj/item/clothing/head/helmet/power_armor/f13/t45d
 	suit_store = /obj/item/weapon/gun/energy/laser/scatter
@@ -546,7 +546,7 @@
 	uniform = /obj/item/clothing/under/f13/recon
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
-	ears = /obj/item/device/radio/headset/heads/hos/alt
+	ears = /obj/item/device/radio/headset/headset_bos
 	suit = /obj/item/clothing/suit/armor/f13/combat/brotherhood
 	head = /obj/item/clothing/head/helmet/f13/combat/brotherhood
 	suit_store = /obj/item/weapon/gun/projectile/automatic/assault_rifle
@@ -575,7 +575,7 @@
 	shoes = /obj/item/clothing/shoes/combat/swat
 	gloves = /obj/item/clothing/gloves/combat
 	suit = /obj/item/clothing/suit/f13/scribe
-	ears = /obj/item/device/radio/headset/heads/hos/alt
+	ears = /obj/item/device/radio/headset/headset_bos
 	belt = /obj/item/weapon/storage/belt/utility/full
 	back = /obj/item/weapon/storage/backpack/satchel
 	suit_store = /obj/item/weapon/gun/projectile/automatic/smg10mm
