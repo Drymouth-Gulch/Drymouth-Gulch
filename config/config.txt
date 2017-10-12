@@ -122,7 +122,7 @@ SERVER 92.222.238.93:4738
 FORUMURL 
 
 ## Wiki address
-# WIKIURL 
+WIKIURL http://drymouth-gulch-ss13.wikia.com/wiki/Drymouth_Gulch_-_SS13_Wiki
 
 ##Rules address
 # RULESURL 
