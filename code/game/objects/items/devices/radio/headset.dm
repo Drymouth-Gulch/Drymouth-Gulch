@@ -242,7 +242,7 @@
 	//icon_state = "sec_headset"
 	item_state = "headset"
 	keyslot = new /obj/item/device/encryptionkey/headset_encl
-	
+
 /obj/item/device/radio/headset/headset_bos
 	name = "Brotherhood radio headset"
 	desc = "A Brotherhood headset, when your better dead than red but your friend across the wasteland don't know. \nTo access Brotherhood channel, use :h."
