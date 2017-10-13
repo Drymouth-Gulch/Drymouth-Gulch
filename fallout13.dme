@@ -1559,6 +1559,7 @@
 #include "code\modules\reagents\reagent_containers\spray.dm"
 #include "code\modules\reagents\reagent_containers\stimpak.dm"
 #include "code\modules\reagents\reagent_containers\syringes.dm"
+#include "code\modules\reagents\reagent_containers\pottery.dm"
 #include "code\modules\recycling\conveyor2.dm"
 #include "code\modules\recycling\disposal-construction.dm"
 #include "code\modules\recycling\disposal-structures.dm"
