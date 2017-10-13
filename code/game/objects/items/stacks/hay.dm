@@ -1,3 +1,6 @@
+//Contains new hay craftable objects, will be moved into their relevant files eventually
+//For now these are collated here for ease of my lazyness times -Gomble
+
 var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	new/datum/stack_recipe("Bedroll", /obj/item/roller/bedroll, 10, time = 10, one_per_turf = 0, on_floor = 0), \
 	new/datum/stack_recipe("Rice Hat", /obj/item/clothing/head/rice_hat, 4, time = 5, one_per_turf = 0, on_floor = 0), \
@@ -67,11 +70,13 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	name = "basket"
 	desc = "A handmade wicker basket. How artisan! GMO FREE ORGANIC FREE RANGE ARTISAN VEGAN AND PALEO FRIENDLY."
 	icon = 'icons/obj/crates.dmi'
-	var/icon_crate = "basket"
+	icon_crate = "basket"
 	icon_state = "basket"
 	burn_state = FLAMMABLE
 
+
 //Broom (A buggered mop that uses no water)
+#define is_cleanable(A) (istype(A, /obj/effect/decal/cleanable) || istype(A, /obj/effect/rune))
 /obj/item/weapon/mop/broom
 	desc = "Sweep all your problems under the rug."
 	name = "broom"
@@ -82,7 +87,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	create_reagents(mopcap)
 
 
-/obj/item/weapon/mop/broom/proc/clean(turf/A)
+/obj/item/weapon/mop/broom/clean(turf/A)
 	A.clean_blood()
 	for(var/obj/effect/O in A)
 		if(is_cleanable(O))
