@@ -11,7 +11,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 /obj/item/stack/hay
 	name = "hay"
 	desc = "A bundle of hay. Food for livestock, and useful for weaving. Hail the Wickerman."
-	singular_name = "strand of hay"
+	singular_name = "hay stalk"
 	icon_state = "hay"
 	item_state = "hay"
 	w_class = 2
@@ -29,7 +29,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	recipes = hay_recipes
 	update_icon()
 
-/obj/item/stack/rods/update_icon()
+/obj/item/stack/hay/update_icon()
 	var/amount = get_amount()
 	if((amount <= 4) && (amount > 0))
 		icon_state = "hay[amount]"
@@ -60,10 +60,10 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	var/obj/structure/bed/roller/bedroll/R = new /obj/structure/bed/roller/bedroll(user.loc)
 	R.add_fingerprint(user)
 	qdel(src)
-	
-	
-	
-	
+
+
+
+
 //Wicker Basket
 
 /obj/structure/closet/crate/wicker
@@ -108,9 +108,9 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 		if(do_after(user, src.mopspeed, target = turf))
 			user << "<span class='notice'>You finish sweeping.</span>"
 			clean(turf)
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+

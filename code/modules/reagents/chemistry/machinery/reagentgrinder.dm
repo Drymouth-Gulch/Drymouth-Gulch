@@ -58,7 +58,10 @@
 
 				//All types that you can put into the grinder to transfer the reagents to the beaker. !Put all recipes above this.!
 				/obj/item/weapon/reagent_containers/pill = list(),
-				/obj/item/weapon/reagent_containers/food = list()
+				/obj/item/weapon/reagent_containers/food = list(),
+
+				//tasty cows
+				/obj/item/weapon/calftum = list("enzyme" = 15)
 		)
 
 		var/list/juice_items = list (

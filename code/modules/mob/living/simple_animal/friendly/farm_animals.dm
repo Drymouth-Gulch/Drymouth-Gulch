@@ -90,7 +90,7 @@
 	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 2)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 2, /obj/item/weapon/calftum = 1)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
@@ -101,9 +101,15 @@
 	pass_flags = PASSMOB
 	gold_core_spawnable = 2
 
+
+/obj/item/weapon/calftum
+	name = "Calf Stomach"
+	desc = "Gross! Blend this up to get some tasy enzyme"
+	icon_state = "calfTum"
+
 /mob/living/simple_animal/calf/New()
 	..()
-	resize = 0.5 //half the size of the babby cow
+	resize = 0.8
 
 /mob/living/simple_animal/calf/Life()
 	. =..()
@@ -142,6 +148,8 @@
 	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
 	var/fed_desc = list("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
 
+
+
 /mob/living/simple_animal/cow/New()
 	udder = new()
 	..()
@@ -152,15 +160,22 @@
 	return ..()
 
 /mob/living/simple_animal/cow/attackby(obj/item/O, mob/user, params)
-	if(stat == CONSCIOUS && istype(O, /obj/item/weapon/reagent_containers/glass))
-		udder.milkAnimal(O, user)
+	if(stat == CONSCIOUS)
+		if(istype(O, /obj/item/weapon/reagent_containers/glass))
+			udder.milkAnimal(O, user)
+		if(istype(O, /obj/item/stack/hay))
+			var/obj/item/stack/hay/H = O
+			if(H.use(1))
+				fedAmount += 5
+				user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
+
 	else
 		..()
 
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
-		fedAmount = round(0.9 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
+		fedAmount = round(0.99 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
 		if(getFedState() == 2)
 			make_babies(1)
 		udder.generateMilk(getFedState())
@@ -174,14 +189,14 @@
 		fedAmount = 0
 	switch(fedAmount)
 		if(0 to 24)
-			return 0 //cant do much
 			desc = basedesc + fed_desc[0]
+			return 0 //cant do much
 		if(25 to 74)
-			return 1 //good for milkies
 			desc = basedesc + fed_desc[1]
+			return 1 //good for milkies
 		if(75 to 100)
-			return 2 //can preggo
 			desc = basedesc + fed_desc[2]
+			return 2 //can preggo
 
 /mob/living/simple_animal/cow/attack_hand(mob/living/carbon/M)
 	if(!stat && M.a_intent == "disarm" && icon_state != icon_dead)
