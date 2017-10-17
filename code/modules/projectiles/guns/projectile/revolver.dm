@@ -90,8 +90,8 @@
 	user << "[get_ammo(0,0)] of those are live rounds."
 
 /obj/item/weapon/gun/projectile/revolver/detective
-	name = "\improper .38 Mars Special"
-	desc = "A cheap Martian knock-off of a classic law enforcement firearm. Uses .38-special rounds."
+	name = "\improper .38 S&W"
+	desc = "A classic law enforcement firearm. Uses .38-special rounds."
 	icon_state = "detective"
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
@@ -109,7 +109,7 @@
 
 /obj/item/weapon/gun/projectile/revolver/mateba
 	name = "\improper Unica 6 auto-revolver"
-	desc = "A retro high-powered autorevolver typically used by officers of the New Russia military. Uses .357 ammo."
+	desc = "A retro high-powered autorevolver typically used by officers of the New California Republic. Uses .357 ammo."
 	icon_state = "mateba"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	origin_tech = "combat=2;materials=2"
@@ -130,8 +130,8 @@
 	zoom_amt = 7
 
 /obj/item/weapon/gun/projectile/revolver/m29/mysterious
-	name = "\improper S&W Model 29 - 'Mysterious'"
-	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? You feel like you have the power of god. <b>HELL YEAH!</b>"
+	name = "Big Iron"
+	desc = "There before them lay the body of the outlaw on the ground. Oh, he might have went on livin' but he made one fatal slip, when he tried to match the ranger with the big iron on his hip"
 	icon_state = "mysterious_m29"
 	damageG=9999
 	damageA=9999
@@ -153,7 +153,7 @@
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
 
 /obj/item/weapon/gun/projectile/revolver/police
-	name = "police pistol"
+	name = "S&W Model 36"
 	desc = "A .38 caliber police pistol which can also accept .357 rounds."
 	icon_state = "police"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
@@ -186,15 +186,15 @@
 	return
 
 /obj/item/weapon/gun/projectile/revolver/sequoia/scoped
-	name = "Hunting Revolver"
+	name = "Magnum Research BFR"
 	desc = "A scoped double action revolver chambered in 45-70."
 	icon_state = "hunting_revolver"
 	zoomable = TRUE
 	zoom_amt = 7
 
 /obj/item/weapon/gun/projectile/revolver/that_gun
-	name = ".223 pistol"
-	desc = "A modified .223 rifle that was cut down to a pistol. It has two triggers, two red LEDs, and an ammunition capacity of five .223 rounds, granting it excellent firepower."
+	name = ".223 revolver"
+	desc = "Dinosaur plushies not included."
 	icon_state = "that_gun"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev556
 	origin_tech = "combat=4;materials=3"
