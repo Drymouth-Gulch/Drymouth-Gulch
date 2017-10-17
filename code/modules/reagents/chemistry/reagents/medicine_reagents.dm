@@ -1193,16 +1193,3 @@ datum/reagent/medicine/super_stimpak/on_mob_life(mob/living/M)
 	M.Dizzy(2)
 	..()
 	return
-
-/datum/reagent/medicine/cum
-	name = "Cum"
-	id = "cum"
-	description = "Jesus, what the fuck is this?"
-	reagent_state = LIQUID
-	color = "#DFD7AF" // rgb: 223, 215, 175
-
-/datum/reagent/medicine/cum/on_mob_life(mob/living/M)
-	M.adjustFireLoss(-0.1*REM)
-	M.adjustBruteLoss(-0.1*REM)
-	.=..()
-	return
