@@ -25,6 +25,7 @@
 	icon_state = "AEP7"
 	item_state = "pistol"
 	w_class = 2
+	fire_delay = 0
 	ammo_type = list(/obj/item/ammo_casing/energy/laser/pistol)
 	cell_type = /obj/item/weapon/stock_parts/cell/ammo/ec
 
