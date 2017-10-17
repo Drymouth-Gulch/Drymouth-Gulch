@@ -80,7 +80,8 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 /obj/item/weapon/mop/broom
 	desc = "Sweep all your problems under the rug."
 	name = "broom"
-	icon_state = "broom" //todo
+	icon = 'icons/obj/wizard.dmi' //this broom is actually perfect
+	icon_state = "broom"
 	attack_verb = list("tickled", "swept", "dusted", "smacked")
 
 /obj/item/weapon/mop/broom/New()
