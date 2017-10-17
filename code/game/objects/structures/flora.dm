@@ -143,7 +143,7 @@
 
 /obj/structure/flora/grass/attackby(obj/item/weapon/W, mob/user)
 	..()
-	if(istype(W,istype(W, /obj/item/weapon/scythe || /obj/item/weapon/kitchen/knife ||  /obj/item/weapon/circular_saw) || istype(W, /obj/item/weapon/hatchet) || (istype(W, /obj/item/weapon/twohanded/fireaxe) && W:wielded) || istype(W, /obj/item/weapon/melee/energy) || istype(W, /obj/item/weapon/twohanded/required/chainsaw))
+	if(istype(W,istype(W, /obj/item/weapon/scythe) || istype(W, /obj/item/weapon/kitchen/knife) ||  istype(W, /obj/item/weapon/circular_saw) || istype(W, /obj/item/weapon/hatchet) || (istype(W, /obj/item/weapon/twohanded/fireaxe) && W:wielded) || istype(W, /obj/item/weapon/melee/energy) || istype(W, /obj/item/weapon/twohanded/required/chainsaw))
 		visible_message("<i>[user] begins to cut [src]...</i>")
 		if(do_after(user, 15, target = src))
 			var/obj/item/stack/hay/H = new /obj/item/stack/hay(get_turf(src))
