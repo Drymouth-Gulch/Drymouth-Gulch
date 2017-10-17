@@ -147,8 +147,8 @@
 	var/fedAmount = 50 //Affects milk and breeding. 0-24 very little milk, no breeding, 25-74 normal milk, no breeding, 75-100 more milk, breedable
 	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
 	var/fed_desc = list("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
-
-
+	species = /mob/living/simple_animal/cow
+	childtype = /mob/living/simple_animal/calf
 
 /mob/living/simple_animal/cow/New()
 	udder = new()
@@ -166,7 +166,7 @@
 		if(istype(O, /obj/item/stack/hay))
 			var/obj/item/stack/hay/H = O
 			if(H.use(1))
-				fedAmount += 5
+				fedAmount += 12
 				user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
 
 	else
