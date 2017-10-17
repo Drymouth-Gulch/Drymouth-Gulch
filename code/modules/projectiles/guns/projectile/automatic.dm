@@ -12,7 +12,7 @@
 	chamber_sound = 'sound/effects/wep_magazines/smg_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/proto
-	name = "\improper Advanced SABR SMG"
+	name = "/improper SABR SG-T"
 	desc = "A prototype three-round burst 9mm submachine gun, designated 'SABR'. Has a threaded barrel for suppressors."
 	icon_state = "saber"
 	mag_type = /obj/item/ammo_box/magazine/smgm9mm
@@ -117,14 +117,14 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/wt550
-	name = "security auto rifle"
-	desc = "An outdated personal defence weapon. Uses 4.6x30mm rounds and is designated the WT-550 Automatic Rifle."
+	name = "/improper General Arms SDW"
+	desc = "A light weight tactical SMG. Uses 4.6x30mm rounds and is designated as a self defense weapon. Has a GA logo stamped into the reciever."
 	icon_state = "wt550"
 	item_state = "arg"
 	mag_type = /obj/item/ammo_box/magazine/wt550m9
-	fire_delay = 2
-	can_suppress = 0
-	burst_size = 0
+	fire_delay = 1.5
+	can_suppress = 1
+	burst_size = 3
 
 /obj/item/weapon/gun/projectile/automatic/wt550/ui_action_click()
 	return
@@ -217,7 +217,7 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/tommygun
-	name = "\improper Thompson SMG"
+	name = "Thompson M1A1"
 	desc = "Based on the classic 'Chicago Typewriter'."
 	icon_state = "tommygun"
 	item_state = "shotgun"
@@ -247,8 +247,8 @@
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
 
 /obj/item/weapon/gun/projectile/automatic/smg10mm
-	name = "10-mm submachine gun"
-	desc = "Submachine gun H&K MP9 (10-mm caliber variant). The average sub-machine gun, can operate in both single and automatic fire."
+	name = "10mm submarine gun"
+	desc = "A select fire open bolt 10mm submachine gun. The serial number and manufactuer markings have been scratched off."
 	icon_state = "smg10mm"
 	item_state = "smg10mm"
 	slot_flags = 0
@@ -260,8 +260,8 @@
  	//fire_delay = 1
 
 /obj/item/weapon/gun/projectile/automatic/assault_rifle
-	name = "Assault Rifle"
-	desc = "An Assault Rifle. An old military model, out of use around the time of the war."
+	name = "R91 assault rifle"
+	desc = "A standard R91 combat rifle, out of use around the time of the Great War."
 	icon_state = "assault_rifle"
 	item_state = "assault_rifle"
 	slot_flags = 0
@@ -278,7 +278,7 @@
 	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/automatic/assault_rifle/infiltrator
-	name = "infiltrator"
+	name = "R91 infiltrator"
 	desc = "A customized R91 assault rifle, with a scope, integrated suppressor, cut down stock and polymer furniture."
 	icon_state = "infiltrator"
 	item_state = "arg"
@@ -300,8 +300,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/marksman
-	name = "Marksman Carbine"
-	desc = "A 5.56 caliber assault rifle widely seen in use by pre-war U.S. military forces. Semi-automatic only."
+	name = "R94 marksman carbine"
+	desc = "A R94 marksman carbine, chambered in 5.56x45. Seen heavy usage in pre-war conflicts. This one isn't a select fire variant."
 	icon_state = "marksman_rifle"
 	item_state = "arg"
 	slot_flags = 0
@@ -330,8 +330,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/marksman/servicerifle
-	name = "Service Rifle"
-	desc = "A 5.56 caliber semi-automatic standard issue service rifle for NCR Troopers."
+	name = "R81 service rifle"
+	desc = "A 5.56x45 semi-automatic service rifle manufcatured by the NCR and issued to all combat personnel."
 	icon_state = "service_rifle"
 	item_state = "assault_rifle"
 	fire_sound = 'sound/f13weapons/varmint_rifle.ogg'
@@ -339,8 +339,8 @@
 	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/automatic/minigun
-	name = "Minigun"
-	desc = "A minigun is a multi-barrel machine gun with a high rate of fire, employing Gatling-style rotating barrels."
+	name = "M134 Minigun"
+	desc = "The M134 is a 7.62×51mm, six-barrel rotary machine gun with a rate of fire between 2,000 and 6,000 rounds per minute."
 	icon_state = "arg"
 	item_state = "arg"
 	slot_flags = 0
@@ -348,12 +348,12 @@
 	mag_type = /obj/item/ammo_box/magazine/m556
 	fire_sound = 'sound/f13weapons/10mm_fire_03.ogg'
 	can_suppress = 0
-	burst_size = 3
-	fire_delay = 0.5
+	burst_size = 5
+	fire_delay = 0.2
 	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/pancor
-	name = "pancor jackhammer"
+	name = "Pancor Jackhammer"
 	desc = "A select fire automatic shotgun, the pinnacle of turning things into swiss cheese."
 	icon_state = "pancor"
 	item_state = "bulldog"
@@ -366,7 +366,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/caws
 	name = "HK CAWS"
-	desc = "A select fire automatic shotgun, the Pancor's little brother."
+	desc = "A select fire automatic shotgun, a modern variant of the Pancor Jackhammer."
 	icon_state = "caws"
 	item_state = "bulldog"
 	fire_sound = 'sound/f13weapons/repeater_fire.ogg'
@@ -378,7 +378,7 @@
 	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/automatic/shotgun/riot
-	name = "riot shotgun"
+	name = "R15a riot shotgun"
 	desc = "A semi-automatic shotgun with a drum magazine of 12, allowing for robust crowd control."
 	icon_state = "riot_shotgun"
 	item_state = "shotgun"
@@ -391,8 +391,8 @@
 	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/automatic/lsw
-	name = "light support weapon"
-	desc = "A British made light machine gun, for squad supressive fire capabilities. "
+	name = "L86A1 LSW"
+	desc = "A british variant of the L86 platform. This one was designed as a light support weapon, featuring a bipod and fluted barrel."
 	icon_state = "lsw"
 	item_state = "l6closedmag"
 	slot_flags = 0
@@ -400,9 +400,9 @@
 	mag_type = /obj/item/ammo_box/magazine/m556
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = 0
-	burst_size = 10
+	burst_size = 3
 	heavy_weapon = 1
-	fire_delay = 1
+	fire_delay = 0.5
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
@@ -410,8 +410,8 @@
 	heavy_weapon = 1
 
 /obj/item/weapon/gun/projectile/automatic/american180
-	name = "silenced .22 smg"
-	desc = "An American 180, commonly used in prisons."
+	name = "American 180"
+	desc = "A select fire, open bolt, rotary fed, submachine gun."
 	icon_state = "american180"
 	item_state = "shotgun"
 	suppressed = 1
@@ -441,7 +441,7 @@
 	fire_sound = 'sound/f13weapons/greasegun.ogg'
 	can_suppress = 0
 	burst_size = 3
-	fire_delay = 3
+	fire_delay = 2
 
 /obj/item/weapon/gun/projectile/automatic/bozar
 	name = "Bozar"
