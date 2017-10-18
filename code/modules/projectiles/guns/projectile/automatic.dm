@@ -400,9 +400,8 @@
 	mag_type = /obj/item/ammo_box/magazine/m556
 	fire_sound = 'sound/f13weapons/assaultrifle_fire.ogg'
 	can_suppress = 0
-	burst_size = 3
-	heavy_weapon = 1
-	fire_delay = 0.5
+	burst_size = 5
+	fire_delay = 0.3
 	mag_load_sound = 'sound/effects/wep_magazines/ar_load.ogg'
 	mag_unload_sound = 'sound/effects/wep_magazines/ar_unload.ogg'
 	chamber_sound = 'sound/effects/wep_magazines/ar_chamber.ogg'
