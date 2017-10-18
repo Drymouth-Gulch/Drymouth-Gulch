@@ -164,7 +164,8 @@ var/list/radiochannelsreverse = list(
 	"1303" = "Legion",
 	"1305" = "NCR",
 	"1307" = "Den",
-	"1309" = "Enclave"
+	"1309" = "Enclave",
+	"1311" = "Brotherhood"
 )
 
 //depenging helpers
@@ -184,6 +185,7 @@ var/const/LEG_FREQ = 1303
 var/const/NCR_FREQ = 1305
 var/const/DEN_FREQ = 1307
 var/const/ENCL_FREQ = 1309
+var/const/BOS_FREQ = 1311
 
 #define TRANSMISSION_WIRE	0
 #define TRANSMISSION_RADIO	1

@@ -129,33 +129,39 @@
 /obj/item/device/encryptionkey/ai //ported from NT, this goes 'inside' the AI.
 	channels = list("Command" = 1, "Security" = 1, "Engineering" = 1, "Science" = 1, "Medical" = 1, "Supply" = 1, "Service" = 1, "AI Private" = 1)
 
-//FALOUT
+//fallout
 /obj/item/device/encryptionkey/headset_vlt
-	name = "Vault 113 radio encryption key"
+	name = "vault 113 radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the Vault channel, use :v."
 	//icon_state = "sec_cypherkey"
 	channels = list("Vault" = 1)
 
 /obj/item/device/encryptionkey/headset_leg
-	name = "Legion radio encryption key"
+	name = "legion radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the Legion channel, use :e."
 	//icon_state = "eng_cypherkey"
 	channels = list("Legion" = 1)
 
 /obj/item/device/encryptionkey/headset_ncr
-	name = "NCR radio encryption key"
+	name = "ncr radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the NCR channel, use :c."
 	icon_state = "rob_cypherkey"
 	channels = list("NCR" = 1)
 
 /obj/item/device/encryptionkey/headset_den
-	name = "Den radio encryption key"
+	name = "den radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the Den channel, use :d."
 	//icon_state = "med_cypherkey"
 	channels = list("Den" = 1)
 
 /obj/item/device/encryptionkey/headset_encl
-	name = "Enclave radio encryption key"
+	name = "enclave radio encryption key"
 	desc = "An encryption key for a radio headset.  To access the science channel, use :q."
 	//icon_state = "sci_cypherkey"
 	channels = list("Enclave" = 1)
+
+/obj/item/device/encryptionkey/headset_bos
+	name = "brotherhood radio encryption key"
+	desc = "An encryption key for a radio headset.  To access the science channel, use :h."
+	//icon_state = "sec_cypherkey"
+	channels = list("Brotherhood" = 1)
