@@ -367,7 +367,7 @@
 	name = "Improvised Kevlar Plate"
 	result = /obj/item/asteroid/goliath_hide
 	time = 30
-	reqs = list(/obj/item/stack/sheet/leather = 2,
+	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw = 2,
 				/obj/item/stack/sheet/plasteel = 1)
 	tools = list(/obj/item/weapon/wrench, /obj/item/weapon/weldingtool)
 	parts = list()
