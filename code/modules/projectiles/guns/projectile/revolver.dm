@@ -109,7 +109,7 @@
 
 /obj/item/weapon/gun/projectile/revolver/mateba
 	name = "\improper Unica 6 auto-revolver"
-	desc = "A retro high-powered autorevolver typically used by officers of the New California Republic. Uses .357 ammo."
+	desc = "A retro high-powered autorevolver typically used by flag officers of the New California Republic. Uses .357 ammo."
 	icon_state = "mateba"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev38
 	origin_tech = "combat=2;materials=2"
@@ -129,9 +129,24 @@
 	zoomable = TRUE
 	zoom_amt = 7
 
-/obj/item/weapon/gun/projectile/revolver/m29/mysterious
+/obj/item/weapon/gun/projectile/revolver/m29/bigiron
 	name = "Big Iron"
 	desc = "There before them lay the body of the outlaw on the ground. Oh, he might have went on livin' but he made one fatal slip, when he tried to match the ranger with the big iron on his hip"
+	icon_state = "mysterious_m29"
+	damageG=9999
+	damageA=9999
+	damageS=9999
+	rangeG=0
+
+/obj/item/weapon/gun/projectile/revolver/m29/bigiron/New()
+	..()
+	update_icon()
+	src.setgundamage(src.damageG,src.damageA,src.damageS,src.rangeG)
+	return
+
+/obj/item/weapon/gun/projectile/revolver/m29/mysterious
+	name = "\improper S&W Model 29 - 'Mysterious'"
+	desc = "Being that this is the most powerful handgun in the world, and can blow your head clean-off, you've got to ask yourself one question. Do I feel lucky? Well, do ya punk? You feel like you have the power of god. <b>HELL YEAH!</b>"
 	icon_state = "mysterious_m29"
 	damageG=9999
 	damageA=9999
