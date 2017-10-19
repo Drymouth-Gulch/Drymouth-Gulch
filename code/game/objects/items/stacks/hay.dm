@@ -3,6 +3,7 @@
 
 var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	new/datum/stack_recipe("Bedroll", /obj/item/roller/bedroll, 10, time = 10, one_per_turf = 0, on_floor = 0), \
+	new/datum/stack_recipe("Rope", /obj/item/weapon/restraints/handcuffs/rope, 4, time = 5, one_per_turf = 0, on_floor = 0), \
 	new/datum/stack_recipe("Rice Hat", /obj/item/clothing/head/rice_hat, 4, time = 5, one_per_turf = 0, on_floor = 0), \
 	new/datum/stack_recipe("Wicker Basket", /obj/structure/closet/crate/wicker, 15, time = 15, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Broom", /obj/item/weapon/mop/broom, 15, time = 15, one_per_turf = 0, on_floor = 0), \
@@ -110,7 +111,14 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 			user << "<span class='notice'>You finish sweeping.</span>"
 			clean(turf)
 
-
+//Rope
+/obj/item/weapon/restraints/handcuffs/rope
+	name = "rope restraints"
+	desc = "Looks like some thread woven together. Could be used to tie something up."
+	icon_state = "cuff_rope" //NEEDS ICON
+	item_state = "coil_red"
+	breakouttime = 300 //Deciseconds = 30s
+	cuffsound = 'sound/weapons/cablecuff.ogg'
 
 
 
