@@ -81,6 +81,11 @@
 /obj/structure/ladder/attack_paw(mob/user)
 	return attack_hand(user)
 
+/obj/structure/ladder/attack_robot(mob/user)
+	if(Adjacent(user))
+		return attack_hand(user)
+
+
 /obj/structure/ladder/attackby(obj/item/weapon/W, mob/user, params)
 	return attack_hand(user)
 
