@@ -41,18 +41,21 @@
 
 	else	//wtf make your ladders properly assholes
 		icon_state = "ladder00"
-
+/obj/structure/ladder/proc/travelLadder(mob/user,newloc)
+	if(user.pulled)
+		user.pulled.loc = newloc
+	user.loc = newloc
 /obj/structure/ladder/proc/go_up(mob/user,is_ghost)
 	if(!is_ghost)
 		show_fluff_message(1,user)
 		up.add_fingerprint(user)
-	user.loc = get_turf(up)
+	travelLadder(user,get_turf(up)
 
 /obj/structure/ladder/proc/go_down(mob/user,is_ghost)
 	if(!is_ghost)
 		show_fluff_message(0,user)
 		down.add_fingerprint(user)
-	user.loc = get_turf(down)
+	travelLadder(user,get_turf(down)
 
 /obj/structure/ladder/proc/use(mob/user,is_ghost=0)
 	if(up && down)
