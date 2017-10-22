@@ -87,8 +87,24 @@
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
 	return (BRUTELOSS|FIRELOSS)
 
+//mhatt's fallout
+/obj/item/weapon/bumpersword
+	name = "Bumper Sword"
+	desc = "A rusty car bumper that has been flattened and sharpened into a thick, heavy blade. The license plate is still attached, and an exhaust pipe strapped to the unsharpened end serves as a makeshift handle."
+	icon_state = "a_blade"
+	item_state = "a_blade"
+	slot_flags = SLOT_BELT | SLOT_BACK
+	force = 30
+	throw_speed = 1
+	throw_range = 2
+	throwforce = 10
+	w_class = 4
 
+/obj/item/weapon/golf/suicide_act(mob/user)
+	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
+	return (BRUTELOSS|FIRELOSS)
 
+//misc
 /obj/item/weapon/sord
 	name = "\improper SORD"
 	desc = "This thing is so unspeakably shitty you are having a hard time even holding it."

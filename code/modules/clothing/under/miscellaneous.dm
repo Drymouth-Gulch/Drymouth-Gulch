@@ -1083,6 +1083,40 @@
     armor = list(melee = 5, bullet = 5, laser = 5,energy = 5, bomb = 0, bio = 0, rad = 0)
     can_adjust = 0
 
+/obj/item/clothing/under/f13/greatkhan
+	name = "great khan uniform"
+	desc = "The uniform of the organized raider group the Great Khans."
+	icon_state = "khan"
+	item_state = "khan"
+	item_color = "khan"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/tribalwear
+	name = "tribal clothing"
+	desc = "This outfit seems to be made out of scraps of leather and bone, creating a tribal attire."
+	icon_state = "tribal"
+	item_state = "tribal"
+	item_color = "tribal"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/tribalwearf
+	name = "tribal clothing"
+	desc = "This outfit seems to be made out of scraps of leather and bone, creating a tribal attire."
+	icon_state = "Tribal_F"
+	item_state = "Tribal_F"
+	item_color = "Tribal_F"
+	can_adjust = 0
+
+/obj/item/clothing/under/f13/ncrofficer
+    name = "NCR officer fatigues"
+    desc = "A set of standard issue New California Republic officer fatigues, offers slight protection."
+    icon_state = "ncrofficer"
+    item_state = "lb_suit"
+    item_color = "ncrofficer"
+    body_parts_covered = CHEST|GROIN|LEGS|ARMS
+    armor = list(melee = 5, bullet = 5, laser = 5,energy = 5, bomb = 0, bio = 0, rad = 0)
+    can_adjust = 0
+
 //Plasmameme
 
 /obj/item/clothing/under/plasmaman
