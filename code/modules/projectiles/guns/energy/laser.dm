@@ -153,3 +153,15 @@
 	pin = /obj/item/device/firing_pin/tag/red
 	ammo_x_offset = 2
 	selfcharge = 1
+
+////////mhatt's fallout////////
+
+/obj/item/weapon/gun/energy/laser/lasergatling
+	name = "H&K L30 Gatling laser"
+	desc = "Designed specifically for military use, these were in the prototype stage at the beginning of the Great War. Multiple barrels allowed longer firing before overheating."
+	icon_state = "lasergatling"
+	burst_size = 8
+	fire_delay = 0
+	spread = 12
+	ammo_type = list(/obj/item/ammo_casing/energy/laser/scatter)
+	cell_type = /obj/item/weapon/stock_parts/cell/ammo/ecp

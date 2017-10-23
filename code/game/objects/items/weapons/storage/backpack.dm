@@ -169,8 +169,8 @@
 	item_state = "chempack"
 
 /obj/item/weapon/storage/backpack/genetics
-	name = "genetics backpack"
-	desc = "A bag designed to be super tough, just in case someone hulks out on you."
+	name = "travel pack"
+	desc = "A makeshift bag, designed to carry light and the essentials."
 	icon_state = "genepack"
 	item_state = "genepack"
 
