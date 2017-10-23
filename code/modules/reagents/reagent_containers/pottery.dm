@@ -8,7 +8,7 @@
   flags = OPENCONTAINER //nolids hashtag
   possible_transfer_amounts = list(5,10,15,25,30)
   volume = 30
-  
+
 /obj/item/weapon/reagent_containers/glass/clay/large
   name = "Large Clay Pot"
   desc = "A large clay pot, handcrafted in Drymouth Gulch by artisan potters. This holds a convinient 80 units."
@@ -17,11 +17,11 @@
   w_class = 3
   possible_transfer_amounts = list(10,20,30,40,80) //Big Tippies
   volume = 30
-  
+
 /obj/item/weapon/reagent_containers/glass/clay/huge //bigly
   name = "Huge Clay Pot"
   desc = "A huge clay pot, handcrafted in Drymouth Gulch by artisan potters. This holds a convinient 150 units, wow its biggo!"
-  slowdown = 1  
+  slowdown = 1
   icon_state = "clayPot_yuge"
   item_state = "clayPot_yuge"
   w_class = 4 //I think this is the no backpack one

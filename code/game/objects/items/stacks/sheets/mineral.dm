@@ -38,9 +38,6 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 	new/datum/stack_recipe("sandstone door", /obj/structure/mineral_door/sandstone, 10, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Assistant Statue", /obj/structure/statue/sandstone/assistant, 5, one_per_turf = 1, on_floor = 1), \
 	new/datum/stack_recipe("Sandstone Wall", /turf/simulated/wall/mineral/sandstone, 15, one_per_turf = 1, on_floor = 1), \
-	new/datum/stack_recipe("Clay Pot", /obj/item/weapon/reagent_containers/glass/clay, 3, one_per_turf = 0, on_floor = 0), \
-	new/datum/stack_recipe("Large Clay Pot", /obj/item/weapon/reagent_containers/glass/clay/large, 5, one_per_turf = 0, on_floor = 0), \
-	new/datum/stack_recipe("Huge Clay Pot", /obj/item/weapon/reagent_containers/glass/clay/huge, 8, one_per_turf = 0, on_floor = 0), \
 	)
 
 /obj/item/stack/sheet/mineral/sandstone/New(var/loc, var/amount=null)

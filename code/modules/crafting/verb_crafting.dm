@@ -26,8 +26,3 @@
 /client/proc/misc_craft()
 	set category = "Crafting"
 	set name = "Miscellaneous"
-
-/client/proc/tribal_craft()
-	set category = "Crafting"
-	set name = "Tribal"
-

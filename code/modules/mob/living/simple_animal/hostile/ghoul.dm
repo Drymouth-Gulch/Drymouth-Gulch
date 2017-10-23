@@ -13,7 +13,7 @@
 	speed = 0
 	maxHealth = 60
 	health = 60
-
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/human/mutant/fly = 2, /obj/item/stack/sheet/animalhide/human =  1)
 	harm_intent_damage = 10
 	melee_damage_lower = 20
 	melee_damage_upper = 20

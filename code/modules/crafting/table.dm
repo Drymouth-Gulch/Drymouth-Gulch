@@ -2,7 +2,7 @@
 /obj/structure/table
 	var/list/table_contents = list()
 	var/viewing_category = 1 //typical powergamer starting on the Weapons tab
-	var/list/categories = list(CAT_WEAPON,CAT_MED,CAT_ARMOR,CAT_AMMO,CAT_ROBOT,CAT_FOOD,CAT_MISC,CAT_TRIBE)
+	var/list/categories = list(CAT_WEAPON,CAT_MED,CAT_ARMOR,CAT_AMMO,CAT_ROBOT,CAT_FOOD,CAT_MISC)
 
 
 

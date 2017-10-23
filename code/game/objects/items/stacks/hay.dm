@@ -61,7 +61,8 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	var/obj/structure/bed/roller/bedroll/R = new /obj/structure/bed/roller/bedroll(user.loc)
 	R.add_fingerprint(user)
 	qdel(src)
-
+/obj/structure/bed/roller/post_buckle_mob(mob/living/M)
+	return
 
 
 
@@ -115,8 +116,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 /obj/item/weapon/restraints/handcuffs/rope
 	name = "rope restraints"
 	desc = "Looks like some thread woven together. Could be used to tie something up."
-	icon_state = "cuff_rope" //NEEDS ICON
-	item_state = "coil_red"
+	icon_state = "cuff_rope"
 	breakouttime = 300 //Deciseconds = 30s
 	cuffsound = 'sound/weapons/cablecuff.ogg'
 

@@ -197,6 +197,17 @@
 	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/deathclaw
 	slice_path = null
 
+
+/obj/item/weapon/reagent_containers/food/snacks/meat/slab/stomach
+	name = "calf stomach"
+	desc = "A stomach from a baby brahmin."
+	icon_state = "calftum"
+	list_reagents = list("enzyme" = 12)
+	bitesize = 2 //Smaller animal
+	filling_color = "#FA8072"
+	cooked_type = /obj/item/weapon/reagent_containers/food/snacks/meat/steak/gekkon
+	slice_path = null
+
 ////////////////////////////////////// MEAT STEAKS ///////////////////////////////////////////////////////////
 
 
