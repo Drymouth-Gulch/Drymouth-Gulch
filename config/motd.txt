@@ -2,13 +2,13 @@
 
 <h1>Welcome to Drymouth Gulch!</h1>
 
-<i><b>For questions about this server, contact Rengusta#9572 or Mhatt12#6932 on Discord!
-Development is active, but we are always looking for spriters or developers!
+<i><b>For general questions regarding the server, contact Rengusta#9572 or Mhatt12#6932 on our Discord.
+Development is active, and we are always looking for more developers, contact Gomble#6584 if interested.
 
-Here's our Discord! https://discord.gg/ZmWPqkN
-
-Here's our Legacy Github! https://github.com/Drymouth-Gulch/Drymouth-Gulch 
+Discord: https://discord.gg/ZmWPqkN
+Github: https://github.com/Drymouth-Gulch/Drymouth-Gulch 
+Wiki: http://drymouth-gulch-ss13.wikia.com/wiki/Drymouth_Gulch_-_SS13_Wiki
 
 This server takes place before the Second Battle of Hoover Dam, in Nevada.
 
-This server is running Fallout13 Legacy code, which is based on fairly old /tg/code. We've purged the whitelist from the code, and crank out updates to keep the old girl working every now and then, but our main focus is currently on a rebase.</i></b>
+This server is running on a modified version of the F13 Legacy code, however we are currently working on a rebase.</i></b>
