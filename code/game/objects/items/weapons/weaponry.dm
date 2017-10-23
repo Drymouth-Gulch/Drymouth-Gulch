@@ -100,7 +100,7 @@
 	throwforce = 10
 	w_class = 4
 
-/obj/item/weapon/golf/suicide_act(mob/user)
+/obj/item/weapon/bumpersword/suicide_act(mob/user)
 	user.visible_message("<span class='suicide'>[user] is impaling \himself with the [src.name]! It looks like \he's trying to commit suicide.</span>")
 	return (BRUTELOSS|FIRELOSS)
 
