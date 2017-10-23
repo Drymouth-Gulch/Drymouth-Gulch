@@ -58,7 +58,10 @@
 
 				//All types that you can put into the grinder to transfer the reagents to the beaker. !Put all recipes above this.!
 				/obj/item/weapon/reagent_containers/pill = list(),
-				/obj/item/weapon/reagent_containers/food = list()
+				/obj/item/weapon/reagent_containers/food = list(),
+
+				//tasty cows
+				/obj/item/weapon/calftum = list("enzyme" = 15)
 		)
 
 		var/list/juice_items = list (
@@ -430,7 +433,20 @@
 						if (space < amount)
 								break
 						remove_object(O)
-
+		
+		//calf stomach - this should really be made into a food product instead - haggis
+		for (var/obj/item/weapon/calftum/O in holdingitems)
+				if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)
+						break
+				var/allowed = get_allowed_by_id(O)
+				for (var/r_id in allowed)
+						var/space = beaker.reagents.maximum_volume - beaker.reagents.total_volume
+						var/amount = allowed[r_id]
+						beaker.reagents.add_reagent(r_id,min(amount, space))
+						if (space < amount)
+								break
+						remove_object(O)
+						
 		//Everything else - Transfers reagents from it into beaker
 		for (var/obj/item/weapon/reagent_containers/O in holdingitems)
 				if (beaker.reagents.total_volume >= beaker.reagents.maximum_volume)

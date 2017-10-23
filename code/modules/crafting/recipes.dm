@@ -73,7 +73,7 @@
 	name = "Dynamite"
 	result = /obj/item/weapon/grenade/syndieminibomb
 	reqs = list(/datum/reagent/blackpowder = 50,
-				/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 5)
 	time = 60
 	category = CAT_WEAPON
@@ -350,7 +350,7 @@
 	name = "Satchel"
 	result = /obj/item/weapon/storage/backpack/satchel
 	time = 15
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 2)
+	reqs = list(/obj/item/stack/sheet/leather = 2)
 	parts = list()
 	category = CAT_MISC
 
@@ -359,7 +359,7 @@
 	name = "Bandolier"
 	result = /obj/item/weapon/storage/belt/bandolier
 	time = 15
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 2)
+	reqs = list(/obj/item/stack/sheet/leather = 2)
 	parts = list()
 	category = CAT_MISC
 
@@ -367,7 +367,7 @@
 	name = "Improvised Kevlar Plate"
 	result = /obj/item/asteroid/goliath_hide
 	time = 30
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 2,
+	reqs = list(/obj/item/stack/sheet/animalhide/deathclaw = 2,
 				/obj/item/stack/sheet/plasteel = 1)
 	tools = list(/obj/item/weapon/wrench, /obj/item/weapon/weldingtool)
 	parts = list()
@@ -376,7 +376,7 @@
 /datum/table_recipe/leatherarmor
 	name = "leather armor"
 	result = /obj/item/clothing/suit/armor/f13/leatherarmor
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 3,
+	reqs = list(/obj/item/stack/sheet/leather = 3,
 				/obj/item/stack/cable_coil = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -385,7 +385,7 @@
 /datum/table_recipe/armorkit
 	name = "armor kit"
 	result = /obj/item/clothing/suit/armor/f13/kit
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 2,
+	reqs = list(/obj/item/stack/sheet/leather = 2,
 				/obj/item/stack/cable_coil = 1)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 60
@@ -394,7 +394,7 @@
 /datum/table_recipe/leatherhat
 	name = "leather hat"
 	result = /obj/item/clothing/head/lizard
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/cable_coil = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 40
@@ -403,7 +403,7 @@
 /datum/table_recipe/metalarmor
 	name = "metal armor"
 	result = /obj/item/clothing/suit/armor/f13/bmetalarmor
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
@@ -413,7 +413,7 @@
 /datum/table_recipe/Imetalarmor
 	name = "improved metal armor"
 	result = /obj/item/clothing/suit/armor/f13/ibmetalarmor
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/stack/sheet/metal = 4,
 				/obj/item/stack/sheet/plasteel = 2)
@@ -434,7 +434,7 @@
 /datum/table_recipe/gladiator
 	name = "gladiator clothing"
 	result = /obj/item/clothing/under/gladiator
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/cable_coil = 6,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
@@ -479,7 +479,7 @@
 	name = "Super Stimpak"
 	result = /obj/item/weapon/reagent_containers/stimpak/super
 	reqs = list(/obj/item/weapon/reagent_containers/stimpak/regular = 1,
-				/obj/item/stack/sheet/gekkonhide = 1,
+				/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/cable_coil = 5,
 				/obj/item/weapon/reagent_containers/food/drinks/bottle/nukacola = 1,
 				/obj/item/weapon/reagent_containers/food/snacks/grown/mutfruit = 1)
@@ -514,7 +514,7 @@
 /datum/table_recipe/legion_recruit_armor
 	name = "Legion recruit clothing"
 	result = /obj/item/clothing/suit/armor/f13/legrecruit
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -524,7 +524,7 @@
 /datum/table_recipe/legion_recruit_helm
 	name = "Legion recruit helmet"
 	result = /obj/item/clothing/head/helmet/f13/legrecruit
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -534,7 +534,7 @@
 /datum/table_recipe/legion_vex_armor
 	name = "Legion vexillarius clothing"
 	result = /obj/item/clothing/suit/armor/f13/legvexil
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -544,7 +544,7 @@
 /datum/table_recipe/legion_vex_helm
 	name = "Legion vexillarius helmet"
 	result = /obj/item/clothing/head/helmet/f13/legvexil
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -554,7 +554,7 @@
 /datum/table_recipe/legion_cent_armor
 	name = "Legion centurion clothing"
 	result = /obj/item/clothing/suit/armor/f13/legcenturion
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -564,7 +564,7 @@
 /datum/table_recipe/legion_cent_helm
 	name = "Legion centurion helmet"
 	result = /obj/item/clothing/head/helmet/f13/legcenturion
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -574,7 +574,7 @@
 /datum/table_recipe/legion_legat_armor
 	name = "Legion legat clothing"
 	result = /obj/item/clothing/suit/armor/f13/leglegat
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -584,7 +584,7 @@
 /datum/table_recipe/legion_legat_helm
 	name = "Legion legat helmet"
 	result = /obj/item/clothing/head/helmet/f13/leglegat
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -594,7 +594,7 @@
 /datum/table_recipe/legion_legat_gloves
 	name = "Legion legat gloves"
 	result = /obj/item/clothing/gloves/f13/legionlegat
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -604,7 +604,7 @@
 /datum/table_recipe/legion_legat_shoes
 	name = "Legion legat shoes"
 	result = /obj/item/clothing/shoes/legionlegat
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -626,7 +626,7 @@
 /datum/table_recipe/ncr_combat_armor
 	name = "NCR recruit armor"
 	result = /obj/item/clothing/suit/armor/f13/ncrarmor
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 2)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -636,7 +636,7 @@
 /datum/table_recipe/ncr_ranger_armor
 	name = "NCR ranger armor"
 	result = /obj/item/clothing/suit/armor/f13/rangercombat
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 3,
+	reqs = list(/obj/item/stack/sheet/leather = 3,
 				/obj/item/stack/sheet/metal = 8)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -646,7 +646,7 @@
 /datum/table_recipe/ncr_ranger_helm
 	name = "NCR ranger helmet"
 	result = /obj/item/clothing/head/helmet/f13/rangercombat
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 3,
+	reqs = list(/obj/item/stack/sheet/leather = 3,
 				/obj/item/stack/sheet/metal = 8)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -694,7 +694,7 @@
 /datum/table_recipe/raider_yankee_armor
 	name = "raider yankee armor"
 	result = /obj/item/clothing/suit/armor/f13/raider/yankee
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -704,7 +704,7 @@
 /datum/table_recipe/raider_supafly_armor
 	name = "raider supa-fly armor"
 	result = /obj/item/clothing/suit/armor/f13/raider
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -714,7 +714,7 @@
 /datum/table_recipe/raider_supafly_helmet
 	name = "raider supa-fly helmet"
 	result =/obj/item/clothing/head/helmet/f13/raider
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
@@ -724,10 +724,9 @@
 /datum/table_recipe/raider_yankee_helmet
 	name = "raider yankee yankee"
 	result = /obj/item/clothing/head/helmet/f13/raider/yankee
-	reqs = list(/obj/item/stack/sheet/gekkonhide = 1,
+	reqs = list(/obj/item/stack/sheet/leather = 1,
 				/obj/item/stack/sheet/metal = 5)
 	tools = list(/obj/item/weapon/screwdriver, /obj/item/weapon/wirecutters)
 	time = 120
 	show = 0
 	category = CAT_ARMOR
-

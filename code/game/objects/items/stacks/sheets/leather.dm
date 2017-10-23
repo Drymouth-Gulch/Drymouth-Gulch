@@ -1,3 +1,17 @@
+/obj/item/stack/sheet/animalhide/brahmin
+	name = "brahmin skin"
+	desc = "The by-product of brahmin farming."
+	singular_name = "brahmin skin piece"
+	icon_state = "sheet-hide" //ToDo: Brahmin Mat
+	origin_tech = null
+	
+/obj/item/stack/sheet/animalhide/deathclaw
+	name = "deathclaw skin"
+	desc = "The hard skin of a slain Deathclaw."
+	singular_name = "deathclaw skin piece"
+	icon_state = "sheet-hide" //ToDo: deathclaw Mat
+	origin_tech = null
+	
 /obj/item/stack/sheet/animalhide/human
 	name = "human skin"
 	desc = "The by-product of human farming."
@@ -96,7 +110,7 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	icon_state = "sheet-hairlesshide"
 	origin_tech = null
 
-/obj/item/stack/sheet/gekkonhide
+/obj/item/stack/sheet/animalhide/gekkonhide
 	name = "gekkon skin"
 	desc = "This is gekkon hide."
 	singular_name = "gekkon skin piece"
