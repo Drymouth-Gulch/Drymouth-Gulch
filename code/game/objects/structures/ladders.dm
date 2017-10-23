@@ -42,9 +42,10 @@
 	else	//wtf make your ladders properly assholes
 		icon_state = "ladder00"
 /obj/structure/ladder/proc/travelLadder(mob/user,newloc)
-	if(user.pulled)
-		user.pulled.loc = newloc
+	if(user.pulling)
+		user.pulling.loc = newloc
 	user.loc = newloc
+	
 /obj/structure/ladder/proc/go_up(mob/user,is_ghost)
 	if(!is_ghost)
 		show_fluff_message(1,user)
