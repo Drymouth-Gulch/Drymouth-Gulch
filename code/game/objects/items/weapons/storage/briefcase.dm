@@ -26,7 +26,7 @@
 
 /obj/item/weapon/storage/vase
 	name = "briefcase"
-	desc = "A handcrafting sandstone vase, made for storage of several items."
+	desc = "A handcrafted sandstone vase, made for storage of several items."
 	icon_state = "vase"
 	flags = CONDUCT
 	force = 8
