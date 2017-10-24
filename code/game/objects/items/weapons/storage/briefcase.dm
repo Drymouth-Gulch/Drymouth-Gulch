@@ -25,7 +25,7 @@
 	new /obj/item/weapon/pen(src)
 
 /obj/item/weapon/storage/vase
-	name = "briefcase"
+	name = "Sandstone Vase"
 	desc = "A handcrafted sandstone vase, made for storage of several items."
 	icon_state = "vase"
 	flags = CONDUCT
