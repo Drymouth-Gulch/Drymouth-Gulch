@@ -26,8 +26,8 @@
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/grenade
 
 /obj/item/weapon/gun/projectile/revolver/grenadelauncher/cyborg
-	desc = "A 6-shot grenade launcher."
-	name = "multi grenade launcher"
+	desc = "Milkor MGL"
+	name = "A six shot 40mm revolving grenade launcher."
 	icon = 'icons/mecha/mecha_equipment.dmi'
 	icon_state = "mecha_grenadelnchr"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/grenademulti
