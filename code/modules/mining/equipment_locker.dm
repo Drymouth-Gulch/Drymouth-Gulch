@@ -410,7 +410,8 @@
 		return
 	if(istype(I, /obj/item/stack/sheet/mineral/plasma))
 		if(inserted_id)
-			var/plasmacount = I.amount
+			var/obj/item/stack/sheet/mineral/O = I
+			var/plasmacount = O.amount
 			inserted_id.mining_points == inserted_id.mining_points + (plasmacount * 100)
 	if(default_deconstruction_screwdriver(user, "mining-open", "mining", I))
 		updateUsrDialog()
