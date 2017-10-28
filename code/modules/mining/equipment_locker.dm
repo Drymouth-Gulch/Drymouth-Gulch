@@ -269,7 +269,7 @@
 
 /obj/machinery/mineral/equipment_vendor
 	name = "mining equipment vendor"
-	desc = "An equipment vendor for miners, points collected at an ore redemption machine can be spent here."
+	desc = "A vendor that takes points made from a Ore Redemption Machine. This one also has a option to get additional points by hitting it with plasma while having an ID loaded."
 	icon = 'icons/obj/machines/mining_machines.dmi'
 	icon_state = "mining"
 	density = 1
@@ -284,7 +284,6 @@
 		new /datum/data/mining_equipment("Laser Pointer",       /obj/item/device/laser_pointer, 				                   300),
 		new /datum/data/mining_equipment("Alien Toy",           /obj/item/clothing/mask/facehugger/toy, 		                   300),
 		new /datum/data/mining_equipment("Advanced Scanner",	/obj/item/device/t_scanner/adv_mining_scanner,                     400),
-		new /datum/data/mining_equipment("Hivelord Stabilizer",	/obj/item/weapon/hivelordstabilizer			 ,                     400),
 		new /datum/data/mining_equipment("Mining Drone",        /mob/living/simple_animal/hostile/mining_drone,                    500),
 		new /datum/data/mining_equipment("GAR mesons",			/obj/item/clothing/glasses/meson/gar,							   500),
 		new /datum/data/mining_equipment("Brute First-Aid Kit",	/obj/item/weapon/storage/firstaid/brute,						   600),
@@ -299,6 +298,19 @@
 		new /datum/data/mining_equipment("Super Resonator",     /obj/item/weapon/resonator/upgraded,                              2500),
 		new /datum/data/mining_equipment("Super Accelerator",	/obj/item/weapon/gun/energy/kinetic_accelerator/super,			  3000),
 		new /datum/data/mining_equipment("Point Transfer Card", /obj/item/weapon/card/mining_point_card,               			   500),
+		new /datum/data/mining_equipment("Medbot", /mob/living/simple_animal/bot/medbot, 400),
+		new /datum/data/mining_equipment("Laser Gun", /obj/item/weapon/gun/energy/laser, 600),
+		new /datum/data/mining_equipment("Bulletproof Vest", /obj/item/clothing/suit/armor/bulletproof, 300),
+		new /datum/data/mining_equipment("Reflector Vest", /obj/item/clothing/suit/armor/laserproof, 300),
+		new /datum/data/mining_equipment("WT550 SMG", /obj/item/weapon/gun/projectile/automatic/wt550, 600),
+		new /datum/data/mining_equipment("WT550 SMG Magazine", /obj/item/ammo_box/magazine/wt550m9 , 150),
+		new /datum/data/mining_equipment("Box of Loyalty Implants", /obj/item/weapon/storage/lockbox/loyalty, 1500),
+		new /datum/data/mining_equipment("Insulated Gloves", /obj/item/clothing/gloves/color/yellow, 250),
+		new /datum/data/mining_equipment("Space Suit", /obj/item/clothing/suit/space, 400),
+		new /datum/data/mining_equipment("Space Suit Helmet", /obj/item/clothing/head/helmet/space, 200),
+		new /datum/data/mining_equipment("Box of High Tier Stock Parts", /obj/item/weapon/storage/box/highstock_parts, 1000),
+		new /datum/data/mining_equipment("Plasma Cutter Tool", /obj/item/weapon/gun/energy/plasmacutter, 750),
+		new /datum/data/mining_equipment("Advanced Plasma Cutter Tool", /obj/item/weapon/gun/energy/plasmacutter/adv, 1000), 
 		)
 
 /datum/data/mining_equipment/
@@ -397,6 +409,11 @@
 			inserted_id = C
 			interact(user)
 		return
+	if(istype(I, /obj/item/stack/sheet/mineral/plasma))
+		if(inserted_id)
+			var/obj/item/stack/sheet/mineral/O = I
+			var/plasmacount = O.amount
+			inserted_id.mining_points += plasmacount * 100
 	if(default_deconstruction_screwdriver(user, "mining-open", "mining", I))
 		updateUsrDialog()
 		return
@@ -430,6 +447,23 @@
 		qdel(src)
 
 /**********************Mining Equipment Vendor Items**************************/
+
+/**********************Box of high tech stock parts**********************/
+
+/obj/item/weapon/storage/box/highstock_parts
+	name = "Box of High Tech Stock Parts"
+	desc = "A box that contains some very high tech parts for machinery."
+
+/obj/item/weapon/storage/box/highstock_parts/New()
+	..()
+	contents = list()
+	new /obj/item/weapon/stock_parts/cell/bluespace(src)
+	new /obj/item/weapon/stock_parts/matter_bin/bluespace(src)
+	new /obj/item/weapon/stock_parts/micro_laser/quadultra(src)
+	new /obj/item/weapon/stock_parts/manipulator/femto(src)
+	new /obj/item/weapon/stock_parts/scanning_module/triphasic(src)
+	new /obj/item/weapon/stock_parts/capacitor/quadratic(src)
+	return
 
 /**********************Mining Equipment Voucher**********************/
 
