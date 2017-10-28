@@ -284,7 +284,6 @@
 		new /datum/data/mining_equipment("Laser Pointer",       /obj/item/device/laser_pointer, 				                   300),
 		new /datum/data/mining_equipment("Alien Toy",           /obj/item/clothing/mask/facehugger/toy, 		                   300),
 		new /datum/data/mining_equipment("Advanced Scanner",	/obj/item/device/t_scanner/adv_mining_scanner,                     400),
-		new /datum/data/mining_equipment("Hivelord Stabilizer",	/obj/item/weapon/hivelordstabilizer			 ,                     400),
 		new /datum/data/mining_equipment("Mining Drone",        /mob/living/simple_animal/hostile/mining_drone,                    500),
 		new /datum/data/mining_equipment("GAR mesons",			/obj/item/clothing/glasses/meson/gar,							   500),
 		new /datum/data/mining_equipment("Brute First-Aid Kit",	/obj/item/weapon/storage/firstaid/brute,						   600),
@@ -310,6 +309,8 @@
 		new /datum/data/mining_equipment("Space Suit", /obj/item/clothing/suit/space, 400),
 		new /datum/data/mining_equipment("Space Suit Helmet", /obj/item/clothing/head/helmet/space, 200),
 		new /datum/data/mining_equipment("Box of High Tier Stock Parts", /obj/item/weapon/storage/box/highstock_parts, 1000),
+		new /datum/data/mining_equipment("Plasma Cutter Tool", /obj/item/weapon/gun/energy/plasmacutter, 750),
+		new /datum/data/mining_equipment("Advanced Plasma Cutter Tool", /obj/item/weapon/gun/energy/plasmacutter/adv, 1000), 
 		)
 
 /datum/data/mining_equipment/
