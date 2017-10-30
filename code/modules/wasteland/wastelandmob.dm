@@ -86,7 +86,7 @@
 	response_harm = "hits"
 	maxHealth = 60
 	health = 60
-	butcher_results = list(/obj/item/stack/sheet/gekkonhide = 1, \
+	butcher_results = list(/obj/item/stack/sheet/animalhide/gekkonhide = 3, \
 	/obj/item/weapon/reagent_containers/food/snacks/meat/slab/gekkon = 1)
 	faction = list("wmobs")
 	melee_damage_lower = 10
@@ -110,7 +110,8 @@
 	response_help = "touches"
 	response_disarm = "tries to push aside"
 	response_harm = "hits"
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab/deathclaw = 5, \
+	/obj/item/stack/sheet/animalhide/deathclaw = 1)
 	maxHealth = 500
 	health = 500
 	force_threshold = 20

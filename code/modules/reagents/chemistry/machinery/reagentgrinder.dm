@@ -58,7 +58,8 @@
 
 				//All types that you can put into the grinder to transfer the reagents to the beaker. !Put all recipes above this.!
 				/obj/item/weapon/reagent_containers/pill = list(),
-				/obj/item/weapon/reagent_containers/food = list()
+				/obj/item/weapon/reagent_containers/food = list(),
+
 		)
 
 		var/list/juice_items = list (
@@ -430,6 +431,7 @@
 						if (space < amount)
 								break
 						remove_object(O)
+
 
 		//Everything else - Transfers reagents from it into beaker
 		for (var/obj/item/weapon/reagent_containers/O in holdingitems)

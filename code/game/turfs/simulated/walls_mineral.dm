@@ -6,7 +6,15 @@
 	var/active = null
 	canSmoothWith = null
 	smooth = SMOOTH_TRUE
+	var/bruteable = 0 //allows the walls to be torn down with weapons
+	var/health = 1000 //totally arbitrary health amount
 
+/turf/simulated/wall/mineral/attackby(obj/item/weapon/W, mob/user, params)
+	if(user.a_intent == "harm" && bruteable)
+		health = health - W.force
+	if(health <= 0)
+		Destroy()
+	..()
 /turf/simulated/wall/mineral/gold
 	name = "gold wall"
 	desc = "A wall with gold plating. Swag!"
@@ -67,6 +75,16 @@
 	sheet_type = /obj/item/stack/sheet/mineral/sandstone
 	explosion_block = 0
 	canSmoothWith = list(/turf/simulated/wall/mineral/sandstone, /obj/structure/falsewall/sandstone)
+	bruteable = 1
+
+/turf/simulated/wall/mineral/sandstone/New()
+	smooth_icon_neighbors(src)
+	..()
+
+/turf/simulated/wall/mineral/sandstone/attackby(obj/item/weapon/W, mob/user, params)
+	if(user.a_intent == "harm" && bruteable && istype(W, /obj/item/weapon/crowbar)) //lazyboye - this is only used for wood and sandstone walls
+		health = health - W.force													// So i figured this saves on adding 3 vars to every mineral wall
+	..()
 
 /turf/simulated/wall/mineral/uranium
 	name = "uranium wall"
@@ -152,6 +170,7 @@
 	sheet_type = /obj/item/stack/sheet/mineral/wood
 	hardness = 70
 	explosion_block = 0
+	bruteable = 1
 	smooth = SMOOTH_FALSE
 //	canSmoothWith = list(/turf/simulated/wall/mineral/wood, /obj/structure/falsewall/wood)
 
@@ -190,6 +209,10 @@
 			icon_state = "wood"
 
 
+/turf/simulated/wall/mineral/wood/attackby(obj/item/weapon/W, mob/user, params)
+	if(user.a_intent == "harm" && bruteable && istype(W, /obj/item/weapon/crowbar)) //lazyboye - this is only used for wood and sandstone walls
+		health = health - W.force													// So i figured this saves on adding 3 vars to every mineral wall
+	..()
 
 /turf/simulated/wall/mineral/iron
 	name = "rough metal wall"

@@ -1,3 +1,17 @@
+/obj/item/stack/sheet/animalhide/brahmin
+	name = "brahmin skin"
+	desc = "The by-product of brahmin farming."
+	singular_name = "brahmin skin piece"
+	icon_state = "sheet-hide" //ToDo: Brahmin Mat
+	origin_tech = null
+
+/obj/item/stack/sheet/animalhide/deathclaw
+	name = "deathclaw skin"
+	desc = "The hard skin of a slain Deathclaw."
+	singular_name = "deathclaw skin piece"
+	icon_state = "sheet-hide" //ToDo: deathclaw Mat
+	origin_tech = null
+
 /obj/item/stack/sheet/animalhide/human
 	name = "human skin"
 	desc = "The by-product of human farming."
@@ -96,7 +110,7 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	icon_state = "sheet-hairlesshide"
 	origin_tech = null
 
-/obj/item/stack/sheet/gekkonhide
+/obj/item/stack/sheet/animalhide/gekkonhide
 	name = "gekkon skin"
 	desc = "This is gekkon hide."
 	singular_name = "gekkon skin piece"
@@ -109,8 +123,8 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	singular_name = "wet leather piece"
 	icon_state = "sheet-wetleather"
 	origin_tech = null
-	var/wetness = 30 //Reduced when exposed to high temperautres
-	var/drying_threshold_temperature = 500 //Kelvin to start drying
+	var/wetness = 15 //Reduced when exposed to high temperautres
+	var/drying_threshold_temperature = 20 //Kelvin to start drying
 
 /obj/item/stack/sheet/leather
 	name = "leather"
@@ -123,43 +137,46 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 
 //Step one - dehairing.
 
-/obj/item/stack/sheet/animalhide/attackby(obj/item/weapon/W, mob/user, params)
-	if(is_sharp(W))
+/obj/item/stack/sheet/animalhide/attackby(obj/item/W, mob/user, params)
+	if(W.is_sharp())
 		playsound(loc, 'sound/weapons/slice.ogg', 50, 1, -1)
 		user.visible_message("[user] starts cutting hair off \the [src].", "<span class='notice'>You start cutting the hair off \the [src]...</span>", "<span class='italics'>You hear the sound of a knife rubbing against flesh.</span>")
 		if(do_after(user,50, target = src))
-			user << "<span class='notice'>You cut the hair from this [src.singular_name].</span>"
-			//Try locating an exisitng stack on the tile and add to there if possible
-			for(var/obj/item/stack/sheet/hairlesshide/HS in user.loc)
-				if(HS.amount < 50)
-					HS.amount++
-					use(1)
-					break
-			//If it gets to here it means it did not find a suitable stack on the tile.
+			user.visible_message("<span class='notice'>You cut the hair from this [src.singular_name].</span>")
 			var/obj/item/stack/sheet/hairlesshide/HS = new(user.loc)
 			HS.amount = 1
 			use(1)
 	else
-		..()
+		return ..()
 
 
 //Step two - washing..... it's actually in washing machine code.
 
 //Step three - drying
+/obj/item/stack/sheet/wetleather/process()
+	..()
+	for(var/obj/structure/rack/R in src.loc)
+		if(R)
+			DryLeather()
+
+
 /obj/item/stack/sheet/wetleather/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
 	if(exposed_temperature >= drying_threshold_temperature)
-		wetness--
-		if(wetness == 0)
-			//Try locating an exisitng stack on the tile and add to there if possible
-			for(var/obj/item/stack/sheet/leather/HS in src.loc)
-				if(HS.amount < 50)
-					HS.amount++
-					src.use(1)
-					wetness = initial(wetness)
-					break
-			//If it gets to here it means it did not find a suitable stack on the tile.
-			var/obj/item/stack/sheet/leather/HS = new(src.loc)
-			HS.amount = 1
-			wetness = initial(wetness)
-			src.use(1)
+		DryLeather()
+
+obj/item/stack/sheet/wetleather/proc/DryLeather()
+	wetness--
+	if(wetness <= 0)
+		//Try locating an exisitng stack on the tile and add to there if possible
+		for(var/obj/item/stack/sheet/leather/HS in src.loc)
+			if(HS.amount < 50)
+				HS.amount++
+				src.use(1)
+				wetness = initial(wetness)
+				break
+		//If it gets to here it means it did not find a suitable stack on the tile.
+		var/obj/item/stack/sheet/leather/HS = new(src.loc)
+		HS.amount = 1
+		wetness = initial(wetness)
+		src.use(1)

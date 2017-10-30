@@ -76,6 +76,48 @@
 		..()
 
 //cow
+/mob/living/simple_animal/calf
+	name = "brahmin calf"
+	desc = "Oh look a babby brahmin!"
+	icon_state = "cow"
+	icon_living = "cow"
+	icon_dead = "cow_dead"
+	icon_gib = "cow_gib"
+	speak = list("Moo?","Moo!","MOOOOOO","Heeey brooo!","Heeey yooou!")
+	speak_emote = list("moos","moos hauntingly")
+	emote_hear = list("brays.")
+	emote_see = list("shakes its head.")
+	speak_chance = 1
+	turns_per_move = 5
+	see_in_dark = 6
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 2, /obj/item/weapon/reagent_containers/food/snacks/meat/slab/stomach = 1,/obj/item/stack/sheet/animalhide/brahmin = 2)
+	response_help  = "pets"
+	response_disarm = "gently pushes aside"
+	response_harm   = "kicks"
+	attacktext = "kicks"
+	attack_sound = 'sound/weapons/punch1.ogg'
+	health = 20
+	var/amount_grown = 0
+	pass_flags = PASSMOB
+	gold_core_spawnable = 2
+
+/mob/living/simple_animal/calf/New()
+	..()
+	resize = 0.8
+
+/mob/living/simple_animal/calf/Life()
+	. =..()
+	if(!.)
+		return
+	if(!stat && !ckey)
+		amount_grown += rand(1,2)
+		if(amount_grown >= 100)
+			new /mob/living/simple_animal/cow(src.loc)
+			qdel(src)
+
+var/const/MAX_COWS = 50
+var/global/cow_count = 0
+
 /mob/living/simple_animal/cow
 	name = "brahmin"
 	desc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over."
@@ -90,7 +132,7 @@
 	speak_chance = 1
 	turns_per_move = 5
 	see_in_dark = 6
-	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6)
+	butcher_results = list(/obj/item/weapon/reagent_containers/food/snacks/meat/slab = 6,/obj/item/stack/sheet/animalhide/brahmin = 5)
 	response_help  = "pets"
 	response_disarm = "gently pushes aside"
 	response_harm   = "kicks"
@@ -99,10 +141,19 @@
 	health = 50
 	var/obj/udder/udder = null
 	gold_core_spawnable = 2
+	var/fedAmount = 749 //Affects milk and breeding. 0-24 very little milk, no breeding, 25-74 normal milk, no breeding, 75-100 more milk, breedable
+	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over.<br>"
+	var/fed_desc = list("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
+	childtype = /mob/living/simple_animal/calf
 
 /mob/living/simple_animal/cow/New()
 	udder = new()
+	cow_count += 1
 	..()
+
+/mob/living/simple_animal/cow/death(gibbed)
+	..(gibbed)
+	cow_count -= 1
 
 /mob/living/simple_animal/cow/Destroy()
 	qdel(udder)
@@ -110,15 +161,60 @@
 	return ..()
 
 /mob/living/simple_animal/cow/attackby(obj/item/O, mob/user, params)
-	if(stat == CONSCIOUS && istype(O, /obj/item/weapon/reagent_containers/glass))
-		udder.milkAnimal(O, user)
-	else
-		..()
+	if(stat == CONSCIOUS)
+		if(istype(O, /obj/item/weapon/reagent_containers/glass))
+			udder.milkAnimal(O, user)
+			return
+		if(istype(O, /obj/item/stack/hay))
+			var/obj/item/stack/hay/H = O
+			if(H.use(1))
+				fedAmount += 15
+				user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
+			return
+	..()
 
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
-		udder.generateMilk()
+		fedAmount = round(0.99 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
+		if(getFedState() >= 2)
+			cowbabies()
+		udder.generateMilk(getFedState())
+
+/mob/living/simple_animal/cow/proc/cowbabies() //because this shouldn't be complicated
+	var/babypartner = 0
+	if(cow_count >= MAX_COWS)
+		visible_message("The Brahmin senses too many fellow moos in the world, and sucks the calf back in")
+		return 0
+	if(!stat)
+		for(var/mob/M in oview(7, src))
+			if(istype(M, /mob/living/simple_animal/cow))
+				babypartner = 1
+				break
+		if(babypartner)
+			fedAmount = fedAmount - 500
+			new childtype(get_turf(src))
+
+			visible_message("Squish! Look babby cow do a come out!")
+			return 1
+
+
+
+/mob/living/simple_animal/cow/proc/getFedState()
+	if(fedAmount > 1000)
+		fedAmount = 1000
+	if(fedAmount < 0)
+		fedAmount = 0
+	switch(fedAmount)
+		if(0 to 249)
+			desc = basedesc + fed_desc[1]
+			return 0 //cant do much
+		if(250 to 749)
+			desc = basedesc + fed_desc[2]
+			return 1 //good for milkies
+		if(750 to 1000)
+			desc = basedesc + fed_desc[3]
+			return 2 //can preggo
 
 /mob/living/simple_animal/cow/attack_hand(mob/living/carbon/M)
 	if(!stat && M.a_intent == "disarm" && icon_state != icon_dead)
@@ -279,9 +375,9 @@ var/global/chicken_count = 0
 	reagents.my_atom = src
 	reagents.add_reagent("milk", 20)
 
-/obj/udder/proc/generateMilk()
+/obj/udder/proc/generateMilk(milkGenState = 2)
 	if(prob(5))
-		reagents.add_reagent("milk", rand(5, 10))
+		reagents.add_reagent("milk", rand(1 + 5*milkGenState, 5 + 10*milkGenState))
 
 /obj/udder/proc/milkAnimal(obj/O, mob/user)
 	var/obj/item/weapon/reagent_containers/glass/G = O

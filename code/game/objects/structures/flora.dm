@@ -141,6 +141,21 @@
 
 	icon_state = "tall_grass_[rand(1, 8)]"//16)]"
 
+/obj/structure/flora/grass/attackby(obj/item/weapon/W, mob/user)
+	..()
+	if(istype(W, /obj/item/weapon/scythe) || istype(W, /obj/item/weapon/kitchen/knife) || istype(W, /obj/item/weapon/circular_saw) || istype(W, /obj/item/weapon/hatchet) || (istype(W, /obj/item/weapon/twohanded/fireaxe) && W:wielded) || istype(W, /obj/item/weapon/melee/energy) || istype(W, /obj/item/weapon/twohanded/required/chainsaw))
+		visible_message("<i>[user] begins to cut [src]...</i>")
+		if(do_after(user, 15, target = src))
+			var/obj/item/stack/hay/H = new /obj/item/stack/hay(get_turf(src))
+			H.amount = rand(5,10)
+			H.update_icon()
+			visible_message("<i>[user] has cut the [src] into loose hay./i>")
+			qdel(src)
+			return
+
+
+
+
 //glowshroom
 /obj/structure/flora/mushroom
 	name = "mushroom"

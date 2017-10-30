@@ -5,6 +5,7 @@
 	var/list/categories = list(CAT_WEAPON,CAT_MED,CAT_ARMOR,CAT_AMMO,CAT_ROBOT,CAT_FOOD,CAT_MISC)
 
 
+
 /obj/structure/table/MouseDrop(atom/over)
 	if(over != usr || !usr.IsAdvancedToolUser())
 		return

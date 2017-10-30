@@ -77,9 +77,21 @@
 //It automatically updates damage overlays if necesary
 //It automatically updates health status
 /mob/living/carbon/human/heal_organ_damage(brute, burn)
+	var/sleepMulti = 1.25 //heal bonus from sleep
+	var/bedMulti = 2.00 //heal bonus for sleeping on a bed, on top of sleep multi (about 2.5x better)
 	var/list/obj/item/organ/limb/parts = get_damaged_organs(brute,burn)
 	if(!parts.len)	return
 	var/obj/item/organ/limb/picked = pick(parts)
+	//Heal faster if asleep - even faster if on a bed
+	if(stat == UNCONSCIOUS || sleeping > 0) //getting head conked is sometimes good
+		brute = brute * sleepMulti
+		burn  = burn * sleepMulti
+		if(buckled) //to lower the frequency of redundant for loops
+			for(var/obj/structure/bed/D in src.loc)
+				if(D)
+					brute = brute * bedMulti
+					burn = burn * bedMulti
+	//End of bed Healing
 	if(picked.heal_damage(brute,burn,0))
 		update_damage_overlays(0)
 	updatehealth()

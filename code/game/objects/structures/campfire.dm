@@ -72,6 +72,9 @@
 
 /obj/structure/campfire/process()
 	var/turf/location = get_turf(src)
+	for(var/obj/item/stack/sheet/wetleather/WL in src.loc)
+		if(WL)
+			WL.DryLeather()
 	fuel--
 	if(fuel > 200)
 		SetLuminosity(8)
@@ -82,10 +85,10 @@
 	if(fuel <= 0)
 		new /obj/effect/decal/cleanable/ash(location)
 		qdel(src)
-
 	if(location)
 		location.hotspot_expose(7000, 5)
 		return
+
 
 /obj/structure/campfire/proc/fire(mob/living/user)
 	playsound(src, 'sound/items/welder.ogg', 25, 1, -3)
