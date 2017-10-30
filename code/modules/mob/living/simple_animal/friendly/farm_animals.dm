@@ -171,15 +171,13 @@ var/global/cow_count = 0
 				fedAmount += 15
 				user.visible_message("<span class='notice'>[user] feeds the [src] a yummy [H].</span>","<span class='notice'>You feed the [src] a yummy [H].</span>")
 			return
-	else
-		..()
+	..()
 
 /mob/living/simple_animal/cow/Life()
 	. = ..()
 	if(stat == CONSCIOUS)
 		fedAmount = round(0.99 * fedAmount) //CRYOSTASIS COWS, INFINITE COW BREEDING
 		if(getFedState() >= 2)
-			visible_message("Brahmin is try do a squeeze of babby come out.")
 			cowbabies()
 		udder.generateMilk(getFedState())
 
@@ -196,6 +194,7 @@ var/global/cow_count = 0
 		if(babypartner)
 			fedAmount = fedAmount - 500
 			new childtype(get_turf(src))
+
 			visible_message("Squish! Look babby cow do a come out!")
 			return 1
 

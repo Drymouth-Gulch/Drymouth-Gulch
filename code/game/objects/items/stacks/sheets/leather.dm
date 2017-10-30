@@ -124,7 +124,7 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	icon_state = "sheet-wetleather"
 	origin_tech = null
 	var/wetness = 15 //Reduced when exposed to high temperautres
-	var/drying_threshold_temperature = 150 //Kelvin to start drying
+	var/drying_threshold_temperature = 20 //Kelvin to start drying
 
 /obj/item/stack/sheet/leather
 	name = "leather"
@@ -157,17 +157,17 @@ var/global/list/datum/stack_recipe/xeno_recipes = list ( \
 	..()
 	for(var/obj/structure/rack/R in src.loc)
 		if(R)
-			Dry()
+			DryLeather()
 
 
 /obj/item/stack/sheet/wetleather/temperature_expose(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()
 	if(exposed_temperature >= drying_threshold_temperature)
-		Dry()
+		DryLeather()
 
-obj/item/stack/sheet/wetleather/proc/Dry()
+obj/item/stack/sheet/wetleather/proc/DryLeather()
 	wetness--
-	if(wetness == 0)
+	if(wetness <= 0)
 		//Try locating an exisitng stack on the tile and add to there if possible
 		for(var/obj/item/stack/sheet/leather/HS in src.loc)
 			if(HS.amount < 50)

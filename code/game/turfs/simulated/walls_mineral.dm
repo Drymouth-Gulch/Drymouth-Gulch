@@ -75,6 +75,7 @@
 	sheet_type = /obj/item/stack/sheet/mineral/sandstone
 	explosion_block = 0
 	canSmoothWith = list(/turf/simulated/wall/mineral/sandstone, /obj/structure/falsewall/sandstone)
+	bruteable = 1
 
 /turf/simulated/wall/mineral/sandstone/New()
 	smooth_icon_neighbors(src)
@@ -169,6 +170,7 @@
 	sheet_type = /obj/item/stack/sheet/mineral/wood
 	hardness = 70
 	explosion_block = 0
+	bruteable = 1
 	smooth = SMOOTH_FALSE
 //	canSmoothWith = list(/turf/simulated/wall/mineral/wood, /obj/structure/falsewall/wood)
 
