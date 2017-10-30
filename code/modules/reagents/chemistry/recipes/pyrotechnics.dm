@@ -30,7 +30,7 @@
 	e.set_up(round(created_volume/2, 1), location, 0, 0)
 	e.start()
 	holder.clear_reagents()
-
+/*
 /datum/chemical_reaction/potassium_explosion
 	name = "Explosion"
 	id = "potassium_explosion"
@@ -38,12 +38,14 @@
 	required_reagents = list("water" = 1, "potassium" = 1)
 	result_amount = 2
 
+
 /datum/chemical_reaction/potassium_explosion/on_reaction(datum/reagents/holder, created_volume)
 	var/location = get_turf(holder.my_atom)
 	var/datum/effect_system/reagents_explosion/e = new()
 	e.set_up(round (created_volume/10, 1), location, 0, 0)
 	e.start()
 	holder.clear_reagents()
+*/
 
 /datum/chemical_reaction/blackpowder
 	name = "Black Powder"
