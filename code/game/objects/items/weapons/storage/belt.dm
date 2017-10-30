@@ -201,8 +201,8 @@
 		)
 
 /obj/item/weapon/storage/belt/holster
-	name = "shoulder holster"
-	desc = "A holster to conceal a carried handgun and ammo. WARNING: Badasses only."
+	name = "belt holster"
+	desc = "A cowboy style belt holster, for any wild west duels your heart can contain."
 	icon_state = "holster"
 	item_state = "holster"
 	storage_slots = 3

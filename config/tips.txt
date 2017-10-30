@@ -4,16 +4,27 @@ You can drag other players onto yourself to open the strip menu, letting you rem
 Clicking on a windoor rather then bumping into it will keep it open, you can click it again to close it.
 You can change the control scheme by pressing tab. One is WASD, the other is the arrow keys. Keep in mind that hotkeys are also changed with this.
 All vending machines can be hacked to obtain some contraband items from them, and some can be fed with coins to gain access to premium items.
-Firesuits and winter coats offer mild protection from the cold, allowing you to spend longer periods of time near breaches and space than if wearing nothing at all.
 Glass shards can be welded to make glass, and metal rods can be welded to make metal. Ores can be welded too, but this takes a lot of fuel.
 If you need to drag multiple people either to safety or to their death, bring a locker over and stuff them all in before hauling them off.
 You can grab someone by clicking on them with the grab intent, then upgrade the grab by clicking on the grab button in your active hand. An aggressive grab will allow you to place someone on a table by clicking on it, or throw them by toggling on throwing.
 Holding alt and left clicking a tile will allow you to see its contents in the top right window pane, which is much faster than right clicking.
 The resist button will allow you to resist out of handcuffs, being buckled to a chair or bed, out of locked lockers and more. Whenever you're stuck, try resisting!
 You can move an item out of the way by dragging it and then clicking on an adjacent tile with an empty hand.
-You can recolor certain items like jumpsuits and gloves in washing machines by also throwing in a crayon.
-Maintenance is full of equipment that is randomized every round. Look around and see if anything is worth using.
-Your emergency oxygen tank delivers 21 kPa by default, which is more air than you need to survive! Click the tank in an open hand to adjust the pressure.
+Emergency oxygen tanks deliver 21 kPa by default, which is more air than you need to survive! Click the tank in an open hand to adjust the pressure.
+Jumpsuits can be colored, throw them in a washing machine with a crayon and it will color it accordingly.
 Crates can be booby-trapped by adding wire, shocking anyone who tries to open them.
 You can toggle the safety of your favorite shotgun by holding alt and clicking on it in your hotbar.
-You can distinguish raiders by the red star next to their head.
+Shift clicking on a person with a exposed face will show their faction affiliation at the bottom of the examine text.
+Centurion Armor has almost the same damage resistance as power armor.
+On most advanced armor, the helmet has more damage resistance than the actual armor, sometimes it is useful to aim for the limbs.
+Armor piercing rounds will ignore power armor.
+Bulletproof armor, SWAT armor, and Combat Armor MKI and II offer signifigantly better damage resistance than standard NCR vests. Replace them as soon as possible.
+Dynamite requires you to use a ignition tool on it to activate it. ( Torch / Zippo / Lighter / Welder )
+The wasteland has many hidden surprises, be sure to look closely when on your next scouting run.
+Recruit > Trooper > Heavy Trooper >  Sergeant > Sergeant Major > Scout Ranger > Ranger > Veteran Ranger > Lieutenant > Captain > Major > Colonel > General > President
+Slave > Recruit > Veteran Legionnaire - Vexillarius > Decanus > Centurion > Legate > Caesar
+-just the tip-
+Server Discord: https://discord.gg/vhMJDR6
+Server Wiki: http://drymouth-gulch-ss13.wikia.com/wiki/Drymouth_Gulch_-_SS13_Wiki
+The server discord and wiki can be accessed at the top of the page.
+Rounds generally last between 2-12 hours, depending on reset times and round events.

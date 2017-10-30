@@ -1,6 +1,6 @@
 /obj/item/weapon/gun/projectile/shotgun
-	name = "hunting shotgun"
-	desc = "A traditional shotgun with wood furniture and a four-shell capacity underneath."
+	name = "Ithaca Model 37"
+	desc = "A traditional hunting shotgun with wood furniture and a four-shell capacity underneath."
 	icon_state = "shotgun"
 	item_state = "shotgun"
 	w_class = 4
@@ -87,8 +87,8 @@
 // RIOT SHOTGUN //
 
 /obj/item/weapon/gun/projectile/shotgun/riot //for spawn in the armory
-	name = "tactical shotgun"
-	desc = "A sturdy shotgun with a longer magazine and a fixed tactical stock designed for tactical use."
+	name = "M590"
+	desc = "A sturdy shotgun with a longer magazine and a fixed tactical stock designed for tactical use tactically."
 	icon_state = "riotshotgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/shot/riot
 	fire_sound = 'sound/f13weapons/riot_shotgun.ogg'
@@ -118,8 +118,8 @@
 ///////////////////////
 
 /obj/item/weapon/gun/projectile/shotgun/boltaction
-	name = "Hunting rifle"
-	desc = "This piece of junk looks like something that could have been used 700 years ago. It feels slightly moist."
+	name = "Remington 700"
+	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war."
 	icon_state = "308"
 	item_state = "assault_rifle"
 	//slot_flags = 0 //no SLOT_BACK sprite, alas
@@ -152,8 +152,8 @@
 */
 
 /obj/item/weapon/gun/projectile/shotgun/boltaction/scoped
-	name = "scoped hunting rifle"
-	desc = "This piece of junk looks like something that could have been used 700 years ago, but makes up for it with the scope."
+	name = "Scoped Remington 700"
+	desc = "A sturdy hunting rifle, chambered in 308. and in use before the war. This one has a 8x scope mounted to it."
 	icon_state = "rifle308_scope"
 	item_state = "assault_rifle"
 	//slot_flags = 0 //no SLOT_BACK sprite, alas
@@ -416,7 +416,7 @@
 // COMBAT SHOTGUN //
 
 /obj/item/weapon/gun/projectile/shotgun/automatic/combat
-	name = "combat shotgun"
+	name = "M1014 Tactical"
 	desc = "A semi automatic shotgun with tactical furniture and a six-shell capacity underneath."
 	icon_state = "cshotgun"
 	origin_tech = "combat=5;materials=2"
@@ -425,7 +425,7 @@
 
 /obj/item/weapon/gun/projectile/shotgun/automatic/hunting
 	name = "Colt Rangemaster"
-	desc = "A Colt Rangemaster semi-automatic rifle chambered in .308. Single-shot only."
+	desc = "A semi automatic Colt Rangemaster semi-automatic rifle chambered in .308."
 	icon_state = "rangemaster"
 	origin_tech = "combat=2;materials=2"
 	mag_type = /obj/item/ammo_box/magazine/internal/boltaction

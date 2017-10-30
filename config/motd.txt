@@ -2,14 +2,13 @@
 
 <h1>Welcome to Drymouth Gulch!</h1>
 
-<i><b>This server contains graphic depictions of sexual and violent content, if you are under the age of eighteen and play on this server we are not responsible for any problems it may cause for you or anyone else assosciated with you.. By playing on this server you confirm that you are over eighteen years of age which is the legal adult age in the United States of America. Further questions about our underage policy can be directed to one of our server hosts on discord.. RenGusta#9572 and Xarvox#8831
+<i><b>For general questions regarding the server, contact Rengusta#9572 or Mhatt12#6932 on our Discord.
+Development is active, and we are always looking for more developers, contact Gomble#6584 if interested.
 
-<i><b>Development is active, but we are always seeking new staff!
+Discord: https://discord.gg/ZmWPqkN
+Github: https://github.com/Drymouth-Gulch/Drymouth-Gulch 
+Wiki: http://drymouth-gulch-ss13.wikia.com/wiki/Drymouth_Gulch_-_SS13_Wiki
 
-<i><b>Here's our Discord! https://discord.gg/2yH5Tsu
+This server takes place before the Second Battle of Hoover Dam, in Nevada.
 
-<i><b>Here's our Legacy Github! https://github.com/Drymouth-Gulch/Drymouth-Gulch
-
-<i><b>This server takes place before the Second Battle of Hoover Dam.
-
-<i>This server is running Fallout13 Legacy code, which is based on fairly old /tg/code. We've purged the whitelist from the code, and crank out updates to keep the old girl working every now and then, but our main focus is currently on a rebase.</i>
+This server is running on a modified version of the F13 Legacy code, however we are currently working on a rebase.</i></b>

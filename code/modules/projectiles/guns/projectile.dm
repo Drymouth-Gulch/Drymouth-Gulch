@@ -152,7 +152,7 @@
 
 /obj/item/weapon/suppressor
 	name = "suppressor"
-	desc = "A universal syndicate small-arms suppressor for maximum espionage."
+	desc = "A six lug surpressor mounted with a set of adaptive threads that allow it to adjust its thread and bore size to match any firearm. How tactical."
 	icon = 'icons/obj/guns/projectile.dmi'
 	icon_state = "suppressor"
 	w_class = 2

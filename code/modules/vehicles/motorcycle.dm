@@ -1,7 +1,7 @@
 //Motorcycle
 /obj/vehicle/motorcycle
 	name = "motorcycle"
-	desc = "Wanderer Motors LLC."
+	desc = "Wanderer Motors LLC"
 	icon = 'icons/obj/vehicles/medium_vehicles.dmi'
 	icon_state = "bike"
 	keytype = /obj/item/key
@@ -29,7 +29,7 @@ obj/vehicle/motorcycle/attackby(obj/item/weapon/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/stock_parts/cell))
 		var/obj/item/weapon/stock_parts/cell/C = W
 		if(bcell)
-			user << "<span class='notice'>[src] already has a cell.</span>"
+			user << "<span class='notice'>A green LED is lit beside the cell chamber indicating it already has a cell installed.</span>"
 		else
 			if(C.maxcharge < movecost)
 				user << "<span class='notice'>[src] requires a higher capacity cell.</span>"
@@ -38,7 +38,7 @@ obj/vehicle/motorcycle/attackby(obj/item/weapon/W, mob/user, params)
 				return
 			W.loc = src
 			bcell = W
-			user << "<span class='notice'>You install a cell in [src].</span>"
+			user << "<span class='notice'>You press a small button on the cell chamber and it opens. You insert the cell and it slides closed again. </span>"
 			update_icon()
 
 	else if(istype(W, /obj/item/weapon/screwdriver))
@@ -46,7 +46,7 @@ obj/vehicle/motorcycle/attackby(obj/item/weapon/W, mob/user, params)
 			bcell.updateicon()
 			bcell.loc = get_turf(src.loc)
 			bcell = null
-			user << "<span class='notice'>You remove the cell from [src].</span>"
+			user << "<span class='notice'>You press a button on the cell chamber and with a small hiss the chamber ejects it into your hand. .</span>"
 			update_icon()
 			return
 		..()

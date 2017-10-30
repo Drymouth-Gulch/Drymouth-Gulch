@@ -308,6 +308,8 @@
 				freq_text = "Den"
 			if(ENCL_FREQ)
 				freq_text = "Enclave"
+			if(BOS_FREQ)
+				freq_text = "Brotherhood"
 		//There's probably a way to use the list var of channels in code\game\communications.dm to make the dept channels non-hardcoded, but I wasn't in an experimentive mood. --NEO
 
 
@@ -359,6 +361,8 @@
 			part_a = "<span class='denradio'><span class='name'>"
 		else if (display_freq==ENCL_FREQ)
 			part_a = "<span class='enclradio'><span class='name'>"
+		else if (display_freq==BOS_FREQ)
+			part_a = "<span class='bosradio'><span class='name'>"
 
 		// --- This following recording is intended for research and feedback in the use of department radio channels ---
 

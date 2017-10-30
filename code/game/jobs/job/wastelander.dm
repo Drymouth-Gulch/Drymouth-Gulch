@@ -19,41 +19,6 @@
 	belt = null
 	backpack = null
 	satchel = null
-
-/*
-Wastelandwhore
-*/
-/datum/job/wastelandwhore
-	title = "Whore"
-	flag = WHORE
-	department_flag = WASTELAND
-	faction = "Wasteland" //desert faction shall disable appearing as scavenger after readying
-	total_positions = 3
-	spawn_positions = 3 //does not matter for late join
-	supervisors = "pusher"
-	selection_color = "#dddddd"
-	access = list()
-	minimal_access = list()
-	outfit = /datum/outfit/job/wastelandwhore
-
-/datum/outfit/job/wastelandwhore
-	name = "Whore"
-	id = null
-	ears = null
-	belt = null
-	backpack = null
-	satchel = null
-
-/datum/outfit/job/wastelandwhore/pre_equip(mob/living/carbon/human/H)
-	..()
-	uniform = pick(/obj/item/clothing/under/f13/female/flapper)
-	r_pocket = pick(/obj/item/device/flashlight/flare/torch, /obj/item/device/flashlight/flare)
-	back = /obj/item/weapon/storage/backpack
-	backpack = /obj/item/weapon/storage/backpack
-	satchel = /obj/item/weapon/storage/backpack/satchel_norm
-	backpack_contents = list(/obj/item/weapon/storage/wallet/random=1)
-	l_hand = /obj/item/weapon/switchblade
-
 /*
 Wastelandpusher
 */

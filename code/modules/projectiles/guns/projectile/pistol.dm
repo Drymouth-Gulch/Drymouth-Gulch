@@ -16,7 +16,7 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/pistol/m1911
-	name = "\improper M1911"
+	name = "Colt M1911"
 	desc = "A classic .45 handgun with a small magazine capacity, a good weapon for taking down unarmored enemies."
 	icon_state = "m1911"
 	w_class = 3
@@ -34,8 +34,8 @@
 	return
 
 /obj/item/weapon/gun/projectile/automatic/pistol/m1911/compact
-	name = "\improper M1911 Compact"
-	desc = "A classic .45 handgun with a small magazine capacity. This model can easily fit in your pocket"
+	name = "Colt M1911-C"
+	desc = "A classic .45 handgun with a small magazine capacity, this is the compact variant."
 	icon_state = "m1911c"
 	w_class = 2
 	damageG=10
@@ -93,7 +93,7 @@
 	item_state = "deagleg"
 
 /obj/item/weapon/gun/projectile/automatic/pistol/silenced22
-	name = "silenced .22 pistol"
+	name = "Ruger MKIV-S"
 	desc = "A integrally suppressed .22 pistol."
 	icon_state = "silenced22"
 	suppressed = 1
