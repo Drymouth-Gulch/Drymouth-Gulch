@@ -9,17 +9,17 @@
 
 BEFORE ADDING ADMINS TO FALLOUT 13 READ ADMIN_RANKS.TXT
 ###############################################################################################
-Xarvox = President
-RenGusta = President
-LaughingRabbit = Elder
-Superballs = Elder
-Zellion = Overseer
-Gomble = President
-Urytion = Paladin
-Mhatt12 = Paladin
-Evoturd = Paladin
-Zyymurgy = Paladin
-LividCake = Paladin
-ChetChumpley = Paladin
-hi_im_white = Paladin
-Dragoon458 = Paladin
+RenGusta = Host
+Mhatt12 = Game Master
+Kanew2000 = Game Master
+Urytion = Badmin
+LividCake = Badmin
+Dragoon458 = Badmin
+ariever = Badmin
+ShortTemperedLeprechaun = Badmin
+TheMostCleverBot = Badmin
+Notwoyk = Badmin
+Karmac = Badmin
+JohnOxford = Coder
+Superballs = Coder
+Gomble = Coder
