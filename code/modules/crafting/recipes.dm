@@ -305,6 +305,15 @@
 	time = 8
 	category = CAT_AMMO
 
+/datum/table_recipe/blackpowder_extraction_buckshot
+	name = "Shotgun Shell Black Powder Extraction"
+	result = /obj/item/weapon/reagent_containers/syringe/blackpowder
+	reqs = list(/obj/item/weapon/reagent_containers/syringe = 1,
+			/obj/item/ammo_casing/shotgun = 1)
+	tools = list()
+	time = 5
+	category = CAT_AMMO
+
 /*/datum/table_recipe/laserslug
 	name = "Laser Slug Shell"
 	result = /obj/item/ammo_casing/shotgun/laserslug

@@ -247,3 +247,10 @@
 	amount_per_transfer_from_this = 1
 	volume = 1
 	list_reagents = list("mulligan" = 1)
+	
+/obj/item/weapon/reagent_containers/syringe/blackpowder
+	name = "Blackpowder syringe"
+	desc = "A syringe filled with extracted blackpowder."
+	amount_per_transfer_from_this = 1
+	volume = 10
+	list_reagents = list("blackpowder" = 10)
