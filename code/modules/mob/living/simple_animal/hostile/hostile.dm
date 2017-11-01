@@ -226,7 +226,7 @@
 	for(var/mob/living/simple_animal/hostile/M in oview(distance, src))
 		var/list/L = M.faction&faction
 		if(L.len)
-			if(M.AIStatus == AI_OFF)
+			if(M.AIStatus == AI_OFF || M.stat == DEAD)
 				return
 			else
 				M.Goto(src,M.move_to_delay,M.minimum_distance)
