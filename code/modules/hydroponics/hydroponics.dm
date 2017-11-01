@@ -1040,6 +1040,8 @@
 	density = 0
 	use_power = 0
 	unwrenchable = 0
+	waterlevel = 0
+	nutrilevel = 0
 
 /obj/machinery/hydroponics/soil/update_icon() // Same as normal but with the overlays removed - Cheridan.
 	overlays.Cut()
