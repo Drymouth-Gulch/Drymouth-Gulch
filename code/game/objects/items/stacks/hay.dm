@@ -62,7 +62,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	R.add_fingerprint(user)
 	qdel(src)
 /obj/structure/bed/roller/post_buckle_mob(mob/living/M)
-	icon_state = bedroll_unrolled //hopefully this fixes the invisibility issues.
+	icon_state = "bedroll_rolled" //hopefully this fixes the invisibility issues.
 	return
 
 
