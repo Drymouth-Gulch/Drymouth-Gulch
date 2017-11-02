@@ -145,7 +145,7 @@ var/global/cow_count = 0
 	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over.<br>"
 	var/fed_desc = list("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
 	childtype = /mob/living/simple_animal/calf
-	var/canBaby = 0
+	var/canBaby = 1 //gw ma 10/10
 
 /mob/living/simple_animal/cow/New()
 	udder = new()
