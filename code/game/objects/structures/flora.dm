@@ -149,7 +149,7 @@
 			var/obj/item/stack/hay/H = new /obj/item/stack/hay(get_turf(src))
 			H.amount = rand(5,10)
 			H.update_icon()
-			visible_message("<i>[user] has cut the [src] into loose hay./i>")
+			visible_message("<i>[user] has cut the [src] into loose hay.</i>")
 			qdel(src)
 			return
 
