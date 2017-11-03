@@ -594,7 +594,7 @@
 	name = "Med-x production"
 	result = /obj/item/weapon/reagent_containers/stimpak/medx
 	reqs = list(/obj/item/weapon/reagent_containers/syringe = 1,
-				/datum/reagent/morphine = 10)
+				/datum/reagent/medicine/morphine = 10)
 	tools = list(/obj/item/weapon/lighter)
 	time = 50
 	category = CAT_MED
