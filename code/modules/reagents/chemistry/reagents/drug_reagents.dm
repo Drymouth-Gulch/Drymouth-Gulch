@@ -541,3 +541,59 @@
 	M.adjustToxLoss(4)
 	..()
 	return
+
+/datum/reagent/drug/buffout
+	name = "Buffout"
+	id = "buffout"
+	description = "A chemical that makes it's user much more sturdier."
+	color = "#000000" // rgb: 0, 0, 0, black
+	addiction_threshold = 15
+	overdose_threshold = 19
+
+/datum/reagent/proc/overdose_start(mob/living/M)
+	M << "<span class='userdanger'>You feel like you took too much of [name]!</span>"
+	M << "You feel so weak!"
+	if(M.maxhealth >= 100)
+		M.maxhealth = 60
+		M.health = min(M.health, 60)
+	return
+
+/datum/reagent/proc/addiction_stage1(mob/living/M)
+	M.maxhealth = 90
+	M.health = min(M.health, 90) //Shouldn't be a problem if this is repeated over and over
+	..()
+
+/datum/reagent/proc/addiction_stage2(mob/living/M)
+	M.maxhealth = 80
+	M.health = min(M.health, 80)
+	..()
+
+/datum/reagent/proc/addiction_stage3(mob/living/M)
+	M.maxhealth = 70
+	M.health = min(M.health, 70)
+	..()
+
+/datum/reagent/proc/addiction_stage4(mob/living/M)
+	M.maxhealth = 60
+	M.health = min(M.health, 60)
+	..()
+
+/datum/reagent/proc/overdose_process(mob/living/M)
+	..()
+
+/datum/reagent/drug/buffout/on_mob_add(mob/living/M)
+	tough_text = pick("brawny", "tenacious", "tough", "hardy", "sturdy") //Super tough stuff
+	M << (M, "<span class='notice'>You feel [tough_text]!</span>")
+	if(M.maxhealth < 100)
+		M.maxhealth = 125
+		M.health += 25
+	else
+		M.maxhealth += 25
+		M.health += 25
+
+/datum/reagentdrug//buffout/on_mob_delete(mob/living/M)
+	M << "You no longer feel [tough_text]"
+	M.maxHealth -= 25
+	M.health = min(M.health - 25, M.maxHealth)
+	if(M.maxhealth = 75) //If you overdosed before
+		M.maxhealth = 100
