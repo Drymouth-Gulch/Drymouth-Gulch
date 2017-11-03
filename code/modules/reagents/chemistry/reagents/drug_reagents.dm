@@ -550,7 +550,7 @@
 	addiction_threshold = 15
 	overdose_threshold = 19
 
-/datum/reagent/proc/overdose_start(mob/living/M)
+/datum/reagent/drug/buffout/overdose_start(mob/living/M)
 	M << "<span class='userdanger'>You feel like you took too much of [name]!</span>"
 	M << "You feel so weak!"
 	if(M.maxHealth >= 100)
@@ -558,27 +558,27 @@
 		M.health = min(M.health, 60)
 	return
 
-/datum/reagent/proc/addiction_stage1(mob/living/M)
+/datum/reagent/drug/buffout/addiction_stage1(mob/living/M)
 	M.maxHealth = 90
 	M.health = min(M.health, 90) //Shouldn't be a problem if this is repeated over and over
 	..()
 
-/datum/reagent/proc/addiction_stage2(mob/living/M)
+/datum/reagent/drug/buffout/addiction_stage2(mob/living/M)
 	M.maxHealth = 80
 	M.health = min(M.health, 80)
 	..()
 
-/datum/reagent/proc/addiction_stage3(mob/living/M)
+/datum/reagent/drug/buffout/addiction_stage3(mob/living/M)
 	M.maxHealth = 70
 	M.health = min(M.health, 70)
 	..()
 
-/datum/reagent/proc/addiction_stage4(mob/living/M)
+/datum/reagent/drug/buffout/addiction_stage4(mob/living/M)
 	M.maxHealth = 60
 	M.health = min(M.health, 60)
 	..()
 
-/datum/reagent/proc/overdose_process(mob/living/M)
+/datum/reagent/drug/buffout/overdose_process(mob/living/M)
 	..()
 
 /datum/reagent/drug/buffout/on_mob_add(mob/living/M)
@@ -593,7 +593,5 @@
 
 /datum/reagent/drug/buffout/on_mob_delete(mob/living/M)
 	M << "You no longer feel tough."
-	M.maxHealth -= 25
 	M.health = min(M.health - 25, M.maxHealth)
-	if(M.maxHealth = 75) //If you overdosed before
-		M.maxHealth = 100
+	M.maxHealth = 100
