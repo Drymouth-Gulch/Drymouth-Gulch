@@ -590,7 +590,48 @@
 	category = CAT_ARMOR
 
 
+/datum/table_craft/medx
+	name = "Med-x production"
+	result = /obj/item/weapon/reagent_containers/stimpak/medx
+	reqs = list(/obj/item/weapon/reagent_containers/syringe = 1,
+				/datum/reagent/morphine = 10)
+	tools = list(/obj/item/weapon/lighter)
+	time = 50
+	category = CAT_MED
 
+/* Commented out recipes as I have no idea what to put in for the reqs
+/datum/table_craft/fixer
+	name = "Fixer production"
+	result = /obj/item/weapon/storage/pill_bottle/fixer
+	reqs = list(evenmorecoolstuff)
+	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/storage/pill_bottle)
+	time = 50
+	category = CAT_MED
+
+/datum/table_craft/buffout
+	name = "Buffout production"
+	result = /obj/item/weapon/reagent_containers/stimpak/buffout
+	reqs = list(coolstuffIthink)
+	tools = list(/obj/item/weapon/lighter)
+	time = 50
+	category = CAT_MED
+
+/datum/table_craft/radx
+	name = "Radx production"
+	result = /obj/item/weapon/storage/pill_bottle/radx
+	reqs = list(something)
+	tools = list(/obj/item/weapon/lighter, /obj/item/weapon/storage/pill_bottle)
+	time = 50
+	category = CAT_MED
+
+/datum/table_craft/radaway
+	name = "Radaway production"
+	result = /obj/item/weapon/reagent_containers/blood/radaway
+	reqs = list(/obj/item/weapon/reagent_containers/blood = 1, /obj/item/weapon/storage/pill_bottle/radx = 1) //Slap some radx into a blood bag for it to somehow work
+	tools = list(/obj/item/weapon/reagent_containers/syringe)
+	time = 50
+	category = CAT_MED
+*/
 
 /datum/table_recipe/gauze
 	name = "Medical gauze"
