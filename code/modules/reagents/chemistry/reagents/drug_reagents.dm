@@ -549,6 +549,7 @@
 	color = "#000000" // rgb: 0, 0, 0, black
 	addiction_threshold = 15
 	overdose_threshold = 19
+	var/maxhealthadded = 0
 
 /datum/reagent/drug/buffout/overdose_start(mob/living/M)
 	M << "<span class='userdanger'>You feel like you took too much of [name]!</span>"
@@ -557,6 +558,18 @@
 		M.maxHealth = 60
 		M.health = min(M.health, 60)
 	return
+
+/datum/reagent/drug/buffout/on_mob_life(mob/living/M)
+	if(maxhealthadded = 0)
+		maxhealthadded = 1
+		M << "You feel tough!"
+		if(M.maxHealth < 100)
+			M.maxHealth = 125
+		else
+			M.maxHealth += 25
+			M.health += 25
+	else
+		..()
 
 /datum/reagent/drug/buffout/addiction_act_stage1(mob/living/M)
 	M.maxHealth = 90
@@ -582,8 +595,7 @@
 	..()
 
 /datum/reagent/drug/buffout/on_mob_add(mob/living/M)
-	tough_text = pick("brawny", "tenacious", "tough", "hardy", "sturdy") //Super tough stuff
-	M << "You feel [tough_text]!"
+	M << "You feel tough!"
 	if(M.maxHealth < 100)
 		M.maxHealth = 125
 		M.health += 25
