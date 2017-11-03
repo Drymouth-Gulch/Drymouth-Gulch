@@ -590,7 +590,7 @@
 	category = CAT_ARMOR
 
 
-/datum/table_craft/medx
+/datum/table_recipe/medx
 	name = "Med-x production"
 	result = /obj/item/weapon/reagent_containers/stimpak/medx
 	reqs = list(/obj/item/weapon/reagent_containers/syringe = 1,
@@ -600,7 +600,7 @@
 	category = CAT_MED
 
 /* Commented out recipes as I have no idea what to put in for the reqs
-/datum/table_craft/fixer
+/datum/table_recipe/fixer
 	name = "Fixer production"
 	result = /obj/item/weapon/storage/pill_bottle/fixer
 	reqs = list(evenmorecoolstuff)
@@ -608,7 +608,7 @@
 	time = 50
 	category = CAT_MED
 
-/datum/table_craft/buffout
+/datum/table_recipe/buffout
 	name = "Buffout production"
 	result = /obj/item/weapon/reagent_containers/stimpak/buffout
 	reqs = list(coolstuffIthink)
@@ -616,7 +616,7 @@
 	time = 50
 	category = CAT_MED
 
-/datum/table_craft/radx
+/datum/table_recipe/radx
 	name = "Radx production"
 	result = /obj/item/weapon/storage/pill_bottle/radx
 	reqs = list(something)
@@ -624,7 +624,7 @@
 	time = 50
 	category = CAT_MED
 
-/datum/table_craft/radaway
+/datum/table_recipe/radaway
 	name = "Radaway production"
 	result = /obj/item/weapon/reagent_containers/blood/radaway
 	reqs = list(/obj/item/weapon/reagent_containers/blood = 1, /obj/item/weapon/storage/pill_bottle/radx = 1) //Slap some radx into a blood bag for it to somehow work
