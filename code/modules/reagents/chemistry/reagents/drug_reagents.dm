@@ -558,22 +558,22 @@
 		M.health = min(M.health, 60)
 	return
 
-/datum/reagent/drug/buffout/addiction_stage1(mob/living/M)
+/datum/reagent/drug/buffout/addiction_act_stage1(mob/living/M)
 	M.maxHealth = 90
 	M.health = min(M.health, 90) //Shouldn't be a problem if this is repeated over and over
 	..()
 
-/datum/reagent/drug/buffout/addiction_stage2(mob/living/M)
+/datum/reagent/drug/buffout/addiction_act_stage2(mob/living/M)
 	M.maxHealth = 80
 	M.health = min(M.health, 80)
 	..()
 
-/datum/reagent/drug/buffout/addiction_stage3(mob/living/M)
+/datum/reagent/drug/buffout/addiction_act_stage3(mob/living/M)
 	M.maxHealth = 70
 	M.health = min(M.health, 70)
 	..()
 
-/datum/reagent/drug/buffout/addiction_stage4(mob/living/M)
+/datum/reagent/drug/buffout/addiction_act_stage4(mob/living/M)
 	M.maxHealth = 60
 	M.health = min(M.health, 60)
 	..()
@@ -583,7 +583,7 @@
 
 /datum/reagent/drug/buffout/on_mob_add(mob/living/M)
 	tough_text = pick("brawny", "tenacious", "tough", "hardy", "sturdy") //Super tough stuff
-	M << (M, "<span class='notice'>You feel [tough_text]!</span>")
+	M << "You feel [tough_text]!"
 	if(M.maxHealth < 100)
 		M.maxHealth = 125
 		M.health += 25
