@@ -594,15 +594,6 @@
 /datum/reagent/drug/buffout/overdose_process(mob/living/M)
 	..()
 
-/datum/reagent/drug/buffout/on_mob_add(mob/living/M)
-	M << "You feel tough!"
-	if(M.maxHealth < 100)
-		M.maxHealth = 125
-		M.health += 25
-	else
-		M.maxHealth += 25
-		M.health += 25
-
 /datum/reagent/drug/buffout/on_mob_delete(mob/living/M)
 	M << "You no longer feel tough."
 	M.health = min(M.health - 25, M.maxHealth)
