@@ -58,3 +58,10 @@
 	icon_state = "medx"
 	amount_per_transfer_from_this = 10
 	list_reagents = list("medx" = 10)
+	
+/obj/item/weapon/reagent_containers/stimpak/buffout
+	name = "Tin of buffout"
+	desc = "A container of buffout, a very potent steroid that massively makes a person sturdier, doesn't actually heal you."
+	icon_state = "mentats" //Placeholer sprite
+	amount_per_transfer_from_this = 10
+	list_reagents = list("buffout" = 10)
