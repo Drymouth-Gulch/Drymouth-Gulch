@@ -560,7 +560,7 @@
 	return
 
 /datum/reagent/drug/buffout/on_mob_life(mob/living/M)
-	if(maxhealthadded = 0)
+	if(maxhealthadded == 0)
 		maxhealthadded = 1
 		M << "You feel tough!"
 		if(M.maxHealth < 100)
