@@ -591,7 +591,7 @@
 		M.maxHealth += 25
 		M.health += 25
 
-/datum/reagentdrug//buffout/on_mob_delete(mob/living/M)
+/datum/reagent/drug/buffout/on_mob_delete(mob/living/M)
 	M << "You no longer feel tough."
 	M.maxHealth -= 25
 	M.health = min(M.health - 25, M.maxHealth)
