@@ -145,6 +145,7 @@ var/global/cow_count = 0
 	var/basedesc = "Brahmin or brahma are mutated cattle with two heads and giant udders.<br>Known for their milk, just don't tip them over.<br>"
 	var/fed_desc = list("This one look starving.","This one looks fed","This happy Brahmin looks well fed.")
 	childtype = /mob/living/simple_animal/calf
+	var/canBaby = 1 //gw ma 10/10
 
 /mob/living/simple_animal/cow/New()
 	udder = new()
@@ -182,6 +183,12 @@ var/global/cow_count = 0
 		udder.generateMilk(getFedState())
 
 /mob/living/simple_animal/cow/proc/cowbabies() //because this shouldn't be complicated
+	
+	if(!canBaby)
+		return
+	canBaby = 0
+	spawn(300)
+		canBaby = 1
 	var/babypartner = 0
 	if(cow_count >= MAX_COWS)
 		visible_message("The Brahmin senses too many fellow moos in the world, and sucks the calf back in")

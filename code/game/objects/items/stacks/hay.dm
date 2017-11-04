@@ -41,7 +41,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 
 /obj/structure/bed/roller/bedroll
 	name = "bedroll"
-	desc = "=A bedroll for the wasteland camping enthusiast."
+	desc = "A breadroll for the wasteland camping enthusiast."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "bedroll_unrolled"
 	anchored = 0
@@ -62,6 +62,7 @@ var/global/list/datum/stack_recipe/hay_recipes = list ( \
 	R.add_fingerprint(user)
 	qdel(src)
 /obj/structure/bed/roller/post_buckle_mob(mob/living/M)
+	icon_state = "bedroll_rolled" //hopefully this fixes the invisibility issues.
 	return
 
 
