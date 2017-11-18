@@ -297,3 +297,9 @@
 	desc = "A small bottle. Contains a sample of Inquisitius."
 	icon_state = "bottle3"
 	spawned_disease = /datum/disease/fluspanish
+
+/obj/item/weapon/reagent_containers/glass/bottle/damageconverter
+	name = "Toxic Injuries Culture Bottle"
+	desc = "A small bottle containing a bacteria that converts normal injuries into toxic byproducts."
+	icon_state = "bottle3"
+	spawned_disease = /datum/disease/advance/damage_converter
